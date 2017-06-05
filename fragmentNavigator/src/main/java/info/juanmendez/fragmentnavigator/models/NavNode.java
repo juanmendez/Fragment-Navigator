@@ -12,6 +12,11 @@ public interface NavNode {
     NavNode applyNodes(NavNode... nodes);
     List<NavNode> getNodes();
 
+
+    //connect with parent
+    void setParent( NavNode parentNode );
+    NavNode getParent();
+
     //search nodes by tag or id
     NavNode search(String tag);
     NavNode search(int id );
@@ -21,7 +26,7 @@ public interface NavNode {
     //displayChild a child by its tag, id, or self reference
     void displayChild(String tag);
     void displayChild(int id);
-    void displayChild(NavItem node );
+    void displayChild(NavNode node );
 
     //allow self node to display or hide
     void setVisible( Boolean show);

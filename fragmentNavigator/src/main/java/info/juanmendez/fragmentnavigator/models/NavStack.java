@@ -13,6 +13,8 @@ import java.util.List;
  */
 
 public class NavStack implements NavNode {
+
+    NavNode parentNode;
     List<NavNode> nodes = new ArrayList<>();
 
     Boolean isRoot = false;
@@ -27,6 +29,11 @@ public class NavStack implements NavNode {
     @Override
     public NavNode applyNodes(NavNode... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
+
+        for( NavNode node: nodes ){
+            node.setParent(this);
+        }
+
         return this;
     }
 
@@ -37,6 +44,16 @@ public class NavStack implements NavNode {
 
     public List<NavNode> getNodes() {
         return nodes;
+    }
+
+    @Override
+    public void setParent(NavNode parentNode) {
+        this.parentNode = parentNode;
+    }
+
+    @Override
+    public NavNode getParent() {
+        return parentNode;
     }
 
     @Override
@@ -96,6 +113,7 @@ public class NavStack implements NavNode {
 
                if(  navItem.getNavFragment().getTag().equals(tag) ){
                     navItem.setVisible(true);
+                   parentNode.displayChild(this);
                }else{
                    navItem.setVisible(false);
                }
@@ -126,19 +144,16 @@ public class NavStack implements NavNode {
     }
 
     @Override
-    public void displayChild(NavItem targetNode) {
+    public void displayChild(NavNode targetNode) {
         NavItem navItem;
 
         for( NavNode node: nodes){
 
-            if( node instanceof NavItem ){
-                navItem = (NavItem) node;
-
-                if(  navItem == targetNode){
-                    navItem.setVisible(true);
-                }else{
-                    navItem.setVisible(false);
-                }
+            if( node == targetNode){
+                node.setVisible(true);
+                parentNode.displayChild(this);
+            }else{
+                node.setVisible(false);
             }
         }
     }

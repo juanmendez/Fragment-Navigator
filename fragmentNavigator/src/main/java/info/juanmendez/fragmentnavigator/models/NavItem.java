@@ -15,6 +15,7 @@ import info.juanmendez.fragmentnavigator.adapters.NavFragment;
  */
 
 public class NavItem implements NavNode {
+    NavNode parentNode;
     private NavFragment navFragment; //identifies Fragment with Tag or its Id
     List<NavNode> nodes = new ArrayList<>();
 
@@ -34,11 +35,25 @@ public class NavItem implements NavNode {
     public NavNode applyNodes(NavNode... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
+        for( NavNode node: nodes ){
+            node.setParent(this);
+        }
+
         return this;
     }
 
     public List<NavNode> getNodes() {
         return this.nodes;
+    }
+
+    @Override
+    public void setParent(NavNode parentNode) {
+        this.parentNode = parentNode;
+    }
+
+    @Override
+    public NavNode getParent() {
+        return parentNode;
     }
 
     @Override
@@ -94,8 +109,8 @@ public class NavItem implements NavNode {
     }
 
     @Override
-    public void displayChild(NavItem node) {
-
+    public void displayChild(NavNode node) {
+        parentNode.displayChild(this);
     }
 
     @Override

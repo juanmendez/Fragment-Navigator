@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.models.NavItem;
 import info.juanmendez.fragmentnavigator.models.NavNode;
 import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
@@ -52,12 +51,26 @@ public class RootNavigator implements NavNode {
     @Override
     public NavNode applyNodes(NavNode... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
+
+        for( NavNode node: nodes ){
+            node.setParent(this);
+        }
+
         return this;
     }
 
     @Override
     public List<NavNode> getNodes() {
         return this.nodes;
+    }
+
+    @Override
+    public void setParent(NavNode parentNode) {
+    }
+
+    @Override
+    public NavNode getParent() {
+        return null;
     }
 
     @Override
@@ -105,7 +118,7 @@ public class RootNavigator implements NavNode {
     }
 
     @Override
-    public void displayChild(NavItem node) {}
+    public void displayChild(NavNode node) {}
 
     @Override
     public void setVisible(Boolean show) {

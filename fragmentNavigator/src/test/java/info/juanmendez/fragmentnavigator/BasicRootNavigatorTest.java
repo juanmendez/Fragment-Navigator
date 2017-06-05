@@ -27,11 +27,17 @@ public class BasicRootNavigatorTest {
     String tagA = "fragmentA";
     String tagB = "fragmentB";
     String tagC = "fragmentC";
+    String tagD = "fragmentD";
+    String tagE = "fragmentE";
+    String tagF = "fragmentF";
 
     TestNavFragmentManager fragmentManagerShadow;
     NavFragment fragmentA;
     NavFragment fragmentB;
     NavFragment fragmentC;
+    NavFragment fragmentD;
+    NavFragment fragmentE;
+    NavFragment fragmentF;
 
     RootNavigator navigator;
 
@@ -42,6 +48,9 @@ public class BasicRootNavigatorTest {
         fragmentA = new TestNavFragment(tagA);
         fragmentB = new TestNavFragment(tagB);
         fragmentC = new TestNavFragment(tagC);
+        fragmentD = new TestNavFragment(tagD);
+        fragmentE = new TestNavFragment(tagE);
+        fragmentF = new TestNavFragment(tagF);
         fragmentManagerShadow = new TestNavFragmentManager();
     }
 
@@ -98,9 +107,6 @@ public class BasicRootNavigatorTest {
         NavItem navItemA = NavItem.build(fragmentA);
         NavItem navItemB = NavItem.build(fragmentB);
 
-        //lets have fragmentA has other fragments
-        NavFragment fragmentC = new TestNavFragment("fragmentC");
-        NavFragment fragmentD = new TestNavFragment("fragmentD");
 
         NavItem navItemC = NavItem.build(fragmentC);
         NavItem navItemD = NavItem.build(fragmentD);
@@ -114,7 +120,7 @@ public class BasicRootNavigatorTest {
 
         for( NavNode node: navigator.getNodes() ){
 
-            result = node.search( "fragmentC");
+            result = node.search( tagC);
 
             if( result != null ){
                 match = result;
@@ -206,5 +212,38 @@ public class BasicRootNavigatorTest {
         assertFalse("navigation ended when false", wentBack );
     }
 
+    /**
+     * A stack is made of two stacks!
+     */
+    public void shouldStackOfStacksGoForward(){
+        navigator.clear();
 
+        NavItem navItemA = NavItem.build(fragmentA);
+        NavItem navItemB = NavItem.build(fragmentB);
+        NavItem navItemC = NavItem.build(fragmentC);
+        NavItem navItemD = NavItem.build( fragmentD );
+
+        navigator.applyNodes( NavStack.build( NavStack.build(navItemA,navItemB), NavStack.build(navItemC,navItemD)) );
+
+        navigator.asObservable().subscribe(s -> {
+
+
+            //if its in a stack then only show this fragment!
+            NavNode parent = navigator.search(s);
+
+            if( parent instanceof NavStack ){
+                parent.displayChild(s);
+            }
+        });
+
+
+        NavStack navStack1 = (NavStack) navigator.getNodes().get(0);
+        NavStack navStack2 = (NavStack) navigator.getNodes().get(1);
+
+        navigator.request( tagA );
+
+        assertTrue( "first stack displayed", navStack1.getVisible() );
+        assertFalse( "second stack hides", navStack2.getVisible() );
+
+    }
 }

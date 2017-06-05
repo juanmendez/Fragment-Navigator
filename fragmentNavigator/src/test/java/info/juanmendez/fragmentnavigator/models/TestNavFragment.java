@@ -1,6 +1,6 @@
 package info.juanmendez.fragmentnavigator.models;
 
-import info.juanmendez.fragmentnavigator.simulators.NavFragment;
+import info.juanmendez.fragmentnavigator.adapters.NavFragment;
 
 
 /**
@@ -11,6 +11,7 @@ import info.juanmendez.fragmentnavigator.simulators.NavFragment;
 
 public class TestNavFragment implements NavFragment {
 
+    Boolean visible = false;
     String tag;
     int id;
 
@@ -27,4 +28,16 @@ public class TestNavFragment implements NavFragment {
     public int getId(){
         return id;
     }
+
+    @Override
+    public void setVisible(Boolean show) {
+        visible = show;
+    }
+
+    @Override
+    public boolean getVisible() {
+        return visible;
+    }
+
+
 }

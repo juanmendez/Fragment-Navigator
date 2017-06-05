@@ -4,49 +4,56 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import info.juanmendez.fragmentnavigator.adapters.NavFragment;
+
 /**
  * Created by Juan Mendez on 6/2/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
  *
- * Structure representation of a collection of nodes which visually correspond to a stack of fragments
+ * Represents a fragment having layoutNodes as a single branch.
  */
 
-public class Stack implements NavNode {
+public class NavItem implements NavNode {
+    private NavFragment navFragment; //identifies Fragment with Tag or its Id
     List<NavNode> nodes = new ArrayList<>();
 
-    public static Stack build(NavNode... childNodeArray){
-        Stack stack =  new Stack();
-        stack.applyNodes( childNodeArray );
+    public static NavItem build(NavFragment navFragment){
+        return new NavItem(navFragment);
+    }
 
-        return stack;
+    public NavItem(NavFragment navFragment){
+        this.navFragment = navFragment;
+    }
+
+    public NavFragment getNavFragment(){
+        return navFragment;
     }
 
     @Override
     public NavNode applyNodes(NavNode... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
+
         return this;
     }
 
     public List<NavNode> getNodes() {
-        return nodes;
+        return this.nodes;
     }
-
-
 
     @Override
     public NavNode search(String tag) {
+
+        if( navFragment.getTag().equals(tag))
+            return this;
+
         NavNode nodeResult;
 
         for( NavNode node: nodes){
             nodeResult = node.search( tag );
 
             if( nodeResult != null ){
-                if( nodeResult instanceof Node && nodes.contains( nodeResult ) ){
-                    return this;
-                }else{
-                    return nodeResult;
-                }
+                return nodeResult;
             }
         }
 
@@ -55,17 +62,17 @@ public class Stack implements NavNode {
 
     @Override
     public NavNode search(int id) {
+
+        if( navFragment.getId()==id)
+            return this;
+
         NavNode nodeResult;
 
         for( NavNode node: nodes){
             nodeResult = node.search( id );
 
             if( nodeResult != null ){
-                if( nodeResult instanceof Node && nodes.contains( nodeResult ) ){
-                    return this;
-                }else{
-                    return nodeResult;
-                }
+                return nodeResult;
             }
         }
 
@@ -75,5 +82,22 @@ public class Stack implements NavNode {
     @Override
     public void clear() {
         nodes.clear();
+    }
+
+    @Override
+    public void display(String tag) {
+
+    }
+
+    @Override
+    public void display(int id) {}
+
+    @Override
+    public void display(NavItem node) {}
+
+
+    @Override
+    public boolean goBack() {
+        return false;
     }
 }

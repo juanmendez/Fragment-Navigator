@@ -1,4 +1,4 @@
-package info.juanmendez.fragmentnavigator.simulators;
+package info.juanmendez.fragmentnavigator.adapters;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
@@ -9,4 +9,6 @@ package info.juanmendez.fragmentnavigator.simulators;
 public interface NavFragment {
     String getTag();
     int getId();
+    void setVisible( Boolean show);
+    boolean getVisible();
 }

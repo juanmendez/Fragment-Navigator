@@ -2,8 +2,8 @@ package info.juanmendez.fragmentnavigator.models;
 
 import java.util.HashMap;
 
-import info.juanmendez.fragmentnavigator.simulators.NavFragmentManager;
-import info.juanmendez.fragmentnavigator.simulators.NavFragment;
+import info.juanmendez.fragmentnavigator.adapters.NavFragmentManager;
+import info.juanmendez.fragmentnavigator.adapters.NavFragment;
 
 
 /**
@@ -36,12 +36,12 @@ public class TestNavFragmentManager implements NavFragmentManager {
 
 
     @Override
-    public NavFragment findFragmentByTag(String tag) {
+    public NavFragment findFragment(String tag) {
         return hashTag.get(tag);
     }
 
     @Override
-    public NavFragment findFragmentById(int id) {
+    public NavFragment findFragment(int id) {
         return hashId.get(id);
     }
 }

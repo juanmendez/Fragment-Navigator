@@ -16,4 +16,9 @@ public interface NavNode {
     NavNode search(int id );
 
     void clear();
+    void display(String tag);
+    void display(int id);
+    void display( NavItem node );
+
+    boolean goBack();
 }

@@ -14,7 +14,6 @@ import java.util.List;
 
 public class NavStack implements NavNode {
     List<NavNode> nodes = new ArrayList<>();
-    List<NavNode> history = new ArrayList<>();
 
     Boolean isRoot = false;
 
@@ -81,12 +80,11 @@ public class NavStack implements NavNode {
     @Override
     public void clear() {
         nodes.clear();
-        history.clear();
     }
 
 
     @Override
-    public void display(String tag) {
+    public void displayChild(String tag) {
 
         NavItem navItem;
         NavStack navStack;
@@ -97,10 +95,9 @@ public class NavStack implements NavNode {
                 navItem = (NavItem) node;
 
                if(  navItem.getNavFragment().getTag().equals(tag) ){
-                    history.add(navItem);
-                    navItem.getNavFragment().setVisible(true);
+                    navItem.setVisible(true);
                }else{
-                   navItem.getNavFragment().setVisible(false);
+                   navItem.setVisible(false);
                }
             }
         }
@@ -108,7 +105,7 @@ public class NavStack implements NavNode {
     }
 
     @Override
-    public void display(int id) {
+    public void displayChild(int id) {
 
         NavItem navItem;
         NavStack navStack;
@@ -119,10 +116,9 @@ public class NavStack implements NavNode {
                 navItem = (NavItem) node;
 
                 if(  navItem.getNavFragment().getId() == id ){
-                    history.add(navItem);
-                    navItem.getNavFragment().setVisible(true);
+                    navItem.setVisible(true);
                 }else{
-                    navItem.getNavFragment().setVisible(false);
+                    navItem.setVisible(false);
                 }
             }
         }
@@ -130,7 +126,7 @@ public class NavStack implements NavNode {
     }
 
     @Override
-    public void display(NavItem targetNode) {
+    public void displayChild(NavItem targetNode) {
         NavItem navItem;
 
         for( NavNode node: nodes){
@@ -139,39 +135,46 @@ public class NavStack implements NavNode {
                 navItem = (NavItem) node;
 
                 if(  navItem == targetNode){
-                    history.add(navItem);
-                    navItem.getNavFragment().setVisible(true);
+                    navItem.setVisible(true);
                 }else{
-                    navItem.getNavFragment().setVisible(false);
+                    navItem.setVisible(false);
                 }
             }
         }
     }
 
     @Override
+    public void setVisible(Boolean show) {
+
+    }
+
+    @Override
+    public boolean getVisible() {
+        return false;
+    }
+
+    @Override
     public boolean goBack() {
 
-        NavItem navItem;
-        NavStack navStack;
-        int lastPos;
+        NavNode nodeDisplayed=null;
+        int lastPos=0;
 
-        if( history.size() > 1 ){
+        //lets find item on display...
+        for( NavNode node: nodes ){
 
-            lastPos = history.size()-1;
-
-            //make top item invisible
-            if( history.get(lastPos) instanceof NavItem ){
-                navItem = (NavItem) history.get( history.size()-1);
-                navItem.getNavFragment().setVisible(false);
-                history.remove(lastPos);
+            if( node.getVisible() ){
+                nodeDisplayed = node;
+                lastPos = nodes.indexOf(nodeDisplayed);
+                break;
             }
+        }
 
+        if( nodeDisplayed != null && lastPos > 0){
 
-            lastPos = history.size()-1;
-            if( history.get(lastPos) instanceof NavItem ){
-                navItem = (NavItem) history.get( history.size()-1);
-                navItem.getNavFragment().setVisible(true);
-            }
+            nodeDisplayed.setVisible(false);
+
+            nodeDisplayed = nodes.get(--lastPos);
+            nodeDisplayed.setVisible(true);
 
             return true;
         }

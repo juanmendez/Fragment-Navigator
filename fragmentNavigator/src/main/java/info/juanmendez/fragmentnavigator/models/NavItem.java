@@ -85,15 +85,28 @@ public class NavItem implements NavNode {
     }
 
     @Override
-    public void display(String tag) {
+    public void displayChild(String tag) {
+    }
+
+    @Override
+    public void displayChild(int id) {
 
     }
 
     @Override
-    public void display(int id) {}
+    public void displayChild(NavItem node) {
+
+    }
 
     @Override
-    public void display(NavItem node) {}
+    public void setVisible(Boolean show) {
+        navFragment.setVisible(show);
+    }
+
+    @Override
+    public boolean getVisible() {
+        return navFragment.getVisible();
+    }
 
 
     @Override

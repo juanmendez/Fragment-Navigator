@@ -126,7 +126,7 @@ public class BasicRootNavigatorTest {
 
 
     @Test
-    public void shouldForwardStack(){
+    public void shouldStackGoForward(){
         navigator.clear();
 
         NavItem navItemA = NavItem.build(fragmentA);
@@ -143,24 +143,24 @@ public class BasicRootNavigatorTest {
             NavNode parent = navigator.search(s);
 
             if( parent instanceof NavStack ){
-                parent.display(s);
+                parent.displayChild(s);
             }
         });
 
         //if its in a stack then only show this fragment!
-        assertTrue( "navItemA is visible", navItemA.getNavFragment().getVisible() );
-        assertFalse( "navItemB is invisible", navItemB.getNavFragment().getVisible() );
+        assertTrue( "navItemA is visible", navItemA.getVisible() );
+        assertFalse( "navItemB is invisible", navItemB.getVisible() );
 
         navigator.request( tagB );
 
-        assertFalse( "navItemA is invisible", navItemA.getNavFragment().getVisible() );
-        assertTrue( "navItemB is visibile", navItemB.getNavFragment().getVisible() );
+        assertFalse( "navItemA is invisible", navItemA.getVisible() );
+        assertTrue( "navItemB is visibile", navItemB.getVisible() );
     }
 
 
 
     @Test
-    public void shouldDoBackStack(){
+    public void shouldStackGoBack(){
         navigator.clear();
 
         NavItem navItemA = NavItem.build(fragmentA);
@@ -175,7 +175,7 @@ public class BasicRootNavigatorTest {
             NavNode parent = navigator.search(s);
 
             if( parent != null )
-                parent.display(s);
+                parent.displayChild(s);
         });
 
 
@@ -185,25 +185,26 @@ public class BasicRootNavigatorTest {
         navigator.request( tagC );
 
         //if its in a stack then only show this fragment!
-        assertTrue( "navItemA is visible", navItemC.getNavFragment().getVisible() );
+        assertTrue( "navItemA is visible", navItemC.getVisible() );
 
         //we are going back now...
         NavNode parent = navigator.search(tagC);
 
         Boolean wentBack = parent.goBack();
         assertTrue("able to go back", wentBack );
-        assertTrue( "navItemB is visible", navItemB.getNavFragment().getVisible() );
-        assertFalse( "navItemC is invisible", navItemC.getNavFragment().getVisible() );
-        assertFalse( "navItemA is invisible", navItemA.getNavFragment().getVisible() );
+        assertTrue( "navItemB is visible", navItemB.getVisible() );
+        assertFalse( "navItemC is invisible", navItemC.getVisible() );
+        assertFalse( "navItemA is invisible", navItemA.getVisible() );
 
         wentBack = parent.goBack();
         assertTrue("able to go back", wentBack );
-        assertFalse( "navItemB is ivisible", navItemB.getNavFragment().getVisible() );
-        assertFalse( "navItemC is invisible", navItemC.getNavFragment().getVisible() );
-        assertTrue( "navItemA is visible", navItemA.getNavFragment().getVisible() );
+        assertFalse( "navItemB is ivisible", navItemB.getVisible() );
+        assertFalse( "navItemC is invisible", navItemC.getVisible() );
+        assertTrue( "navItemA is visible", navItemA.getVisible() );
 
         wentBack = parent.goBack();
         assertFalse("navigation ended when false", wentBack );
-
     }
+
+
 }

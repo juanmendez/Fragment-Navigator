@@ -96,16 +96,26 @@ public class RootNavigator implements NavNode {
     }
 
     @Override
-    public void display(String tag) {
+    public void displayChild(String tag) {
     }
 
     @Override
-    public void display(int id) {
+    public void displayChild(int id) {
 
     }
 
     @Override
-    public void display(NavItem node) {}
+    public void displayChild(NavItem node) {}
+
+    @Override
+    public void setVisible(Boolean show) {
+
+    }
+
+    @Override
+    public boolean getVisible() {
+        return false;
+    }
 
     @Override
     public boolean goBack() {

@@ -1,10 +1,9 @@
 package info.juanmendez.fragmentnavigator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import info.juanmendez.fragmentnavigator.models.NavNode;
+import info.juanmendez.fragmentnavigator.models.NavRoot;
 import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
 
@@ -16,8 +15,7 @@ import io.reactivex.subjects.BehaviorSubject;
 
 public class RootNavigator implements NavNode {
 
-
-    List<NavNode> nodes = new ArrayList<>();
+    NavRoot root = new NavRoot();
 
     private BehaviorSubject<String> publishSubject;
     private static RootNavigator rootNavigator = new RootNavigator();
@@ -38,30 +36,17 @@ public class RootNavigator implements NavNode {
         return publishSubject.hide();
     }
 
-    /**
-     * if it executed the code it will return true.
-     * @return
-     */
-    public boolean onBackNav(){
-
-        return false;
-    }
-
 
     @Override
     public NavNode applyNodes(NavNode... nodes) {
-        this.nodes = new ArrayList<>(Arrays.asList(nodes));
-
-        for( NavNode node: nodes ){
-            node.setParent(this);
-        }
+        root.applyNodes(nodes);
 
         return this;
     }
 
     @Override
     public List<NavNode> getNodes() {
-        return this.nodes;
+        return root.getNodes();
     }
 
     @Override
@@ -74,38 +59,18 @@ public class RootNavigator implements NavNode {
     }
 
     @Override
-    public NavNode search(String tag) {
-        NavNode nodeResult;
-
-        for( NavNode node: nodes){
-            nodeResult = node.search( tag );
-
-            if( nodeResult != null ){
-                return nodeResult;
-            }
-        }
-
-        return null;
+    public NavNode searchParent(String tag) {
+        return root.searchParent( tag );
     }
 
     @Override
-    public NavNode search(int id) {
-        NavNode nodeResult;
-
-        for( NavNode node: nodes){
-            nodeResult = node.search( id );
-
-            if( nodeResult != null ){
-                return nodeResult;
-            }
-        }
-
-        return null;
+    public NavNode searchParent(int id) {
+        return root.searchParent( id );
     }
 
     @Override
     public void clear() {
-        nodes.clear();
+        root.clear();
     }
 
     @Override
@@ -114,7 +79,6 @@ public class RootNavigator implements NavNode {
 
     @Override
     public void displayChild(int id) {
-
     }
 
     @Override
@@ -122,12 +86,12 @@ public class RootNavigator implements NavNode {
 
     @Override
     public void setVisible(Boolean show) {
-
+        root.setVisible(show);
     }
 
     @Override
     public boolean getVisible() {
-        return false;
+        return root.getVisible();
     }
 
     @Override

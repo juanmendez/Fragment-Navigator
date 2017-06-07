@@ -17,9 +17,9 @@ public interface NavNode {
     void setParent( NavNode parentNode );
     NavNode getParent();
 
-    //search nodes by tag or id
-    NavNode search(String tag);
-    NavNode search(int id );
+    //searchParent nodes by tag or id
+    NavNode searchParent(String tag);
+    NavNode searchParent(int id );
 
     void clear();
 

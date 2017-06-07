@@ -4,32 +4,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.adapters.NavFragment;
 
 /**
- * Created by Juan Mendez on 6/2/2017.
+ * Created by Juan Mendez on 6/7/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
- *
- * Represents a fragment having layoutNodes as a single branch.
  */
 
-public class NavItem implements NavNode {
-    NavNode parentNode;
-    private NavFragment navFragment; //identifies Fragment with Tag or its Id
+public class NavRoot implements NavNode {
+
+    Boolean visible = false;
     List<NavNode> nodes = new ArrayList<>();
-
-    public static NavItem build(NavFragment navFragment){
-        return new NavItem(navFragment);
-    }
-
-    public NavItem(NavFragment navFragment){
-        this.navFragment = navFragment;
-    }
-
-    public NavFragment getNavFragment(){
-        return navFragment;
-    }
 
     @Override
     public NavNode applyNodes(NavNode... nodes) {
@@ -37,31 +22,28 @@ public class NavItem implements NavNode {
 
         for( NavNode node: nodes ){
             node.setParent(this);
+            node.setVisible(true);
         }
 
         return this;
     }
 
+    @Override
     public List<NavNode> getNodes() {
         return this.nodes;
     }
 
     @Override
     public void setParent(NavNode parentNode) {
-        this.parentNode = parentNode;
     }
 
     @Override
     public NavNode getParent() {
-        return parentNode;
+        return null;
     }
 
     @Override
     public NavNode searchParent(String tag) {
-
-        if( navFragment.getTag().equals(tag))
-            return this;
-
         NavNode nodeResult;
 
         for( NavNode node: nodes){
@@ -77,10 +59,6 @@ public class NavItem implements NavNode {
 
     @Override
     public NavNode searchParent(int id) {
-
-        if( navFragment.getId()==id)
-            return this;
-
         NavNode nodeResult;
 
         for( NavNode node: nodes){
@@ -105,20 +83,20 @@ public class NavItem implements NavNode {
 
     @Override
     public void displayChild(int id) {
+
     }
 
     @Override
-    public void displayChild(NavNode node) {
-    }
+    public void displayChild(NavNode node) {}
 
     @Override
     public void setVisible(Boolean show) {
-        navFragment.setVisible(show);
+        visible = show;
     }
 
     @Override
     public boolean getVisible() {
-        return navFragment.getVisible();
+        return visible;
     }
 
     @Override

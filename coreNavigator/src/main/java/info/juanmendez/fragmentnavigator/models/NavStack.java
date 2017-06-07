@@ -19,8 +19,6 @@ public class NavStack implements NavNode {
     List<NavNode> nodes = new ArrayList<>();
     List<NavNode> history = new ArrayList<>();
 
-    Boolean isRoot = false;
-
     public static NavStack build(NavNode... childNodeArray){
         NavStack navStack =  new NavStack();
         navStack.applyNodes( childNodeArray );
@@ -36,17 +34,12 @@ public class NavStack implements NavNode {
         //by default first fragment is visible
         for( NavNode node: nodes ){
             node.setParent(this);
-
             node.setVisible( this.nodes.indexOf(node) == 0 );
         }
 
         return this;
     }
 
-    public NavStack applyRoot(Boolean isRoot ){
-        this.isRoot = isRoot;
-        return this;
-    }
 
     public List<NavNode> getNodes() {
         return nodes;

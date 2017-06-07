@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Fragment-Navigator.iml" filepath="$PROJECT_DIR$/Fragment-Navigator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fragmentNavigator/fragmentNavigator.iml" filepath="$PROJECT_DIR$/fragmentNavigator/fragmentNavigator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coreNavigator/coreNavigator.iml" filepath="$PROJECT_DIR$/coreNavigator/coreNavigator.iml" />
     </modules>
   </component>
 </project>

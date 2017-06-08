@@ -5,37 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="593b7e85-53f0-47a4-b095-a2fc4ca8b280" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/coreNavigator/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/coreNavigator/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/coreNavigator/proguard-rules.pro" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/AndroidManifest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragment.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragmentManager.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragmentManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavNode.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavRoot.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavRoot.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/values/colors.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/values/strings.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/values/styles.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestActivity.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/models/TestActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragment.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragmentManager.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragmentManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
     </list>
     <ignored path="Fragment Navigator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -2914,7 +2884,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../misc/mockingrealm-support" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

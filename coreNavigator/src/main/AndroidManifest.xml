@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 
-    package="info.juanmendez.fragmentnavigator">
+    package="info.juanmendez.corenavigator">
 
     <application
         android:allowBackup="true"

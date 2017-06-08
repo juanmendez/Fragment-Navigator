@@ -8,7 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/coreNavigator" />
+            <option value="$PROJECT_DIR$/fragmentNavigator" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

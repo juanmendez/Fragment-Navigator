@@ -5,55 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="593b7e85-53f0-47a4-b095-a2fc4ca8b280" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_android_25.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/javassist_3_20_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mockito_core_1_10_19.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/objenesis_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/powermock_api_mockito_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/powermock_api_support_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/powermock_classloading_base_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/powermock_classloading_xstream_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/powermock_core_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/powermock_module_junit4_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/powermock_module_junit4_common_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/powermock_module_junit4_rule_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/powermock_reflect_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/reactive_streams_1_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/rxandroid_2_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/rxjava_2_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_compat_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_25_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/timber_4_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/xmlpull_1_1_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/xpp3_min_1_1_4c.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/xstream_1_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Fragment-Navigator.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local.properties" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/RootNavigator.java" afterPath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/adapters/NavFragment.java" afterPath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/adapters/NavFragmentManager.java" afterPath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragmentManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavItem.java" afterPath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavNode.java" afterPath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavRoot.java" afterPath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavRoot.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavStack.java" afterPath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/fragmentnavigator/BasicRootNavigatorTest.java" afterPath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/fragmentnavigator/models/TestActivity.java" afterPath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/fragmentnavigator/models/TestNavFragment.java" afterPath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/fragmentnavigator/models/TestNavFragmentManager.java" afterPath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragmentManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coreNavigator/build.gradle" afterPath="$PROJECT_DIR$/coreNavigator/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coreNavigator/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/coreNavigator/src/main/AndroidManifest.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/coreNavigator/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/coreNavigator/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/coreNavigator/proguard-rules.pro" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/AndroidManifest.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragment.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragmentManager.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragmentManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavNode.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavNode.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavRoot.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavRoot.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/values/colors.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/values/strings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/res/values/styles.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestActivity.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/models/TestActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragment.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragmentManager.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragmentManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
     </list>
     <ignored path="Fragment Navigator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,48 +66,7 @@
     <favorites_list name="Fragment Navigator" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="750">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="8" column="55" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coreNavigator/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-845">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="23" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,8 +106,8 @@
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value=":coreNavigator" />
-                <option name="path" value="$PROJECT_DIR$/coreNavigator" />
+                <option name="name" value=":fragmentNavigator" />
+                <option name="path" value="$PROJECT_DIR$/fragmentNavigator" />
               </ExternalProjectPojo>
             </list>
           </value>
@@ -1678,6 +1619,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/fragmentNavigator" />
+                <option name="name" value="transformClassesWithRetrolambdaForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/fragmentNavigator" />
                 <option name="name" value="transformNativeLibsWithSyncJniLibsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1733,6 +1678,11 @@
                 <option name="description" value="Prepare com.android.support:appcompat-v7:25.3.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/fragmentNavigator" />
                 <option name="name" value="prepareComAndroidSupportAppcompatV72531Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Converts all java 8 class files to java 6 or 7" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/fragmentNavigator" />
+                <option name="name" value="compileRetrolambda" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the tasks runnable from project ':fragmentNavigator'." />
@@ -2224,6 +2174,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/fragmentNavigator" />
+                <option name="name" value="transformClassesWithRetrolambdaForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/fragmentNavigator" />
                 <option name="name" value="transformResourcesWithMergeJavaResForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -2309,6 +2263,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/fragmentNavigator" />
+                <option name="name" value="transformClassesWithRetrolambdaForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/fragmentNavigator" />
                 <option name="name" value="generateReleaseResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -2379,7 +2337,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\codes\Android\juanmendez\Fragment-Navigator" value="4490156063570" />
+        <entry key="C:\codes\Android\juanmendez\Fragment-Navigator" value="4490156929344" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2880,10 +2838,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-14" />
-    <option name="y" value="14" />
-    <option name="width" value="3840" />
-    <option name="height" value="2060" />
+    <option name="x" value="-16" />
+    <option name="y" value="-16" />
+    <option name="width" value="3872" />
+    <option name="height" value="2092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -2911,11 +2869,10 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane />
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2934,8 +2891,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragmentNavigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3538,8 +3510,8 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-14" y="14" width="3840" height="2060" extended-state="0" />
-    <editor active="true" />
+    <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777116" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -3550,14 +3522,13 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261111" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32807016" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41801947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41791844" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -3573,6 +3544,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3590,7 +3562,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java</url>
+          <url>file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java</url>
           <line>98</line>
           <properties />
           <option name="timeStamp" value="31" />
@@ -3601,20 +3573,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavRoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#searchParent#0;class#NavRoot#0" expanded="false" />
-            <element signature="method#searchParent#1;class#NavRoot#0" expanded="false" />
-            <element signature="method#displayChild#1;class#NavRoot#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3622,29 +3581,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3880">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#applyNodes#0;class#NavItem#0" expanded="false" />
-            <element signature="method#searchParent#0;class#NavItem#0" expanded="false" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#2170#2171#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1960">
           <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
@@ -3657,7 +3608,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7200">
           <caret line="190" column="58" selection-start-line="190" selection-start-column="58" selection-end-line="190" selection-end-column="58" />
@@ -3665,29 +3616,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10480">
           <caret line="276" column="0" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5200">
           <caret line="130" column="1" selection-start-line="130" selection-start-column="1" selection-end-line="130" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#applyNodes#0;class#NavItem#0" expanded="false" />
-            <element signature="method#searchParent#0;class#NavItem#0" expanded="false" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#2170#2171#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
           <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
@@ -3700,7 +3643,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3708,29 +3651,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3600">
           <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#applyNodes#0;class#NavItem#0" expanded="false" />
-            <element signature="method#searchParent#0;class#NavItem#0" expanded="false" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#2170#2171#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6040">
           <caret line="155" column="19" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
@@ -3746,7 +3681,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
@@ -3759,15 +3694,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1480">
           <caret line="37" column="94" selection-start-line="37" selection-start-column="94" selection-end-line="37" selection-end-column="94" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/build.gradle">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
           <caret line="36" column="68" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
@@ -3775,7 +3709,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1040">
           <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
@@ -3783,29 +3717,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavNode.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1400">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#applyNodes#0;class#NavItem#0" expanded="false" />
-            <element signature="method#searchParent#0;class#NavItem#0" expanded="false" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#2170#2171#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -3843,14 +3769,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestActivity.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/models/TestActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/.gitignore">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3866,14 +3792,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragment.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1000">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3884,28 +3806,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavNode.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavRoot.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavRoot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#searchParent#0;class#NavRoot#0" expanded="false" />
-            <element signature="method#searchParent#1;class#NavRoot#0" expanded="false" />
-            <element signature="method#displayChild#1;class#NavRoot#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
@@ -3913,7 +3828,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/RootNavigator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="15" column="26" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="26" />
@@ -3926,61 +3841,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragment.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragmentManager.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragmentManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/corenavigator/models/NavItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#applyNodes#0;class#NavItem#0" expanded="false" />
-            <element signature="method#searchParent#0;class#NavItem#0" expanded="false" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#2170#2171#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragmentManager.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/models/TestCoreNavFragmentManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/corenavigator/BasicRootNavigatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1441">
           <caret line="106" column="50" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2200">
-          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragment.java" />
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
@@ -3991,47 +3888,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragmentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1329">
-          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragmentManager.java" />
     <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragmentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragment.java" />
+    <entry file="file://$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragmentManager.java" />
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/build.gradle" />
     <entry file="file://$PROJECT_DIR$/fragmentNavigator/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coreNavigator/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-845">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="38" />
@@ -4043,6 +3911,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="23" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

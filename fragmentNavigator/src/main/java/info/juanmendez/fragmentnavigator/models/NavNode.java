@@ -1,4 +1,4 @@
-package info.juanmendez.corenavigator.models;
+package info.juanmendez.fragmentnavigator.models;
 
 import java.util.List;
 

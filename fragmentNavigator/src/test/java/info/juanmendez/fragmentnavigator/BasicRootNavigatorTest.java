@@ -1,14 +1,14 @@
-package info.juanmendez.corenavigator;
+package info.juanmendez.fragmentnavigator;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import info.juanmendez.corenavigator.adapters.CoreNavFragment;
-import info.juanmendez.corenavigator.models.NavItem;
-import info.juanmendez.corenavigator.models.NavNode;
-import info.juanmendez.corenavigator.models.NavStack;
-import info.juanmendez.corenavigator.models.TestCoreNavFragment;
-import info.juanmendez.corenavigator.models.TestCoreNavFragmentManager;
+import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
+import info.juanmendez.fragmentnavigator.models.NavItem;
+import info.juanmendez.fragmentnavigator.models.NavNode;
+import info.juanmendez.fragmentnavigator.models.NavStack;
+import info.juanmendez.fragmentnavigator.models.TestCoreNavFragment;
+import info.juanmendez.fragmentnavigator.models.TestCoreNavFragmentManager;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;

@@ -1,10 +1,10 @@
-package info.juanmendez.corenavigator.models;
+package info.juanmendez.fragmentnavigator.models;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.corenavigator.adapters.CoreNavFragment;
+import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
 
 /**
  * Created by Juan Mendez on 6/2/2017.

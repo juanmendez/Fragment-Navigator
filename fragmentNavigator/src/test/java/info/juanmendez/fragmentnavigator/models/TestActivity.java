@@ -1,4 +1,4 @@
-package info.juanmendez.corenavigator.models;
+package info.juanmendez.fragmentnavigator.models;
 
 /**
  * Created by Juan Mendez on 6/2/2017.

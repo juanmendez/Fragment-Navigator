@@ -1,4 +1,4 @@
-package info.juanmendez.corenavigator.adapters;
+package info.juanmendez.fragmentnavigator.adapters;
 
 /**
  * Created by Juan Mendez on 6/2/2017.

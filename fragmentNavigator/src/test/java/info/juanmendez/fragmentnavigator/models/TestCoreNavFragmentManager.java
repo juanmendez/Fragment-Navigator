@@ -1,9 +1,9 @@
-package info.juanmendez.corenavigator.models;
+package info.juanmendez.fragmentnavigator.models;
 
 import java.util.HashMap;
 
-import info.juanmendez.corenavigator.adapters.CoreNavFragmentManager;
-import info.juanmendez.corenavigator.adapters.CoreNavFragment;
+import info.juanmendez.fragmentnavigator.adapters.CoreNavFragmentManager;
+import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
 
 
 /**

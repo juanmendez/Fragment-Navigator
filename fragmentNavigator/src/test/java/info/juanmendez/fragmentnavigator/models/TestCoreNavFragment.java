@@ -1,6 +1,6 @@
-package info.juanmendez.corenavigator.models;
+package info.juanmendez.fragmentnavigator.models;
 
-import info.juanmendez.corenavigator.adapters.CoreNavFragment;
+import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
 
 
 /**

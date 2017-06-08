@@ -1,9 +1,9 @@
-package info.juanmendez.corenavigator;
+package info.juanmendez.fragmentnavigator;
 
 import java.util.List;
 
-import info.juanmendez.corenavigator.models.NavNode;
-import info.juanmendez.corenavigator.models.NavRoot;
+import info.juanmendez.fragmentnavigator.models.NavNode;
+import info.juanmendez.fragmentnavigator.models.NavRoot;
 import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
 

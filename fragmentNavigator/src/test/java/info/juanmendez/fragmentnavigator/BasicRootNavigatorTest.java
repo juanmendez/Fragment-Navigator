@@ -93,8 +93,8 @@ public class BasicRootNavigatorTest {
         //so we are going to build a dual pane...
         navRoot.request( tagA );
 
-        navRoot.asObservable().subscribe(s -> {
-            assertEquals( "tag is A", tagA, s );
+        navRoot.asObservable().subscribe(navItems -> {
+            assertEquals( "tag is A", navItems.get(navItems.size()-1), navItemA );
         });
     }
 
@@ -153,8 +153,6 @@ public class BasicRootNavigatorTest {
         assertTrue( "navItemB is visibile", navItemB.getVisible() );
     }
 
-
-
     @Test
     public void shouldStackGoBack(){
         navRoot.clear();
@@ -173,93 +171,20 @@ public class BasicRootNavigatorTest {
         //if its in a stack then only show this fragment!
         assertTrue( "navItemA is visible", navItemC.getVisible() );
 
-        //we are going back now...
-        NavNode parent = navRoot.search(tagC);
-
-        Boolean wentBack = parent.goBack();
+        Boolean wentBack = navRoot.goBack();
         assertTrue("able to go back", wentBack );
         assertTrue( "navItemB is visible", navItemB.getVisible() );
         assertFalse( "navItemC is invisible", navItemC.getVisible() );
         assertFalse( "navItemA is invisible", navItemA.getVisible() );
 
-        wentBack = parent.goBack();
+        wentBack = navRoot.goBack();
         assertTrue("able to go back", wentBack );
         assertFalse( "navItemB is ivisible", navItemB.getVisible() );
         assertFalse( "navItemC is invisible", navItemC.getVisible() );
         assertTrue( "navItemA is visible", navItemA.getVisible() );
-
-        wentBack = parent.goBack();
+        
+        wentBack = navRoot.goBack();
         assertFalse("navigation ended when false", wentBack );
     }
 
-
-    @Test
-    public void shouldStackOfStacksGoForward(){
-        navRoot.clear();
-
-        NavItem navItemA = NavItem.build(fragmentA);
-        NavItem navItemB = NavItem.build(fragmentB);
-        NavItem navItemC = NavItem.build(fragmentC);
-        NavItem navItemD = NavItem.build( fragmentD );
-
-        navRoot.applyNodes( NavStack.build( NavStack.build(navItemA,navItemB), NavStack.build(navItemC,navItemD)) );
-
-        NavStack navStack1 = (NavStack) navRoot.getNodes().get(0).getNodes().get(0);
-        NavStack navStack2 = (NavStack) navRoot.getNodes().get(0).getNodes().get(1);
-
-        navRoot.request( tagA );
-
-        assertTrue( "first stack displayed", navStack1.getVisible() );
-        assertFalse( "second stack hides", navStack2.getVisible() );
-
-
-        navRoot.request( tagC );
-
-        assertFalse( "first stack hides", navStack1.getVisible() );
-        assertTrue( "second stack displayed", navStack2.getVisible() );
-    }
-
-
-    @Test
-    public void mockingRotatingDevice(){
-        //so initially we have a list of fragments, but then they change to a stack..
-        NavItem navItemA = NavItem.build(fragmentA);
-        NavItem navItemB = NavItem.build(fragmentB);
-
-        navRoot.applyNodes( navItemA, navItemB );
-
-        assertTrue( "visible", navItemA.getVisible() );
-        assertTrue( "visible", navItemB.getVisible() );
-
-        //ok,, now we rotate and we have a stack of fragments
-        navRoot.applyNodes( NavStack.build(navItemA, navItemB));
-
-        assertTrue( "visible", navItemA.getVisible() );
-        assertFalse( "visible", navItemB.getVisible() );
-
-        //lets go to fragmentB
-        navRoot.request( tagB );
-
-        assertFalse( "visible a", navItemA.getVisible() );
-        assertTrue( "invisible b", navItemB.getVisible() );
-
-        //lets rotate again
-        navRoot.applyNodes( navItemA, navItemB );
-
-        assertTrue( "visible", navItemA.getVisible() );
-        assertTrue( "visible", navItemB.getVisible() );
-
-        //ok,, now we rotate and we have a stack of fragments
-        navRoot.applyNodes( NavStack.build(navItemA, navItemB));
-
-        navRoot.request( tagB );
-        assertFalse( "visible", navItemA.getVisible() );
-        assertTrue( "visible", navItemB.getVisible() );
-
-        navRoot.getNodes().get(0).goBack();
-
-        assertTrue( "visible", navItemA.getVisible() );
-        assertFalse( "visible", navItemB.getVisible() );
-
-    }
 }

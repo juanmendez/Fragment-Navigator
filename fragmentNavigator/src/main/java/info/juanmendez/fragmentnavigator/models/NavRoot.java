@@ -17,8 +17,9 @@ import io.reactivex.subjects.BehaviorSubject;
 
 public class NavRoot implements NavNode {
 
-    Boolean visible = false;
+    Boolean visible = true;
     List<NavNode> nodes = new ArrayList<>();
+    List<NavNode> history = new ArrayList<>();
 
     private BehaviorSubject<List<NavNode>> publishSubject = BehaviorSubject.create();
 
@@ -32,6 +33,7 @@ public class NavRoot implements NavNode {
 
     public void request( NavNode navNode ){
         if( navNode != null ){
+            history.add(navNode);
             publishSubject.onNext(NavUtils.getPathToNode(navNode));
         }
     }
@@ -112,8 +114,22 @@ public class NavRoot implements NavNode {
         return visible;
     }
 
-    @Override
-    public boolean goBack() {
+    /**
+     * attempt to go back within all different navNodes visited.
+     * @return true if it executed.
+     */
+    public boolean goBack(){
+
+        if( history.size() >= 2 ){
+
+            history.remove( history.size()-1 );
+
+            NavNode lastVisited = history.get( history.size()-1 );
+            publishSubject.onNext(NavUtils.getPathToNode(lastVisited));
+            return true;
+        }
+
         return false;
     }
+
 }

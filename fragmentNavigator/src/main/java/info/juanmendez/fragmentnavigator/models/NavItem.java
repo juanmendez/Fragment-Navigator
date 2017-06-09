@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import info.juanmendez.fragmentnavigator.RootNavigator;
 import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
 
 /**
@@ -23,7 +24,26 @@ public class NavItem implements NavNode {
         return new NavItem(coreNavFragment);
     }
 
+    public NavItem() {
+
+        RootNavigator.getNavRoot().asObservable().subscribe(navNodes -> {
+            int pos = navNodes.indexOf( this );
+            int len = navNodes.size();
+
+            if( pos >= 0 && pos < len-1 ){
+                for( NavNode node: nodes ){
+                    node.setVisible( true );
+                }
+            }else{
+                for( NavNode node: nodes ){
+                    node.setVisible( false );
+                }
+            }
+        });
+    }
+
     public NavItem(CoreNavFragment coreNavFragment){
+        this();
         this.coreNavFragment = coreNavFragment;
     }
 
@@ -107,10 +127,5 @@ public class NavItem implements NavNode {
     @Override
     public boolean getVisible() {
         return coreNavFragment.getVisible();
-    }
-
-    @Override
-    public boolean goBack() {
-        return false;
     }
 }

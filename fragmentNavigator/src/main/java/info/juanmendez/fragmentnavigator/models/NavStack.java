@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import info.juanmendez.fragmentnavigator.RootNavigator;
+
 /**
  * Created by Juan Mendez on 6/2/2017.
  * www.juanmendez.info
@@ -17,7 +19,6 @@ public class NavStack implements NavNode {
     Boolean visible = false;
     NavNode parentNode;
     List<NavNode> nodes = new ArrayList<>();
-    List<NavNode> history = new ArrayList<>();
 
     public static NavStack build(NavNode... childNodeArray){
         NavStack navStack =  new NavStack();
@@ -27,6 +28,19 @@ public class NavStack implements NavNode {
     }
 
     public NavStack() {
+
+        RootNavigator.getNavRoot().asObservable().subscribe(navNodes -> {
+            int pos = navNodes.indexOf( this );
+            int len = navNodes.size();
+
+            if( pos >= 0 && pos < len-1 ){
+                NavNode childFound = navNodes.get( pos+1);
+
+                for( NavNode node: nodes ){
+                    node.setVisible( node == childFound );
+                }
+            }
+        });
 
     }
 
@@ -42,7 +56,6 @@ public class NavStack implements NavNode {
 
         return this;
     }
-
 
     public List<NavNode> getNodes() {
         return nodes;
@@ -66,11 +79,7 @@ public class NavStack implements NavNode {
             nodeResult = node.search( tag );
 
             if( nodeResult != null ){
-                if( nodeResult instanceof NavItem && nodes.contains( nodeResult ) ){
-                    return this;
-                }else{
-                    return nodeResult;
-                }
+                return nodeResult;
             }
         }
 
@@ -99,53 +108,16 @@ public class NavStack implements NavNode {
     @Override
     public void clear() {
         nodes.clear();
-        history.clear();
     }
 
 
     @Override
     public void setVisible(Boolean show) {
         visible = show;
-        parentNode.setVisible(show);
     }
 
     @Override
     public boolean getVisible() {
         return visible;
-    }
-
-    @Override
-    public boolean goBack() {
-
-        NavNode nodeDisplayed=null;
-
-        //suppose stack has three fragments
-        //and it is now at the third one, but
-        //the first two were never navigated
-        //then history is based in the order of the list..
-        if(history.size() <= 1){
-            history.clear();
-            for( NavNode node: nodes ){
-
-                history.add( node );
-                if( node.getVisible() ){
-                    break;
-                }
-
-            }
-        }
-
-        if( history.size() > 1 ){
-
-            nodeDisplayed = history.get(history.size()-1);
-            nodeDisplayed.setVisible(false);
-
-            history.remove( history.size()-1 );
-            nodeDisplayed = nodes.get(history.size()-1);
-            nodeDisplayed.setVisible(true);
-            return true;
-        }
-
-        return false;
     }
 }

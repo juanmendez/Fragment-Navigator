@@ -1,6 +1,7 @@
 package info.juanmendez.fragmentnavigator.utils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import info.juanmendez.fragmentnavigator.models.NavNode;
@@ -24,6 +25,7 @@ public class NavUtils {
             nodes.add( navNode );
         }
 
+        Collections.reverse(nodes);
         return nodes;
     }
 }

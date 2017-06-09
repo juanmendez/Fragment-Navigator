@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="593b7e85-53f0-47a4-b095-a2fc4ca8b280" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavRoot.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavRoot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/fragmentnavigator/BasicRootNavigatorTest.java" afterPath="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/fragmentnavigator/BasicRootNavigatorTest.java" />
     </list>
     <ignored path="Fragment Navigator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,6 +68,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RootNavigator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/RootNavigator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+              <folding>
+                <element signature="e#390#391#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="NavStack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavStack.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,8 +94,8 @@
       <file leaf-file-name="NavRoot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavRoot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1247">
-              <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+            <state relative-caret-position="3047">
+              <caret line="139" column="9" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
               <folding>
                 <element signature="method#applyNodes#0;class#NavRoot#0" expanded="false" />
                 <element signature="method#search#0;class#NavRoot#0" expanded="false" />
@@ -2993,7 +3004,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25906876" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3505685" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32816228" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3036,8 +3047,6 @@
         <state relative-caret-position="1960">
           <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
             <element signature="e#390#391#0" expanded="true" />
             <element signature="e#437#438#0" expanded="true" />
           </folding>
@@ -3071,8 +3080,6 @@
         <state relative-caret-position="2040">
           <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
             <element signature="e#390#391#0" expanded="true" />
             <element signature="e#437#438#0" expanded="true" />
           </folding>
@@ -3122,8 +3129,6 @@
         <state relative-caret-position="480">
           <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
           <folding>
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
             <element signature="e#390#391#0" expanded="true" />
             <element signature="e#437#438#0" expanded="true" />
           </folding>
@@ -3317,19 +3322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/RootNavigator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/utils/NavUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1120">
@@ -3394,10 +3386,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/RootNavigator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavRoot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1247">
-          <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+        <state relative-caret-position="3047">
+          <caret line="139" column="9" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
           <folding>
             <element signature="method#applyNodes#0;class#NavRoot#0" expanded="false" />
             <element signature="method#search#0;class#NavRoot#0" expanded="false" />

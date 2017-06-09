@@ -8,13 +8,11 @@ import info.juanmendez.fragmentnavigator.utils.NavUtils;
 import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
 
-
 /**
  * Created by Juan Mendez on 6/7/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
  */
-
 public class NavRoot implements NavNode {
 
     Boolean visible = true;
@@ -127,6 +125,12 @@ public class NavRoot implements NavNode {
      * @return true if it executed.
      */
     public boolean goBack(){
+
+        /**
+         * last navNode can have an internal history;therefore,
+         * rather than just jumping to the previous element it can
+         * return false if it is done with its history.
+         */
 
         //we always go to the element before the last
         if( history.size() >= 2 ){

@@ -23,6 +23,9 @@ public class NavItem implements NavNode {
         return new NavItem(coreNavFragment);
     }
 
+    public NavItem() {
+    }
+
     public NavItem(CoreNavFragment coreNavFragment){
         this.coreNavFragment = coreNavFragment;
     }

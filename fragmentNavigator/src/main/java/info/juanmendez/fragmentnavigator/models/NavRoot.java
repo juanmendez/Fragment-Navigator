@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import io.reactivex.Observable;
+import io.reactivex.subjects.BehaviorSubject;
+
 
 /**
  * Created by Juan Mendez on 6/7/2017.
@@ -15,6 +18,16 @@ public class NavRoot implements NavNode {
 
     Boolean visible = false;
     List<NavNode> nodes = new ArrayList<>();
+
+    private BehaviorSubject<String> publishSubject = BehaviorSubject.create();
+
+    public void request(String requestedTag) {
+        publishSubject.onNext( requestedTag );
+    }
+
+    public Observable<String> asObservable() {
+        return publishSubject.hide();
+    }
 
     @Override
     public NavNode applyNodes(NavNode... nodes) {

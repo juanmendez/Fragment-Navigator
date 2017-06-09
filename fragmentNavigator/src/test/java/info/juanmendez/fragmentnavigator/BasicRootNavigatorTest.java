@@ -6,6 +6,7 @@ import org.junit.Test;
 import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
 import info.juanmendez.fragmentnavigator.models.NavItem;
 import info.juanmendez.fragmentnavigator.models.NavNode;
+import info.juanmendez.fragmentnavigator.models.NavRoot;
 import info.juanmendez.fragmentnavigator.models.NavStack;
 import info.juanmendez.fragmentnavigator.models.TestCoreNavFragment;
 import info.juanmendez.fragmentnavigator.models.TestCoreNavFragmentManager;
@@ -38,13 +39,12 @@ public class BasicRootNavigatorTest {
     CoreNavFragment fragmentD;
     CoreNavFragment fragmentE;
     CoreNavFragment fragmentF;
-
-    RootNavigator navigator;
+    NavRoot navRoot;
 
     @Before
     public void before(){
-        navigator = RootNavigator.getInstance();
-
+        navRoot = new NavRoot();
+        RootNavigator.setNavRoot( navRoot );
         fragmentA = new TestCoreNavFragment(tagA);
         fragmentB = new TestCoreNavFragment(tagB);
         fragmentC = new TestCoreNavFragment(tagC);
@@ -88,12 +88,12 @@ public class BasicRootNavigatorTest {
         NavItem navItemB = NavItem.build(fragmentB);
 
         //lets draw the fragments
-        navigator.applyNodes(navItemA, navItemB);
+        navRoot.applyNodes(navItemA, navItemB);
 
         //so we are going to build a dual pane...
-        navigator.request( tagA );
+        navRoot.request( tagA );
 
-        navigator.asObservable().subscribe(s -> {
+        navRoot.asObservable().subscribe(s -> {
             assertEquals( "tag is A", tagA, s );
         });
     }
@@ -111,14 +111,14 @@ public class BasicRootNavigatorTest {
         NavItem navItemC = NavItem.build(fragmentC);
         NavItem navItemD = NavItem.build(fragmentD);
 
-        navigator.clear();
-        navigator.applyNodes(navItemA, navItemB.applyNodes(navItemC, navItemD) );
+        navRoot.clear();
+        navRoot.applyNodes(navItemA, navItemB.applyNodes(navItemC, navItemD) );
 
 
         NavNode result;
         NavNode match = null;
 
-        for( NavNode node: navigator.getNodes() ){
+        for( NavNode node: navRoot.getNodes() ){
 
             result = node.search( tagC);
 
@@ -133,21 +133,21 @@ public class BasicRootNavigatorTest {
 
     @Test
     public void shouldStackGoForward(){
-        navigator.clear();
+        navRoot.clear();
 
         NavItem navItemA = NavItem.build(fragmentA);
         NavItem navItemB = NavItem.build(fragmentB);
 
-        navigator.applyNodes( NavStack.build(navItemA, navItemB) );
+        navRoot.applyNodes( NavStack.build(navItemA, navItemB) );
 
         //lets go to first one!
-        navigator.request( tagA );
+        navRoot.request( tagA );
 
         //if its in a stack then only show this fragment!
         assertTrue( "navItemA is visible", navItemA.getVisible() );
         assertFalse( "navItemB is invisible", navItemB.getVisible() );
 
-        navigator.request( tagB );
+        navRoot.request( tagB );
 
         assertFalse( "navItemA is invisible", navItemA.getVisible() );
         assertTrue( "navItemB is visibile", navItemB.getVisible() );
@@ -157,24 +157,24 @@ public class BasicRootNavigatorTest {
 
     @Test
     public void shouldStackGoBack(){
-        navigator.clear();
+        navRoot.clear();
 
         NavItem navItemA = NavItem.build(fragmentA);
         NavItem navItemB = NavItem.build(fragmentB);
         NavItem navItemC = NavItem.build(fragmentC);
 
-        navigator.applyNodes( NavStack.build(navItemA, navItemB, navItemC) );
+        navRoot.applyNodes( NavStack.build(navItemA, navItemB, navItemC) );
 
         //lets go to first one!
-        navigator.request( tagA );
-        navigator.request( tagB );
-        navigator.request( tagC );
+        navRoot.request( tagA );
+        navRoot.request( tagB );
+        navRoot.request( tagC );
 
         //if its in a stack then only show this fragment!
         assertTrue( "navItemA is visible", navItemC.getVisible() );
 
         //we are going back now...
-        NavNode parent = navigator.search(tagC);
+        NavNode parent = navRoot.search(tagC);
 
         Boolean wentBack = parent.goBack();
         assertTrue("able to go back", wentBack );
@@ -195,25 +195,25 @@ public class BasicRootNavigatorTest {
 
     @Test
     public void shouldStackOfStacksGoForward(){
-        navigator.clear();
+        navRoot.clear();
 
         NavItem navItemA = NavItem.build(fragmentA);
         NavItem navItemB = NavItem.build(fragmentB);
         NavItem navItemC = NavItem.build(fragmentC);
         NavItem navItemD = NavItem.build( fragmentD );
 
-        navigator.applyNodes( NavStack.build( NavStack.build(navItemA,navItemB), NavStack.build(navItemC,navItemD)) );
+        navRoot.applyNodes( NavStack.build( NavStack.build(navItemA,navItemB), NavStack.build(navItemC,navItemD)) );
 
-        NavStack navStack1 = (NavStack) navigator.getNodes().get(0).getNodes().get(0);
-        NavStack navStack2 = (NavStack) navigator.getNodes().get(0).getNodes().get(1);
+        NavStack navStack1 = (NavStack) navRoot.getNodes().get(0).getNodes().get(0);
+        NavStack navStack2 = (NavStack) navRoot.getNodes().get(0).getNodes().get(1);
 
-        navigator.request( tagA );
+        navRoot.request( tagA );
 
         assertTrue( "first stack displayed", navStack1.getVisible() );
         assertFalse( "second stack hides", navStack2.getVisible() );
 
 
-        navigator.request( tagC );
+        navRoot.request( tagC );
 
         assertFalse( "first stack hides", navStack1.getVisible() );
         assertTrue( "second stack displayed", navStack2.getVisible() );
@@ -226,37 +226,37 @@ public class BasicRootNavigatorTest {
         NavItem navItemA = NavItem.build(fragmentA);
         NavItem navItemB = NavItem.build(fragmentB);
 
-        navigator.applyNodes( navItemA, navItemB );
+        navRoot.applyNodes( navItemA, navItemB );
 
         assertTrue( "visible", navItemA.getVisible() );
         assertTrue( "visible", navItemB.getVisible() );
 
         //ok,, now we rotate and we have a stack of fragments
-        navigator.applyNodes( NavStack.build(navItemA, navItemB));
+        navRoot.applyNodes( NavStack.build(navItemA, navItemB));
 
         assertTrue( "visible", navItemA.getVisible() );
         assertFalse( "visible", navItemB.getVisible() );
 
         //lets go to fragmentB
-        navigator.request( tagB );
+        navRoot.request( tagB );
 
         assertFalse( "visible a", navItemA.getVisible() );
         assertTrue( "invisible b", navItemB.getVisible() );
 
         //lets rotate again
-        navigator.applyNodes( navItemA, navItemB );
+        navRoot.applyNodes( navItemA, navItemB );
 
         assertTrue( "visible", navItemA.getVisible() );
         assertTrue( "visible", navItemB.getVisible() );
 
         //ok,, now we rotate and we have a stack of fragments
-        navigator.applyNodes( NavStack.build(navItemA, navItemB));
+        navRoot.applyNodes( NavStack.build(navItemA, navItemB));
 
-        navigator.request( tagB );
+        navRoot.request( tagB );
         assertFalse( "visible", navItemA.getVisible() );
         assertTrue( "visible", navItemB.getVisible() );
 
-        navigator.getNodes().get(0).goBack();
+        navRoot.getNodes().get(0).goBack();
 
         assertTrue( "visible", navItemA.getVisible() );
         assertFalse( "visible", navItemB.getVisible() );

@@ -16,7 +16,7 @@ import info.juanmendez.fragmentnavigator.RootNavigator;
 
 public class NavStack implements NavNode {
 
-    Boolean visible = false;
+    Boolean active = false;
     NavNode parentNode;
     List<NavNode> nodes = new ArrayList<>();
 
@@ -37,7 +37,7 @@ public class NavStack implements NavNode {
                 NavNode childFound = navNodes.get( pos+1);
 
                 for( NavNode node: nodes ){
-                    node.setVisible( node == childFound );
+                    node.setActive( node == childFound );
                 }
             }
         });
@@ -48,10 +48,10 @@ public class NavStack implements NavNode {
     public NavNode applyNodes(NavNode... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
-        //by default first fragment is visible
+        //by default first fragment is active
         for( NavNode node: nodes ){
             node.setParent(this);
-            node.setVisible( this.nodes.indexOf(node) == 0 );
+            node.setActive( this.nodes.indexOf(node) == 0 );
         }
 
         return this;
@@ -112,12 +112,12 @@ public class NavStack implements NavNode {
 
 
     @Override
-    public void setVisible(Boolean show) {
-        visible = show;
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     @Override
-    public boolean getVisible() {
-        return visible;
+    public boolean isActive() {
+        return active;
     }
 }

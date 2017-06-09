@@ -15,7 +15,7 @@ import io.reactivex.subjects.BehaviorSubject;
  */
 public class NavRoot implements NavNode {
 
-    Boolean visible = true;
+    Boolean active = true;
     List<NavNode> nodes = new ArrayList<>();
     List<NavNode> history = new ArrayList<>();
 
@@ -54,7 +54,7 @@ public class NavRoot implements NavNode {
 
         for( NavNode node: nodes ){
             node.setParent(this);
-            node.setVisible(true);
+            node.setActive(true);
         }
 
         return this;
@@ -111,13 +111,13 @@ public class NavRoot implements NavNode {
 
 
     @Override
-    public void setVisible(Boolean show) {
-        visible = show;
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     @Override
-    public boolean getVisible() {
-        return visible;
+    public boolean isActive() {
+        return active;
     }
 
     /**

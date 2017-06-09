@@ -148,13 +148,13 @@ public class BasicRootNavigatorTest {
         navRoot.request( tagA );
 
         //if its in a stack then only show this fragment!
-        assertTrue( "navItemA is visible", navItemA.getVisible() );
-        assertFalse( "navItemB is invisible", navItemB.getVisible() );
+        assertTrue( "navItemA is visible", navItemA.isActive() );
+        assertFalse( "navItemB is invisible", navItemB.isActive() );
 
         navRoot.request( tagB );
 
-        assertFalse( "navItemA is invisible", navItemA.getVisible() );
-        assertTrue( "navItemB is visibile", navItemB.getVisible() );
+        assertFalse( "navItemA is invisible", navItemA.isActive() );
+        assertTrue( "navItemB is visibile", navItemB.isActive() );
     }
 
     @Test
@@ -173,19 +173,19 @@ public class BasicRootNavigatorTest {
         navRoot.request( tagC );
 
         //if its in a stack then only show this fragment!
-        assertTrue( "navItemA is visible", navItemC.getVisible() );
+        assertTrue( "navItemA is visible", navItemC.isActive() );
 
         Boolean wentBack = navRoot.goBack();
         assertTrue("able to go back", wentBack );
-        assertTrue( "navItemB is visible", navItemB.getVisible() );
-        assertFalse( "navItemC is invisible", navItemC.getVisible() );
-        assertFalse( "navItemA is invisible", navItemA.getVisible() );
+        assertTrue( "navItemB is visible", navItemB.isActive() );
+        assertFalse( "navItemC is invisible", navItemC.isActive() );
+        assertFalse( "navItemA is invisible", navItemA.isActive() );
 
         wentBack = navRoot.goBack();
         assertTrue("able to go back", wentBack );
-        assertFalse( "navItemB is ivisible", navItemB.getVisible() );
-        assertFalse( "navItemC is invisible", navItemC.getVisible() );
-        assertTrue( "navItemA is visible", navItemA.getVisible() );
+        assertFalse( "navItemB is ivisible", navItemB.isActive() );
+        assertFalse( "navItemC is invisible", navItemC.isActive() );
+        assertTrue( "navItemA is visible", navItemA.isActive() );
 
         wentBack = navRoot.goBack();
         assertFalse("navigation ended when false", wentBack );

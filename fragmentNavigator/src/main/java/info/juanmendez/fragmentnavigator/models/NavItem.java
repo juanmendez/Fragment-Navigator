@@ -32,11 +32,11 @@ public class NavItem implements NavNode {
 
             if( pos >= 0 && pos < len-1 ){
                 for( NavNode node: nodes ){
-                    node.setVisible( true );
+                    node.setActive( true );
                 }
             }else{
                 for( NavNode node: nodes ){
-                    node.setVisible( false );
+                    node.setActive( false );
                 }
             }
         });
@@ -120,12 +120,12 @@ public class NavItem implements NavNode {
     }
 
     @Override
-    public void setVisible(Boolean show) {
-        coreNavFragment.setVisible(show);
+    public void setActive(Boolean active) {
+        coreNavFragment.setVisible(active);
     }
 
     @Override
-    public boolean getVisible() {
+    public boolean isActive() {
         return coreNavFragment.getVisible();
     }
 }

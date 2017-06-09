@@ -24,6 +24,6 @@ public interface NavNode {
     void clear();
 
     //allow self node to display or hide
-    void setVisible( Boolean show);
-    boolean getVisible();
+    void setActive(Boolean active);
+    boolean isActive();
 }

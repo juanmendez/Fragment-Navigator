@@ -33,7 +33,15 @@ public class NavRoot implements NavNode {
 
     public void request( NavNode navNode ){
         if( navNode != null ){
-            history.add(navNode);
+
+            //going forward can mean also steping back to a previous navNode
+            if( history.contains( navNode )){
+                int pos = history.indexOf( navNode );
+                history = history.subList(0, pos+1);
+            }else{
+                history.add(navNode);
+            }
+
             publishSubject.onNext(NavUtils.getPathToNode(navNode));
         }
     }
@@ -120,16 +128,13 @@ public class NavRoot implements NavNode {
      */
     public boolean goBack(){
 
+        //we always go to the element before the last
         if( history.size() >= 2 ){
 
-            history.remove( history.size()-1 );
-
-            NavNode lastVisited = history.get( history.size()-1 );
-            publishSubject.onNext(NavUtils.getPathToNode(lastVisited));
+            request( history.get(history.size()-2));
             return true;
         }
 
         return false;
     }
-
 }

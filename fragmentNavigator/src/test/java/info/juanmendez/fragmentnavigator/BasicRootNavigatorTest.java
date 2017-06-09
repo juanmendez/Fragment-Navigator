@@ -3,6 +3,10 @@ package info.juanmendez.fragmentnavigator;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
 import info.juanmendez.fragmentnavigator.models.NavItem;
 import info.juanmendez.fragmentnavigator.models.NavNode;
@@ -182,9 +186,16 @@ public class BasicRootNavigatorTest {
         assertFalse( "navItemB is ivisible", navItemB.getVisible() );
         assertFalse( "navItemC is invisible", navItemC.getVisible() );
         assertTrue( "navItemA is visible", navItemA.getVisible() );
-        
+
         wentBack = navRoot.goBack();
         assertFalse("navigation ended when false", wentBack );
+    }
+
+    @Test
+    public void slideArrayList(){
+        List<String> strings = new ArrayList<>(Arrays.asList(new String[]{"a","b","c","d"}));
+        strings = strings.subList(0, 2);
+        assertEquals( "last is c", strings.get(strings.size()-1), "b"  );
     }
 
 }

@@ -101,7 +101,7 @@ public class BasicRootNavigatorTest {
 
     @Test
     public void shouldGetParentOfNode(){
-        /*NavNode parentNode = navigator.getRoot().searchParent( tagA );
+        /*NavNode parentNode = navigator.getRoot().search( tagA );
         assertEquals( "it's the same root node", parentNode, navigator.getRoot() );*/
 
         NavItem navItemA = NavItem.build(fragmentA);
@@ -120,7 +120,7 @@ public class BasicRootNavigatorTest {
 
         for( NavNode node: navigator.getNodes() ){
 
-            result = node.searchParent( tagC);
+            result = node.search( tagC);
 
             if( result != null ){
                 match = result;
@@ -142,16 +142,6 @@ public class BasicRootNavigatorTest {
 
         //lets go to first one!
         navigator.request( tagA );
-        navigator.asObservable().subscribe(s -> {
-
-
-            //if its in a stack then only show this fragment!
-            NavNode parent = navigator.searchParent(s);
-
-            if( parent instanceof NavStack ){
-                parent.displayChild(s);
-            }
-        });
 
         //if its in a stack then only show this fragment!
         assertTrue( "navItemA is visible", navItemA.getVisible() );
@@ -175,16 +165,6 @@ public class BasicRootNavigatorTest {
 
         navigator.applyNodes( NavStack.build(navItemA, navItemB, navItemC) );
 
-        navigator.asObservable().subscribe(s -> {
-
-            //if its in a stack then only show this fragment!
-            NavNode parent = navigator.searchParent(s);
-
-            if( parent != null )
-                parent.displayChild(s);
-        });
-
-
         //lets go to first one!
         navigator.request( tagA );
         navigator.request( tagB );
@@ -194,7 +174,7 @@ public class BasicRootNavigatorTest {
         assertTrue( "navItemA is visible", navItemC.getVisible() );
 
         //we are going back now...
-        NavNode parent = navigator.searchParent(tagC);
+        NavNode parent = navigator.search(tagC);
 
         Boolean wentBack = parent.goBack();
         assertTrue("able to go back", wentBack );
@@ -224,15 +204,6 @@ public class BasicRootNavigatorTest {
 
         navigator.applyNodes( NavStack.build( NavStack.build(navItemA,navItemB), NavStack.build(navItemC,navItemD)) );
 
-        navigator.asObservable().subscribe(s -> {
-            //if its in a stack then only show this fragment!
-            NavNode parent = navigator.searchParent(s);
-
-            if( parent != null )
-                parent.displayChild(s);
-        });
-
-
         NavStack navStack1 = (NavStack) navigator.getNodes().get(0).getNodes().get(0);
         NavStack navStack2 = (NavStack) navigator.getNodes().get(0).getNodes().get(1);
 
@@ -252,15 +223,6 @@ public class BasicRootNavigatorTest {
     @Test
     public void mockingRotatingDevice(){
         //so initially we have a list of fragments, but then they change to a stack..
-
-        navigator.asObservable().subscribe(s -> {
-            //if its in a stack then only show this fragment!
-            NavNode parent = navigator.searchParent(s);
-
-            if( parent != null )
-                parent.displayChild(s);
-        });
-
         NavItem navItemA = NavItem.build(fragmentA);
         NavItem navItemB = NavItem.build(fragmentB);
 

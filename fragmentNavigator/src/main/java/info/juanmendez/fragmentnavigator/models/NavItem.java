@@ -57,7 +57,7 @@ public class NavItem implements NavNode {
     }
 
     @Override
-    public NavNode searchParent(String tag) {
+    public NavNode search(String tag) {
 
         if( coreNavFragment.getTag().equals(tag))
             return this;
@@ -65,7 +65,7 @@ public class NavItem implements NavNode {
         NavNode nodeResult;
 
         for( NavNode node: nodes){
-            nodeResult = node.searchParent( tag );
+            nodeResult = node.search( tag );
 
             if( nodeResult != null ){
                 return nodeResult;
@@ -76,7 +76,7 @@ public class NavItem implements NavNode {
     }
 
     @Override
-    public NavNode searchParent(int id) {
+    public NavNode search(int id) {
 
         if( coreNavFragment.getId()==id)
             return this;
@@ -84,7 +84,7 @@ public class NavItem implements NavNode {
         NavNode nodeResult;
 
         for( NavNode node: nodes){
-            nodeResult = node.searchParent( id );
+            nodeResult = node.search( id );
 
             if( nodeResult != null ){
                 return nodeResult;

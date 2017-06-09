@@ -56,11 +56,11 @@ public class NavStack implements NavNode {
     }
 
     @Override
-    public NavNode searchParent(String tag) {
+    public NavNode search(String tag) {
         NavNode nodeResult;
 
         for( NavNode node: nodes){
-            nodeResult = node.searchParent( tag );
+            nodeResult = node.search( tag );
 
             if( nodeResult != null ){
                 if( nodeResult instanceof NavItem && nodes.contains( nodeResult ) ){
@@ -75,11 +75,11 @@ public class NavStack implements NavNode {
     }
 
     @Override
-    public NavNode searchParent(int id) {
+    public NavNode search(int id) {
         NavNode nodeResult;
 
         for( NavNode node: nodes){
-            nodeResult = node.searchParent( id );
+            nodeResult = node.search( id );
 
             if( nodeResult != null ){
                 if( nodeResult instanceof NavItem && nodes.contains( nodeResult ) ){

@@ -59,20 +59,20 @@ public class RootNavigator implements NavNode {
     }
 
     @Override
-    public NavNode searchParent(String tag) {
-        return root.searchParent( tag );
+    public NavNode search(String tag) {
+        return root.search( tag );
     }
 
     @Override
-    public NavNode searchParent(int id) {
-        return root.searchParent( id );
+    public NavNode search(int id) {
+        return root.search( id );
     }
 
     @Override
     public void clear() {
         root.clear();
     }
-    
+
     @Override
     public void setVisible(Boolean show) {
         root.setVisible(show);

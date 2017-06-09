@@ -26,6 +26,9 @@ public class NavStack implements NavNode {
         return navStack;
     }
 
+    public NavStack() {
+
+    }
 
     @Override
     public NavNode applyNodes(NavNode... nodes) {

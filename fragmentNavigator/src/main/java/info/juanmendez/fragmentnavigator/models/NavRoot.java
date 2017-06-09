@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import info.juanmendez.fragmentnavigator.utils.NavUtils;
 import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
 
@@ -19,13 +20,23 @@ public class NavRoot implements NavNode {
     Boolean visible = false;
     List<NavNode> nodes = new ArrayList<>();
 
-    private BehaviorSubject<String> publishSubject = BehaviorSubject.create();
+    private BehaviorSubject<List<NavNode>> publishSubject = BehaviorSubject.create();
 
     public void request(String requestedTag) {
-        publishSubject.onNext( requestedTag );
+        request(search( requestedTag ));
     }
 
-    public Observable<String> asObservable() {
+    public void request(int id) {
+        request(search( id ));
+    }
+
+    public void request( NavNode navNode ){
+        if( navNode != null ){
+            publishSubject.onNext(NavUtils.getPathToNode(navNode));
+        }
+    }
+
+    public Observable<List<NavNode>> asObservable() {
         return publishSubject.hide();
     }
 

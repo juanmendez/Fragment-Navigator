@@ -77,17 +77,6 @@ public class NavRoot implements NavNode {
         nodes.clear();
     }
 
-    @Override
-    public void displayChild(String tag) {
-    }
-
-    @Override
-    public void displayChild(int id) {
-
-    }
-
-    @Override
-    public void displayChild(NavNode node) {}
 
     @Override
     public void setVisible(Boolean show) {

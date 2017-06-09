@@ -100,18 +100,6 @@ public class NavItem implements NavNode {
     }
 
     @Override
-    public void displayChild(String tag) {
-    }
-
-    @Override
-    public void displayChild(int id) {
-    }
-
-    @Override
-    public void displayChild(NavNode node) {
-    }
-
-    @Override
     public void setVisible(Boolean show) {
         coreNavFragment.setVisible(show);
     }

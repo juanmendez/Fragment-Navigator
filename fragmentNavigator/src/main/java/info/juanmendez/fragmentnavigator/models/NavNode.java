@@ -23,11 +23,6 @@ public interface NavNode {
 
     void clear();
 
-    //displayChild a child by its tag, id, or self reference
-    void displayChild(String tag);
-    void displayChild(int id);
-    void displayChild(NavNode node );
-
     //allow self node to display or hide
     void setVisible( Boolean show);
     boolean getVisible();

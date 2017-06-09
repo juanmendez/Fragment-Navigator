@@ -101,68 +101,6 @@ public class NavStack implements NavNode {
 
 
     @Override
-    public void displayChild(String tag) {
-
-        NavItem navItem;
-        NavStack navStack;
-
-        for( NavNode node: nodes){
-
-            if( node instanceof NavItem ){
-                navItem = (NavItem) node;
-
-               if(  navItem.getCoreNavFragment().getTag().equals(tag) ){
-                    navItem.setVisible(true);
-                    history.add( navItem );
-               }else{
-                   navItem.setVisible(false);
-               }
-            }
-        }
-
-    }
-
-    @Override
-    public void displayChild(int id) {
-
-        NavItem navItem;
-        NavStack navStack;
-
-        for( NavNode node: nodes){
-
-            if( node instanceof NavItem ){
-                navItem = (NavItem) node;
-
-                if(  navItem.getCoreNavFragment().getId() == id ){
-                    history.add( navItem );
-                    navItem.setVisible(true);
-                }else{
-                    navItem.setVisible(false);
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void displayChild(NavNode targetNode) {
-        Boolean childFound = false;
-
-        for( NavNode node: nodes){
-
-            if( node == targetNode){
-                childFound = true;
-                history.add( node );
-                node.setVisible(true);
-            }else{
-                node.setVisible(false);
-            }
-        }
-
-        setVisible(childFound);
-    }
-
-    @Override
     public void setVisible(Boolean show) {
         visible = show;
         parentNode.setVisible(show);

@@ -72,18 +72,7 @@ public class RootNavigator implements NavNode {
     public void clear() {
         root.clear();
     }
-
-    @Override
-    public void displayChild(String tag) {
-    }
-
-    @Override
-    public void displayChild(int id) {
-    }
-
-    @Override
-    public void displayChild(NavNode node) {}
-
+    
     @Override
     public void setVisible(Boolean show) {
         root.setVisible(show);

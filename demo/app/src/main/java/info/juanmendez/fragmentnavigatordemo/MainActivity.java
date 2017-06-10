@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
             navRoot.applyNodes( NavItem.build(navA), NavItem.build(navB), NavItem.build(navC) );
         }else{
             navRoot.applyNodes(NavStack.build(NavItem.build(navA), NavItem.build(navB), NavItem.build(navC) ));
-            navRoot.request( "A" );
         }
     }
 

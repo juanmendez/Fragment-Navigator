@@ -20,7 +20,6 @@ public class NavFragment implements CoreNavFragment {
         this.fragment = fragment;
     }
 
-
     @Override
     public String getTag() {
         return fragment.getTag();

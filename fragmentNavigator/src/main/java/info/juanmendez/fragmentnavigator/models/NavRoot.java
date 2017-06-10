@@ -6,7 +6,7 @@ import java.util.List;
 
 import info.juanmendez.fragmentnavigator.utils.NavUtils;
 import io.reactivex.Observable;
-import io.reactivex.subjects.BehaviorSubject;
+import io.reactivex.subjects.PublishSubject;
 
 /**
  * Created by Juan Mendez on 6/7/2017.
@@ -19,7 +19,7 @@ public class NavRoot implements NavNode {
     List<NavNode> nodes = new ArrayList<>();
     List<NavNode> history = new ArrayList<>();
 
-    private BehaviorSubject<List<NavNode>> publishSubject = BehaviorSubject.create();
+    private PublishSubject<List<NavNode>> publishSubject = PublishSubject.create();
 
     public void request(String requestedTag) {
         request(search( requestedTag ));

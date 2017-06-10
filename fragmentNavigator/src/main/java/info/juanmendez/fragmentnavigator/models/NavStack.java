@@ -51,7 +51,7 @@ public class NavStack implements NavNode {
         //by default first fragment is active
         for( NavNode node: nodes ){
             node.setParent(this);
-            node.setActive( this.nodes.indexOf(node) == 0 );
+            node.setActive(false);
         }
 
         return this;

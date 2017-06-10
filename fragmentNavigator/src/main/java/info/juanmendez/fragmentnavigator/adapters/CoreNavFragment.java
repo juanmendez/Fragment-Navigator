@@ -9,6 +9,6 @@ package info.juanmendez.fragmentnavigator.adapters;
 public interface CoreNavFragment {
     String getTag();
     int getId();
-    void setVisible( Boolean show);
-    boolean getVisible();
+    void setActive(Boolean active);
+    boolean isActive();
 }

@@ -30,12 +30,12 @@ public class TestCoreNavFragment implements CoreNavFragment {
     }
 
     @Override
-    public void setVisible(Boolean show) {
+    public void setActive(Boolean show) {
         visible = show;
     }
 
     @Override
-    public boolean getVisible() {
+    public boolean isActive() {
         return visible;
     }
 

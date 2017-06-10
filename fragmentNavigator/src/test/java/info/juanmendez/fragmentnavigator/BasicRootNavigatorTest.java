@@ -198,4 +198,74 @@ public class BasicRootNavigatorTest {
         assertEquals( "last is c", strings.get(strings.size()-1), "b"  );
     }
 
+
+    @Test
+    public void shouldStackOfStacksGoForward(){
+        navRoot.clear();
+
+        NavItem navItemA = NavItem.build(fragmentA);
+        NavItem navItemB = NavItem.build(fragmentB);
+        NavItem navItemC = NavItem.build(fragmentC);
+        NavItem navItemD = NavItem.build( fragmentD );
+
+        navRoot.applyNodes( NavStack.build( NavStack.build(navItemA,navItemB), NavStack.build(navItemC,navItemD)) );
+
+        NavStack navStack1 = (NavStack) navRoot.getNodes().get(0).getNodes().get(0);
+        NavStack navStack2 = (NavStack) navRoot.getNodes().get(0).getNodes().get(1);
+
+        navRoot.request( tagA );
+
+        assertTrue( "first stack displayed", navStack1.isActive() );
+        assertFalse( "second stack hides", navStack2.isActive() );
+
+
+        navRoot.request( tagC );
+
+        assertFalse( "first stack hides", navStack1.isActive() );
+        assertTrue( "second stack displayed", navStack2.isActive() );
+    }
+
+
+    @Test
+    public void mockingRotatingDevice(){
+        //so initially we have a list of fragments, but then they change to a stack..
+        NavItem navItemA = NavItem.build(fragmentA);
+        NavItem navItemB = NavItem.build(fragmentB);
+
+        navRoot.applyNodes( navItemA, navItemB );
+
+        assertTrue( "visible", navItemA.isActive() );
+        assertTrue( "visible", navItemB.isActive() );
+
+        //ok,, now we rotate and we have a stack of fragments
+        navRoot.applyNodes( NavStack.build(navItemA, navItemB));
+        navRoot.request( tagA );
+        assertTrue( "visible", navItemA.isActive() );
+        assertFalse( "visible", navItemB.isActive() );
+
+        //lets go to fragmentB
+        navRoot.request( tagB );
+
+        assertFalse( "visible a", navItemA.isActive() );
+        assertTrue( "invisible b", navItemB.isActive() );
+
+        //lets rotate again
+        navRoot.applyNodes( navItemA, navItemB );
+
+        assertTrue( "visible", navItemA.isActive() );
+        assertTrue( "visible", navItemB.isActive() );
+
+        //ok,, now we rotate and we have a stack of fragments
+        navRoot.applyNodes( NavStack.build(navItemA, navItemB));
+        navRoot.request( tagB );
+        assertFalse( "visible", navItemA.isActive() );
+        assertTrue( "visible", navItemB.isActive() );
+
+        navRoot.goBack();
+
+        assertTrue( "visible", navItemA.isActive() );
+        assertFalse( "visible", navItemB.isActive() );
+
+    }
+
 }

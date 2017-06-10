@@ -57,6 +57,7 @@ public class NavItem implements NavNode {
 
         for( NavNode node: nodes ){
             node.setParent(this);
+            node.setActive(true);
         }
 
         return this;
@@ -121,11 +122,11 @@ public class NavItem implements NavNode {
 
     @Override
     public void setActive(Boolean active) {
-        coreNavFragment.setVisible(active);
+        coreNavFragment.setActive(active);
     }
 
     @Override
     public boolean isActive() {
-        return coreNavFragment.getVisible();
+        return coreNavFragment.isActive();
     }
 }

@@ -12,7 +12,6 @@ public class FragmentNav {
 
     private static NavRoot navRoot;
 
-
     public static NavRoot getNavRoot() {
         return navRoot;
     }

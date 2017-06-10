@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.RootNavigator;
+import info.juanmendez.fragmentnavigator.FragmentNav;
 import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
 
 /**
@@ -26,7 +26,7 @@ public class NavItem implements NavNode {
 
     public NavItem() {
 
-        RootNavigator.getNavRoot().asObservable().subscribe(navNodes -> {
+        FragmentNav.getNavRoot().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 

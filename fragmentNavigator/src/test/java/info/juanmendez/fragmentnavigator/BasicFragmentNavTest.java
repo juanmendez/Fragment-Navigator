@@ -27,7 +27,7 @@ import static junit.framework.Assert.assertTrue;
  * contact@juanmendez.info
  */
 
-public class BasicRootNavigatorTest {
+public class BasicFragmentNavTest {
 
     String tagA = "fragmentA";
     String tagB = "fragmentB";
@@ -48,7 +48,7 @@ public class BasicRootNavigatorTest {
     @Before
     public void before(){
         navRoot = new NavRoot();
-        RootNavigator.setNavRoot( navRoot );
+        FragmentNav.setNavRoot( navRoot );
         fragmentA = new TestCoreNavFragment(tagA);
         fragmentB = new TestCoreNavFragment(tagB);
         fragmentC = new TestCoreNavFragment(tagC);

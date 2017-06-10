@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.RootNavigator;
+import info.juanmendez.fragmentnavigator.FragmentNav;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
@@ -29,7 +29,7 @@ public class NavStack implements NavNode {
 
     public NavStack() {
 
-        RootNavigator.getNavRoot().asObservable().subscribe(navNodes -> {
+        FragmentNav.getNavRoot().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 

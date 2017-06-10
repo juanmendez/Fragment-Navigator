@@ -8,7 +8,7 @@ import info.juanmendez.fragmentnavigator.models.NavRoot;
  * contact@juanmendez.info
  */
 
-public class RootNavigator{
+public class FragmentNav {
 
     private static NavRoot navRoot;
 
@@ -18,6 +18,6 @@ public class RootNavigator{
     }
 
     public static void setNavRoot(NavRoot navRoot) {
-        RootNavigator.navRoot = navRoot;
+        FragmentNav.navRoot = navRoot;
     }
 }

@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 
-import info.juanmendez.fragmentnavigator.RootNavigator;
+import info.juanmendez.fragmentnavigator.FragmentNav;
 import info.juanmendez.fragmentnavigator.models.NavItem;
 import info.juanmendez.fragmentnavigator.models.NavRoot;
 import info.juanmendez.fragmentnavigator.models.NavStack;
@@ -18,17 +18,18 @@ public class MainActivity extends AppCompatActivity {
     @AfterViews
     public void afterViews(){
 
+        NavRoot navRoot = new NavRoot();
+        FragmentNav.setNavRoot( navRoot );
+
         NavFragment navA = new NavFragment(includeFragment( "A", R.id.layoutA ) );
         NavFragment navB = new NavFragment(includeFragment( "B", R.id.layoutB ) );
         NavFragment navC = new NavFragment(includeFragment( "C", R.id.layoutC ) );
-
-        NavRoot navRoot = new NavRoot();
-        RootNavigator.setNavRoot( navRoot );
 
         if( usesPane() ){
             navRoot.applyNodes( NavItem.build(navA), NavItem.build(navB), NavItem.build(navC) );
         }else{
             navRoot.applyNodes(NavStack.build(NavItem.build(navA), NavItem.build(navB), NavItem.build(navC) ));
+            navRoot.request( "A" );
         }
     }
 
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (!RootNavigator.getNavRoot().goBack()) {
+        if (!FragmentNav.getNavRoot().goBack()) {
             super.onBackPressed();
         }
     }

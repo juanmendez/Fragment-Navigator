@@ -11,7 +11,7 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.FragmentArg;
 import org.androidannotations.annotations.ViewById;
 
-import info.juanmendez.fragmentnavigator.RootNavigator;
+import info.juanmendez.fragmentnavigator.FragmentNav;
 
 
 /**
@@ -44,17 +44,17 @@ public class FragmentLetter extends Fragment {
 
     @Click
     void requestA(){
-        RootNavigator.getNavRoot().request( "A" );
+        FragmentNav.getNavRoot().request( "A" );
     }
 
     @Click
     void requestB(){
-        RootNavigator.getNavRoot().request( "B" );
+        FragmentNav.getNavRoot().request( "B" );
     }
 
     @Click
     void requestC(){
-        RootNavigator.getNavRoot().request( "C" );
+        FragmentNav.getNavRoot().request( "C" );
     }
 
 }

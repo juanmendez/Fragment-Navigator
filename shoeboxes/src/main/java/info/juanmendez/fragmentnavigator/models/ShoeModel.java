@@ -19,7 +19,6 @@ public interface ShoeModel {
 
     //search nodes by tag or id
     ShoeModel search(String tag);
-    ShoeModel search(int id );
 
     void clear();
 

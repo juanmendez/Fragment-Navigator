@@ -19,6 +19,12 @@ public class ShoeFlow implements ShoeModel {
     Boolean active = false;
     List<ShoeModel> nodes = new ArrayList<>();
 
+    public static ShoeFlow build(ShoeModel... childNodeArray){
+        ShoeFlow flow =  new ShoeFlow();
+        flow.applyNodes( childNodeArray );
+        return flow;
+    }
+
     public ShoeFlow() {
 
         ShoeStorage.getShoeRack().asObservable().subscribe(navNodes -> {
@@ -70,22 +76,6 @@ public class ShoeFlow implements ShoeModel {
 
         for( ShoeModel node: nodes){
             nodeResult = node.search( tag );
-
-            if( nodeResult != null ){
-                return nodeResult;
-            }
-        }
-
-        return null;
-    }
-
-    @Override
-    public ShoeModel search(int id) {
-
-        ShoeModel nodeResult;
-
-        for( ShoeModel node: nodes){
-            nodeResult = node.search( id );
 
             if( nodeResult != null ){
                 return nodeResult;

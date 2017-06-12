@@ -95,26 +95,7 @@ public class ShoeBox implements ShoeModel {
 
         return null;
     }
-
-    @Override
-    public ShoeModel search(int id) {
-
-        if( shoeFragment.getId()==id)
-            return this;
-
-        ShoeModel nodeResult;
-
-        for( ShoeModel node: nodes){
-            nodeResult = node.search( id );
-
-            if( nodeResult != null ){
-                return nodeResult;
-            }
-        }
-
-        return null;
-    }
-
+    
     @Override
     public void clear() {
         nodes.clear();

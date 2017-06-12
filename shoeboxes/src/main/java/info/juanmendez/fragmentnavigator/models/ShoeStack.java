@@ -87,25 +87,6 @@ public class ShoeStack implements ShoeModel {
     }
 
     @Override
-    public ShoeModel search(int id) {
-        ShoeModel nodeResult;
-
-        for( ShoeModel node: nodes){
-            nodeResult = node.search( id );
-
-            if( nodeResult != null ){
-                if( nodeResult instanceof ShoeBox && nodes.contains( nodeResult ) ){
-                    return this;
-                }else{
-                    return nodeResult;
-                }
-            }
-        }
-
-        return null;
-    }
-
-    @Override
     public void clear() {
         nodes.clear();
     }

@@ -9,6 +9,7 @@ import java.util.List;
 
 import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
 import info.juanmendez.fragmentnavigator.models.ShoeBox;
+import info.juanmendez.fragmentnavigator.models.ShoeFlow;
 import info.juanmendez.fragmentnavigator.models.ShoeModel;
 import info.juanmendez.fragmentnavigator.models.ShoeStack;
 import info.juanmendez.fragmentnavigator.models.ShoeRack;
@@ -116,7 +117,7 @@ public class BasicShoeStorageTest {
         ShoeBox shoeBoxD = ShoeBox.build(fragmentD);
 
         shoeRack.clear();
-        shoeRack.applyNodes(shoeBoxA, shoeBoxB.applyNodes(shoeBoxC, shoeBoxD) );
+        shoeRack.applyNodes(shoeBoxA, shoeBoxB.applyNodes(shoeBoxC, shoeBoxD ));
 
 
         ShoeModel result;
@@ -189,6 +190,41 @@ public class BasicShoeStorageTest {
 
         wentBack = shoeRack.goBack();
         assertFalse("navigation ended when false", wentBack );
+    }
+
+
+    @Test
+    public void shouldFlowGoBack(){
+        shoeRack.clear();
+
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack.applyNodes( ShoeFlow.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+
+        //lets go to first one!
+        shoeRack.request( tagA );
+        shoeRack.request( tagB );
+        shoeRack.request( tagC );
+
+        //if its in a stack then only show this fragment!
+        assertTrue( "shoeBoxA is visible", shoeBoxC.isActive() );
+
+        //Boolean wentBack = shoeRack.goBack();
+        //assertFalse("able to go back", wentBack );
+        /*assertTrue( "shoeBoxB is visible", shoeBoxB.isActive() );
+        assertTrue( "shoeBoxC is invisible", shoeBoxC.isActive() );
+        assertTrue( "shoeBoxA is invisible", shoeBoxA.isActive() );
+
+        wentBack = shoeRack.goBack();
+        assertTrue("able to go back", wentBack );
+        assertFalse( "shoeBoxB is ivisible", shoeBoxB.isActive() );
+        assertFalse( "shoeBoxC is invisible", shoeBoxC.isActive() );
+        assertTrue( "shoeBoxA is visible", shoeBoxA.isActive() );
+
+        wentBack = shoeRack.goBack();
+        assertFalse("navigation ended when false", wentBack );*/
     }
 
     @Test
@@ -265,7 +301,6 @@ public class BasicShoeStorageTest {
 
         assertTrue( "visible", shoeBoxA.isActive() );
         assertFalse( "visible", shoeBoxB.isActive() );
-
     }
 
 }

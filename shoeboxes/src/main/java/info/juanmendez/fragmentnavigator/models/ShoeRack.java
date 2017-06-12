@@ -21,12 +21,12 @@ public class ShoeRack implements ShoeModel {
 
     private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
 
-    public void request(String requestedTag) {
-        request(search( requestedTag ));
+    public void request( int requestId ){
+        request( Integer.toString( requestId) );
     }
 
-    public void request(int id) {
-        request(search( id ));
+    public void request(String requestedTag) {
+        request(search( requestedTag ));
     }
 
     public void request( ShoeModel shoeModel){
@@ -46,6 +46,10 @@ public class ShoeRack implements ShoeModel {
 
     public Observable<List<ShoeModel>> asObservable() {
         return publishSubject.hide();
+    }
+
+    public List<ShoeModel> getHistory() {
+        return history;
     }
 
     @Override
@@ -80,21 +84,6 @@ public class ShoeRack implements ShoeModel {
 
         for( ShoeModel node: nodes){
             nodeResult = node.search( tag );
-
-            if( nodeResult != null ){
-                return nodeResult;
-            }
-        }
-
-        return null;
-    }
-
-    @Override
-    public ShoeModel search(int id) {
-        ShoeModel nodeResult;
-
-        for( ShoeModel node: nodes){
-            nodeResult = node.search( id );
 
             if( nodeResult != null ){
                 return nodeResult;

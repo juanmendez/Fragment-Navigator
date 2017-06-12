@@ -1,3 +1,3 @@
 include ':app'
-include 'fragmentNavigator'
-project(':fragmentNavigator').projectDir = new File(settingsDir, '../fragmentNavigator')
+include 'shoeboxes'
+project(':shoeboxes').projectDir = new File(settingsDir, '../shoeboxes')

@@ -21,7 +21,7 @@ public class ShoeFlow implements ShoeModel {
 
     public ShoeFlow() {
 
-        ShoeStore.getShoeContainer().asObservable().subscribe(navNodes -> {
+        ShoeStore.getShoeRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 

@@ -1,6 +1,6 @@
 package info.juanmendez.fragmentnavigator;
 
-import info.juanmendez.fragmentnavigator.models.ShoeContainer;
+import info.juanmendez.fragmentnavigator.models.ShoeRack;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
@@ -10,13 +10,13 @@ import info.juanmendez.fragmentnavigator.models.ShoeContainer;
 
 public class ShoeStore {
 
-    private static ShoeContainer shoeContainer;
+    private static ShoeRack shoeRack;
 
-    public static ShoeContainer getShoeContainer() {
-        return shoeContainer;
+    public static ShoeRack getShoeRack() {
+        return shoeRack;
     }
 
-    public static void setShoeContainer(ShoeContainer shoeContainer) {
-        ShoeStore.shoeContainer = shoeContainer;
+    public static void setShoeRack(ShoeRack shoeRack) {
+        ShoeStore.shoeRack = shoeRack;
     }
 }

@@ -13,7 +13,7 @@ import io.reactivex.subjects.PublishSubject;
  * www.juanmendez.info
  * contact@juanmendez.info
  */
-public class ShoeContainer implements ShoeModel {
+public class ShoeRack implements ShoeModel {
 
     Boolean active = true;
     List<ShoeModel> nodes = new ArrayList<>();

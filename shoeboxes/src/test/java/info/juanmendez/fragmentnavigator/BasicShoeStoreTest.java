@@ -11,7 +11,7 @@ import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
 import info.juanmendez.fragmentnavigator.models.ShoeBox;
 import info.juanmendez.fragmentnavigator.models.ShoeModel;
 import info.juanmendez.fragmentnavigator.models.ShoeStack;
-import info.juanmendez.fragmentnavigator.models.ShoeContainer;
+import info.juanmendez.fragmentnavigator.models.ShoeRack;
 import info.juanmendez.fragmentnavigator.models.TestShoeFragment;
 import info.juanmendez.fragmentnavigator.models.TestShoeFragmentManager;
 
@@ -43,12 +43,12 @@ public class BasicShoeStoreTest {
     ShoeFragment fragmentD;
     ShoeFragment fragmentE;
     ShoeFragment fragmentF;
-    ShoeContainer shoeContainer;
+    ShoeRack shoeRack;
 
     @Before
     public void before(){
-        shoeContainer = new ShoeContainer();
-        ShoeStore.setShoeContainer(shoeContainer);
+        shoeRack = new ShoeRack();
+        ShoeStore.setShoeRack(shoeRack);
         fragmentA = new TestShoeFragment(tagA);
         fragmentB = new TestShoeFragment(tagB);
         fragmentC = new TestShoeFragment(tagC);
@@ -92,12 +92,12 @@ public class BasicShoeStoreTest {
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
         //lets draw the fragments
-        shoeContainer.applyNodes(shoeBoxA, shoeBoxB);
+        shoeRack.applyNodes(shoeBoxA, shoeBoxB);
 
         //so we are going to build a dual pane...
-        shoeContainer.request( tagA );
+        shoeRack.request( tagA );
 
-        shoeContainer.asObservable().subscribe(navItems -> {
+        shoeRack.asObservable().subscribe(navItems -> {
             assertEquals( "tag is A", navItems.get(navItems.size()-1), shoeBoxA);
         });
     }
@@ -115,14 +115,14 @@ public class BasicShoeStoreTest {
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
         ShoeBox shoeBoxD = ShoeBox.build(fragmentD);
 
-        shoeContainer.clear();
-        shoeContainer.applyNodes(shoeBoxA, shoeBoxB.applyNodes(shoeBoxC, shoeBoxD) );
+        shoeRack.clear();
+        shoeRack.applyNodes(shoeBoxA, shoeBoxB.applyNodes(shoeBoxC, shoeBoxD) );
 
 
         ShoeModel result;
         ShoeModel match = null;
 
-        for( ShoeModel node: shoeContainer.getNodes() ){
+        for( ShoeModel node: shoeRack.getNodes() ){
 
             result = node.search( tagC);
 
@@ -137,21 +137,21 @@ public class BasicShoeStoreTest {
 
     @Test
     public void shouldStackGoForward(){
-        shoeContainer.clear();
+        shoeRack.clear();
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
-        shoeContainer.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB) );
+        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB) );
 
         //lets go to first one!
-        shoeContainer.request( tagA );
+        shoeRack.request( tagA );
 
         //if its in a stack then only show this fragment!
         assertTrue( "shoeBoxA is visible", shoeBoxA.isActive() );
         assertFalse( "shoeBoxB is invisible", shoeBoxB.isActive() );
 
-        shoeContainer.request( tagB );
+        shoeRack.request( tagB );
 
         assertFalse( "shoeBoxA is invisible", shoeBoxA.isActive() );
         assertTrue( "shoeBoxB is visibile", shoeBoxB.isActive() );
@@ -159,35 +159,35 @@ public class BasicShoeStoreTest {
 
     @Test
     public void shouldStackGoBack(){
-        shoeContainer.clear();
+        shoeRack.clear();
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
-        shoeContainer.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
 
         //lets go to first one!
-        shoeContainer.request( tagA );
-        shoeContainer.request( tagB );
-        shoeContainer.request( tagC );
+        shoeRack.request( tagA );
+        shoeRack.request( tagB );
+        shoeRack.request( tagC );
 
         //if its in a stack then only show this fragment!
         assertTrue( "shoeBoxA is visible", shoeBoxC.isActive() );
 
-        Boolean wentBack = shoeContainer.goBack();
+        Boolean wentBack = shoeRack.goBack();
         assertTrue("able to go back", wentBack );
         assertTrue( "shoeBoxB is visible", shoeBoxB.isActive() );
         assertFalse( "shoeBoxC is invisible", shoeBoxC.isActive() );
         assertFalse( "shoeBoxA is invisible", shoeBoxA.isActive() );
 
-        wentBack = shoeContainer.goBack();
+        wentBack = shoeRack.goBack();
         assertTrue("able to go back", wentBack );
         assertFalse( "shoeBoxB is ivisible", shoeBoxB.isActive() );
         assertFalse( "shoeBoxC is invisible", shoeBoxC.isActive() );
         assertTrue( "shoeBoxA is visible", shoeBoxA.isActive() );
 
-        wentBack = shoeContainer.goBack();
+        wentBack = shoeRack.goBack();
         assertFalse("navigation ended when false", wentBack );
     }
 
@@ -201,25 +201,25 @@ public class BasicShoeStoreTest {
 
     @Test
     public void shouldStackOfStacksGoForward(){
-        shoeContainer.clear();
+        shoeRack.clear();
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
         ShoeBox shoeBoxD = ShoeBox.build( fragmentD );
 
-        shoeContainer.applyNodes( ShoeStack.build( ShoeStack.build(shoeBoxA, shoeBoxB), ShoeStack.build(shoeBoxC, shoeBoxD)) );
+        shoeRack.applyNodes( ShoeStack.build( ShoeStack.build(shoeBoxA, shoeBoxB), ShoeStack.build(shoeBoxC, shoeBoxD)) );
 
-        ShoeStack shoeStack1 = (ShoeStack) shoeContainer.getNodes().get(0).getNodes().get(0);
-        ShoeStack shoeStack2 = (ShoeStack) shoeContainer.getNodes().get(0).getNodes().get(1);
+        ShoeStack shoeStack1 = (ShoeStack) shoeRack.getNodes().get(0).getNodes().get(0);
+        ShoeStack shoeStack2 = (ShoeStack) shoeRack.getNodes().get(0).getNodes().get(1);
 
-        shoeContainer.request( tagA );
+        shoeRack.request( tagA );
 
         assertTrue( "first stack displayed", shoeStack1.isActive() );
         assertFalse( "second stack hides", shoeStack2.isActive() );
 
 
-        shoeContainer.request( tagC );
+        shoeRack.request( tagC );
 
         assertFalse( "first stack hides", shoeStack1.isActive() );
         assertTrue( "second stack displayed", shoeStack2.isActive() );
@@ -232,36 +232,36 @@ public class BasicShoeStoreTest {
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
-        shoeContainer.applyNodes(shoeBoxA, shoeBoxB);
+        shoeRack.applyNodes(shoeBoxA, shoeBoxB);
 
         assertTrue( "visible", shoeBoxA.isActive() );
         assertTrue( "visible", shoeBoxB.isActive() );
 
         //ok,, now we rotate and we have a stack of fragments
-        shoeContainer.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
-        shoeContainer.request( tagA );
+        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
+        shoeRack.request( tagA );
         assertTrue( "visible", shoeBoxA.isActive() );
         assertFalse( "visible", shoeBoxB.isActive() );
 
         //lets go to fragmentB
-        shoeContainer.request( tagB );
+        shoeRack.request( tagB );
 
         assertFalse( "visible a", shoeBoxA.isActive() );
         assertTrue( "invisible b", shoeBoxB.isActive() );
 
         //lets rotate again
-        shoeContainer.applyNodes(shoeBoxA, shoeBoxB);
+        shoeRack.applyNodes(shoeBoxA, shoeBoxB);
 
         assertTrue( "visible", shoeBoxA.isActive() );
         assertTrue( "visible", shoeBoxB.isActive() );
 
         //ok,, now we rotate and we have a stack of fragments
-        shoeContainer.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
-        shoeContainer.request( tagB );
+        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
+        shoeRack.request( tagB );
         assertFalse( "visible", shoeBoxA.isActive() );
         assertTrue( "visible", shoeBoxB.isActive() );
 
-        shoeContainer.goBack();
+        shoeRack.goBack();
 
         assertTrue( "visible", shoeBoxA.isActive() );
         assertFalse( "visible", shoeBoxB.isActive() );

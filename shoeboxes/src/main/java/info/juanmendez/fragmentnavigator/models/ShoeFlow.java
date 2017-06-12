@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.ShoeStore;
+import info.juanmendez.fragmentnavigator.ShoeStorage;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
@@ -21,7 +21,7 @@ public class ShoeFlow implements ShoeModel {
 
     public ShoeFlow() {
 
-        ShoeStore.getShoeRack().asObservable().subscribe(navNodes -> {
+        ShoeStorage.getShoeRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 

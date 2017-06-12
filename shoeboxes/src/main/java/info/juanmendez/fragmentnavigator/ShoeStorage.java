@@ -8,7 +8,7 @@ import info.juanmendez.fragmentnavigator.models.ShoeRack;
  * contact@juanmendez.info
  */
 
-public class ShoeStore {
+public class ShoeStorage {
 
     private static ShoeRack shoeRack;
 
@@ -17,6 +17,6 @@ public class ShoeStore {
     }
 
     public static void setShoeRack(ShoeRack shoeRack) {
-        ShoeStore.shoeRack = shoeRack;
+        ShoeStorage.shoeRack = shoeRack;
     }
 }

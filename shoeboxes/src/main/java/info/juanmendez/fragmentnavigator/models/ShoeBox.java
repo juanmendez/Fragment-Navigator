@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.ShoeStore;
+import info.juanmendez.fragmentnavigator.ShoeStorage;
 import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
 
 /**
@@ -26,7 +26,7 @@ public class ShoeBox implements ShoeModel {
 
     public ShoeBox() {
 
-        ShoeStore.getShoeRack().asObservable().subscribe(navNodes -> {
+        ShoeStorage.getShoeRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 

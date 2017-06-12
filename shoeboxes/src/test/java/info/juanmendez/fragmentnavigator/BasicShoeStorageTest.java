@@ -27,7 +27,7 @@ import static junit.framework.Assert.assertTrue;
  * contact@juanmendez.info
  */
 
-public class BasicShoeStoreTest {
+public class BasicShoeStorageTest {
 
     String tagA = "fragmentA";
     String tagB = "fragmentB";
@@ -48,7 +48,7 @@ public class BasicShoeStoreTest {
     @Before
     public void before(){
         shoeRack = new ShoeRack();
-        ShoeStore.setShoeRack(shoeRack);
+        ShoeStorage.setShoeRack(shoeRack);
         fragmentA = new TestShoeFragment(tagA);
         fragmentB = new TestShoeFragment(tagB);
         fragmentC = new TestShoeFragment(tagC);

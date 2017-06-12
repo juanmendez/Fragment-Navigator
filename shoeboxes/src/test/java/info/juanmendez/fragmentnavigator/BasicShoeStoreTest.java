@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
-import info.juanmendez.fragmentnavigator.models.NavItem;
-import info.juanmendez.fragmentnavigator.models.NavNode;
-import info.juanmendez.fragmentnavigator.models.NavRoot;
-import info.juanmendez.fragmentnavigator.models.NavStack;
-import info.juanmendez.fragmentnavigator.models.TestCoreNavFragment;
-import info.juanmendez.fragmentnavigator.models.TestCoreNavFragmentManager;
+import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
+import info.juanmendez.fragmentnavigator.models.ShoeBox;
+import info.juanmendez.fragmentnavigator.models.ShoeModel;
+import info.juanmendez.fragmentnavigator.models.ShoeStack;
+import info.juanmendez.fragmentnavigator.models.ShoeContainer;
+import info.juanmendez.fragmentnavigator.models.TestShoeFragment;
+import info.juanmendez.fragmentnavigator.models.TestShoeFragmentManager;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
@@ -36,35 +36,35 @@ public class BasicShoeStoreTest {
     String tagE = "fragmentE";
     String tagF = "fragmentF";
 
-    TestCoreNavFragmentManager fragmentManagerShadow;
-    CoreNavFragment fragmentA;
-    CoreNavFragment fragmentB;
-    CoreNavFragment fragmentC;
-    CoreNavFragment fragmentD;
-    CoreNavFragment fragmentE;
-    CoreNavFragment fragmentF;
-    NavRoot navRoot;
+    TestShoeFragmentManager fragmentManagerShadow;
+    ShoeFragment fragmentA;
+    ShoeFragment fragmentB;
+    ShoeFragment fragmentC;
+    ShoeFragment fragmentD;
+    ShoeFragment fragmentE;
+    ShoeFragment fragmentF;
+    ShoeContainer shoeContainer;
 
     @Before
     public void before(){
-        navRoot = new NavRoot();
-        ShoeStore.setNavRoot( navRoot );
-        fragmentA = new TestCoreNavFragment(tagA);
-        fragmentB = new TestCoreNavFragment(tagB);
-        fragmentC = new TestCoreNavFragment(tagC);
-        fragmentD = new TestCoreNavFragment(tagD);
-        fragmentE = new TestCoreNavFragment(tagE);
-        fragmentF = new TestCoreNavFragment(tagF);
-        fragmentManagerShadow = new TestCoreNavFragmentManager();
+        shoeContainer = new ShoeContainer();
+        ShoeStore.setShoeContainer(shoeContainer);
+        fragmentA = new TestShoeFragment(tagA);
+        fragmentB = new TestShoeFragment(tagB);
+        fragmentC = new TestShoeFragment(tagC);
+        fragmentD = new TestShoeFragment(tagD);
+        fragmentE = new TestShoeFragment(tagE);
+        fragmentF = new TestShoeFragment(tagF);
+        fragmentManagerShadow = new TestShoeFragmentManager();
     }
 
 
     @Test
     public void shouldBuildFragmentNode(){
 
-        NavItem right = new NavItem(fragmentA);
-        NavItem left = new NavItem(fragmentB);
-        NavStack root = NavStack.build( right, left );
+        ShoeBox right = new ShoeBox(fragmentA);
+        ShoeBox left = new ShoeBox(fragmentB);
+        ShoeStack root = ShoeStack.build( right, left );
         assertEquals( root.getNodes().size(), 2 );
     }
 
@@ -88,41 +88,41 @@ public class BasicShoeStoreTest {
         fragmentManagerShadow.add( tagA, fragmentA );
         fragmentManagerShadow.add( tagB, fragmentB );
 
-        NavItem navItemA = NavItem.build(fragmentA);
-        NavItem navItemB = NavItem.build(fragmentB);
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
         //lets draw the fragments
-        navRoot.applyNodes(navItemA, navItemB);
+        shoeContainer.applyNodes(shoeBoxA, shoeBoxB);
 
         //so we are going to build a dual pane...
-        navRoot.request( tagA );
+        shoeContainer.request( tagA );
 
-        navRoot.asObservable().subscribe(navItems -> {
-            assertEquals( "tag is A", navItems.get(navItems.size()-1), navItemA );
+        shoeContainer.asObservable().subscribe(navItems -> {
+            assertEquals( "tag is A", navItems.get(navItems.size()-1), shoeBoxA);
         });
     }
 
 
     @Test
     public void shouldGetParentOfNode(){
-        /*NavNode parentNode = navigator.getRoot().search( tagA );
+        /*ShoeModel parentNode = navigator.getRoot().search( tagA );
         assertEquals( "it's the same root node", parentNode, navigator.getRoot() );*/
 
-        NavItem navItemA = NavItem.build(fragmentA);
-        NavItem navItemB = NavItem.build(fragmentB);
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
 
-        NavItem navItemC = NavItem.build(fragmentC);
-        NavItem navItemD = NavItem.build(fragmentD);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+        ShoeBox shoeBoxD = ShoeBox.build(fragmentD);
 
-        navRoot.clear();
-        navRoot.applyNodes(navItemA, navItemB.applyNodes(navItemC, navItemD) );
+        shoeContainer.clear();
+        shoeContainer.applyNodes(shoeBoxA, shoeBoxB.applyNodes(shoeBoxC, shoeBoxD) );
 
 
-        NavNode result;
-        NavNode match = null;
+        ShoeModel result;
+        ShoeModel match = null;
 
-        for( NavNode node: navRoot.getNodes() ){
+        for( ShoeModel node: shoeContainer.getNodes() ){
 
             result = node.search( tagC);
 
@@ -137,57 +137,57 @@ public class BasicShoeStoreTest {
 
     @Test
     public void shouldStackGoForward(){
-        navRoot.clear();
+        shoeContainer.clear();
 
-        NavItem navItemA = NavItem.build(fragmentA);
-        NavItem navItemB = NavItem.build(fragmentB);
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
-        navRoot.applyNodes( NavStack.build(navItemA, navItemB) );
+        shoeContainer.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB) );
 
         //lets go to first one!
-        navRoot.request( tagA );
+        shoeContainer.request( tagA );
 
         //if its in a stack then only show this fragment!
-        assertTrue( "navItemA is visible", navItemA.isActive() );
-        assertFalse( "navItemB is invisible", navItemB.isActive() );
+        assertTrue( "shoeBoxA is visible", shoeBoxA.isActive() );
+        assertFalse( "shoeBoxB is invisible", shoeBoxB.isActive() );
 
-        navRoot.request( tagB );
+        shoeContainer.request( tagB );
 
-        assertFalse( "navItemA is invisible", navItemA.isActive() );
-        assertTrue( "navItemB is visibile", navItemB.isActive() );
+        assertFalse( "shoeBoxA is invisible", shoeBoxA.isActive() );
+        assertTrue( "shoeBoxB is visibile", shoeBoxB.isActive() );
     }
 
     @Test
     public void shouldStackGoBack(){
-        navRoot.clear();
+        shoeContainer.clear();
 
-        NavItem navItemA = NavItem.build(fragmentA);
-        NavItem navItemB = NavItem.build(fragmentB);
-        NavItem navItemC = NavItem.build(fragmentC);
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
-        navRoot.applyNodes( NavStack.build(navItemA, navItemB, navItemC) );
+        shoeContainer.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
 
         //lets go to first one!
-        navRoot.request( tagA );
-        navRoot.request( tagB );
-        navRoot.request( tagC );
+        shoeContainer.request( tagA );
+        shoeContainer.request( tagB );
+        shoeContainer.request( tagC );
 
         //if its in a stack then only show this fragment!
-        assertTrue( "navItemA is visible", navItemC.isActive() );
+        assertTrue( "shoeBoxA is visible", shoeBoxC.isActive() );
 
-        Boolean wentBack = navRoot.goBack();
+        Boolean wentBack = shoeContainer.goBack();
         assertTrue("able to go back", wentBack );
-        assertTrue( "navItemB is visible", navItemB.isActive() );
-        assertFalse( "navItemC is invisible", navItemC.isActive() );
-        assertFalse( "navItemA is invisible", navItemA.isActive() );
+        assertTrue( "shoeBoxB is visible", shoeBoxB.isActive() );
+        assertFalse( "shoeBoxC is invisible", shoeBoxC.isActive() );
+        assertFalse( "shoeBoxA is invisible", shoeBoxA.isActive() );
 
-        wentBack = navRoot.goBack();
+        wentBack = shoeContainer.goBack();
         assertTrue("able to go back", wentBack );
-        assertFalse( "navItemB is ivisible", navItemB.isActive() );
-        assertFalse( "navItemC is invisible", navItemC.isActive() );
-        assertTrue( "navItemA is visible", navItemA.isActive() );
+        assertFalse( "shoeBoxB is ivisible", shoeBoxB.isActive() );
+        assertFalse( "shoeBoxC is invisible", shoeBoxC.isActive() );
+        assertTrue( "shoeBoxA is visible", shoeBoxA.isActive() );
 
-        wentBack = navRoot.goBack();
+        wentBack = shoeContainer.goBack();
         assertFalse("navigation ended when false", wentBack );
     }
 
@@ -201,70 +201,70 @@ public class BasicShoeStoreTest {
 
     @Test
     public void shouldStackOfStacksGoForward(){
-        navRoot.clear();
+        shoeContainer.clear();
 
-        NavItem navItemA = NavItem.build(fragmentA);
-        NavItem navItemB = NavItem.build(fragmentB);
-        NavItem navItemC = NavItem.build(fragmentC);
-        NavItem navItemD = NavItem.build( fragmentD );
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+        ShoeBox shoeBoxD = ShoeBox.build( fragmentD );
 
-        navRoot.applyNodes( NavStack.build( NavStack.build(navItemA,navItemB), NavStack.build(navItemC,navItemD)) );
+        shoeContainer.applyNodes( ShoeStack.build( ShoeStack.build(shoeBoxA, shoeBoxB), ShoeStack.build(shoeBoxC, shoeBoxD)) );
 
-        NavStack navStack1 = (NavStack) navRoot.getNodes().get(0).getNodes().get(0);
-        NavStack navStack2 = (NavStack) navRoot.getNodes().get(0).getNodes().get(1);
+        ShoeStack shoeStack1 = (ShoeStack) shoeContainer.getNodes().get(0).getNodes().get(0);
+        ShoeStack shoeStack2 = (ShoeStack) shoeContainer.getNodes().get(0).getNodes().get(1);
 
-        navRoot.request( tagA );
+        shoeContainer.request( tagA );
 
-        assertTrue( "first stack displayed", navStack1.isActive() );
-        assertFalse( "second stack hides", navStack2.isActive() );
+        assertTrue( "first stack displayed", shoeStack1.isActive() );
+        assertFalse( "second stack hides", shoeStack2.isActive() );
 
 
-        navRoot.request( tagC );
+        shoeContainer.request( tagC );
 
-        assertFalse( "first stack hides", navStack1.isActive() );
-        assertTrue( "second stack displayed", navStack2.isActive() );
+        assertFalse( "first stack hides", shoeStack1.isActive() );
+        assertTrue( "second stack displayed", shoeStack2.isActive() );
     }
 
 
     @Test
     public void mockingRotatingDevice(){
         //so initially we have a list of fragments, but then they change to a stack..
-        NavItem navItemA = NavItem.build(fragmentA);
-        NavItem navItemB = NavItem.build(fragmentB);
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
-        navRoot.applyNodes( navItemA, navItemB );
+        shoeContainer.applyNodes(shoeBoxA, shoeBoxB);
 
-        assertTrue( "visible", navItemA.isActive() );
-        assertTrue( "visible", navItemB.isActive() );
+        assertTrue( "visible", shoeBoxA.isActive() );
+        assertTrue( "visible", shoeBoxB.isActive() );
 
         //ok,, now we rotate and we have a stack of fragments
-        navRoot.applyNodes( NavStack.build(navItemA, navItemB));
-        navRoot.request( tagA );
-        assertTrue( "visible", navItemA.isActive() );
-        assertFalse( "visible", navItemB.isActive() );
+        shoeContainer.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
+        shoeContainer.request( tagA );
+        assertTrue( "visible", shoeBoxA.isActive() );
+        assertFalse( "visible", shoeBoxB.isActive() );
 
         //lets go to fragmentB
-        navRoot.request( tagB );
+        shoeContainer.request( tagB );
 
-        assertFalse( "visible a", navItemA.isActive() );
-        assertTrue( "invisible b", navItemB.isActive() );
+        assertFalse( "visible a", shoeBoxA.isActive() );
+        assertTrue( "invisible b", shoeBoxB.isActive() );
 
         //lets rotate again
-        navRoot.applyNodes( navItemA, navItemB );
+        shoeContainer.applyNodes(shoeBoxA, shoeBoxB);
 
-        assertTrue( "visible", navItemA.isActive() );
-        assertTrue( "visible", navItemB.isActive() );
+        assertTrue( "visible", shoeBoxA.isActive() );
+        assertTrue( "visible", shoeBoxB.isActive() );
 
         //ok,, now we rotate and we have a stack of fragments
-        navRoot.applyNodes( NavStack.build(navItemA, navItemB));
-        navRoot.request( tagB );
-        assertFalse( "visible", navItemA.isActive() );
-        assertTrue( "visible", navItemB.isActive() );
+        shoeContainer.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
+        shoeContainer.request( tagB );
+        assertFalse( "visible", shoeBoxA.isActive() );
+        assertTrue( "visible", shoeBoxB.isActive() );
 
-        navRoot.goBack();
+        shoeContainer.goBack();
 
-        assertTrue( "visible", navItemA.isActive() );
-        assertFalse( "visible", navItemB.isActive() );
+        assertTrue( "visible", shoeBoxA.isActive() );
+        assertFalse( "visible", shoeBoxB.isActive() );
 
     }
 

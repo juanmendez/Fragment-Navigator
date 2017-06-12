@@ -6,7 +6,7 @@ package info.juanmendez.fragmentnavigator.adapters;
  * contact@juanmendez.info
  */
 
-public interface CoreNavFragment {
+public interface ShoeFragment {
     String getTag();
     int getId();
     void setActive(Boolean active);

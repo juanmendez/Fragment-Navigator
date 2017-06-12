@@ -1,6 +1,6 @@
 package info.juanmendez.fragmentnavigator.models;
 
-import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
+import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
 
 
 /**
@@ -9,13 +9,13 @@ import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
  * contact@juanmendez.info
  */
 
-public class TestCoreNavFragment implements CoreNavFragment {
+public class TestShoeFragment implements ShoeFragment {
 
     Boolean visible = false;
     String tag;
     int id;
 
-    public TestCoreNavFragment(String tag ){
+    public TestShoeFragment(String tag ){
         this.tag = tag;
     }
 

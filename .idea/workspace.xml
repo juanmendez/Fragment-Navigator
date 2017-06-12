@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="593b7e85-53f0-47a4-b095-a2fc4ca8b280" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavFlow.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/CoreNavFragment.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/CoreNavFragmentManager.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragmentManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavFlow.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeFlow.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavItem.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavNode.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeModel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavRoot.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeContainer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavStack.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/NavUtils.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/ShoeUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestCoreNavFragment.java" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestCoreNavFragmentManager.java" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragmentManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/proguard-rules.pro" afterPath="$PROJECT_DIR$/shoeboxes/proguard-rules.pro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/ShoeStore.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/ShoeStore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/BasicShoeStoreTest.java" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/BasicShoeStoreTest.java" />
     </list>
     <ignored path="Fragment Navigator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +55,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="750">
-      <file leaf-file-name="NavItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavItem.java">
+      <file leaf-file-name="BasicShoeStoreTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/BasicShoeStoreTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="9" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+            <state relative-caret-position="3480">
+              <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestShoeFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+              <folding>
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeBox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,18 +100,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NavFlow.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavFlow.java">
+      <file leaf-file-name="ShoeFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2250">
-              <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2215#2216#0" expanded="true" />
-                <element signature="e#2251#2252#0" expanded="true" />
-                <element signature="e#2298#2299#0" expanded="true" />
-                <element signature="e#2327#2328#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeFragmentManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragmentManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeStack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeContainer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/ShoeUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2893,25 +2983,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/info/juanmendez/fragmentnavigator/models/FragmentTree.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/info/juanmendez/fragmentnavigator/models/FragmentNode.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/FragmentTree.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/FragmentNavigationHolder.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/FragmentBlock.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavigatorChild.java" />
-        <option value="$PROJECT_DIR$/gradle.properties" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/fragmentnavigator/models/TestFragmentShadow.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/fragmentnavigator/models/TestActivity.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/fragmentnavigator/models/TestFragmentManagerShadow.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/FragmentNode.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/FragmentStack.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/simulators/FragmentShadow.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/simulators/NavFragment.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/simulators/FragmentManagerShadow.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/simulators/NavFragmentManager.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/LayoutNode.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/Stack.java" />
         <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/Root.java" />
         <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/adapters/NavFragmentManager.java" />
         <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/Node.java" />
@@ -2944,6 +3015,25 @@
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/FragmentNav.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/ShoeStore.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavFlow.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeFlow.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavItem.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavNode.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeModel.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavStack.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavRoot.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeContainer.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/NavUtils.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/ShoeUtils.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShowBox.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/CoreNavFragment.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShowFragment.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragment.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/CoreNavFragmentManager.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragmentManager.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestCoreNavFragment.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragment.java" />
       </list>
     </option>
   </component>
@@ -3162,7 +3252,75 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragmentnavigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragmentnavigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapters" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3181,33 +3339,7 @@
       <recent name="C:\codes\Android\juanmendez\Fragment-Navigator\coreNavigator\src\main\java\info\juanmendez\fragmentnavigator\models" />
     </key>
   </component>
-  <component name="RunManager" selected="Android JUnit.info.juanmendez.fragmentnavigator in shoeboxes">
-    <configuration default="false" name="BasicRootNavigatorTest.shouldStackGoBack" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="info.juanmendez.fragmentnavigator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="fragmentNavigator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="info.juanmendez.fragmentnavigator" />
-      <option name="MAIN_CLASS_NAME" value="info.juanmendez.fragmentnavigator.BasicRootNavigatorTest" />
-      <option name="METHOD_NAME" value="shouldStackGoBack" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Android JUnit.BasicShoeStoreTest">
     <configuration default="false" name="BasicRootNavigatorTest.shouldStackOfStacksGoForward" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -3300,6 +3432,32 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BasicShoeStoreTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="info.juanmendez.fragmentnavigator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="shoeboxes" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="info.juanmendez.fragmentnavigator" />
+      <option name="MAIN_CLASS_NAME" value="info.juanmendez.fragmentnavigator.BasicShoeStoreTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -3690,19 +3848,19 @@
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
       <item index="1" class="java.lang.String" itemvalue="Android App.fragmentNavigator" />
       <item index="2" class="java.lang.String" itemvalue="Android App.coreNavigator" />
-      <item index="3" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.shouldStackGoBack" />
-      <item index="4" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.shouldStackOfStacksGoForward" />
-      <item index="5" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest" />
-      <item index="6" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.mockingRotatingDevice" />
-      <item index="7" class="java.lang.String" itemvalue="Android JUnit.info.juanmendez.fragmentnavigator in shoeboxes" />
+      <item index="3" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.shouldStackOfStacksGoForward" />
+      <item index="4" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest" />
+      <item index="5" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.mockingRotatingDevice" />
+      <item index="6" class="java.lang.String" itemvalue="Android JUnit.info.juanmendez.fragmentnavigator in shoeboxes" />
+      <item index="7" class="java.lang.String" itemvalue="Android JUnit.BasicShoeStoreTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Android JUnit.info.juanmendez.fragmentnavigator in shoeboxes" />
-        <item index="1" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.mockingRotatingDevice" />
-        <item index="2" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest" />
-        <item index="3" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.shouldStackOfStacksGoForward" />
-        <item index="4" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.shouldStackGoBack" />
+        <item index="0" class="java.lang.String" itemvalue="Android JUnit.BasicShoeStoreTest" />
+        <item index="1" class="java.lang.String" itemvalue="Android JUnit.info.juanmendez.fragmentnavigator in shoeboxes" />
+        <item index="2" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.mockingRotatingDevice" />
+        <item index="3" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest" />
+        <item index="4" class="java.lang.String" itemvalue="Android JUnit.BasicRootNavigatorTest.shouldStackOfStacksGoForward" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -3738,9 +3896,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BasicRootNavigatorTest_mockingRotatingDevice - 2017.06.09 at 14h 58m 23s.xml">
-      <configuration name="BasicRootNavigatorTest.mockingRotatingDevice" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="BasicRootNavigatorTest_mockingRotatingDevice - 2017.06.09 at 14h 58m 59s.xml">
       <configuration name="BasicRootNavigatorTest.mockingRotatingDevice" configurationId="AndroidJUnit" />
     </history-entry>
@@ -3761,6 +3916,9 @@
     </history-entry>
     <history-entry file="BasicRootNavigatorTest_shouldStackOfStacksGoForward - 2017.06.09 at 14h 55m 08s.xml">
       <configuration name="BasicRootNavigatorTest.shouldStackOfStacksGoForward" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="BasicShoeStoreTest - 2017.06.12 at 15h 26m 03s.xml">
+      <configuration name="BasicShoeStoreTest" configurationId="AndroidJUnit" />
     </history-entry>
     <history-entry file="info_juanmendez_fragmentnavigator_in_shoeboxes - 2017.06.12 at 15h 12m 47s.xml">
       <configuration name="info.juanmendez.fragmentnavigator in shoeboxes" configurationId="AndroidJUnit" />
@@ -3789,6 +3947,7 @@
       <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23394005" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32813403" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -3805,7 +3964,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299946" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32816228" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3862,14 +4020,14 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/fragmentnavigator/BasicRootNavigatorTest.java" />
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavItem.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3600">
           <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavStack.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6040">
           <caret line="155" column="19" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
@@ -3893,7 +4051,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavStack.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1040">
           <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
@@ -3901,14 +4059,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavNode.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavItem.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1400">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
@@ -3953,13 +4111,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shoeboxes/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3976,13 +4127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestCoreNavFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-25/android.jar!/junit/framework/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -3990,21 +4134,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/CoreNavFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/CoreNavFragmentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestCoreNavFragmentManager.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragmentManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
@@ -4055,13 +4185,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/NavUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-25/android.jar!/java/util/ArrayList.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -4076,26 +4199,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/RootNavigator.java" />
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavRoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1600">
-          <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
-          <folding>
-            <element signature="method#search#0;class#NavRoot#0" expanded="false" />
-            <element signature="method#search#1;class#NavRoot#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/fragmentnavigator/BasicRootNavigatorTest.java" />
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -4151,43 +4255,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavStack.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeFlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2257#2258#0" expanded="true" />
+            <element signature="e#2293#2294#0" expanded="true" />
+            <element signature="e#2340#2341#0" expanded="true" />
+            <element signature="e#2369#2370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/ShoeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragmentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/BasicShoeStoreTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="3480">
           <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="9" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/NavFlow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2250">
-          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2215#2216#0" expanded="true" />
-            <element signature="e#2251#2252#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -8,18 +8,18 @@ import java.util.List;
  * contact@juanmendez.info
  */
 
-public interface NavNode {
-    NavNode applyNodes(NavNode... nodes);
-    List<NavNode> getNodes();
+public interface ShoeModel {
+    ShoeModel applyNodes(ShoeModel... nodes);
+    List<ShoeModel> getNodes();
 
 
     //connect with parent
-    void setParent( NavNode parentNode );
-    NavNode getParent();
+    void setParent( ShoeModel parentNode );
+    ShoeModel getParent();
 
     //search nodes by tag or id
-    NavNode search(String tag);
-    NavNode search(int id );
+    ShoeModel search(String tag);
+    ShoeModel search(int id );
 
     void clear();
 

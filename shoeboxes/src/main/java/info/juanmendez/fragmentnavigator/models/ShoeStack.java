@@ -14,29 +14,29 @@ import info.juanmendez.fragmentnavigator.ShoeStore;
  * Structure representation of a collection of nodes which visually correspond to a stack of fragments.
  */
 
-public class NavStack implements NavNode {
+public class ShoeStack implements ShoeModel {
 
     Boolean active = false;
-    NavNode parentNode;
-    List<NavNode> nodes = new ArrayList<>();
+    ShoeModel parentNode;
+    List<ShoeModel> nodes = new ArrayList<>();
 
-    public static NavStack build(NavNode... childNodeArray){
-        NavStack navStack =  new NavStack();
-        navStack.applyNodes( childNodeArray );
+    public static ShoeStack build(ShoeModel... childNodeArray){
+        ShoeStack shoeStack =  new ShoeStack();
+        shoeStack.applyNodes( childNodeArray );
 
-        return navStack;
+        return shoeStack;
     }
 
-    public NavStack() {
+    public ShoeStack() {
 
-        ShoeStore.getNavRoot().asObservable().subscribe(navNodes -> {
+        ShoeStore.getShoeContainer().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
             if( pos >= 0 && pos < len-1 ){
-                NavNode childFound = navNodes.get( pos+1);
+                ShoeModel childFound = navNodes.get( pos+1);
 
-                for( NavNode node: nodes ){
+                for( ShoeModel node: nodes ){
                     node.setActive( node == childFound );
                 }
             }
@@ -45,11 +45,11 @@ public class NavStack implements NavNode {
     }
 
     @Override
-    public NavNode applyNodes(NavNode... nodes) {
+    public ShoeModel applyNodes(ShoeModel... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
         //by default first fragment is active
-        for( NavNode node: nodes ){
+        for( ShoeModel node: nodes ){
             node.setParent(this);
             node.setActive(false);
         }
@@ -57,25 +57,25 @@ public class NavStack implements NavNode {
         return this;
     }
 
-    public List<NavNode> getNodes() {
+    public List<ShoeModel> getNodes() {
         return nodes;
     }
 
     @Override
-    public void setParent(NavNode parentNode) {
+    public void setParent(ShoeModel parentNode) {
         this.parentNode = parentNode;
     }
 
     @Override
-    public NavNode getParent() {
+    public ShoeModel getParent() {
         return parentNode;
     }
 
     @Override
-    public NavNode search(String tag) {
-        NavNode nodeResult;
+    public ShoeModel search(String tag) {
+        ShoeModel nodeResult;
 
-        for( NavNode node: nodes){
+        for( ShoeModel node: nodes){
             nodeResult = node.search( tag );
 
             if( nodeResult != null ){
@@ -87,14 +87,14 @@ public class NavStack implements NavNode {
     }
 
     @Override
-    public NavNode search(int id) {
-        NavNode nodeResult;
+    public ShoeModel search(int id) {
+        ShoeModel nodeResult;
 
-        for( NavNode node: nodes){
+        for( ShoeModel node: nodes){
             nodeResult = node.search( id );
 
             if( nodeResult != null ){
-                if( nodeResult instanceof NavItem && nodes.contains( nodeResult ) ){
+                if( nodeResult instanceof ShoeBox && nodes.contains( nodeResult ) ){
                     return this;
                 }else{
                     return nodeResult;

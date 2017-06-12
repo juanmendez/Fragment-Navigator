@@ -6,8 +6,8 @@ package info.juanmendez.fragmentnavigator.adapters;
  * contact@juanmendez.info
  */
 
-public interface CoreNavFragmentManager {
+public interface ShoeFragmentManager {
 
-    CoreNavFragment findFragment(String tag );
-    CoreNavFragment findFragment(int id);
+    ShoeFragment findFragment(String tag );
+    ShoeFragment findFragment(int id);
 }

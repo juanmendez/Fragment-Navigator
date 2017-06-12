@@ -5,57 +5,43 @@ import java.util.Arrays;
 import java.util.List;
 
 import info.juanmendez.fragmentnavigator.ShoeStore;
-import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
  *
- * Represents a fragment having layoutNodes as a single branch.
+ * Represents a flow of fragments having all visible yet one is active.
  */
 
-public class NavItem implements NavNode {
-    NavNode parentNode;
-    private CoreNavFragment coreNavFragment; //identifies Fragment with Tag or its Id
-    List<NavNode> nodes = new ArrayList<>();
+public class ShoeFlow implements ShoeModel {
+    ShoeModel parentNode;
+    Boolean active = false;
+    List<ShoeModel> nodes = new ArrayList<>();
 
-    public static NavItem build(CoreNavFragment coreNavFragment){
-        return new NavItem(coreNavFragment);
-    }
+    public ShoeFlow() {
 
-    public NavItem() {
-
-        ShoeStore.getNavRoot().asObservable().subscribe(navNodes -> {
+        ShoeStore.getShoeContainer().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
             if( pos >= 0 && pos < len-1 ){
-                for( NavNode node: nodes ){
+                for( ShoeModel node: nodes ){
                     node.setActive( true );
                 }
             }else{
-                for( NavNode node: nodes ){
+                for( ShoeModel node: nodes ){
                     node.setActive( false );
                 }
             }
         });
     }
 
-    public NavItem(CoreNavFragment coreNavFragment){
-        this();
-        this.coreNavFragment = coreNavFragment;
-    }
-
-    public CoreNavFragment getCoreNavFragment(){
-        return coreNavFragment;
-    }
-
     @Override
-    public NavNode applyNodes(NavNode... nodes) {
+    public ShoeModel applyNodes(ShoeModel... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
-        for( NavNode node: nodes ){
+        for( ShoeModel node: nodes ){
             node.setParent(this);
             node.setActive(true);
         }
@@ -63,29 +49,26 @@ public class NavItem implements NavNode {
         return this;
     }
 
-    public List<NavNode> getNodes() {
+    public List<ShoeModel> getNodes() {
         return this.nodes;
     }
 
     @Override
-    public void setParent(NavNode parentNode) {
+    public void setParent(ShoeModel parentNode) {
         this.parentNode = parentNode;
     }
 
     @Override
-    public NavNode getParent() {
+    public ShoeModel getParent() {
         return parentNode;
     }
 
     @Override
-    public NavNode search(String tag) {
+    public ShoeModel search(String tag) {
 
-        if( coreNavFragment.getTag().equals(tag))
-            return this;
+        ShoeModel nodeResult;
 
-        NavNode nodeResult;
-
-        for( NavNode node: nodes){
+        for( ShoeModel node: nodes){
             nodeResult = node.search( tag );
 
             if( nodeResult != null ){
@@ -97,14 +80,11 @@ public class NavItem implements NavNode {
     }
 
     @Override
-    public NavNode search(int id) {
+    public ShoeModel search(int id) {
 
-        if( coreNavFragment.getId()==id)
-            return this;
+        ShoeModel nodeResult;
 
-        NavNode nodeResult;
-
-        for( NavNode node: nodes){
+        for( ShoeModel node: nodes){
             nodeResult = node.search( id );
 
             if( nodeResult != null ){
@@ -122,11 +102,11 @@ public class NavItem implements NavNode {
 
     @Override
     public void setActive(Boolean active) {
-        coreNavFragment.setActive(active);
+        this.active = active;
     }
 
     @Override
     public boolean isActive() {
-        return coreNavFragment.isActive();
+        return active;
     }
 }

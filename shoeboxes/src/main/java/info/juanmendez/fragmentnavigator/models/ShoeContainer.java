@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.utils.NavUtils;
+import info.juanmendez.fragmentnavigator.utils.ShoeUtils;
 import io.reactivex.Observable;
 import io.reactivex.subjects.PublishSubject;
 
@@ -13,13 +13,13 @@ import io.reactivex.subjects.PublishSubject;
  * www.juanmendez.info
  * contact@juanmendez.info
  */
-public class NavRoot implements NavNode {
+public class ShoeContainer implements ShoeModel {
 
     Boolean active = true;
-    List<NavNode> nodes = new ArrayList<>();
-    List<NavNode> history = new ArrayList<>();
+    List<ShoeModel> nodes = new ArrayList<>();
+    List<ShoeModel> history = new ArrayList<>();
 
-    private PublishSubject<List<NavNode>> publishSubject = PublishSubject.create();
+    private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
 
     public void request(String requestedTag) {
         request(search( requestedTag ));
@@ -29,30 +29,30 @@ public class NavRoot implements NavNode {
         request(search( id ));
     }
 
-    public void request( NavNode navNode ){
-        if( navNode != null ){
+    public void request( ShoeModel shoeModel){
+        if( shoeModel != null ){
 
-            //going forward can mean also steping back to a previous navNode
-            if( history.contains( navNode )){
-                int pos = history.indexOf( navNode );
+            //going forward can mean also steping back to a previous shoeModel
+            if( history.contains(shoeModel)){
+                int pos = history.indexOf(shoeModel);
                 history = history.subList(0, pos+1);
             }else{
-                history.add(navNode);
+                history.add(shoeModel);
             }
 
-            publishSubject.onNext(NavUtils.getPathToNode(navNode));
+            publishSubject.onNext(ShoeUtils.getPathToNode(shoeModel));
         }
     }
 
-    public Observable<List<NavNode>> asObservable() {
+    public Observable<List<ShoeModel>> asObservable() {
         return publishSubject.hide();
     }
 
     @Override
-    public NavNode applyNodes(NavNode... nodes) {
+    public ShoeModel applyNodes(ShoeModel... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
-        for( NavNode node: nodes ){
+        for( ShoeModel node: nodes ){
             node.setParent(this);
             node.setActive(true);
         }
@@ -61,24 +61,24 @@ public class NavRoot implements NavNode {
     }
 
     @Override
-    public List<NavNode> getNodes() {
+    public List<ShoeModel> getNodes() {
         return this.nodes;
     }
 
     @Override
-    public void setParent(NavNode parentNode) {
+    public void setParent(ShoeModel parentNode) {
     }
 
     @Override
-    public NavNode getParent() {
+    public ShoeModel getParent() {
         return null;
     }
 
     @Override
-    public NavNode search(String tag) {
-        NavNode nodeResult;
+    public ShoeModel search(String tag) {
+        ShoeModel nodeResult;
 
-        for( NavNode node: nodes){
+        for( ShoeModel node: nodes){
             nodeResult = node.search( tag );
 
             if( nodeResult != null ){
@@ -90,10 +90,10 @@ public class NavRoot implements NavNode {
     }
 
     @Override
-    public NavNode search(int id) {
-        NavNode nodeResult;
+    public ShoeModel search(int id) {
+        ShoeModel nodeResult;
 
-        for( NavNode node: nodes){
+        for( ShoeModel node: nodes){
             nodeResult = node.search( id );
 
             if( nodeResult != null ){

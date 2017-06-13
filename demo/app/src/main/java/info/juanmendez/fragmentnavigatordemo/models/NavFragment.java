@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
+import info.juanmendez.shoeboxes.adapters.ShoeFragment;
 
 
 /**

@@ -4,8 +4,8 @@ import android.support.v4.app.FragmentManager;
 
 import java.util.HashMap;
 
-import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
-import info.juanmendez.fragmentnavigator.adapters.ShoeFragmentManager;
+import info.juanmendez.shoeboxes.adapters.ShoeFragment;
+import info.juanmendez.shoeboxes.adapters.ShoeFragmentManager;
 
 
 /**

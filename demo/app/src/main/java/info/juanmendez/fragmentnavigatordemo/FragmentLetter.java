@@ -11,7 +11,7 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.FragmentArg;
 import org.androidannotations.annotations.ViewById;
 
-import info.juanmendez.fragmentnavigator.ShoeStorage;
+import info.juanmendez.shoeboxes.ShoeStorage;
 
 
 /**

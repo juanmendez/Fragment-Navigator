@@ -1,4 +1,4 @@
-package info.juanmendez.fragmentnavigator.models;
+package info.juanmendez.shoeboxes.models;
 
 import java.util.List;
 

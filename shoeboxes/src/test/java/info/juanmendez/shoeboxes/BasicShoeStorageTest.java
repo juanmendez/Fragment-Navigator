@@ -1,4 +1,4 @@
-package info.juanmendez.fragmentnavigator;
+package info.juanmendez.shoeboxes;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
-import info.juanmendez.fragmentnavigator.models.ShoeBox;
-import info.juanmendez.fragmentnavigator.models.ShoeFlow;
-import info.juanmendez.fragmentnavigator.models.ShoeModel;
-import info.juanmendez.fragmentnavigator.models.ShoeStack;
-import info.juanmendez.fragmentnavigator.models.ShoeRack;
-import info.juanmendez.fragmentnavigator.models.TestShoeFragment;
-import info.juanmendez.fragmentnavigator.models.TestShoeFragmentManager;
+import info.juanmendez.shoeboxes.adapters.ShoeFragment;
+import info.juanmendez.shoeboxes.models.ShoeBox;
+import info.juanmendez.shoeboxes.models.ShoeFlow;
+import info.juanmendez.shoeboxes.models.ShoeModel;
+import info.juanmendez.shoeboxes.models.ShoeStack;
+import info.juanmendez.shoeboxes.models.ShoeRack;
+import info.juanmendez.shoeboxes.models.TestShoeFragment;
+import info.juanmendez.shoeboxes.models.TestShoeFragmentManager;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;

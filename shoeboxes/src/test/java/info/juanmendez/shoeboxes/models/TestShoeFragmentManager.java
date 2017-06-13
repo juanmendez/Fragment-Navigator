@@ -1,9 +1,9 @@
-package info.juanmendez.fragmentnavigator.models;
+package info.juanmendez.shoeboxes.models;
 
 import java.util.HashMap;
 
-import info.juanmendez.fragmentnavigator.adapters.ShoeFragmentManager;
-import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
+import info.juanmendez.shoeboxes.adapters.ShoeFragmentManager;
+import info.juanmendez.shoeboxes.adapters.ShoeFragment;
 
 
 /**

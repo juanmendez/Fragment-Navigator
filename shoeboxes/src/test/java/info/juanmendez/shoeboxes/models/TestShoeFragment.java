@@ -1,6 +1,6 @@
-package info.juanmendez.fragmentnavigator.models;
+package info.juanmendez.shoeboxes.models;
 
-import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
+import info.juanmendez.shoeboxes.adapters.ShoeFragment;
 
 
 /**

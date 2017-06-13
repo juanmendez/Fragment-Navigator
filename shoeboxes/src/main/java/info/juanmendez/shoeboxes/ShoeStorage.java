@@ -1,6 +1,6 @@
-package info.juanmendez.fragmentnavigator;
+package info.juanmendez.shoeboxes;
 
-import info.juanmendez.fragmentnavigator.models.ShoeRack;
+import info.juanmendez.shoeboxes.models.ShoeRack;
 
 /**
  * Created by Juan Mendez on 6/2/2017.

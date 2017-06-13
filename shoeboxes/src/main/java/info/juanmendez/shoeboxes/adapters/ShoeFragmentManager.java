@@ -1,4 +1,4 @@
-package info.juanmendez.fragmentnavigator.adapters;
+package info.juanmendez.shoeboxes.adapters;
 
 /**
  * Created by Juan Mendez on 6/2/2017.

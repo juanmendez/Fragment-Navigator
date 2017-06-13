@@ -1,9 +1,9 @@
-package info.juanmendez.fragmentnavigator.models;
+package info.juanmendez.shoeboxes.models;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.utils.ShoeUtils;
+import info.juanmendez.shoeboxes.utils.ShoeUtils;
 import io.reactivex.Observable;
 import io.reactivex.subjects.PublishSubject;
 

@@ -6,10 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 
-import info.juanmendez.fragmentnavigator.ShoeStorage;
-import info.juanmendez.fragmentnavigator.models.ShoeBox;
-import info.juanmendez.fragmentnavigator.models.ShoeRack;
-import info.juanmendez.fragmentnavigator.models.ShoeStack;
+import info.juanmendez.shoeboxes.ShoeStorage;
+import info.juanmendez.shoeboxes.models.ShoeBox;
+import info.juanmendez.shoeboxes.models.ShoeRack;
+import info.juanmendez.shoeboxes.models.ShoeStack;
 import info.juanmendez.fragmentnavigatordemo.models.NavFragment;
 
 @EActivity(R.layout.activity_main)

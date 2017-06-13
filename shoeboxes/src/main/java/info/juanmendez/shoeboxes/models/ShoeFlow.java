@@ -1,31 +1,31 @@
-package info.juanmendez.fragmentnavigator.models;
+package info.juanmendez.shoeboxes.models;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.ShoeStorage;
-import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
+import info.juanmendez.shoeboxes.ShoeStorage;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
  *
- * Represents a fragment having layoutNodes as a single branch.
+ * Represents a flow of fragments having all visible yet one is active.
  */
 
-public class ShoeBox implements ShoeModel {
+public class ShoeFlow implements ShoeModel {
     ShoeModel parentNode;
-    private ShoeFragment shoeFragment; //identifies Fragment with Tag or its Id
-    ShoeModel shoeModel;
+    Boolean active = false;
     List<ShoeModel> nodes = new ArrayList<>();
 
-    public static ShoeBox build(ShoeFragment shoeFragment){
-        return new ShoeBox(shoeFragment);
+    public static ShoeFlow build(ShoeModel... childNodeArray){
+        ShoeFlow flow =  new ShoeFlow();
+        flow.applyNodes( childNodeArray );
+        return flow;
     }
 
-    public ShoeBox() {
+    public ShoeFlow() {
 
         ShoeStorage.getShoeRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
@@ -43,25 +43,8 @@ public class ShoeBox implements ShoeModel {
         });
     }
 
-    public ShoeBox(ShoeFragment shoeFragment){
-        this();
-        this.shoeFragment = shoeFragment;
-    }
-
-    public ShoeFragment getShoeFragment(){
-        return shoeFragment;
-    }
-
     @Override
     public ShoeModel applyNodes(ShoeModel... nodes) {
-
-        if( nodes.length > 1 ){
-            shoeModel = ShoeFlow.build( nodes );
-        }else if( nodes.length == 1){
-            shoeModel = nodes[0];
-        }
-
-
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
         for( ShoeModel node: nodes ){
@@ -89,26 +72,31 @@ public class ShoeBox implements ShoeModel {
     @Override
     public ShoeModel search(String tag) {
 
-        if( shoeFragment.getTag().equals(tag))
-            return this;
+        ShoeModel nodeResult;
 
-        if( shoeModel != null )
-            return shoeModel.search( tag );
+        for( ShoeModel node: nodes){
+            nodeResult = node.search( tag );
+
+            if( nodeResult != null ){
+                return nodeResult;
+            }
+        }
 
         return null;
     }
 
     @Override
     public void clear() {
+        nodes.clear();
     }
 
     @Override
     public void setActive(Boolean active) {
-        shoeFragment.setActive(active);
+        this.active = active;
     }
 
     @Override
     public boolean isActive() {
-        return shoeFragment.isActive();
+        return active;
     }
 }

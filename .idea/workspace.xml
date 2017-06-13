@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="593b7e85-53f0-47a4-b095-a2fc4ca8b280" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/ShoeStorage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragmentManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeRack.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/ShoeUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/BasicShoeStorageTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragmentManager.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/FragmentLetter.java" afterPath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/FragmentLetter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/MainActivity.java" afterPath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/models/NavFragment.java" afterPath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/models/NavFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/models/NavFragmentManager.java" afterPath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/models/NavFragmentManager.java" />
     </list>
     <ignored path="Fragment Navigator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +60,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="750">
       <file leaf-file-name="BasicShoeStorageTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/BasicShoeStorageTest.java">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicShoeStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="6800">
               <caret line="232" column="60" selection-start-line="232" selection-start-column="60" selection-end-line="232" selection-end-column="60" />
@@ -55,84 +70,84 @@
         </entry>
       </file>
       <file leaf-file-name="ShoeFlow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeFlow.java">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeFlow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="790">
               <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2139#2140#0" expanded="true" />
-                <element signature="e#2175#2176#0" expanded="true" />
+                <element signature="e#2123#2124#0" expanded="true" />
+                <element signature="e#2159#2160#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ShoeBox.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeBox.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1310">
               <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2476#2477#0" expanded="true" />
-                <element signature="e#2522#2523#0" expanded="true" />
-                <element signature="e#2569#2570#0" expanded="true" />
-                <element signature="e#2615#2616#0" expanded="true" />
+                <element signature="e#2452#2453#0" expanded="true" />
+                <element signature="e#2498#2499#0" expanded="true" />
+                <element signature="e#2545#2546#0" expanded="true" />
+                <element signature="e#2591#2592#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ShoeRack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeRack.java">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeRack.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="404">
               <caret line="130" column="45" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
               <folding>
                 <element signature="docComment;class#ShoeRack#0" expanded="false" />
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-                <element signature="e#2984#2985#0" expanded="true" />
-                <element signature="e#3016#3017#0" expanded="true" />
-                <element signature="e#3059#3060#0" expanded="true" />
-                <element signature="e#3105#3106#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#2968#2969#0" expanded="true" />
+                <element signature="e#3000#3001#0" expanded="true" />
+                <element signature="e#3043#3044#0" expanded="true" />
+                <element signature="e#3089#3090#0" expanded="true" />
                 <element signature="docComment;method#goBack#0;class#ShoeRack#0" expanded="false" />
-                <element signature="e#4463#4464#0" expanded="true" />
-                <element signature="e#4494#4495#0" expanded="true" />
+                <element signature="e#4447#4448#0" expanded="true" />
+                <element signature="e#4478#4479#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ShoeStack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeStack.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1190">
               <caret line="45" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1666#1667#0" expanded="true" />
-                <element signature="e#1694#1695#0" expanded="true" />
-                <element signature="e#1759#1760#0" expanded="true" />
-                <element signature="e#1803#1804#0" expanded="true" />
-                <element signature="e#1853#1854#0" expanded="true" />
-                <element signature="e#1886#1887#0" expanded="true" />
-                <element signature="e#2223#2224#0" expanded="true" />
-                <element signature="e#2252#2253#0" expanded="true" />
-                <element signature="e#2312#2313#0" expanded="true" />
-                <element signature="e#2348#2349#0" expanded="true" />
-                <element signature="e#2395#2396#0" expanded="true" />
-                <element signature="e#2424#2425#0" expanded="true" />
+                <element signature="e#1650#1651#0" expanded="true" />
+                <element signature="e#1678#1679#0" expanded="true" />
+                <element signature="e#1743#1744#0" expanded="true" />
+                <element signature="e#1787#1788#0" expanded="true" />
+                <element signature="e#1837#1838#0" expanded="true" />
+                <element signature="e#1870#1871#0" expanded="true" />
+                <element signature="e#2207#2208#0" expanded="true" />
+                <element signature="e#2236#2237#0" expanded="true" />
+                <element signature="e#2296#2297#0" expanded="true" />
+                <element signature="e#2332#2333#0" expanded="true" />
+                <element signature="e#2379#2380#0" expanded="true" />
+                <element signature="e#2408#2409#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ShoeUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/ShoeUtils.java">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1270">
               <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
@@ -2964,7 +2979,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/RootNode.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/adapters/NavFragment.java" />
         <option value="$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/fragmentnavigator/models/TestNavFragment.java" />
@@ -3015,14 +3029,15 @@
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeFlow.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/BasicShoeStorageTest.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicShoeStorageTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1696" />
-    <option name="y" value="266" />
-    <option name="width" value="3868" />
-    <option name="height" value="2074" />
+    <option name="x" value="-16" />
+    <option name="y" value="-16" />
+    <option name="width" value="3872" />
+    <option name="height" value="2092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -3677,7 +3692,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1696" y="266" width="3868" height="2074" extended-state="0" />
+    <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3694,13 +3709,13 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23419078" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23394005" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32813403" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.525394" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51993066" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25751072" sideWeight="0.50467837" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3769,14 +3784,14 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/test/java/info/juanmendez/fragmentnavigator/BasicRootNavigatorTest.java" />
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3600">
           <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6040">
           <caret line="155" column="19" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
@@ -3800,7 +3815,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1040">
           <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
@@ -3808,14 +3823,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeModel.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1400">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
@@ -3876,7 +3891,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragmentManager.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/models/TestShoeFragmentManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
@@ -3989,7 +4004,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragmentManager.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/adapters/ShoeFragmentManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
@@ -3997,18 +4012,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragment.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/models/TestShoeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestActivity.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/models/TestActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
@@ -4016,7 +4031,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeModel.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
@@ -4024,7 +4039,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragment.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/adapters/ShoeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
@@ -4032,7 +4047,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/ShoeStorage.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/ShoeStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
@@ -4048,21 +4063,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1310">
           <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2476#2477#0" expanded="true" />
-            <element signature="e#2522#2523#0" expanded="true" />
-            <element signature="e#2569#2570#0" expanded="true" />
-            <element signature="e#2615#2616#0" expanded="true" />
+            <element signature="e#2452#2453#0" expanded="true" />
+            <element signature="e#2498#2499#0" expanded="true" />
+            <element signature="e#2545#2546#0" expanded="true" />
+            <element signature="e#2591#2592#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/ShoeUtils.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1270">
           <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
@@ -4070,62 +4085,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeRack.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeRack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="130" column="45" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
           <folding>
             <element signature="docComment;class#ShoeRack#0" expanded="false" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#2984#2985#0" expanded="true" />
-            <element signature="e#3016#3017#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
-            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#2968#2969#0" expanded="true" />
+            <element signature="e#3000#3001#0" expanded="true" />
+            <element signature="e#3043#3044#0" expanded="true" />
+            <element signature="e#3089#3090#0" expanded="true" />
             <element signature="docComment;method#goBack#0;class#ShoeRack#0" expanded="false" />
-            <element signature="e#4463#4464#0" expanded="true" />
-            <element signature="e#4494#4495#0" expanded="true" />
+            <element signature="e#4447#4448#0" expanded="true" />
+            <element signature="e#4478#4479#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
           <caret line="45" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1666#1667#0" expanded="true" />
-            <element signature="e#1694#1695#0" expanded="true" />
-            <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1803#1804#0" expanded="true" />
-            <element signature="e#1853#1854#0" expanded="true" />
-            <element signature="e#1886#1887#0" expanded="true" />
-            <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2252#2253#0" expanded="true" />
-            <element signature="e#2312#2313#0" expanded="true" />
-            <element signature="e#2348#2349#0" expanded="true" />
-            <element signature="e#2395#2396#0" expanded="true" />
-            <element signature="e#2424#2425#0" expanded="true" />
+            <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1743#1744#0" expanded="true" />
+            <element signature="e#1787#1788#0" expanded="true" />
+            <element signature="e#1837#1838#0" expanded="true" />
+            <element signature="e#1870#1871#0" expanded="true" />
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2236#2237#0" expanded="true" />
+            <element signature="e#2296#2297#0" expanded="true" />
+            <element signature="e#2332#2333#0" expanded="true" />
+            <element signature="e#2379#2380#0" expanded="true" />
+            <element signature="e#2408#2409#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeFlow.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeFlow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="790">
           <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-            <element signature="e#2175#2176#0" expanded="true" />
+            <element signature="e#2123#2124#0" expanded="true" />
+            <element signature="e#2159#2160#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/BasicShoeStorageTest.java">
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicShoeStorageTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6800">
           <caret line="232" column="60" selection-start-line="232" selection-start-column="60" selection-end-line="232" selection-end-column="60" />

@@ -1,39 +1,43 @@
-package info.juanmendez.fragmentnavigator.models;
+package info.juanmendez.shoeboxes.models;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.ShoeStorage;
+import info.juanmendez.shoeboxes.ShoeStorage;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
  *
- * Represents a flow of fragments having all visible yet one is active.
+ * Structure representation of a collection of nodes which visually correspond to a stack of fragments.
  */
 
-public class ShoeFlow implements ShoeModel {
-    ShoeModel parentNode;
+public class ShoeStack implements ShoeModel {
+
     Boolean active = false;
+    ShoeModel parentNode;
     List<ShoeModel> nodes = new ArrayList<>();
 
-    public static ShoeFlow build(ShoeModel... childNodeArray){
-        ShoeFlow flow =  new ShoeFlow();
-        flow.applyNodes( childNodeArray );
-        return flow;
+    public static ShoeStack build(ShoeModel... childNodeArray){
+        ShoeStack shoeStack =  new ShoeStack();
+        shoeStack.applyNodes( childNodeArray );
+
+        return shoeStack;
     }
 
-    public ShoeFlow() {
+    public ShoeStack() {
 
         ShoeStorage.getShoeRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
             if( pos >= 0 && pos < len-1 ){
+                ShoeModel childFound = navNodes.get( pos+1);
+
                 for( ShoeModel node: nodes ){
-                    node.setActive( true );
+                    node.setActive( node == childFound );
                 }
             }else{
                 for( ShoeModel node: nodes ){
@@ -41,22 +45,24 @@ public class ShoeFlow implements ShoeModel {
                 }
             }
         });
+
     }
 
     @Override
     public ShoeModel applyNodes(ShoeModel... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
+        //by default first fragment is active
         for( ShoeModel node: nodes ){
             node.setParent(this);
-            node.setActive(true);
+            node.setActive(false);
         }
 
         return this;
     }
 
     public List<ShoeModel> getNodes() {
-        return this.nodes;
+        return nodes;
     }
 
     @Override
@@ -71,7 +77,6 @@ public class ShoeFlow implements ShoeModel {
 
     @Override
     public ShoeModel search(String tag) {
-
         ShoeModel nodeResult;
 
         for( ShoeModel node: nodes){
@@ -89,6 +94,7 @@ public class ShoeFlow implements ShoeModel {
     public void clear() {
         nodes.clear();
     }
+
 
     @Override
     public void setActive(Boolean active) {

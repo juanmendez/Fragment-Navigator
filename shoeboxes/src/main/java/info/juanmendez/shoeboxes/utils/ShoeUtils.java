@@ -1,4 +1,4 @@
-package info.juanmendez.fragmentnavigator.utils;
+package info.juanmendez.shoeboxes.utils;
 
 import android.support.annotation.NonNull;
 
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import info.juanmendez.fragmentnavigator.models.ShoeFlow;
-import info.juanmendez.fragmentnavigator.models.ShoeModel;
+import info.juanmendez.shoeboxes.models.ShoeFlow;
+import info.juanmendez.shoeboxes.models.ShoeModel;
 
 /**
  * Created by Juan Mendez on 6/9/2017.

@@ -6,10 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 
-import info.juanmendez.fragmentnavigator.FragmentNav;
-import info.juanmendez.fragmentnavigator.models.NavItem;
-import info.juanmendez.fragmentnavigator.models.NavRoot;
-import info.juanmendez.fragmentnavigator.models.NavStack;
+import info.juanmendez.fragmentnavigator.ShoeStorage;
+import info.juanmendez.fragmentnavigator.models.ShoeBox;
+import info.juanmendez.fragmentnavigator.models.ShoeRack;
+import info.juanmendez.fragmentnavigator.models.ShoeStack;
 import info.juanmendez.fragmentnavigatordemo.models.NavFragment;
 
 @EActivity(R.layout.activity_main)
@@ -18,17 +18,17 @@ public class MainActivity extends AppCompatActivity {
     @AfterViews
     public void afterViews(){
 
-        NavRoot navRoot = new NavRoot();
-        FragmentNav.setNavRoot( navRoot );
+        ShoeRack navRoot = new ShoeRack();
+        ShoeStorage.setShoeRack( navRoot );
 
         NavFragment navA = new NavFragment(includeFragment( "A", R.id.layoutA ) );
         NavFragment navB = new NavFragment(includeFragment( "B", R.id.layoutB ) );
         NavFragment navC = new NavFragment(includeFragment( "C", R.id.layoutC ) );
 
         if( usesPane() ){
-            navRoot.applyNodes( NavItem.build(navA), NavItem.build(navB), NavItem.build(navC) );
+            navRoot.applyNodes( ShoeBox.build(navA), ShoeBox.build(navB), ShoeBox.build(navC) );
         }else{
-            navRoot.applyNodes(NavStack.build(NavItem.build(navA), NavItem.build(navB), NavItem.build(navC) ));
+            navRoot.applyNodes(ShoeStack.build(ShoeBox.build(navA), ShoeBox.build(navB), ShoeBox.build(navC) ));
         }
     }
 
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (!FragmentNav.getNavRoot().goBack()) {
+        if (!ShoeStorage.getShoeRack().goBack()) {
             super.onBackPressed();
         }
     }

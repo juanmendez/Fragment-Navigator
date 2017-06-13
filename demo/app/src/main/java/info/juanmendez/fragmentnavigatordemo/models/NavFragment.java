@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
+import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
 
 
 /**
@@ -12,7 +12,7 @@ import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
  * www.juanmendez.info
  * contact@juanmendez.info
  */
-public class NavFragment implements CoreNavFragment {
+public class NavFragment implements ShoeFragment {
 
     Fragment fragment;
 

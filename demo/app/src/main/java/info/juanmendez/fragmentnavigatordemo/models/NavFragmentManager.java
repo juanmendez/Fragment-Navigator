@@ -4,8 +4,8 @@ import android.support.v4.app.FragmentManager;
 
 import java.util.HashMap;
 
-import info.juanmendez.fragmentnavigator.adapters.CoreNavFragment;
-import info.juanmendez.fragmentnavigator.adapters.CoreNavFragmentManager;
+import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
+import info.juanmendez.fragmentnavigator.adapters.ShoeFragmentManager;
 
 
 /**
@@ -14,17 +14,17 @@ import info.juanmendez.fragmentnavigator.adapters.CoreNavFragmentManager;
  * contact@juanmendez.info
  */
 
-public class NavFragmentManager implements CoreNavFragmentManager {
+public class NavFragmentManager implements ShoeFragmentManager {
 
-    HashMap<String, CoreNavFragment> hashTag = new HashMap<>();
-    HashMap<Integer, CoreNavFragment> hashId = new HashMap<>();
+    HashMap<String, ShoeFragment> hashTag = new HashMap<>();
+    HashMap<Integer, ShoeFragment> hashId = new HashMap<>();
     FragmentManager fragmentManager;
 
     public NavFragmentManager(FragmentManager fragmentManager) {
         this.fragmentManager = fragmentManager;
     }
 
-    public void add( String tag, CoreNavFragment fragment ){
+    public void add( String tag, ShoeFragment fragment ){
         hashTag.put( tag, fragment );
     }
 
@@ -33,7 +33,7 @@ public class NavFragmentManager implements CoreNavFragmentManager {
     }
 
 
-    public void add( int id, CoreNavFragment fragment ){
+    public void add( int id, ShoeFragment fragment ){
         hashId.put( id, fragment );
     }
 
@@ -43,12 +43,12 @@ public class NavFragmentManager implements CoreNavFragmentManager {
 
 
     @Override
-    public CoreNavFragment findFragment(String tag) {
+    public ShoeFragment findFragment(String tag) {
         return hashTag.get(tag);
     }
 
     @Override
-    public CoreNavFragment findFragment(int id) {
+    public ShoeFragment findFragment(int id) {
         return hashId.get(id);
     }
 }

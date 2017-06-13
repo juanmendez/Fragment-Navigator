@@ -18,18 +18,20 @@ public class MainActivity extends AppCompatActivity {
     @AfterViews
     public void afterViews(){
 
-        ShoeRack navRoot = new ShoeRack();
-        ShoeStorage.setShoeRack( navRoot );
+        ShoeRack shoeRack = new ShoeRack();
+        ShoeStorage.setShoeRack( shoeRack );
 
         NavFragment navA = new NavFragment(includeFragment( "A", R.id.layoutA ) );
         NavFragment navB = new NavFragment(includeFragment( "B", R.id.layoutB ) );
         NavFragment navC = new NavFragment(includeFragment( "C", R.id.layoutC ) );
 
         if( usesPane() ){
-            navRoot.applyNodes( ShoeBox.build(navA), ShoeBox.build(navB), ShoeBox.build(navC) );
+            shoeRack.applyNodes( ShoeBox.build(navA), ShoeBox.build(navB), ShoeBox.build(navC) );
         }else{
-            navRoot.applyNodes(ShoeStack.build(ShoeBox.build(navA), ShoeBox.build(navB), ShoeBox.build(navC) ));
+            shoeRack.applyNodes(ShoeStack.build(ShoeBox.build(navA), ShoeBox.build(navB), ShoeBox.build(navC) ));
         }
+
+        shoeRack.request( "A" );
     }
 
 

@@ -116,21 +116,12 @@ public class BasicShoeStorageTest {
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
         ShoeBox shoeBoxD = ShoeBox.build(fragmentD);
 
-        shoeRack.clear();
+        
         shoeRack.applyNodes(shoeBoxA, shoeBoxB.applyNodes(shoeBoxC, shoeBoxD ));
 
 
         ShoeModel result;
-        ShoeModel match = null;
-
-        for( ShoeModel node: shoeRack.getNodes() ){
-
-            result = node.search( tagC);
-
-            if( result != null ){
-                match = result;
-            }
-        }
+        ShoeModel match = shoeRack.search( tagC );
 
         assertNotNull( "not null", match);
     }
@@ -138,7 +129,7 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldStackGoForward(){
-        shoeRack.clear();
+        
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
@@ -159,8 +150,26 @@ public class BasicShoeStorageTest {
     }
 
     @Test
+    public void shouldHistoryByFlowWorkFine(){
+        
+
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack.applyNodes( ShoeFlow.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+
+        //lets go to first one!
+        shoeRack.request( tagC );
+        assertEquals( "there are three elements in history!", shoeRack.getHistory().size(), 3 );
+        assertFalse( "going back shouldn't execute, and then return false", shoeRack.goBack() );
+
+    }
+
+
+    @Test
     public void shouldStackGoBack(){
-        shoeRack.clear();
+        
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
@@ -195,36 +204,34 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldFlowGoBack(){
-        shoeRack.clear();
+        
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
-        shoeRack.applyNodes( ShoeFlow.build(shoeBoxA, shoeBoxB, shoeBoxC) );
 
-        //lets go to first one!
+        shoeRack.applyNodes( ShoeStack.build(shoeBoxC, ShoeStack.build(shoeBoxA, shoeBoxB)) );
+        shoeRack.request( tagC );
         shoeRack.request( tagA );
         shoeRack.request( tagB );
-        shoeRack.request( tagC );
 
-        //if its in a stack then only show this fragment!
-        assertTrue( "shoeBoxA is visible", shoeBoxC.isActive() );
+        assertTrue( "B is active", shoeBoxB.isActive() );
+        assertFalse( "A is inactive", shoeBoxA.isActive() );
+        assertFalse( "C is inactive", shoeBoxC.isActive() );
 
-        //Boolean wentBack = shoeRack.goBack();
-        //assertFalse("able to go back", wentBack );
-        /*assertTrue( "shoeBoxB is visible", shoeBoxB.isActive() );
-        assertTrue( "shoeBoxC is invisible", shoeBoxC.isActive() );
-        assertTrue( "shoeBoxA is invisible", shoeBoxA.isActive() );
+        shoeRack.goBack();
 
-        wentBack = shoeRack.goBack();
-        assertTrue("able to go back", wentBack );
-        assertFalse( "shoeBoxB is ivisible", shoeBoxB.isActive() );
-        assertFalse( "shoeBoxC is invisible", shoeBoxC.isActive() );
-        assertTrue( "shoeBoxA is visible", shoeBoxA.isActive() );
+        assertTrue( "A is active", shoeBoxA.isActive() );
+        assertFalse( "B is inactive", shoeBoxB.isActive() );
+        assertFalse( "C is inactive", shoeBoxC.isActive() );
 
-        wentBack = shoeRack.goBack();
-        assertFalse("navigation ended when false", wentBack );*/
+        assertTrue( "can go back", shoeRack.goBack());
+
+        assertTrue( "C is inactive", shoeBoxC.isActive() );
+        assertFalse( "B is inactive", shoeBoxB.isActive() );
+        assertFalse( "A is inactive", shoeBoxA.isActive() );
+
     }
 
     @Test
@@ -237,17 +244,17 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldStackOfStacksGoForward(){
-        shoeRack.clear();
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
         ShoeBox shoeBoxD = ShoeBox.build( fragmentD );
 
-        shoeRack.applyNodes( ShoeStack.build( ShoeStack.build(shoeBoxA, shoeBoxB), ShoeStack.build(shoeBoxC, shoeBoxD)) );
+        ShoeStack shoeStack1;
+        ShoeStack shoeStack2;
 
-        ShoeStack shoeStack1 = (ShoeStack) shoeRack.getNodes().get(0).getNodes().get(0);
-        ShoeStack shoeStack2 = (ShoeStack) shoeRack.getNodes().get(0).getNodes().get(1);
+        shoeRack.applyNodes( ShoeStack.build( shoeStack1=ShoeStack.build(shoeBoxA, shoeBoxB), shoeStack2=ShoeStack.build(shoeBoxC, shoeBoxD)) );
+
 
         shoeRack.request( tagA );
 

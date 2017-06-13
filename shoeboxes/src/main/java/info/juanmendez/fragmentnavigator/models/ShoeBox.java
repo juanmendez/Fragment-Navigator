@@ -18,6 +18,7 @@ import info.juanmendez.fragmentnavigator.adapters.ShoeFragment;
 public class ShoeBox implements ShoeModel {
     ShoeModel parentNode;
     private ShoeFragment shoeFragment; //identifies Fragment with Tag or its Id
+    ShoeModel shoeModel;
     List<ShoeModel> nodes = new ArrayList<>();
 
     public static ShoeBox build(ShoeFragment shoeFragment){
@@ -53,6 +54,14 @@ public class ShoeBox implements ShoeModel {
 
     @Override
     public ShoeModel applyNodes(ShoeModel... nodes) {
+
+        if( nodes.length > 1 ){
+            shoeModel = ShoeFlow.build( nodes );
+        }else if( nodes.length == 1){
+            shoeModel = nodes[0];
+        }
+
+
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
         for( ShoeModel node: nodes ){
@@ -83,22 +92,14 @@ public class ShoeBox implements ShoeModel {
         if( shoeFragment.getTag().equals(tag))
             return this;
 
-        ShoeModel nodeResult;
-
-        for( ShoeModel node: nodes){
-            nodeResult = node.search( tag );
-
-            if( nodeResult != null ){
-                return nodeResult;
-            }
-        }
+        if( shoeModel != null )
+            return shoeModel.search( tag );
 
         return null;
     }
-    
+
     @Override
     public void clear() {
-        nodes.clear();
     }
 
     @Override

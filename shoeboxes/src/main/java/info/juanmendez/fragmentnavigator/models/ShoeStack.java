@@ -39,6 +39,10 @@ public class ShoeStack implements ShoeModel {
                 for( ShoeModel node: nodes ){
                     node.setActive( node == childFound );
                 }
+            }else{
+                for( ShoeModel node: nodes ){
+                    node.setActive( false );
+                }
             }
         });
 

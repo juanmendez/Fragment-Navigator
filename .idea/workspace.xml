@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="593b7e85-53f0-47a4-b095-a2fc4ca8b280" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/ShoeStorage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/adapters/ShoeFragmentManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeBox.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeFlow.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeRack.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/models/ShoeStack.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/fragmentnavigator/utils/ShoeUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/BasicShoeStorageTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/fragmentnavigator/models/TestShoeFragmentManager.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/FragmentLetter.java" afterPath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/FragmentLetter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/MainActivity.java" afterPath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/models/NavFragment.java" afterPath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/models/NavFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/models/NavFragmentManager.java" afterPath="$PROJECT_DIR$/demo/app/src/main/java/info/juanmendez/fragmentnavigatordemo/models/NavFragmentManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeBox.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeFlow.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeFlow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeModel.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeStack.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeStack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicShoeStorageTest.java" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicShoeStorageTest.java" />
     </list>
     <ignored path="Fragment Navigator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,8 +63,8 @@
               <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2123#2124#0" expanded="true" />
-                <element signature="e#2159#2160#0" expanded="true" />
+                <element signature="e#2053#2054#0" expanded="true" />
+                <element signature="e#2089#2090#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,13 +74,13 @@
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeBox.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1310">
-              <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+              <caret line="102" column="39" selection-start-line="102" selection-start-column="39" selection-end-line="102" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2452#2453#0" expanded="true" />
+                <element signature="e#2405#2406#0" expanded="true" />
+                <element signature="e#2451#2452#0" expanded="true" />
                 <element signature="e#2498#2499#0" expanded="true" />
-                <element signature="e#2545#2546#0" expanded="true" />
-                <element signature="e#2591#2592#0" expanded="true" />
+                <element signature="e#2544#2545#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,12 +122,10 @@
                 <element signature="e#1787#1788#0" expanded="true" />
                 <element signature="e#1837#1838#0" expanded="true" />
                 <element signature="e#1870#1871#0" expanded="true" />
-                <element signature="e#2207#2208#0" expanded="true" />
-                <element signature="e#2236#2237#0" expanded="true" />
-                <element signature="e#2296#2297#0" expanded="true" />
-                <element signature="e#2332#2333#0" expanded="true" />
-                <element signature="e#2379#2380#0" expanded="true" />
-                <element signature="e#2408#2409#0" expanded="true" />
+                <element signature="e#2225#2226#0" expanded="true" />
+                <element signature="e#2261#2262#0" expanded="true" />
+                <element signature="e#2308#2309#0" expanded="true" />
+                <element signature="e#2337#2338#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3692,7 +3677,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
+    <frame x="-16" y="-16" width="3872" height="2092" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -4066,13 +4051,13 @@
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1310">
-          <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+          <caret line="102" column="39" selection-start-line="102" selection-start-column="39" selection-end-line="102" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2452#2453#0" expanded="true" />
+            <element signature="e#2405#2406#0" expanded="true" />
+            <element signature="e#2451#2452#0" expanded="true" />
             <element signature="e#2498#2499#0" expanded="true" />
-            <element signature="e#2545#2546#0" expanded="true" />
-            <element signature="e#2591#2592#0" expanded="true" />
+            <element signature="e#2544#2545#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4118,12 +4103,10 @@
             <element signature="e#1787#1788#0" expanded="true" />
             <element signature="e#1837#1838#0" expanded="true" />
             <element signature="e#1870#1871#0" expanded="true" />
-            <element signature="e#2207#2208#0" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2296#2297#0" expanded="true" />
-            <element signature="e#2332#2333#0" expanded="true" />
-            <element signature="e#2379#2380#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
+            <element signature="e#2225#2226#0" expanded="true" />
+            <element signature="e#2261#2262#0" expanded="true" />
+            <element signature="e#2308#2309#0" expanded="true" />
+            <element signature="e#2337#2338#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4134,8 +4117,8 @@
           <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2123#2124#0" expanded="true" />
-            <element signature="e#2159#2160#0" expanded="true" />
+            <element signature="e#2053#2054#0" expanded="true" />
+            <element signature="e#2089#2090#0" expanded="true" />
           </folding>
         </state>
       </provider>

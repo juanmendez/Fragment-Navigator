@@ -140,13 +140,13 @@ public class BasicShoeStorageTest {
         shoeRack.request( tagA );
 
         //if its in a stack then only show this fragment!
-        assertTrue( "shoeBoxA is visible", shoeBoxA.isActive() );
-        assertFalse( "shoeBoxB is invisible", shoeBoxB.isActive() );
+        assertTrue( "shoeBoxA is active", shoeBoxA.isActive() );
+        assertFalse( "shoeBoxB is inactive", shoeBoxB.isActive() );
 
         shoeRack.request( tagB );
 
-        assertFalse( "shoeBoxA is invisible", shoeBoxA.isActive() );
-        assertTrue( "shoeBoxB is visibile", shoeBoxB.isActive() );
+        assertFalse( "shoeBoxA is inactive", shoeBoxA.isActive() );
+        assertTrue( "shoeBoxB is active", shoeBoxB.isActive() );
     }
 
     @Test

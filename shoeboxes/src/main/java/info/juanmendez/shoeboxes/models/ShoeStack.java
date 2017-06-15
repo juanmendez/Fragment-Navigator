@@ -91,12 +91,6 @@ public class ShoeStack implements ShoeModel {
     }
 
     @Override
-    public void clear() {
-        nodes.clear();
-    }
-
-
-    @Override
     public void setActive(Boolean active) {
         this.active = active;
     }

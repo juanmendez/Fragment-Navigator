@@ -310,4 +310,14 @@ public class BasicShoeStorageTest {
         assertFalse( "visible", shoeBoxB.isActive() );
     }
 
+
+    /**
+     * So we have a flow and then a Stack. We want to see ShoeRack's history keeps up
+     * with the changes.
+     */
+    @Test
+    public void testHistoryAfterRotation(){
+
+    }
+
 }

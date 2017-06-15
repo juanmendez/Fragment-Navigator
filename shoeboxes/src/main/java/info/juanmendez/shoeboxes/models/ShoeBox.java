@@ -99,10 +99,6 @@ public class ShoeBox implements ShoeModel {
     }
 
     @Override
-    public void clear() {
-    }
-
-    @Override
     public void setActive(Boolean active) {
         shoeFragment.setActive(active);
     }

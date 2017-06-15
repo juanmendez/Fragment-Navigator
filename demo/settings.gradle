@@ -1,0 +1,3 @@
+include ':app'
+include 'shoeboxes'
+project(':shoeboxes').projectDir = new File(settingsDir, '../shoeboxes')

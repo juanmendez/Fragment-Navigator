@@ -195,6 +195,7 @@ public class BackstackNavigationTest {
         shoeRack.clearHistory();
 
         ShoeBox shoeBoxA, shoeBoxB, shoeBoxC;
+        Boolean requestResult = false;
 
         shoeBoxA = ShoeBox.build(fragmentA);
         shoeBoxB = ShoeBox.build(fragmentB);
@@ -220,6 +221,15 @@ public class BackstackNavigationTest {
         assertFalse( "shoeBoxC is inactive", shoeBoxC.isActive() );
 
         assertFalse( "we can't go back anymore", shoeRack.goBack() );
+
+        //lets remove one fragment from the structure..
+        //one fragment can turn into a sliding nav which is no longer
+        //applying the structure.. just saying..
+
+        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB) );
+        requestResult = shoeRack.request( tagC );
+
+        assertFalse( "can't be requested ", requestResult );
         
     }
 }

@@ -19,15 +19,15 @@ public class ShoeRack {
 
     private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
 
-    public void  request( int requestId ){
-        request( Integer.toString( requestId) );
+    public boolean  request( int requestId ){
+        return request( Integer.toString( requestId) );
     }
 
-    public void request(String requestedTag) {
-        request(search( requestedTag ));
+    public boolean request(String requestedTag) {
+        return request(search( requestedTag ));
     }
 
-    public void request( ShoeModel shoeModel){
+    public boolean request( ShoeModel shoeModel){
         if( shoeModel != null ){
             //going forward can mean also steping back to a previous shoeModel
 
@@ -68,11 +68,14 @@ public class ShoeRack {
 
             //lets not update based on a shoeBox which has no shoeFragment.
             if( shoeModel instanceof ShoeBox  && ((ShoeBox) shoeModel).getShoeFragment() == null ){
-                return;
+                return false;
             }
 
             publishSubject.onNext(ShoeUtils.getPathToNode(shoeModel));
+            return true;
         }
+
+        return false;
     }
 
     public Observable<List<ShoeModel>> asObservable() {

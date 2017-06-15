@@ -12,7 +12,8 @@ import info.juanmendez.shoeboxes.adapters.ShoeFragment;
  * www.juanmendez.info
  * contact@juanmendez.info
  *
- * Represents a fragment having layoutNodes as a single branch.
+ * Wraps a shoeFragment, and the shoeFragment wraps an Android Fragment.
+ * The shoeFragment is an adapter. So this class proxies activating and deactivating the fragment.
  */
 
 public class ShoeBox implements ShoeModel {

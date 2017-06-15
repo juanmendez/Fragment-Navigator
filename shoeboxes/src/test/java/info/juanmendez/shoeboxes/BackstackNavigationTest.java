@@ -19,7 +19,6 @@ import static junit.framework.Assert.assertTrue;
  * www.juanmendez.info
  * contact@juanmendez.info
  */
-
 public class BackstackNavigationTest {
 
     String tagA = "fragmentA";
@@ -230,6 +229,5 @@ public class BackstackNavigationTest {
         requestResult = shoeRack.request( tagC );
 
         assertFalse( "can't be requested ", requestResult );
-        
     }
 }

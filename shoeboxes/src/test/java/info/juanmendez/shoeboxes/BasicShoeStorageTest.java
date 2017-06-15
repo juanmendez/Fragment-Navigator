@@ -48,8 +48,7 @@ public class BasicShoeStorageTest {
 
     @Before
     public void before(){
-        shoeRack = new ShoeRack();
-        ShoeStorage.setShoeRack(shoeRack);
+        shoeRack = ShoeStorage.getRack( BasicShoeStorageTest.class.getSimpleName());
         fragmentA = new TestShoeFragment(tagA);
         fragmentB = new TestShoeFragment(tagB);
         fragmentC = new TestShoeFragment(tagC);
@@ -86,8 +85,8 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldDispatchRequest(){
-        fragmentManagerShadow.add( tagA, fragmentA );
-        fragmentManagerShadow.add( tagB, fragmentB );
+        shoeRack.clearHistory();
+
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
@@ -106,6 +105,7 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldGetParentOfNode(){
+        shoeRack.clearHistory();
         /*ShoeModel parentNode = navigator.getRoot().search( tagA );
         assertEquals( "it's the same root node", parentNode, navigator.getRoot() );*/
 
@@ -129,8 +129,8 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldStackGoForward(){
-        
 
+        shoeRack.clearHistory();
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
@@ -151,8 +151,8 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldHistoryByFlowWorkFine(){
-        
 
+        shoeRack.clearHistory();
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
@@ -169,8 +169,8 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldStackGoBack(){
-        
 
+        shoeRack.clearHistory();
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
@@ -183,9 +183,9 @@ public class BasicShoeStorageTest {
         shoeRack.request( tagC );
 
         //if its in a stack then only show this fragment!
-        assertTrue( "shoeBoxA is visible", shoeBoxC.isActive() );
+        assertTrue( "shoeBoxC is visible", shoeBoxC.isActive() );
 
-        Boolean wentBack = shoeRack.goBack();
+       Boolean wentBack = shoeRack.goBack();
         assertTrue("able to go back", wentBack );
         assertTrue( "shoeBoxB is visible", shoeBoxB.isActive() );
         assertFalse( "shoeBoxC is invisible", shoeBoxC.isActive() );
@@ -204,8 +204,8 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldFlowGoBack(){
-        
 
+        shoeRack.clearHistory();
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
@@ -244,7 +244,7 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldStackOfStacksGoForward(){
-
+        shoeRack.clearHistory();
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
@@ -271,53 +271,48 @@ public class BasicShoeStorageTest {
 
     @Test
     public void mockingRotatingDevice(){
+
+        shoeRack.clearHistory();
+
         //so initially we have a list of fragments, but then they change to a stack..
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
-        shoeRack.applyNodes(shoeBoxA, shoeBoxB);
-
-        assertTrue( "visible", shoeBoxA.isActive() );
-        assertTrue( "visible", shoeBoxB.isActive() );
-
-        //ok,, now we rotate and we have a stack of fragments
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
-        shoeRack.request( tagA );
-        assertTrue( "visible", shoeBoxA.isActive() );
-        assertFalse( "visible", shoeBoxB.isActive() );
-
-        //lets go to fragmentB
-        shoeRack.request( tagB );
-
-        assertFalse( "visible a", shoeBoxA.isActive() );
-        assertTrue( "invisible b", shoeBoxB.isActive() );
-
-        //lets rotate again
-        shoeRack.applyNodes(shoeBoxA, shoeBoxB);
+        shoeRack.applyNodes(shoeBoxA, shoeBoxB, shoeBoxC );
 
         assertTrue( "visible", shoeBoxA.isActive() );
         assertTrue( "visible", shoeBoxB.isActive() );
+        assertTrue( "visible", shoeBoxC.isActive() );
+
+        shoeRack.request( tagC );
 
         //ok,, now we rotate and we have a stack of fragments
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
-        shoeRack.request( tagB );
+
+        shoeBoxA = ShoeBox.build(fragmentA);
+        shoeBoxB = ShoeBox.build(fragmentB);
+        shoeBoxC = ShoeBox.build(fragmentC);
+        shoeRack.applyNodes( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC));
+
+        assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
+
+
+        shoeBoxA = ShoeBox.build(fragmentA);
+        shoeBoxB = ShoeBox.build(fragmentB);
+        shoeBoxC = ShoeBox.build(fragmentC);
+        shoeRack.applyNodes(shoeBoxA, shoeBoxB, shoeBoxC );
+        assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
+
+        shoeBoxA = ShoeBox.build(fragmentA);
+        shoeBoxB = ShoeBox.build(fragmentB);
+        shoeBoxC = ShoeBox.build(fragmentC);
+        shoeRack.applyNodes( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC));
+
+        assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
+
         assertFalse( "visible", shoeBoxA.isActive() );
-        assertTrue( "visible", shoeBoxB.isActive() );
-
-        shoeRack.goBack();
-
-        assertTrue( "visible", shoeBoxA.isActive() );
         assertFalse( "visible", shoeBoxB.isActive() );
-    }
-
-
-    /**
-     * So we have a flow and then a Stack. We want to see ShoeRack's history keeps up
-     * with the changes.
-     */
-    @Test
-    public void testHistoryAfterRotation(){
-
+        assertTrue( "visible", shoeBoxC.isActive() );
     }
 
 }

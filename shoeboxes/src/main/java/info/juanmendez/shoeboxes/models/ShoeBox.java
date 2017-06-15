@@ -21,13 +21,15 @@ public class ShoeBox implements ShoeModel {
     ShoeModel shoeModel;
     List<ShoeModel> nodes = new ArrayList<>();
 
+    private String fragmentTag;
+
     public static ShoeBox build(ShoeFragment shoeFragment){
         return new ShoeBox(shoeFragment);
     }
 
     public ShoeBox() {
 
-        ShoeStorage.getShoeRack().asObservable().subscribe(navNodes -> {
+        ShoeStorage.getLatestRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
@@ -46,10 +48,21 @@ public class ShoeBox implements ShoeModel {
     public ShoeBox(ShoeFragment shoeFragment){
         this();
         this.shoeFragment = shoeFragment;
+
+        if( shoeFragment.getTag() != null ){
+            this.fragmentTag = shoeFragment.getTag();
+        }
+        else if( shoeFragment.getId() != 0 ){
+            this.fragmentTag = Integer.toString( shoeFragment.getId() );
+        }
     }
 
     public ShoeFragment getShoeFragment(){
         return shoeFragment;
+    }
+
+    public void setShoeFragment( ShoeFragment shoeFragment) {
+        this.shoeFragment = shoeFragment;
     }
 
     @Override
@@ -106,5 +119,9 @@ public class ShoeBox implements ShoeModel {
     @Override
     public boolean isActive() {
         return shoeFragment.isActive();
+    }
+
+    public String getFragmentTag() {
+        return fragmentTag;
     }
 }

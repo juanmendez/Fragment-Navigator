@@ -23,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
         ShoeBox boxC = ShoeBuilder.create(includeFragment( "C", R.id.layoutC ) );
 
         if( usesPane() ){
+            //equivalent to: shoeRack.populate( ShoeFlow.build(...) )
             shoeRack.populate( boxA, boxB, boxC );
         }else{
-            shoeRack.populate(ShoeStack.build(boxA, boxB, boxC ));
+            shoeRack.populate( ShoeStack.build( boxA, boxB, boxC ));
         }
 
         //we want to kick off with first box, if history is empty.

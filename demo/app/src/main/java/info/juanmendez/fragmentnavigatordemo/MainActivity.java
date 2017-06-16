@@ -19,15 +19,19 @@ public class MainActivity extends AppCompatActivity {
     public void afterViews(){
 
         ShoeRack shoeRack = ShoeStorage.getRack( MainActivity.class.getSimpleName() );
-
-        NavFragment navA = new NavFragment(includeFragment( "A", R.id.layoutA ) );
-        NavFragment navB = new NavFragment(includeFragment( "B", R.id.layoutB ) );
-        NavFragment navC = new NavFragment(includeFragment( "C", R.id.layoutC ) );
+        ShoeBox boxA = ShoeBuilder.create(includeFragment( "A", R.id.layoutA ) );
+        ShoeBox boxB = ShoeBuilder.create(includeFragment( "B", R.id.layoutB ) );
+        ShoeBox boxC = ShoeBuilder.create(includeFragment( "C", R.id.layoutC ) );
 
         if( usesPane() ){
-            shoeRack.applyNodes( ShoeBox.build(navA), ShoeBox.build(navB), ShoeBox.build(navC) );
+            shoeRack.applyNodes( boxA, boxB, boxC );
         }else{
-            shoeRack.applyNodes(ShoeStack.build(ShoeBox.build(navA), ShoeBox.build(navB), ShoeBox.build(navC) ));
+            shoeRack.applyNodes(ShoeStack.build(boxA, boxB, boxC ));
+        }
+
+        //we want to kick off with first box, if history is empty.
+        if( shoeRack.isHistoryEmpty() ){
+            shoeRack.request( "A" );
         }
     }
 
@@ -44,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         if( !fragment.isAdded() ){
             fm.beginTransaction().add( layoutId, fragment, letter ).commit();
         }
-
 
         return fragment;
     }

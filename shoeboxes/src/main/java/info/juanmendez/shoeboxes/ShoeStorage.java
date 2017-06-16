@@ -22,9 +22,11 @@ public class ShoeStorage {
     public static ShoeRack getRack( String tag ) {
 
         latestTag = tag;
+
         if( hashShoeRack.get( tag ) == null ){
             hashShoeRack.put( tag, new ShoeRack() );
         }
+
         return hashShoeRack.get( tag );
     }
 }

@@ -133,14 +133,9 @@ public class ShoeRack {
         }
     }
 
-    public ShoeModel getShoeModel() {
-        return shoeModel;
-    }
-
     public ShoeModel search(String tag) {
         return shoeModel.search( tag );
     }
-
 
     /**
      * Requeset to go back to the previous sibling before the last in history.
@@ -194,5 +189,9 @@ public class ShoeRack {
      */
     public void clearHistory(){
         history.clear();
+    }
+
+    public boolean isHistoryEmpty(){
+        return history.isEmpty();
     }
 }

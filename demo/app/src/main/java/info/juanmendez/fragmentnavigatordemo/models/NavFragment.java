@@ -34,16 +34,18 @@ public class NavFragment implements ShoeFragment {
     public void setActive(Boolean active) {
 
         FragmentManager fm = fragment.getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
 
-        if( active ){
-            ft.show( fragment );
-        }else{
-            ft.hide( fragment );
+        if( fm != null ){
+            FragmentTransaction ft = fm.beginTransaction();
+
+            if( active ){
+                ft.show( fragment );
+            }else{
+                ft.hide( fragment );
+            }
+
+            ft.commit();
         }
-
-        ft.commit();
-
     }
 
     @Override

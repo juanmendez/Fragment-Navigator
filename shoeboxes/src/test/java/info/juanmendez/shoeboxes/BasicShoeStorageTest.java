@@ -48,8 +48,7 @@ public class BasicShoeStorageTest {
 
     @Before
     public void before(){
-        shoeRack = new ShoeRack();
-        ShoeStorage.setShoeRack(shoeRack);
+        shoeRack = ShoeStorage.getRack( BasicShoeStorageTest.class.getSimpleName());
         fragmentA = new TestShoeFragment(tagA);
         fragmentB = new TestShoeFragment(tagB);
         fragmentC = new TestShoeFragment(tagC);
@@ -86,8 +85,8 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldDispatchRequest(){
-        fragmentManagerShadow.add( tagA, fragmentA );
-        fragmentManagerShadow.add( tagB, fragmentB );
+        shoeRack.clearHistory();
+
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
@@ -106,6 +105,7 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldGetParentOfNode(){
+        shoeRack.clearHistory();
         /*ShoeModel parentNode = navigator.getRoot().search( tagA );
         assertEquals( "it's the same root node", parentNode, navigator.getRoot() );*/
 
@@ -129,8 +129,8 @@ public class BasicShoeStorageTest {
 
     @Test
     public void shouldStackGoForward(){
-        
 
+        shoeRack.clearHistory();
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
@@ -140,19 +140,19 @@ public class BasicShoeStorageTest {
         shoeRack.request( tagA );
 
         //if its in a stack then only show this fragment!
-        assertTrue( "shoeBoxA is visible", shoeBoxA.isActive() );
-        assertFalse( "shoeBoxB is invisible", shoeBoxB.isActive() );
+        assertTrue( "shoeBoxA is active", shoeBoxA.isActive() );
+        assertFalse( "shoeBoxB is inactive", shoeBoxB.isActive() );
 
         shoeRack.request( tagB );
 
-        assertFalse( "shoeBoxA is invisible", shoeBoxA.isActive() );
-        assertTrue( "shoeBoxB is visibile", shoeBoxB.isActive() );
+        assertFalse( "shoeBoxA is inactive", shoeBoxA.isActive() );
+        assertTrue( "shoeBoxB is active", shoeBoxB.isActive() );
     }
 
     @Test
     public void shouldHistoryByFlowWorkFine(){
-        
 
+        shoeRack.clearHistory();
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
@@ -166,148 +166,11 @@ public class BasicShoeStorageTest {
 
     }
 
-
-    @Test
-    public void shouldStackGoBack(){
-        
-
-        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
-        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
-        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
-
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
-
-        //lets go to first one!
-        shoeRack.request( tagA );
-        shoeRack.request( tagB );
-        shoeRack.request( tagC );
-
-        //if its in a stack then only show this fragment!
-        assertTrue( "shoeBoxA is visible", shoeBoxC.isActive() );
-
-        Boolean wentBack = shoeRack.goBack();
-        assertTrue("able to go back", wentBack );
-        assertTrue( "shoeBoxB is visible", shoeBoxB.isActive() );
-        assertFalse( "shoeBoxC is invisible", shoeBoxC.isActive() );
-        assertFalse( "shoeBoxA is invisible", shoeBoxA.isActive() );
-
-        wentBack = shoeRack.goBack();
-        assertTrue("able to go back", wentBack );
-        assertFalse( "shoeBoxB is ivisible", shoeBoxB.isActive() );
-        assertFalse( "shoeBoxC is invisible", shoeBoxC.isActive() );
-        assertTrue( "shoeBoxA is visible", shoeBoxA.isActive() );
-
-        wentBack = shoeRack.goBack();
-        assertFalse("navigation ended when false", wentBack );
-    }
-
-
-    @Test
-    public void shouldFlowGoBack(){
-        
-
-        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
-        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
-        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
-
-
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxC, ShoeStack.build(shoeBoxA, shoeBoxB)) );
-        shoeRack.request( tagC );
-        shoeRack.request( tagA );
-        shoeRack.request( tagB );
-
-        assertTrue( "B is active", shoeBoxB.isActive() );
-        assertFalse( "A is inactive", shoeBoxA.isActive() );
-        assertFalse( "C is inactive", shoeBoxC.isActive() );
-
-        shoeRack.goBack();
-
-        assertTrue( "A is active", shoeBoxA.isActive() );
-        assertFalse( "B is inactive", shoeBoxB.isActive() );
-        assertFalse( "C is inactive", shoeBoxC.isActive() );
-
-        assertTrue( "can go back", shoeRack.goBack());
-
-        assertTrue( "C is inactive", shoeBoxC.isActive() );
-        assertFalse( "B is inactive", shoeBoxB.isActive() );
-        assertFalse( "A is inactive", shoeBoxA.isActive() );
-
-    }
-
     @Test
     public void slideArrayList(){
         List<String> strings = new ArrayList<>(Arrays.asList(new String[]{"a","b","c","d"}));
         strings = strings.subList(0, 2);
         assertEquals( "last is c", strings.get(strings.size()-1), "b"  );
-    }
-
-
-    @Test
-    public void shouldStackOfStacksGoForward(){
-
-        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
-        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
-        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
-        ShoeBox shoeBoxD = ShoeBox.build( fragmentD );
-
-        ShoeStack shoeStack1;
-        ShoeStack shoeStack2;
-
-        shoeRack.applyNodes( ShoeStack.build( shoeStack1=ShoeStack.build(shoeBoxA, shoeBoxB), shoeStack2=ShoeStack.build(shoeBoxC, shoeBoxD)) );
-
-
-        shoeRack.request( tagA );
-
-        assertTrue( "first stack displayed", shoeStack1.isActive() );
-        assertFalse( "second stack hides", shoeStack2.isActive() );
-
-
-        shoeRack.request( tagC );
-
-        assertFalse( "first stack hides", shoeStack1.isActive() );
-        assertTrue( "second stack displayed", shoeStack2.isActive() );
-    }
-
-
-    @Test
-    public void mockingRotatingDevice(){
-        //so initially we have a list of fragments, but then they change to a stack..
-        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
-        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
-
-        shoeRack.applyNodes(shoeBoxA, shoeBoxB);
-
-        assertTrue( "visible", shoeBoxA.isActive() );
-        assertTrue( "visible", shoeBoxB.isActive() );
-
-        //ok,, now we rotate and we have a stack of fragments
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
-        shoeRack.request( tagA );
-        assertTrue( "visible", shoeBoxA.isActive() );
-        assertFalse( "visible", shoeBoxB.isActive() );
-
-        //lets go to fragmentB
-        shoeRack.request( tagB );
-
-        assertFalse( "visible a", shoeBoxA.isActive() );
-        assertTrue( "invisible b", shoeBoxB.isActive() );
-
-        //lets rotate again
-        shoeRack.applyNodes(shoeBoxA, shoeBoxB);
-
-        assertTrue( "visible", shoeBoxA.isActive() );
-        assertTrue( "visible", shoeBoxB.isActive() );
-
-        //ok,, now we rotate and we have a stack of fragments
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB));
-        shoeRack.request( tagB );
-        assertFalse( "visible", shoeBoxA.isActive() );
-        assertTrue( "visible", shoeBoxB.isActive() );
-
-        shoeRack.goBack();
-
-        assertTrue( "visible", shoeBoxA.isActive() );
-        assertFalse( "visible", shoeBoxB.isActive() );
     }
 
 }

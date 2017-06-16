@@ -19,15 +19,15 @@ public class ShoeRack {
 
     private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
 
-    public void request( int requestId ){
-        request( Integer.toString( requestId) );
+    public boolean  request( int requestId ){
+        return request( Integer.toString( requestId) );
     }
 
-    public void request(String requestedTag) {
-        request(search( requestedTag ));
+    public boolean request(String requestedTag) {
+        return request(search( requestedTag ));
     }
 
-    public void request( ShoeModel shoeModel){
+    public boolean request( ShoeModel shoeModel){
         if( shoeModel != null ){
             //going forward can mean also steping back to a previous shoeModel
 
@@ -39,19 +39,15 @@ public class ShoeRack {
              * this helps when switching to stack, we have in history those other siblings in order to go back.
              */
 
-            //going forward can mean also steping back to a previous shoeModel
+            //going forward can mean also stepping back to a previous shoeModel
             if( history.contains(shoeModel)){
-                int pos = history.indexOf(shoeModel);
-                history = history.subList(0, pos+1);
-                ShoeModel sibling;
 
-                //we have to move all the way out of all sibling if the parent is a ShoeFlow.
-                if( parent != null && parent instanceof ShoeFlow ){
-                    for( int i = history.size()-1; i >= 0; i-- ){
-                        sibling = history.get(i);
-                        if( sibling.getParent() == parent ){
-                            history.remove( history.size()-1);
-                        }
+                for( int i = history.size()-1; i>= 0; i--){
+
+                    if( history.get(i) != shoeModel ){
+                        history.remove( i );
+                    }else{
+                        break;
                     }
                 }
 
@@ -70,9 +66,16 @@ public class ShoeRack {
                 history.add(shoeModel);
             }
 
+            //lets not update based on a shoeBox which has no shoeFragment.
+            if( shoeModel instanceof ShoeBox  && ((ShoeBox) shoeModel).getShoeFragment() == null ){
+                return false;
+            }
 
             publishSubject.onNext(ShoeUtils.getPathToNode(shoeModel));
+            return true;
         }
+
+        return false;
     }
 
     public Observable<List<ShoeModel>> asObservable() {
@@ -91,8 +94,43 @@ public class ShoeRack {
         }else if( nodes.length == 1 ){
             shoeModel = nodes[0];
         }
+        replaceHistory();
 
         return this;
+    }
+
+    /**
+     * When an app is rotated shoeModel can update all shoeBox references.
+     * This method takes care of updating all history items to work along with the
+     * new shoeBoxes.
+     */
+    private void replaceHistory(){
+
+        ShoeBox prevShoeBox; //old shoeBox reference
+        ShoeBox nextShoeBox; //new shoeBox reference
+
+
+        for( int i = 0; i < history.size(); i++ ){
+
+            if( history.get(i) instanceof ShoeBox ){
+                prevShoeBox = (ShoeBox) history.get(i);
+
+                nextShoeBox = (ShoeBox) search( prevShoeBox.getFragmentTag() );
+
+                if( nextShoeBox != null ){
+                    history.set( i, nextShoeBox );
+                }else{
+                    prevShoeBox.setShoeFragment(null);
+                }
+            }
+        }
+
+        //lets make sure to call back again for the last history registered..
+        if( !history.isEmpty() ){
+
+            //publishSubject.onNext(ShoeUtils.getPathToNode(history.get(history.size()-1)));
+            request( history.get(history.size()-1));
+        }
     }
 
     public ShoeModel getShoeModel() {
@@ -105,8 +143,9 @@ public class ShoeRack {
 
 
     /**
-     * attempt to go back within all different navNodes visited.
-     * @return true if it executed.
+     * Requeset to go back to the previous sibling before the last in history.
+     * Read what happens when the last element is part of a ShoeFlow.
+     * @return true if it handled back navigation; otherwise, it returns false.
      */
     public boolean goBack(){
 
@@ -117,36 +156,42 @@ public class ShoeRack {
          */
 
         //we always go to the element before the last
+        Boolean executed = false;
         if( history.size() >= 2 ){
 
-            ShoeModel current = history.get( history.size()-1 );
-            ShoeModel parent = current.getParent();
+            ShoeModel parent = history.get( history.size()-1 ).getParent();
 
             /**
-             * if previous siblings have the same parent, and the parent is a ShoeFlow, then
-             * we want to skip them and go to the one who no longer has that parent.
+             * If currently we are on a ShoeFlow, we need to move out of all other parent siblings
+             * As we don't navigate through a ShoeFlow, but only through a ShoeStack.
+             *
+             * Otherwise we request to go to the element before the last.
              */
             if( parent != null && parent instanceof ShoeFlow ){
-                for( int i = history.size()-2; i>= 0; i--){
-                    current = history.get(i);
 
-                    if( current.getParent() != parent ){
-                        request( history.get(i) );
-                        return true;
+                for( int i = history.size()-1; i>= 0; i--){
+
+                    if( history.get(i).getParent() != parent ){
+                       request( history.get(i));
+                       executed = true;
+                       break;
                     }
-
-                    return false;
                 }
             }else{
-                request( history.get(history.size()-2));
+                request( history.get( history.size()-2) );
+                executed = true;
             }
 
-            return true;
+
         }
 
-        return false;
+        return executed;
     }
 
+    /**
+     * While testing clearning has been convinient to start new tests.
+     * This gives flexibility to an application to remove all history .
+     */
     public void clearHistory(){
         history.clear();
     }

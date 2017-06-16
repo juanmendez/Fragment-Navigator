@@ -1,5 +1,7 @@
 package info.juanmendez.shoeboxes;
 
+import java.util.HashMap;
+
 import info.juanmendez.shoeboxes.models.ShoeRack;
 
 /**
@@ -10,13 +12,19 @@ import info.juanmendez.shoeboxes.models.ShoeRack;
 
 public class ShoeStorage {
 
-    private static ShoeRack shoeRack;
+    private static String latestTag;
+    private static HashMap<String, ShoeRack> hashShoeRack = new HashMap<>();
 
-    public static ShoeRack getShoeRack() {
-        return shoeRack;
+    public static ShoeRack getLatestRack() {
+        return hashShoeRack.get( latestTag );
     }
 
-    public static void setShoeRack(ShoeRack shoeRack) {
-        ShoeStorage.shoeRack = shoeRack;
+    public static ShoeRack getRack( String tag ) {
+
+        latestTag = tag;
+        if( hashShoeRack.get( tag ) == null ){
+            hashShoeRack.put( tag, new ShoeRack() );
+        }
+        return hashShoeRack.get( tag );
     }
 }

@@ -12,7 +12,8 @@ import info.juanmendez.shoeboxes.adapters.ShoeFragment;
  * www.juanmendez.info
  * contact@juanmendez.info
  *
- * Represents a fragment having layoutNodes as a single branch.
+ * Wraps a shoeFragment, and the shoeFragment wraps an Android Fragment.
+ * The shoeFragment is an adapter. So this class proxies activating and deactivating the fragment.
  */
 
 public class ShoeBox implements ShoeModel {
@@ -21,13 +22,15 @@ public class ShoeBox implements ShoeModel {
     ShoeModel shoeModel;
     List<ShoeModel> nodes = new ArrayList<>();
 
+    private String fragmentTag;
+
     public static ShoeBox build(ShoeFragment shoeFragment){
         return new ShoeBox(shoeFragment);
     }
 
     public ShoeBox() {
 
-        ShoeStorage.getShoeRack().asObservable().subscribe(navNodes -> {
+        ShoeStorage.getLatestRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
@@ -46,10 +49,21 @@ public class ShoeBox implements ShoeModel {
     public ShoeBox(ShoeFragment shoeFragment){
         this();
         this.shoeFragment = shoeFragment;
+
+        if( shoeFragment.getTag() != null ){
+            this.fragmentTag = shoeFragment.getTag();
+        }
+        else if( shoeFragment.getId() != 0 ){
+            this.fragmentTag = Integer.toString( shoeFragment.getId() );
+        }
     }
 
     public ShoeFragment getShoeFragment(){
         return shoeFragment;
+    }
+
+    public void setShoeFragment( ShoeFragment shoeFragment) {
+        this.shoeFragment = shoeFragment;
     }
 
     @Override
@@ -99,10 +113,6 @@ public class ShoeBox implements ShoeModel {
     }
 
     @Override
-    public void clear() {
-    }
-
-    @Override
     public void setActive(Boolean active) {
         shoeFragment.setActive(active);
     }
@@ -110,5 +120,9 @@ public class ShoeBox implements ShoeModel {
     @Override
     public boolean isActive() {
         return shoeFragment.isActive();
+    }
+
+    public String getFragmentTag() {
+        return fragmentTag;
     }
 }

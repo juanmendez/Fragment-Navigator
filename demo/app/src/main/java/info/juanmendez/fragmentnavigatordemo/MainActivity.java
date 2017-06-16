@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @AfterViews
     public void afterViews(){
 
-        ShoeRack shoeRack = new ShoeRack();
-        ShoeStorage.setShoeRack( shoeRack );
+        ShoeRack shoeRack = ShoeStorage.getRack( MainActivity.class.getSimpleName() );
 
         NavFragment navA = new NavFragment(includeFragment( "A", R.id.layoutA ) );
         NavFragment navB = new NavFragment(includeFragment( "B", R.id.layoutB ) );
@@ -30,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
         }else{
             shoeRack.applyNodes(ShoeStack.build(ShoeBox.build(navA), ShoeBox.build(navB), ShoeBox.build(navC) ));
         }
-
-        shoeRack.request( "A" );
     }
 
 
@@ -54,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (!ShoeStorage.getShoeRack().goBack()) {
+        if (!ShoeStorage.getLatestRack().goBack()) {
             super.onBackPressed();
         }
     }

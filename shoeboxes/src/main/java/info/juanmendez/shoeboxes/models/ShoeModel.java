@@ -20,8 +20,6 @@ public interface ShoeModel {
     //search nodes by tag or id
     ShoeModel search(String tag);
 
-    void clear();
-
     //allow self node to display or hide
     void setActive(Boolean active);
     boolean isActive();

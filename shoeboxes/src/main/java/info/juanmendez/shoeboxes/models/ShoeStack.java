@@ -22,7 +22,7 @@ public class ShoeStack implements ShoeModel {
 
     public static ShoeStack build(ShoeModel... childNodeArray){
         ShoeStack shoeStack =  new ShoeStack();
-        shoeStack.applyNodes( childNodeArray );
+        shoeStack.populate( childNodeArray );
 
         return shoeStack;
     }
@@ -49,7 +49,7 @@ public class ShoeStack implements ShoeModel {
     }
 
     @Override
-    public ShoeModel applyNodes(ShoeModel... nodes) {
+    public ShoeModel populate(ShoeModel... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
         //by default first fragment is active

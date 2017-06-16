@@ -67,7 +67,7 @@ public class ShoeBox implements ShoeModel {
     }
 
     @Override
-    public ShoeModel applyNodes(ShoeModel... nodes) {
+    public ShoeModel populate(ShoeModel... nodes) {
 
         if( nodes.length > 1 ){
             shoeModel = ShoeFlow.build( nodes );

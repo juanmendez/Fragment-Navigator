@@ -92,7 +92,7 @@ public class BasicShoeStorageTest {
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
         //lets draw the fragments
-        shoeRack.applyNodes(shoeBoxA, shoeBoxB);
+        shoeRack.populate(shoeBoxA, shoeBoxB);
 
         //so we are going to build a dual pane...
         shoeRack.request( tagA );
@@ -117,7 +117,7 @@ public class BasicShoeStorageTest {
         ShoeBox shoeBoxD = ShoeBox.build(fragmentD);
 
         
-        shoeRack.applyNodes(shoeBoxA, shoeBoxB.applyNodes(shoeBoxC, shoeBoxD ));
+        shoeRack.populate(shoeBoxA, shoeBoxB.populate(shoeBoxC, shoeBoxD ));
 
 
         ShoeModel result;
@@ -134,7 +134,7 @@ public class BasicShoeStorageTest {
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
 
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB) );
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB) );
 
         //lets go to first one!
         shoeRack.request( tagA );
@@ -157,7 +157,7 @@ public class BasicShoeStorageTest {
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
-        shoeRack.applyNodes( ShoeFlow.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+        shoeRack.populate( ShoeFlow.build(shoeBoxA, shoeBoxB, shoeBoxC) );
 
         //lets go to first one!
         shoeRack.request( tagC );

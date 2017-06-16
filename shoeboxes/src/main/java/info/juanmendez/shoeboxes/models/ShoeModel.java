@@ -9,7 +9,7 @@ import java.util.List;
  */
 
 public interface ShoeModel {
-    ShoeModel applyNodes(ShoeModel... nodes);
+    ShoeModel populate(ShoeModel... nodes);
     List<ShoeModel> getNodes();
 
 

@@ -10,7 +10,6 @@ import info.juanmendez.shoeboxes.ShoeStorage;
 import info.juanmendez.shoeboxes.models.ShoeBox;
 import info.juanmendez.shoeboxes.models.ShoeRack;
 import info.juanmendez.shoeboxes.models.ShoeStack;
-import info.juanmendez.fragmentnavigatordemo.models.NavFragment;
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
@@ -24,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         ShoeBox boxC = ShoeBuilder.create(includeFragment( "C", R.id.layoutC ) );
 
         if( usesPane() ){
-            shoeRack.applyNodes( boxA, boxB, boxC );
+            shoeRack.populate( boxA, boxB, boxC );
         }else{
-            shoeRack.applyNodes(ShoeStack.build(boxA, boxB, boxC ));
+            shoeRack.populate(ShoeStack.build(boxA, boxB, boxC ));
         }
 
         //we want to kick off with first box, if history is empty.

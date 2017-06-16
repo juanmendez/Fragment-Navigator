@@ -21,7 +21,7 @@ public class ShoeFlow implements ShoeModel {
 
     public static ShoeFlow build(ShoeModel... childNodeArray){
         ShoeFlow flow =  new ShoeFlow();
-        flow.applyNodes( childNodeArray );
+        flow.populate( childNodeArray );
         return flow;
     }
 
@@ -44,7 +44,7 @@ public class ShoeFlow implements ShoeModel {
     }
 
     @Override
-    public ShoeModel applyNodes(ShoeModel... nodes) {
+    public ShoeModel populate(ShoeModel... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
         for( ShoeModel node: nodes ){

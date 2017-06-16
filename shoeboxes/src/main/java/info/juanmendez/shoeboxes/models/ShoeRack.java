@@ -87,7 +87,7 @@ public class ShoeRack {
     }
 
 
-    public ShoeRack applyNodes(ShoeModel... nodes) {
+    public ShoeRack populate(ShoeModel... nodes) {
 
         if( nodes.length > 1 ){
             shoeModel = ShoeFlow.build( nodes );

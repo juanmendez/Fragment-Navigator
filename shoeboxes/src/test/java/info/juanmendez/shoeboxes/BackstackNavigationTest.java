@@ -57,7 +57,7 @@ public class BackstackNavigationTest {
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
 
         //lets go to first one!
         shoeRack.request( tagA );
@@ -93,7 +93,7 @@ public class BackstackNavigationTest {
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
 
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxC, ShoeStack.build(shoeBoxA, shoeBoxB)) );
+        shoeRack.populate( ShoeStack.build(shoeBoxC, ShoeStack.build(shoeBoxA, shoeBoxB)) );
         shoeRack.request( tagC );
         shoeRack.request( tagA );
         shoeRack.request( tagB );
@@ -127,7 +127,7 @@ public class BackstackNavigationTest {
         ShoeStack shoeStack1;
         ShoeStack shoeStack2;
 
-        shoeRack.applyNodes( ShoeStack.build( shoeStack1=ShoeStack.build(shoeBoxA, shoeBoxB), shoeStack2=ShoeStack.build(shoeBoxC, shoeBoxD)) );
+        shoeRack.populate( ShoeStack.build( shoeStack1=ShoeStack.build(shoeBoxA, shoeBoxB), shoeStack2=ShoeStack.build(shoeBoxC, shoeBoxD)) );
 
 
         shoeRack.request( tagA );
@@ -153,7 +153,7 @@ public class BackstackNavigationTest {
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
-        shoeRack.applyNodes(shoeBoxA, shoeBoxB, shoeBoxC );
+        shoeRack.populate(shoeBoxA, shoeBoxB, shoeBoxC );
 
         assertTrue( "active", shoeBoxA.isActive() );
         assertTrue( "active", shoeBoxB.isActive() );
@@ -166,7 +166,7 @@ public class BackstackNavigationTest {
         shoeBoxA = ShoeBox.build(fragmentA);
         shoeBoxB = ShoeBox.build(fragmentB);
         shoeBoxC = ShoeBox.build(fragmentC);
-        shoeRack.applyNodes( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC));
+        shoeRack.populate( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC));
 
         assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
 
@@ -174,13 +174,13 @@ public class BackstackNavigationTest {
         shoeBoxA = ShoeBox.build(fragmentA);
         shoeBoxB = ShoeBox.build(fragmentB);
         shoeBoxC = ShoeBox.build(fragmentC);
-        shoeRack.applyNodes(shoeBoxA, shoeBoxB, shoeBoxC );
+        shoeRack.populate(shoeBoxA, shoeBoxB, shoeBoxC );
         assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
 
         shoeBoxA = ShoeBox.build(fragmentA);
         shoeBoxB = ShoeBox.build(fragmentB);
         shoeBoxC = ShoeBox.build(fragmentC);
-        shoeRack.applyNodes( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC));
+        shoeRack.populate( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC));
 
         assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
 
@@ -200,7 +200,7 @@ public class BackstackNavigationTest {
         shoeBoxB = ShoeBox.build(fragmentB);
         shoeBoxC = ShoeBox.build(fragmentC);
 
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
 
         //lets go to first one!
         shoeRack.request( tagA );
@@ -209,7 +209,7 @@ public class BackstackNavigationTest {
 
 
         //ok we are still having the shoeStack
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
         assertEquals( "history remains having 3 ", shoeRack.getHistory().size(), 3 );
         
         shoeRack.goBack();
@@ -225,7 +225,7 @@ public class BackstackNavigationTest {
         //one fragment can turn into a sliding nav which is no longer
         //applying the structure.. just saying..
 
-        shoeRack.applyNodes( ShoeStack.build(shoeBoxA, shoeBoxB) );
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB) );
         requestResult = shoeRack.request( tagC );
 
         assertFalse( "can't be requested ", requestResult );

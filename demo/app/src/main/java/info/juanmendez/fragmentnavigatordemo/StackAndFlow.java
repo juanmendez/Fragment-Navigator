@@ -8,6 +8,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.OptionsMenu;
 
+import info.juanmendez.fragmentnavigatordemo.shoeboxes.ShoeBuilder;
 import info.juanmendez.shoeboxes.ShoeStorage;
 import info.juanmendez.shoeboxes.models.ShoeBox;
 import info.juanmendez.shoeboxes.models.ShoeRack;
@@ -15,14 +16,14 @@ import info.juanmendez.shoeboxes.models.ShoeStack;
 
 @EActivity(R.layout.activity_main)
 @OptionsMenu(R.menu.activity_menu)
-public class MainActivity extends AppCompatActivity {
+public class StackAndFlow extends AppCompatActivity {
 
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        ShoeRack shoeRack = ShoeStorage.getRack( MainActivity.class.getSimpleName() );
+        ShoeRack shoeRack = ShoeStorage.getRack( StackAndFlow.class.getSimpleName() );
         ShoeBox boxA = ShoeBuilder.create(includeFragment( "A", R.id.layoutA ) );
         ShoeBox boxB = ShoeBuilder.create(includeFragment( "B", R.id.layoutB ) );
         ShoeBox boxC = ShoeBuilder.create(includeFragment( "C", R.id.layoutC ) );

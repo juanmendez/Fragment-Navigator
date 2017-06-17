@@ -8,6 +8,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.OptionsMenu;
 
+import info.juanmendez.fragmentnavigatordemo.shoeboxes.ShoeBuilder;
 import info.juanmendez.shoeboxes.ShoeStorage;
 import info.juanmendez.shoeboxes.models.ShoeBox;
 import info.juanmendez.shoeboxes.models.ShoeRack;
@@ -73,6 +74,6 @@ public class FlowWithStackActivity extends AppCompatActivity {
 
     @OptionsItem(R.id.stack_to_flow)
     void goToStackToFlowStack() {
-        startActivity( new Intent(this, MainActivity_.class));
+        startActivity( new Intent(this, StackAndFlow_.class));
     }
 }

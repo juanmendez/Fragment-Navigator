@@ -1,4 +1,4 @@
-package info.juanmendez.fragmentnavigatordemo.models;
+package info.juanmendez.fragmentnavigatordemo.shoeboxes;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,12 +11,15 @@ import info.juanmendez.shoeboxes.adapters.ShoeFragment;
  * Created by Juan Mendez on 6/7/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
+ *
+ * You can make your own adapters. The term active can mean visibility, ducking to the bottom.
+ * Through setActive, you can also apply transitions. You can have more than one adapter.
  */
-public class NavFragment implements ShoeFragment {
+public class ShoeFragmentAdapter implements ShoeFragment {
 
     Fragment fragment;
 
-    public NavFragment(Fragment fragment){
+    public ShoeFragmentAdapter(Fragment fragment){
         this.fragment = fragment;
     }
 

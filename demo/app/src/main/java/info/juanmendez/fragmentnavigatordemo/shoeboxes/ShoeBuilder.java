@@ -1,8 +1,7 @@
-package info.juanmendez.fragmentnavigatordemo;
+package info.juanmendez.fragmentnavigatordemo.shoeboxes;
 
 import android.support.v4.app.Fragment;
 
-import info.juanmendez.fragmentnavigatordemo.models.NavFragment;
 import info.juanmendez.shoeboxes.models.ShoeBox;
 
 /**
@@ -13,7 +12,12 @@ import info.juanmendez.shoeboxes.models.ShoeBox;
 
 public class ShoeBuilder {
 
+    /**
+     * this is a shortcut to create shoeBoxes from fragments.
+     * @param fragment
+     * @return
+     */
     public static ShoeBox create(Fragment fragment ){
-        return ShoeBox.build( new NavFragment(fragment));
+        return ShoeBox.build( new ShoeFragmentAdapter(fragment));
     }
 }

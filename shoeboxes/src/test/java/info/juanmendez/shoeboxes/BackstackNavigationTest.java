@@ -70,14 +70,14 @@ public class BackstackNavigationTest {
         Boolean wentBack = shoeRack.goBack();
         assertTrue("able to go back", wentBack );
         assertTrue( "shoeBoxB is active", shoeBoxB.isActive() );
-        assertFalse( "shoeBoxC is inactive", shoeBoxC.isActive() );
+        assertFalse( shoeBoxC.isActive() );
         assertFalse( "shoeBoxA is inactive", shoeBoxA.isActive() );
 
         wentBack = shoeRack.goBack();
         assertTrue("able to go back", wentBack );
         assertFalse( "shoeBoxB is iactive", shoeBoxB.isActive() );
-        assertFalse( "shoeBoxC is inactive", shoeBoxC.isActive() );
-        assertTrue( "shoeBoxA is active", shoeBoxA.isActive() );
+        assertFalse( shoeBoxC.isActive() );
+        assertTrue( shoeBoxA.isActive() );
 
         wentBack = shoeRack.goBack();
         assertFalse("navigation ended when false", wentBack );
@@ -132,14 +132,14 @@ public class BackstackNavigationTest {
 
         shoeRack.request( tagA );
 
-        assertTrue( "first stack displayed", shoeStack1.isActive() );
-        assertFalse( "second stack hides", shoeStack2.isActive() );
+        assertTrue( shoeStack1.isActive() );
+        assertFalse( shoeStack2.isActive() );
 
 
         shoeRack.request( tagC );
 
-        assertFalse( "first stack hides", shoeStack1.isActive() );
-        assertTrue( "second stack displayed", shoeStack2.isActive() );
+        assertFalse( shoeStack1.isActive() );
+        assertTrue( shoeStack2.isActive() );
     }
 
 
@@ -155,9 +155,9 @@ public class BackstackNavigationTest {
 
         shoeRack.populate(shoeBoxA, shoeBoxB, shoeBoxC );
 
-        assertTrue( "active", shoeBoxA.isActive() );
-        assertTrue( "active", shoeBoxB.isActive() );
-        assertTrue( "active", shoeBoxC.isActive() );
+        assertTrue( shoeBoxA.isActive() );
+        assertTrue( shoeBoxB.isActive() );
+        assertTrue( shoeBoxC.isActive() );
 
         shoeRack.request( tagC );
 
@@ -184,9 +184,9 @@ public class BackstackNavigationTest {
 
         assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
 
-        assertFalse( "active", shoeBoxA.isActive() );
-        assertFalse( "active", shoeBoxB.isActive() );
-        assertTrue( "active", shoeBoxC.isActive() );
+        assertFalse( shoeBoxA.isActive() );
+        assertFalse( shoeBoxB.isActive() );
+        assertTrue( shoeBoxC.isActive() );
     }
 
     @Test
@@ -215,9 +215,9 @@ public class BackstackNavigationTest {
         shoeRack.goBack();
         shoeRack.goBack();
 
-        assertTrue( "shoeBoxA is active", shoeBoxA.isActive() );
-        assertFalse( "shoeBoxB is inactive", shoeBoxB.isActive() );
-        assertFalse( "shoeBoxC is inactive", shoeBoxC.isActive() );
+        assertTrue( shoeBoxA.isActive() );
+        assertFalse(  shoeBoxB.isActive() );
+        assertFalse( shoeBoxC.isActive() );
 
         assertFalse( "we can't go back anymore", shoeRack.goBack() );
 
@@ -229,5 +229,37 @@ public class BackstackNavigationTest {
         requestResult = shoeRack.request( tagC );
 
         assertFalse( "can't be requested ", requestResult );
+    }
+
+
+    /**
+     *  Portrait=> Stack(A,B,C)
+     *  Landscape=> ( A, Stack(B,C))
+     *
+     */
+    @Test
+    public void shouldNavigateBackWithFlowAndStack(){
+        shoeRack.clearHistory();
+
+        ShoeBox shoeBoxA, shoeBoxB, shoeBoxC;
+        Boolean requestResult = false;
+
+        shoeBoxA = ShoeBox.build(fragmentA);
+        shoeBoxB = ShoeBox.build(fragmentB);
+        shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+        shoeRack.request( tagA );
+        shoeRack.request( tagB );
+        shoeRack.request( tagC );
+
+
+        shoeBoxA = ShoeBox.build(fragmentA);
+        shoeBoxB = ShoeBox.build(fragmentB);
+        shoeBoxC = ShoeBox.build(fragmentC);
+        shoeRack.populate( shoeBoxA, ShoeStack.build(shoeBoxB, shoeBoxC));
+
+        shoeRack.goBack();
+        assertFalse(shoeRack.goBack());
     }
 }

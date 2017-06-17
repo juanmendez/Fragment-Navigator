@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">FragmentNavigatorDemo</string>
+    <string name="app_name">Shoe Boxes</string>
+    <string name="stack_to_flow">p:stack(3) l:flow(3)</string>
+    <string name="stack_to_flowstack">p:stack(3) l:flow(1,stack(2))</string>
 </resources>

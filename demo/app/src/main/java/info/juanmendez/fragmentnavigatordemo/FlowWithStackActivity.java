@@ -13,25 +13,31 @@ import info.juanmendez.shoeboxes.models.ShoeBox;
 import info.juanmendez.shoeboxes.models.ShoeRack;
 import info.juanmendez.shoeboxes.models.ShoeStack;
 
-@EActivity(R.layout.activity_main)
-@OptionsMenu(R.menu.activity_menu)
-public class MainActivity extends AppCompatActivity {
 
+/**
+ * Created by Juan Mendez on 6/15/2017.
+ * www.juanmendez.info
+ * contact@juanmendez.info
+ */
+
+@EActivity(R.layout.flow_w_stack)
+@OptionsMenu(R.menu.activity_menu)
+public class FlowWithStackActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        ShoeRack shoeRack = ShoeStorage.getRack( MainActivity.class.getSimpleName() );
+        ShoeRack shoeRack = ShoeStorage.getRack( FlowWithStackActivity.class.getSimpleName() );
         ShoeBox boxA = ShoeBuilder.create(includeFragment( "A", R.id.layoutA ) );
         ShoeBox boxB = ShoeBuilder.create(includeFragment( "B", R.id.layoutB ) );
         ShoeBox boxC = ShoeBuilder.create(includeFragment( "C", R.id.layoutC ) );
 
-        if( usesPane() ){
+        if( isSinglePane() ){
             //equivalent to: shoeRack.populate( ShoeFlow.build(...) )
-            shoeRack.populate( boxA, boxB, boxC );
+            shoeRack.populate( ShoeStack.build( boxA, boxB, boxC ) );
         }else{
-            shoeRack.populate( ShoeStack.build( boxA, boxB, boxC ));
+            shoeRack.populate( boxA, ShoeStack.build( boxB, boxC ));
         }
 
         //we want to kick off with first box, if history is empty.
@@ -64,12 +70,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OptionsItem(R.id.stack_to_flowstack)
-    void goToStackToFlowStack() {
-        startActivity( new Intent(this, FlowWithStackActivity_.class));
+    Boolean isSinglePane(){
+        return findViewById(R.id.fragment_container ) == null;
     }
 
-    Boolean usesPane(){
-        return findViewById(R.id.fragment_container ) == null;
+    @OptionsItem(R.id.stack_to_flow)
+    void goToStackToFlowStack() {
+        startActivity( new Intent(this, MainActivity_.class));
     }
 }

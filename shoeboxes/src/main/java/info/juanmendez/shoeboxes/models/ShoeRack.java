@@ -53,7 +53,9 @@ public class ShoeRack {
 
             }else{
 
+                //if parent is a Flow, then also include previous siblings
                 if( parent != null && parent instanceof ShoeFlow){
+
                     for( ShoeModel sibling: parent.getNodes() ){
                         if( sibling != shoeModel && !history.contains( sibling ) ){
                             history.add( sibling );
@@ -71,7 +73,7 @@ public class ShoeRack {
                 return false;
             }
 
-            publishSubject.onNext(ShoeUtils.getPathToNode(shoeModel));
+            publishSubject.onNext(ShoeUtils.getPath(shoeModel));
             return true;
         }
 
@@ -128,7 +130,7 @@ public class ShoeRack {
         //lets make sure to call back again for the last history registered..
         if( !history.isEmpty() ){
 
-            //publishSubject.onNext(ShoeUtils.getPathToNode(history.get(history.size()-1)));
+            //publishSubject.onNext(ShoeUtils.getPath(history.get(history.size()-1)));
             request( history.get(history.size()-1));
         }
     }
@@ -154,33 +156,48 @@ public class ShoeRack {
         Boolean executed = false;
         if( history.size() >= 2 ){
 
-            ShoeModel parent = history.get( history.size()-1 ).getParent();
+            ShoeModel lastChild = history.get( history.size()-1 );
+            ShoeModel previous = history.get( history.size()-2 );
+            ShoeModel parent = lastChild.getParent();
+            ShoeModel grandParent = parent.getParent();
+
 
             /**
              * If currently we are on a ShoeFlow, we need to move out of all other parent siblings
              * As we don't navigate through a ShoeFlow, but only through a ShoeStack.
              *
+             * The first child of a stack whose parent is a flow should be skipped.. (second condition)
              * Otherwise we request to go to the element before the last.
              */
-            if( parent != null && parent instanceof ShoeFlow ){
+            if( parent != null ){
 
-                for( int i = history.size()-1; i>= 0; i--){
+                if( parent instanceof ShoeFlow ){
+                    for( int i = history.size()-2; i>= 0; i--){
 
-                    if( history.get(i).getParent() != parent ){
-                       request( history.get(i));
-                       executed = true;
-                       break;
+                        if( history.get(i).getParent() != parent ){
+                            return request( history.get(i));
+                        }
+                    }
+
+                    //it never made the call
+                    return false;
+                }
+                else
+                if( grandParent != null ){
+
+                    if( parent instanceof ShoeStack && grandParent instanceof ShoeFlow ){
+                        if( ShoeUtils.isLastChildInHistory(lastChild)){
+                            history.remove( lastChild );
+                            return goBack();
+                        }
                     }
                 }
-            }else{
-                request( history.get( history.size()-2) );
-                executed = true;
             }
 
-
+            return request( history.get( history.size()-2) );
         }
 
-        return executed;
+        return false;
     }
 
     /**

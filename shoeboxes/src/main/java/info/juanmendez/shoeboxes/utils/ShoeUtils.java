@@ -1,13 +1,13 @@
 package info.juanmendez.shoeboxes.utils;
 
-import android.support.annotation.NonNull;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import info.juanmendez.shoeboxes.ShoeStorage;
 import info.juanmendez.shoeboxes.models.ShoeFlow;
 import info.juanmendez.shoeboxes.models.ShoeModel;
+import info.juanmendez.shoeboxes.models.ShoeStack;
 
 /**
  * Created by Juan Mendez on 6/9/2017.
@@ -17,7 +17,7 @@ import info.juanmendez.shoeboxes.models.ShoeModel;
 
 public class ShoeUtils {
 
-    public static List<ShoeModel> getPathToNode(ShoeModel shoeModel){
+    public static List<ShoeModel> getPath(ShoeModel shoeModel){
 
         ArrayList<ShoeModel> nodes = new ArrayList<>();
 
@@ -32,35 +32,80 @@ public class ShoeUtils {
         return nodes;
     }
 
-    @NonNull
-    public static void updateHistory( ShoeModel shoeModel, List<ShoeModel> history ){
-        //lets find the shoeModel within..
-        ShoeModel parent = shoeModel.getParent();
+    public static List<List<ShoeModel>> getPaths(){
+        List<ShoeModel> history = ShoeStorage.getLatestRack().getHistory();
+        List<List<ShoeModel>> historyPaths = new ArrayList<>();
 
-        /**
-         * for flow, we need to add in history previous siblings even if they are never visited.
-         * this helps when switching to stack, we have in history those other siblings in order to go back.
-         */
 
-        if( parent != null && parent instanceof ShoeFlow){
-
-            for( ShoeModel sibling: parent.getNodes() ){
-
-                if( sibling != shoeModel && !history.contains( sibling ) ){
-                    history.add( sibling );
-                }else{
-                    break;
-                }
-            }
+        for (ShoeModel shoeModel: history ){
+            historyPaths.add( getPath( shoeModel) );
         }
 
-        //going forward can mean also steping back to a previous shoeModel
-        if( history.contains(shoeModel)){
-            int pos = history.indexOf(shoeModel);
-            history = history.subList(0, pos+1);
-        }else{
-
-            history.add(shoeModel);
-        }
+        return historyPaths;
     }
+
+    /**
+     * provides child location within parent's children
+      * @param shoeModel
+     * @return location, if there is no parent then -1
+     */
+   public static int getParentIndex(ShoeModel shoeModel ){
+
+       ShoeModel parent = shoeModel.getParent();
+
+       if( parent != null ){
+           return parent.getNodes().indexOf(shoeModel);
+       }
+
+       return -1;
+   }
+
+    /**
+     * Check if there are other siblings of ShoeModel which are in history.
+     * @param shoeModel
+     * @return true if its the last one.
+     */
+   public static boolean isLastChildInHistory(ShoeModel shoeModel ){
+
+       ShoeModel parent = shoeModel.getParent();
+       ShoeModel grandParent = parent.getParent();
+
+       if( parent != null && grandParent != null ){
+
+           if( parent instanceof ShoeStack && grandParent instanceof ShoeFlow ){
+
+               Boolean lastInHistory = true;
+               List<List<ShoeModel>> historyPaths = getPaths();
+
+               for( ShoeModel childModel:parent.getNodes() ){
+
+                   for( List<ShoeModel> path: historyPaths ){
+
+                       //checking on siblings except shoeModel.
+                       if( path.contains(childModel) && childModel != shoeModel ){
+                           lastInHistory = false;
+                           break;
+                       }
+                   }
+               }
+
+               return lastInHistory;
+           }
+       }
+
+       return false;
+   }
+
+
+   public static boolean isInLastHistoryRequest(ShoeModel shoeModel ){
+       List<ShoeModel> history = ShoeStorage.getLatestRack().getHistory();
+
+       if( !history.isEmpty() ){
+           List<ShoeModel> lastPath = getPath( history.get(history.size()-1));
+
+           return lastPath.contains(shoeModel);
+       }
+
+       return false;
+   }
 }

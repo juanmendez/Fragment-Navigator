@@ -23,6 +23,8 @@ public class StackAndFlowActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        //Activity should retain a unique tagging corresponding to shoeRack
+        //in case another instance of this activity is started by another activity.
         ShoeRack shoeRack = ShoeStorage.setTag( StackAndFlowActivity.class.getSimpleName() );
         ShoeBox boxA = ShoeBuilder.create(includeFragment( "A", R.id.layoutA ) );
         ShoeBox boxB = ShoeBuilder.create(includeFragment( "B", R.id.layoutB ) );

@@ -11,15 +11,13 @@ import info.juanmendez.shoeboxes.adapters.ShoeFragment;
 import info.juanmendez.shoeboxes.models.ShoeBox;
 import info.juanmendez.shoeboxes.models.ShoeFlow;
 import info.juanmendez.shoeboxes.models.ShoeModel;
-import info.juanmendez.shoeboxes.models.ShoeStack;
 import info.juanmendez.shoeboxes.models.ShoeRack;
+import info.juanmendez.shoeboxes.models.ShoeStack;
 import info.juanmendez.shoeboxes.models.TestShoeFragment;
-import info.juanmendez.shoeboxes.models.TestShoeFragmentManager;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertNotNull;
-import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertTrue;
 
 /**
@@ -37,7 +35,6 @@ public class BasicShoeStorageTest {
     String tagE = "fragmentE";
     String tagF = "fragmentF";
 
-    TestShoeFragmentManager fragmentManagerShadow;
     ShoeFragment fragmentA;
     ShoeFragment fragmentB;
     ShoeFragment fragmentC;
@@ -55,7 +52,6 @@ public class BasicShoeStorageTest {
         fragmentD = new TestShoeFragment(tagD);
         fragmentE = new TestShoeFragment(tagE);
         fragmentF = new TestShoeFragment(tagF);
-        fragmentManagerShadow = new TestShoeFragmentManager();
     }
 
 
@@ -69,30 +65,14 @@ public class BasicShoeStorageTest {
     }
 
     @Test
-    public void shouldFMWork(){
-        fragmentManagerShadow.add( tagA, fragmentA );
-        fragmentManagerShadow.add( 0, fragmentB );
-
-        assertEquals( "yes it has tagA", fragmentManagerShadow.findFragment(tagA), fragmentA );
-        assertEquals( "yes it has tagB", fragmentManagerShadow.findFragment(0), fragmentB);
-
-        fragmentManagerShadow.remove( tagA );
-        fragmentManagerShadow.remove( 0 );
-
-        assertNull( "tagA gone", fragmentManagerShadow.findFragment(tagA) );
-        assertNull( "tagB gone", fragmentManagerShadow.findFragment(0) );
-    }
-
-    @Test
     public void shouldDispatchRequest(){
         shoeRack.clearHistory();
 
 
-        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
-        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxA, shoeBoxB;
 
         //lets draw the fragments
-        shoeRack.populate(shoeBoxA, shoeBoxB);
+        shoeRack.populate(shoeBoxA = ShoeBox.build(fragmentA), shoeBoxB = ShoeBox.build(fragmentB));
 
         //so we are going to build a dual pane...
         shoeRack.request( tagA );

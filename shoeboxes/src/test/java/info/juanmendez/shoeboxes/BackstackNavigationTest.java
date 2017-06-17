@@ -8,7 +8,6 @@ import info.juanmendez.shoeboxes.models.ShoeBox;
 import info.juanmendez.shoeboxes.models.ShoeRack;
 import info.juanmendez.shoeboxes.models.ShoeStack;
 import info.juanmendez.shoeboxes.models.TestShoeFragment;
-import info.juanmendez.shoeboxes.models.TestShoeFragmentManager;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
@@ -28,7 +27,6 @@ public class BackstackNavigationTest {
     String tagE = "fragmentE";
     String tagF = "fragmentF";
 
-    TestShoeFragmentManager fragmentManagerShadow;
     ShoeFragment fragmentA;
     ShoeFragment fragmentB;
     ShoeFragment fragmentC;
@@ -46,7 +44,6 @@ public class BackstackNavigationTest {
         fragmentD = new TestShoeFragment(tagD);
         fragmentE = new TestShoeFragment(tagE);
         fragmentF = new TestShoeFragment(tagF);
-        fragmentManagerShadow = new TestShoeFragmentManager();
     }
 
     @Test

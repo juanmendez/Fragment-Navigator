@@ -16,14 +16,14 @@ import info.juanmendez.shoeboxes.models.ShoeStack;
 
 @EActivity(R.layout.activity_main)
 @OptionsMenu(R.menu.activity_menu)
-public class StackAndFlow extends AppCompatActivity {
+public class StackAndFlowActivity extends AppCompatActivity {
 
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        ShoeRack shoeRack = ShoeStorage.getRack( StackAndFlow.class.getSimpleName() );
+        ShoeRack shoeRack = ShoeStorage.getRack( StackAndFlowActivity.class.getSimpleName() );
         ShoeBox boxA = ShoeBuilder.create(includeFragment( "A", R.id.layoutA ) );
         ShoeBox boxB = ShoeBuilder.create(includeFragment( "B", R.id.layoutB ) );
         ShoeBox boxC = ShoeBuilder.create(includeFragment( "C", R.id.layoutC ) );

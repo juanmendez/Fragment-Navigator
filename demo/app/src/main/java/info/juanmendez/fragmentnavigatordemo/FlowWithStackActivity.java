@@ -74,6 +74,6 @@ public class FlowWithStackActivity extends AppCompatActivity {
 
     @OptionsItem(R.id.stack_to_flow)
     void goToStackToFlowStack() {
-        startActivity( new Intent(this, StackAndFlow_.class));
+        startActivity( new Intent(this, StackAndFlowActivity_.class));
     }
 }

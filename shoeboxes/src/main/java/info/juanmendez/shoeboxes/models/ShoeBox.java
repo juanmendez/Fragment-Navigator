@@ -18,9 +18,12 @@ import info.juanmendez.shoeboxes.adapters.ShoeFragment;
 
 public class ShoeBox implements ShoeModel {
     ShoeModel parentNode;
+
     private ShoeFragment shoeFragment; //identifies Fragment with Tag or its Id
     ShoeModel shoeModel;
+
     List<ShoeModel> nodes = new ArrayList<>();
+    Boolean active;
 
     private String fragmentTag;
 
@@ -114,12 +117,16 @@ public class ShoeBox implements ShoeModel {
 
     @Override
     public void setActive(Boolean active) {
-        shoeFragment.setActive(active);
+
+        if( this.active == null || this.active != active ){
+            this.active = active;
+            shoeFragment.setActive(active);
+        }
     }
 
     @Override
     public boolean isActive() {
-        return shoeFragment.isActive();
+        return active;
     }
 
     public String getFragmentTag() {

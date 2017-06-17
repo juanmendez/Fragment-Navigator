@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import info.juanmendez.shoeboxes.ShoeStorage;
+import info.juanmendez.shoeboxes.models.ShoeBox;
 import info.juanmendez.shoeboxes.models.ShoeFlow;
 import info.juanmendez.shoeboxes.models.ShoeModel;
 import info.juanmendez.shoeboxes.models.ShoeStack;
@@ -65,7 +66,7 @@ public class ShoeUtils {
      * @param shoeModel
      * @return true if its the last one.
      */
-   public static boolean isLastChildInHistory(ShoeModel shoeModel ){
+   public static boolean anyOtherSiblingsInHistory(ShoeModel shoeModel ){
 
        ShoeModel parent = shoeModel.getParent();
        ShoeModel grandParent = parent.getParent();
@@ -108,4 +109,27 @@ public class ShoeUtils {
 
        return false;
    }
+
+    /**
+     * check if parent has any of its children which are shoeBoxes displayed.
+     * @param shoeParent
+     * @return
+     */
+    public static Boolean anyChildActive(ShoeModel shoeParent) {
+
+        if( shoeParent != null ){
+
+            for( ShoeModel child: shoeParent.getNodes() ){
+
+                if( child instanceof ShoeBox && child.isActive() ){
+                    return true;
+                }
+            }
+
+        }
+
+        return false;
+    }
+
+
 }

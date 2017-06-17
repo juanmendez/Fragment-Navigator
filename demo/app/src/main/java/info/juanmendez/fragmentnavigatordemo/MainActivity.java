@@ -32,11 +32,9 @@ public class MainActivity extends AppCompatActivity {
             shoeRack.populate( boxA, boxB, boxC );
         }else{
             shoeRack.populate( ShoeStack.build( boxA, boxB, boxC ));
-        }
 
-        //we want to kick off with first box, if history is empty.
-        if( shoeRack.isHistoryEmpty() ){
-            shoeRack.request( "A" );
+            //we suggest to have boxA on display..
+            shoeRack.suggest( "A" );
         }
     }
 

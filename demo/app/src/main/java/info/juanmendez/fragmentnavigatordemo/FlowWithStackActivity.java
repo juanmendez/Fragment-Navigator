@@ -36,13 +36,10 @@ public class FlowWithStackActivity extends AppCompatActivity {
         if( isSinglePane() ){
             //equivalent to: shoeRack.populate( ShoeFlow.build(...) )
             shoeRack.populate( ShoeStack.build( boxA, boxB, boxC ) );
+            shoeRack.suggest( "A" );
         }else{
             shoeRack.populate( boxA, ShoeStack.build( boxB, boxC ));
-        }
-
-        //we want to kick off with first box, if history is empty.
-        if( shoeRack.isHistoryEmpty() ){
-            shoeRack.request( "A" );
+            shoeRack.suggest( "A", "B" );
         }
     }
 

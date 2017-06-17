@@ -242,8 +242,8 @@ public class BackstackNavigationTest {
         shoeRack.clearHistory();
 
         ShoeBox shoeBoxA, shoeBoxB, shoeBoxC;
-        Boolean requestResult = false;
 
+        //Portrait mode
         shoeBoxA = ShoeBox.build(fragmentA);
         shoeBoxB = ShoeBox.build(fragmentB);
         shoeBoxC = ShoeBox.build(fragmentC);
@@ -254,12 +254,76 @@ public class BackstackNavigationTest {
         shoeRack.request( tagC );
 
 
+        //Landscape mode
         shoeBoxA = ShoeBox.build(fragmentA);
         shoeBoxB = ShoeBox.build(fragmentB);
         shoeBoxC = ShoeBox.build(fragmentC);
         shoeRack.populate( shoeBoxA, ShoeStack.build(shoeBoxB, shoeBoxC));
 
         shoeRack.goBack();
+
+        //end of back navigation within this structure
         assertFalse(shoeRack.goBack());
+    }
+
+    /**
+     * We want to include childBoxes in any parent which can have its children all inactive
+     * This is the case for ShoeStack
+     */
+    @Test
+    public void shouldSuggestionsWork(){
+
+        shoeRack.clearHistory();
+
+        ShoeBox shoeBoxA, shoeBoxB, shoeBoxC;
+
+        //Portrait mode
+        shoeBoxA = ShoeBox.build(fragmentA);
+        shoeBoxB = ShoeBox.build(fragmentB);
+        shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+        assertFalse( shoeBoxA.isActive() );
+
+        //lets see if suggestion works.
+        assertTrue( shoeRack.suggest( tagA ));
+        assertTrue( shoeBoxA.isActive() );
+
+        //certainly we cannot suggest again.
+        assertFalse( shoeRack.suggest( tagB) );
+        assertFalse( shoeRack.suggest( tagA) );
+
+
+        /**
+         * ROTATION
+         */
+        shoeBoxA = ShoeBox.build(fragmentA);
+        shoeBoxB = ShoeBox.build(fragmentB);
+        shoeBoxC = ShoeBox.build(fragmentC);
+        shoeRack.populate( shoeBoxA, shoeBoxB, shoeBoxC );
+
+        //all must be active..
+        assertTrue( shoeBoxA.isActive() );
+        assertTrue(  shoeBoxB.isActive() );
+        assertTrue( shoeBoxC.isActive() );
+
+        //all our suggestions must fail..
+        assertFalse( shoeRack.suggest( tagA) );
+        assertFalse( shoeRack.suggest( tagB) );
+        assertFalse( shoeRack.suggest( tagC) );
+
+        shoeRack.request( tagC );
+
+        /**
+         * ROTATION
+         */
+        shoeBoxA = ShoeBox.build(fragmentA);
+        shoeBoxB = ShoeBox.build(fragmentB);
+        shoeBoxC = ShoeBox.build(fragmentC);
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+
+        assertFalse( shoeBoxA.isActive() );
+        assertFalse(  shoeBoxB.isActive() );
+        assertTrue( shoeBoxC.isActive() );
     }
 }

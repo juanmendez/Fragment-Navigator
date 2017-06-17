@@ -80,6 +80,50 @@ public class ShoeRack {
         return false;
     }
 
+    /**
+     * try to include children in their parents, if there aren't any.
+     * @param ids
+     */
+    public boolean suggest( int... ids ){
+        String[] stringIds = new String[ids.length];
+
+        for( int i = 0; i < ids.length; i++ ){
+            stringIds[i] = Integer.toString( ids[i] );
+        }
+
+        return suggest( stringIds );
+    }
+
+    /**
+     * try to include children in their parents, if there aren't any.
+     * @param tags
+     * @return  true if any of the tag was successfully executed.
+     */
+    public boolean suggest (String... tags ){
+
+        ShoeModel shoeModel, shoeParent;
+        ShoeBox shoeBox;
+        Boolean anySuccess = false;
+
+        for( String tag: tags ){
+
+            shoeModel = search( tag );
+
+            if( shoeModel != null && shoeModel instanceof ShoeBox ){
+                shoeBox = (ShoeBox) shoeModel;
+                shoeParent = shoeBox.getParent();
+
+                if( !ShoeUtils.anyChildActive( shoeParent ) ){
+                    if( request( tag ) ){
+                        anySuccess = true;
+                    }
+                }
+            }
+        }
+
+        return anySuccess;
+    }
+
     public Observable<List<ShoeModel>> asObservable() {
         return publishSubject.hide();
     }
@@ -186,7 +230,7 @@ public class ShoeRack {
                 if( grandParent != null ){
 
                     if( parent instanceof ShoeStack && grandParent instanceof ShoeFlow ){
-                        if( ShoeUtils.isLastChildInHistory(lastChild)){
+                        if( ShoeUtils.anyOtherSiblingsInHistory(lastChild)){
                             history.remove( lastChild );
                             return goBack();
                         }

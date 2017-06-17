@@ -23,7 +23,7 @@ public class StackAndFlowActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        ShoeRack shoeRack = ShoeStorage.getRack( StackAndFlowActivity.class.getSimpleName() );
+        ShoeRack shoeRack = ShoeStorage.setTag( StackAndFlowActivity.class.getSimpleName() );
         ShoeBox boxA = ShoeBuilder.create(includeFragment( "A", R.id.layoutA ) );
         ShoeBox boxB = ShoeBuilder.create(includeFragment( "B", R.id.layoutB ) );
         ShoeBox boxC = ShoeBuilder.create(includeFragment( "C", R.id.layoutC ) );
@@ -65,6 +65,9 @@ public class StackAndFlowActivity extends AppCompatActivity {
 
     @OptionsItem(R.id.stack_to_flowstack)
     void goToStackToFlowStack() {
+
+        //lets clear that activity's shoe data.
+        ShoeStorage.clear( FlowWithStackActivity.class.getSimpleName() );
         startActivity( new Intent(this, FlowWithStackActivity_.class));
     }
 

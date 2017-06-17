@@ -45,7 +45,7 @@ public class BasicShoeStorageTest {
 
     @Before
     public void before(){
-        shoeRack = ShoeStorage.getRack( BasicShoeStorageTest.class.getSimpleName());
+        shoeRack = ShoeStorage.setTag( BasicShoeStorageTest.class.getSimpleName());
         fragmentA = new TestShoeFragment(tagA);
         fragmentB = new TestShoeFragment(tagB);
         fragmentC = new TestShoeFragment(tagC);

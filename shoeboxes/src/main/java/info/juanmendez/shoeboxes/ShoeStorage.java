@@ -19,7 +19,7 @@ public class ShoeStorage {
         return hashShoeRack.get( latestTag );
     }
 
-    public static ShoeRack getRack( String tag ) {
+    public static ShoeRack setTag(String tag ) {
 
         latestTag = tag;
 
@@ -28,5 +28,9 @@ public class ShoeStorage {
         }
 
         return hashShoeRack.get( tag );
+    }
+
+    public static void clear( String tag ){
+        hashShoeRack.remove( tag );
     }
 }

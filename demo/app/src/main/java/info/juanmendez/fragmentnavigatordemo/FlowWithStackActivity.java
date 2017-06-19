@@ -40,7 +40,7 @@ public class FlowWithStackActivity extends AppCompatActivity {
 
         //Activity should retain a unique tagging corresponding to shoeRack
         //in case another instance of this activity is started by another activity.
-        ShoeRack shoeRack = ShoeStorage.setTag( shoeRackTag );
+        ShoeRack shoeRack = ShoeStorage.getRack( shoeRackTag );
         ShoeBox boxA = ShoeBuilder.create(includeFragment( "A", R.id.layoutA ) );
         ShoeBox boxB = ShoeBuilder.create(includeFragment( "B", R.id.layoutB ) );
         ShoeBox boxC = ShoeBuilder.create(includeFragment( "C", R.id.layoutC ) );
@@ -73,7 +73,7 @@ public class FlowWithStackActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (!ShoeStorage.getLatestRack().goBack()) {
+        if (!ShoeStorage.getCurrentRag().goBack()) {
             super.onBackPressed();
         }
     }
@@ -84,8 +84,11 @@ public class FlowWithStackActivity extends AppCompatActivity {
 
     @OptionsItem(R.id.stack_to_flow)
     void goToStackToFlowStack() {
-        //lets clear that activity's shoe data.
-        ShoeStorage.clear( StackAndFlowActivity.class.getSimpleName() );
         startActivity( new Intent(this, StackAndFlowActivity_.class));
+    }
+
+    @OptionsItem(R.id.static_stack_to_flow)
+    void goToStaticStackToFLow() {
+        startActivity( new Intent(this, StaticFragmentsActivity_.class));
     }
 }

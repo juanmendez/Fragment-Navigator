@@ -29,7 +29,7 @@ public class ShoeStack implements ShoeModel {
 
     public ShoeStack() {
 
-        ShoeStorage.getLatestRack().asObservable().subscribe(navNodes -> {
+        ShoeStorage.getCurrentRag().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 

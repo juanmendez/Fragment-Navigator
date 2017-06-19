@@ -33,28 +33,31 @@ public class FragmentLetter extends Fragment {
 
     @AfterViews
     void afterViews(){
-        txtLayoutName.setText( letter );
 
-        switch( letter ){
-            case "A": requestA.setVisibility(View.GONE); break;
-            case "B": requestB.setVisibility(View.GONE); break;
-            case "C": requestC.setVisibility(View.GONE); break;
+        if( letter != null ){
+            txtLayoutName.setText( letter );
+
+            switch( letter ){
+                case "A": requestA.setVisibility(View.GONE); break;
+                case "B": requestB.setVisibility(View.GONE); break;
+                case "C": requestC.setVisibility(View.GONE); break;
+            }
         }
     }
 
     @Click
     void requestA(){
-        ShoeStorage.getLatestRack().request( "A" );
+        ShoeStorage.getCurrentRag().request( "A" );
     }
 
     @Click
     void requestB(){
-        ShoeStorage.getLatestRack().request( "B" );
+        ShoeStorage.getCurrentRag().request( "B" );
     }
 
     @Click
     void requestC(){
-        ShoeStorage.getLatestRack().request( "C" );
+        ShoeStorage.getCurrentRag().request( "C" );
     }
 
 }

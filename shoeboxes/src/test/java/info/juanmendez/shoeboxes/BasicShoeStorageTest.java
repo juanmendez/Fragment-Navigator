@@ -45,7 +45,7 @@ public class BasicShoeStorageTest {
 
     @Before
     public void before(){
-        shoeRack = ShoeStorage.setTag( BasicShoeStorageTest.class.getSimpleName());
+        shoeRack = ShoeStorage.getRack( BasicShoeStorageTest.class.getSimpleName());
         fragmentA = new TestShoeFragment(tagA);
         fragmentB = new TestShoeFragment(tagB);
         fragmentC = new TestShoeFragment(tagC);
@@ -151,6 +151,34 @@ public class BasicShoeStorageTest {
         List<String> strings = new ArrayList<>(Arrays.asList(new String[]{"a","b","c","d"}));
         strings = strings.subList(0, 2);
         assertEquals( "last is c", strings.get(strings.size()-1), "b"  );
+    }
+
+    @Test
+    public void testByIDs(){
+        ShoeRack shoeRack = ShoeStorage.getRack( "static_fragment_storage");
+        int a=1,b=2,c=3,d=4,e=5,f=6;
+
+        fragmentA = new TestShoeFragment(a);
+        fragmentB = new TestShoeFragment(b);
+        fragmentC = new TestShoeFragment(c);
+
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack.populate( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC ) );
+        shoeRack.suggest( a );
+        assertTrue( shoeBoxA.isActive() );
+        assertFalse( shoeBoxC.isActive() );
+
+        shoeRack.request( c );
+        assertTrue( shoeBoxC.isActive() );
+
+        shoeRack.goBack();
+        assertTrue( shoeBoxA.isActive() );
+        assertFalse( shoeBoxC.isActive() );
+        assertFalse( shoeBoxB.isActive() );
+
     }
 
 }

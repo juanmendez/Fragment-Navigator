@@ -8,4 +8,9 @@
     <item
         android:id="@+id/stack_to_flowstack"
         android:title="@string/stack_to_flowstack" />
+
+
+    <item
+        android:id="@+id/static_stack_to_flow"
+        android:title="@string/static_stack_to_flow" />
 </menu>

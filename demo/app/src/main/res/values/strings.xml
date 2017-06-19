@@ -2,4 +2,5 @@
     <string name="app_name">Shoe Boxes</string>
     <string name="stack_to_flow">Stack/Flow</string>
     <string name="stack_to_flowstack">Stack/Flow-Stack</string>
+    <string name="static_stack_to_flow"><![CDATA[Static Stack & Flow]]></string>
 </resources>

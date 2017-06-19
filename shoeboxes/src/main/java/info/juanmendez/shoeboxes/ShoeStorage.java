@@ -15,11 +15,11 @@ public class ShoeStorage {
     private static String latestTag;
     private static HashMap<String, ShoeRack> hashShoeRack = new HashMap<>();
 
-    public static ShoeRack getLatestRack() {
+    public static ShoeRack getCurrentRag() {
         return hashShoeRack.get( latestTag );
     }
 
-    public static ShoeRack setTag(String tag ) {
+    public static ShoeRack getRack(String tag ) {
 
         latestTag = tag;
 

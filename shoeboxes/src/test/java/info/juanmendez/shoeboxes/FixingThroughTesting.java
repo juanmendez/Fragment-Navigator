@@ -51,7 +51,7 @@ public class FixingThroughTesting {
      */
     @Test
     public void shouldUpdateAfter(){
-        shoeRack = ShoeStorage.setTag( "1");
+        shoeRack = ShoeStorage.getRack( "1");
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
@@ -60,7 +60,7 @@ public class FixingThroughTesting {
         shoeRack.request(tagB);
         shoeRack.request(tagC);
 
-        shoeRack = ShoeStorage.setTag( "2" );
+        shoeRack = ShoeStorage.getRack( "2" );
         ShoeBox shoeBoxD = ShoeBox.build(fragmentD);
         ShoeBox shoeBoxE = ShoeBox.build(fragmentE);
         ShoeBox shoeBoxF = ShoeBox.build(fragmentF);
@@ -68,7 +68,7 @@ public class FixingThroughTesting {
         shoeRack.suggest( tagD, tagE );
 
 
-        shoeRack = ShoeStorage.setTag( "1");
+        shoeRack = ShoeStorage.getRack( "1");
         shoeBoxA = ShoeBox.build(fragmentA);
         shoeBoxB = ShoeBox.build(fragmentB);
         shoeBoxC = ShoeBox.build(fragmentC);

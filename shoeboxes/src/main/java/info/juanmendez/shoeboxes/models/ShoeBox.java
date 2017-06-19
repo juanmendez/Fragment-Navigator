@@ -1,5 +1,7 @@
 package info.juanmendez.shoeboxes.models;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +34,7 @@ public class ShoeBox implements ShoeModel {
 
     public ShoeBox() {
 
-        ShoeStorage.getLatestRack().asObservable().subscribe(navNodes -> {
+        ShoeStorage.getCurrentRag().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
@@ -105,7 +107,8 @@ public class ShoeBox implements ShoeModel {
     @Override
     public ShoeModel search(String tag) {
 
-        if( shoeFragment.getTag().equals(tag))
+        Log.i( "search", fragmentTag + " vs " + tag );
+        if( fragmentTag.equals(tag))
             return this;
 
         if( shoeModel != null )

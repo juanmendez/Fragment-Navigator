@@ -15,9 +15,16 @@ import info.juanmendez.shoeboxes.models.ShoeBox;
 import info.juanmendez.shoeboxes.models.ShoeRack;
 import info.juanmendez.shoeboxes.models.ShoeStack;
 
-@EActivity(R.layout.activity_main)
+
+/**
+ * Created by Juan Mendez on 6/19/2017.
+ * www.juanmendez.info
+ * contact@juanmendez.info
+ */
+
+@EActivity(R.layout.static_stack_and_flow)
 @OptionsMenu(R.menu.activity_menu)
-public class StackAndFlowActivity extends AppCompatActivity {
+public class StaticFragmentsActivity extends AppCompatActivity {
 
     @InstanceState
     String shoeRackTag;
@@ -45,22 +52,15 @@ public class StackAndFlowActivity extends AppCompatActivity {
         }
 
         //if parent of boxA has no child active, then suggest the first by its tag.
-        shoeRack.suggest( "A" );
+        shoeRack.suggest( R.id.layoutA );
     }
 
 
-    FragmentLetter includeFragment( String letter, int layoutId ){
+    StaticFragmentLetter includeFragment( String letter, int layoutId ){
 
         FragmentManager fm = getSupportFragmentManager();
-        FragmentLetter fragment = (FragmentLetter) fm.findFragmentByTag(letter);
-
-        if( fm.findFragmentByTag(letter) == null ){
-            fragment = FragmentLetter_.builder().letter( letter ).build();
-        }
-
-        if( !fragment.isAdded() ){
-            fm.beginTransaction().add( layoutId, fragment, letter ).commit();
-        }
+        StaticFragmentLetter fragment = (StaticFragmentLetter) fm.findFragmentById(layoutId);
+        fragment.setLetter( letter );
 
         return fragment;
     }
@@ -74,15 +74,17 @@ public class StackAndFlowActivity extends AppCompatActivity {
 
     @OptionsItem(R.id.stack_to_flowstack)
     void goToStackToFlowStack() {
+
         startActivity( new Intent(this, FlowWithStackActivity_.class));
     }
 
-    @OptionsItem(R.id.static_stack_to_flow)
-    void goToStaticStackToFLow() {
-        startActivity( new Intent(this, StaticFragmentsActivity_.class));
+    @OptionsItem(R.id.stack_to_flow)
+    void goToStackAndFLow() {
+        startActivity( new Intent(this, StackAndFlowActivity_.class));
     }
 
     Boolean usesPane(){
         return findViewById(R.id.fragment_container ) == null;
     }
+
 }

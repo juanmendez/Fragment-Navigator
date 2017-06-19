@@ -18,6 +18,10 @@
 
         <activity android:name=".FlowWithStackActivity_" android:label="@string/stack_to_flowstack">
         </activity>
+
+
+        <activity android:name=".StaticFragmentsActivity_" android:label="@string/static_stack_to_flow">
+        </activity>
     </application>
 
 </manifest>

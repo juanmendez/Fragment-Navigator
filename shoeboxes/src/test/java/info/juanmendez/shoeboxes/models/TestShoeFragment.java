@@ -19,6 +19,10 @@ public class TestShoeFragment implements ShoeFragment {
         this.tag = tag;
     }
 
+    public TestShoeFragment(int id) {
+        this.id = id;
+    }
+
     @Override
     public String getTag() {
         return tag;
@@ -31,8 +35,6 @@ public class TestShoeFragment implements ShoeFragment {
 
     @Override
     public void setActive(Boolean show) {
-
-        System.out.println( tag + " " + show );
         visible = show;
     }
 

@@ -23,7 +23,6 @@ public class ShoeBox implements ShoeModel {
     ShoeModel shoeModel;
 
     List<ShoeModel> nodes = new ArrayList<>();
-    Boolean active;
 
     private String fragmentTag;
 
@@ -118,15 +117,12 @@ public class ShoeBox implements ShoeModel {
     @Override
     public void setActive(Boolean active) {
 
-        if( this.active == null || this.active != active ){
-            this.active = active;
-            shoeFragment.setActive(active);
-        }
+        shoeFragment.setActive(active);
     }
 
     @Override
     public boolean isActive() {
-        return active;
+        return shoeFragment.isActive();
     }
 
     public String getFragmentTag() {

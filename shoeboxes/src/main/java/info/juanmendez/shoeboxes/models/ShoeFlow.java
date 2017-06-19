@@ -49,7 +49,6 @@ public class ShoeFlow implements ShoeModel {
 
         for( ShoeModel node: nodes ){
             node.setParent(this);
-            node.setActive(true);
         }
 
         return this;

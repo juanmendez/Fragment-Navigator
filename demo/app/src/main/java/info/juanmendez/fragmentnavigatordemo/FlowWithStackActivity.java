@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.InstanceState;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.OptionsMenu;
 
@@ -25,13 +26,21 @@ import info.juanmendez.shoeboxes.models.ShoeStack;
 @OptionsMenu(R.menu.activity_menu)
 public class FlowWithStackActivity extends AppCompatActivity {
 
+    @InstanceState
+    String shoeRackTag;
+
     @Override
     protected void onStart() {
         super.onStart();
 
+
+        if( shoeRackTag == null ){
+            shoeRackTag = FlowWithStackActivity.class.getSimpleName() + "_" + System.currentTimeMillis();
+        }
+
         //Activity should retain a unique tagging corresponding to shoeRack
         //in case another instance of this activity is started by another activity.
-        ShoeRack shoeRack = ShoeStorage.setTag( FlowWithStackActivity.class.getSimpleName() );
+        ShoeRack shoeRack = ShoeStorage.setTag( shoeRackTag );
         ShoeBox boxA = ShoeBuilder.create(includeFragment( "A", R.id.layoutA ) );
         ShoeBox boxB = ShoeBuilder.create(includeFragment( "B", R.id.layoutB ) );
         ShoeBox boxC = ShoeBuilder.create(includeFragment( "C", R.id.layoutC ) );
@@ -45,7 +54,6 @@ public class FlowWithStackActivity extends AppCompatActivity {
             shoeRack.suggest( "A", "B" );
         }
     }
-
 
     FragmentLetter includeFragment( String letter, int layoutId ){
 

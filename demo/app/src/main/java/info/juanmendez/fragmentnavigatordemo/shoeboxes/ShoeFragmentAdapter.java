@@ -18,6 +18,7 @@ import info.juanmendez.shoeboxes.adapters.ShoeFragment;
 public class ShoeFragmentAdapter implements ShoeFragment {
 
     Fragment fragment;
+    boolean active;
 
     public ShoeFragmentAdapter(Fragment fragment){
         this.fragment = fragment;
@@ -37,6 +38,7 @@ public class ShoeFragmentAdapter implements ShoeFragment {
     public void setActive(Boolean active) {
 
         FragmentManager fm = fragment.getFragmentManager();
+        this.active = active;
 
         if( fm != null ){
             FragmentTransaction ft = fm.beginTransaction();
@@ -54,6 +56,6 @@ public class ShoeFragmentAdapter implements ShoeFragment {
     @Override
     public boolean isActive() {
 
-        return fragment.isVisible();
+        return active;
     }
 }

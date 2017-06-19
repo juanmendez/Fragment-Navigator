@@ -31,6 +31,8 @@ public class TestShoeFragment implements ShoeFragment {
 
     @Override
     public void setActive(Boolean show) {
+
+        System.out.println( tag + " " + show );
         visible = show;
     }
 

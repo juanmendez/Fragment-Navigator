@@ -55,7 +55,6 @@ public class ShoeStack implements ShoeModel {
         //by default first fragment is active
         for( ShoeModel node: nodes ){
             node.setParent(this);
-            node.setActive(false);
         }
 
         return this;

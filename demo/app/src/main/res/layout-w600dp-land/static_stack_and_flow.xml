@@ -9,7 +9,7 @@ tools:context="info.juanmendez.fragmentnavigatordemo.StackAndFlowActivity">
 
     <fragment
         android:id="@+id/layoutA"
-        android:name="info.juanmendez.fragmentnavigatordemo.FragmentLetter_"
+        android:name="info.juanmendez.fragmentnavigatordemo.StaticFragmentLetter_"
         android:layout_weight="1"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>
@@ -18,14 +18,14 @@ tools:context="info.juanmendez.fragmentnavigatordemo.StackAndFlowActivity">
     <fragment
         android:id="@+id/layoutB"
         android:layout_weight="1"
-        android:name="info.juanmendez.fragmentnavigatordemo.FragmentLetter_"
+        android:name="info.juanmendez.fragmentnavigatordemo.StaticFragmentLetter_"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>
 
     <fragment
         android:id="@+id/layoutC"
         android:layout_weight="1"
-        android:name="info.juanmendez.fragmentnavigatordemo.FragmentLetter_"
+        android:name="info.juanmendez.fragmentnavigatordemo.StaticFragmentLetter_"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>
 

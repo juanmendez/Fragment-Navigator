@@ -151,7 +151,8 @@ public class BackstackNavigationTest {
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
         shoeRack.populate(shoeBoxA, shoeBoxB, shoeBoxC );
-
+        shoeRack.suggest( tagA );
+        
         assertTrue( shoeBoxA.isActive() );
         assertTrue( shoeBoxB.isActive() );
         assertTrue( shoeBoxC.isActive() );
@@ -165,21 +166,21 @@ public class BackstackNavigationTest {
         shoeBoxC = ShoeBox.build(fragmentC);
         shoeRack.populate( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC));
 
-        assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
+        assertEquals( shoeRack.getHistory().size(), 2 );
 
 
         shoeBoxA = ShoeBox.build(fragmentA);
         shoeBoxB = ShoeBox.build(fragmentB);
         shoeBoxC = ShoeBox.build(fragmentC);
         shoeRack.populate(shoeBoxA, shoeBoxB, shoeBoxC );
-        assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
+        assertEquals( shoeRack.getHistory().size(), 2 );
 
         shoeBoxA = ShoeBox.build(fragmentA);
         shoeBoxB = ShoeBox.build(fragmentB);
         shoeBoxC = ShoeBox.build(fragmentC);
         shoeRack.populate( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC));
 
-        assertEquals( "history has 3 requests", shoeRack.getHistory().size(), 3 );
+        assertEquals( shoeRack.getHistory().size(), 2 );
 
         assertFalse( shoeBoxA.isActive() );
         assertFalse( shoeBoxB.isActive() );

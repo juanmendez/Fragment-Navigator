@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import info.juanmendez.shoeboxes.utils.ShoeUtils;
-import io.reactivex.Observable;
-import io.reactivex.subjects.PublishSubject;
+import rx.Observable;
+import rx.subjects.PublishSubject;
+
 
 /**
  * Created by Juan Mendez on 6/7/2017.
@@ -125,7 +126,7 @@ public class ShoeRack {
     }
 
     public Observable<List<ShoeModel>> asObservable() {
-        return publishSubject.hide();
+        return publishSubject.asObservable();
     }
 
     public List<ShoeModel> getHistory() {

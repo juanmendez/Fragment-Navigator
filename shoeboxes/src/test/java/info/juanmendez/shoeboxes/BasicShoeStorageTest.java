@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 import info.juanmendez.shoeboxes.adapters.ShoeFragment;
@@ -18,6 +19,7 @@ import info.juanmendez.shoeboxes.models.TestShoeFragment;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertTrue;
 
 /**
@@ -145,6 +147,77 @@ public class BasicShoeStorageTest {
         assertFalse( "going back shouldn't execute, and then return false", shoeRack.goBack() );
 
     }
+
+
+    @Test
+    public void testRequestAction(){
+
+        shoeRack.clearHistory();
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+
+
+        shoeRack.request( tagB, "B" );
+
+        //lets go to first one!
+        shoeRack.request( tagC, "C" );
+
+        assertEquals( shoeRack.getActionByTag( tagC ), "C" );
+        assertNull( shoeRack.getActionByTag( tagA ));
+
+        shoeRack.goBack();
+        assertTrue( fragmentB.isActive() );
+        assertEquals( shoeRack.getActionByTag(tagB), "B");
+    }
+
+
+    @Test
+    public void testSuggestByTag(){
+        shoeRack.clearHistory();
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+
+        HashMap<String,String> tagsWithActions = new HashMap<>();
+        tagsWithActions.put( tagC, "C");
+        shoeRack.suggest( tagsWithActions );
+    }
+
+    @Test
+    public void testSuggestById(){
+        shoeRack.clearHistory();
+
+        int a=1,b=2,c=3,d=4,e=5,f=6;
+
+        fragmentA = new TestShoeFragment(a);
+        fragmentB = new TestShoeFragment(b);
+        fragmentC = new TestShoeFragment(c);
+
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack.populate( shoeBoxA, shoeBoxB, shoeBoxC  );
+
+        HashMap<Integer, String> idsWithActions = new HashMap<>();
+        idsWithActions.put( a, "A");
+        idsWithActions.put( b, "B");
+        idsWithActions.put( c, "C");
+
+        shoeRack.suggestIdsWithTags( idsWithActions );
+
+        assertTrue( shoeBoxA.isActive() );
+        assertTrue( shoeBoxC.isActive() );
+        assertTrue( shoeBoxB.isActive() );
+
+        assertEquals( shoeRack.getActionById(a), "A");
+    }
+
 
     @Test
     public void slideArrayList(){

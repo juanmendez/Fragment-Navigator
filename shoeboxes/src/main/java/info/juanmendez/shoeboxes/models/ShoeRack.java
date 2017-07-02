@@ -1,7 +1,9 @@
 package info.juanmendez.shoeboxes.models;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import info.juanmendez.shoeboxes.utils.ShoeUtils;
 import rx.Observable;
@@ -16,23 +18,47 @@ import rx.subjects.PublishSubject;
 public class ShoeRack {
 
     ShoeModel shoeModel;
+    HashMap<String, String> requestActionMap = new HashMap<>();
+
     List<ShoeModel> history = new ArrayList<>();
 
     private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
 
     public boolean  request( int requestId ){
-        return request( Integer.toString( requestId) );
+        return request( requestId, "" );
+    }
+
+    public boolean request( int requestId, String action ){
+        return request( Integer.toString( requestId), action );
     }
 
     public boolean request(String requestedTag) {
         return request(search( requestedTag ));
     }
 
-    public boolean request( ShoeModel shoeModel){
-        if( shoeModel != null ){
-            //going forward can mean also steping back to a previous shoeModel
+    public boolean request(String requestedTag, String action ) {
 
-            //lets find the shoeModel within..
+        /**
+         * keep a reference of the action based on the tag in the shoeBox
+         */
+        ShoeBox shoeBox = (ShoeBox) search( requestedTag );
+
+        if( action == null || action.isEmpty() ){
+            requestActionMap.remove( shoeBox.getFragmentTag() );
+        }else{
+            requestActionMap.put( shoeBox.getFragmentTag(), action );
+        }
+
+        return request( shoeBox );
+    }
+
+    public boolean request( ShoeModel shoeModel ){
+        if( shoeModel != null ){
+
+            /*
+            going forward can mean also steping back to a previous shoeModel
+            lets find the shoeModel within..
+            */
             ShoeModel parent = shoeModel.getParent();
 
             /**
@@ -123,6 +149,44 @@ public class ShoeRack {
         }
 
         return anySuccess;
+    }
+
+    public boolean suggestIdsWithTags( HashMap<Integer, String> idsWithActions ){
+
+        HashMap<String, String> tagsWithActions = new HashMap<>();
+
+        for (Map.Entry<Integer, String> entry : idsWithActions.entrySet()) {
+            tagsWithActions.put( Integer.toString(entry.getKey()), entry.getValue() );
+        }
+
+        return suggest( tagsWithActions );
+    }
+
+
+
+    public boolean suggest( HashMap<String,String> tagsWithActions ){
+
+        ShoeModel shoeModel, shoeParent;
+        ShoeBox shoeBox;
+        Boolean anySuccess = false;
+
+        for (Map.Entry<String, String> entry : tagsWithActions.entrySet()) {
+
+            shoeModel = search( entry.getKey() );
+
+            if( shoeModel != null && shoeModel instanceof ShoeBox ){
+                shoeBox = (ShoeBox) shoeModel;
+                shoeParent = shoeBox.getParent();
+
+                if( !ShoeUtils.anyChildActive( shoeParent ) ){
+                    if( request( entry.getKey(), entry.getValue() ) ){
+                        anySuccess = true;
+                    }
+                }
+            }
+        }
+
+        return  anySuccess;
     }
 
     public Observable<List<ShoeModel>> asObservable() {
@@ -251,6 +315,16 @@ public class ShoeRack {
      */
     public void clearHistory(){
         history.clear();
+        requestActionMap.clear();
+    }
+
+
+    public String getActionByTag( String tag ){
+        return requestActionMap.get( tag );
+    }
+
+    public String getActionById( int id ){
+        return getActionByTag( Integer.toString(id));
     }
 
     public boolean isHistoryEmpty(){

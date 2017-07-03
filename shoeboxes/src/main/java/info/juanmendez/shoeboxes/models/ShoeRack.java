@@ -150,7 +150,7 @@ public class ShoeRack {
         return anySuccess;
     }
 
-    public boolean suggestIdsWithTags( HashMap<Integer, String> idsWithActions ){
+    public boolean suggestIdsWithActions(HashMap<Integer, String> idsWithActions ){
 
         HashMap<String, String> tagsWithActions = new HashMap<>();
 

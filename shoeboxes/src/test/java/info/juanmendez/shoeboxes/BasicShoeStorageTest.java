@@ -209,7 +209,7 @@ public class BasicShoeStorageTest {
         idsWithActions.put( b, "B");
         idsWithActions.put( c, "C");
 
-        shoeRack.suggestIdsWithTags( idsWithActions );
+        shoeRack.suggestIdsWithActions( idsWithActions );
 
         assertTrue( shoeBoxA.isActive() );
         assertTrue( shoeBoxC.isActive() );

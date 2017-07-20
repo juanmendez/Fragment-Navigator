@@ -11,9 +11,9 @@ import org.androidannotations.annotations.OptionsMenu;
 
 import info.juanmendez.fragmentnavigatordemo.shoeboxes.ShoeBuilder;
 import info.juanmendez.shoeboxes.ShoeStorage;
-import info.juanmendez.shoeboxes.models.ShoeBox;
-import info.juanmendez.shoeboxes.models.ShoeRack;
-import info.juanmendez.shoeboxes.models.ShoeStack;
+import info.juanmendez.shoeboxes.shoes.ShoeBox;
+import info.juanmendez.shoeboxes.shoes.ShoeRack;
+import info.juanmendez.shoeboxes.shoes.ShoeStack;
 
 @EActivity(R.layout.activity_main)
 @OptionsMenu(R.menu.activity_menu)

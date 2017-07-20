@@ -1,4 +1,4 @@
-package info.juanmendez.shoeboxes.models;
+package info.juanmendez.shoeboxes.shoes;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -95,7 +95,7 @@ public class ShoeRack {
             }
 
             //lets not update based on a shoeBox which has no shoeFragment.
-            if( shoeModel instanceof ShoeBox  && ((ShoeBox) shoeModel).getShoeFragment() == null ){
+            if( shoeModel instanceof ShoeBox  && ((ShoeBox) shoeModel).getShoeWrapper() == null ){
                 return false;
             }
 
@@ -230,7 +230,7 @@ public class ShoeRack {
                 if( nextShoeBox != null ){
                     history.set( i, nextShoeBox );
                 }else{
-                    prevShoeBox.setShoeFragment(null);
+                    prevShoeBox.setShoeWrapper(null);
                 }
             }
         }

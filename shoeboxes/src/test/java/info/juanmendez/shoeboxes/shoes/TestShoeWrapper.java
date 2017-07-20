@@ -1,25 +1,25 @@
-package info.juanmendez.shoeboxes.models;
+package info.juanmendez.shoeboxes.shoes;
 
-import info.juanmendez.shoeboxes.adapters.ShoeFragment;
-
+import info.juanmendez.shoeboxes.adapters.ShoeWrapper;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
+ *
+ * our test version of ShoeWrapper
  */
-
-public class TestShoeFragment implements ShoeFragment {
+public class TestShoeWrapper implements ShoeWrapper {
 
     Boolean visible = false;
     String tag;
     int id;
 
-    public TestShoeFragment(String tag ){
+    public TestShoeWrapper(String tag ){
         this.tag = tag;
     }
 
-    public TestShoeFragment(int id) {
+    public TestShoeWrapper(int id) {
         this.id = id;
     }
 
@@ -42,6 +42,4 @@ public class TestShoeFragment implements ShoeFragment {
     public boolean isActive() {
         return visible;
     }
-
-
 }

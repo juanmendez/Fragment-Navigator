@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import info.juanmendez.shoeboxes.adapters.ShoeFragment;
+import info.juanmendez.shoeboxes.adapters.ShoeWrapper;
 
 
 /**
@@ -15,12 +15,12 @@ import info.juanmendez.shoeboxes.adapters.ShoeFragment;
  * You can make your own adapters. The term active can mean visibility, ducking to the bottom.
  * Through setActive, you can also apply transitions. You can have more than one adapter.
  */
-public class ShoeFragmentAdapter implements ShoeFragment {
+public class DroidShoeWrapper implements ShoeWrapper {
 
     Fragment fragment;
     boolean active;
 
-    public ShoeFragmentAdapter(Fragment fragment){
+    public DroidShoeWrapper(Fragment fragment){
         this.fragment = fragment;
     }
 

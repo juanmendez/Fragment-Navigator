@@ -6,7 +6,7 @@ package info.juanmendez.shoeboxes.adapters;
  * contact@juanmendez.info
  */
 
-public interface ShoeFragment {
+public interface ShoeWrapper {
     String getTag();
     int getId();
     void setActive(Boolean active);

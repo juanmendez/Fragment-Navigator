@@ -5,29 +5,29 @@ import java.util.Arrays;
 import java.util.List;
 
 import info.juanmendez.shoeboxes.ShoeStorage;
-import info.juanmendez.shoeboxes.adapters.ShoeWrapper;
+import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
  *
- * Wraps a shoeWrapper, and the shoeWrapper wraps an Android Fragment.
- * The shoeWrapper is an adapter. So this class proxies activating and deactivating the fragment.
+ * Think that a Fragment can have other child fragments, well ShoeBox can have other shoeModels
+ * but it also can retain one shoeFragmentAdapter.
  */
 
 public class ShoeBox implements ShoeModel {
     ShoeModel parentNode;
 
-    private ShoeWrapper shoeWrapper; //identifies Fragment with Tag or its Id
+    private ShoeFragmentAdapter shoeFragmentAdapter; //identifies Fragment with Tag or its Id
     ShoeModel shoeModel;
 
     List<ShoeModel> nodes = new ArrayList<>();
 
     private String fragmentTag;
 
-    public static ShoeBox build(ShoeWrapper shoeWrapper){
-        return new ShoeBox(shoeWrapper);
+    public static ShoeBox build(ShoeFragmentAdapter shoeFragmentAdapter){
+        return new ShoeBox(shoeFragmentAdapter);
     }
 
     public ShoeBox() {
@@ -48,24 +48,24 @@ public class ShoeBox implements ShoeModel {
         });
     }
 
-    public ShoeBox(ShoeWrapper shoeWrapper){
+    public ShoeBox(ShoeFragmentAdapter shoeFragmentAdapter){
         this();
-        this.shoeWrapper = shoeWrapper;
+        this.shoeFragmentAdapter = shoeFragmentAdapter;
 
-        if( shoeWrapper.getTag() != null ){
-            this.fragmentTag = shoeWrapper.getTag();
+        if( shoeFragmentAdapter.getTag() != null ){
+            this.fragmentTag = shoeFragmentAdapter.getTag();
         }
-        else if( shoeWrapper.getId() != 0 ){
-            this.fragmentTag = Integer.toString( shoeWrapper.getId() );
+        else if( shoeFragmentAdapter.getId() != 0 ){
+            this.fragmentTag = Integer.toString( shoeFragmentAdapter.getId() );
         }
     }
 
-    public ShoeWrapper getShoeWrapper(){
-        return shoeWrapper;
+    public ShoeFragmentAdapter getShoeFragmentAdapter(){
+        return shoeFragmentAdapter;
     }
 
-    public void setShoeWrapper(ShoeWrapper shoeWrapper) {
-        this.shoeWrapper = shoeWrapper;
+    public void setShoeFragmentAdapter(ShoeFragmentAdapter shoeFragmentAdapter) {
+        this.shoeFragmentAdapter = shoeFragmentAdapter;
     }
 
     @Override
@@ -117,12 +117,12 @@ public class ShoeBox implements ShoeModel {
     @Override
     public void setActive(Boolean active) {
 
-        shoeWrapper.setActive(active);
+        shoeFragmentAdapter.setActive(active);
     }
 
     @Override
     public boolean isActive() {
-        return shoeWrapper.isActive();
+        return shoeFragmentAdapter.isActive();
     }
 
     public String getFragmentTag() {

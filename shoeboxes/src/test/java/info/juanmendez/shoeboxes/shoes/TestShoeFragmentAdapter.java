@@ -1,25 +1,25 @@
 package info.juanmendez.shoeboxes.shoes;
 
-import info.juanmendez.shoeboxes.adapters.ShoeWrapper;
+import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
  * www.juanmendez.info
  * contact@juanmendez.info
  *
- * our test version of ShoeWrapper
+ * our test version of ShoeFragmentAdapter
  */
-public class TestShoeWrapper implements ShoeWrapper {
+public class TestShoeFragmentAdapter implements ShoeFragmentAdapter {
 
     Boolean visible = false;
     String tag;
     int id;
 
-    public TestShoeWrapper(String tag ){
+    public TestShoeFragmentAdapter(String tag ){
         this.tag = tag;
     }
 
-    public TestShoeWrapper(int id) {
+    public TestShoeFragmentAdapter(int id) {
         this.id = id;
     }
 

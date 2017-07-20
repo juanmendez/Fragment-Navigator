@@ -8,13 +8,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-import info.juanmendez.shoeboxes.adapters.ShoeWrapper;
+import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
 import info.juanmendez.shoeboxes.shoes.ShoeBox;
 import info.juanmendez.shoeboxes.shoes.ShoeFlow;
 import info.juanmendez.shoeboxes.shoes.ShoeModel;
 import info.juanmendez.shoeboxes.shoes.ShoeRack;
 import info.juanmendez.shoeboxes.shoes.ShoeStack;
-import info.juanmendez.shoeboxes.shoes.TestShoeWrapper;
+import info.juanmendez.shoeboxes.shoes.TestShoeFragmentAdapter;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
@@ -37,23 +37,23 @@ public class BasicStorageTest {
     String tagE = "fragmentE";
     String tagF = "fragmentF";
 
-    ShoeWrapper fragmentA;
-    ShoeWrapper fragmentB;
-    ShoeWrapper fragmentC;
-    ShoeWrapper fragmentD;
-    ShoeWrapper fragmentE;
-    ShoeWrapper fragmentF;
+    ShoeFragmentAdapter fragmentA;
+    ShoeFragmentAdapter fragmentB;
+    ShoeFragmentAdapter fragmentC;
+    ShoeFragmentAdapter fragmentD;
+    ShoeFragmentAdapter fragmentE;
+    ShoeFragmentAdapter fragmentF;
     ShoeRack shoeRack;
 
     @Before
     public void before(){
         shoeRack = ShoeStorage.getRack( BasicStorageTest.class.getSimpleName());
-        fragmentA = new TestShoeWrapper(tagA);
-        fragmentB = new TestShoeWrapper(tagB);
-        fragmentC = new TestShoeWrapper(tagC);
-        fragmentD = new TestShoeWrapper(tagD);
-        fragmentE = new TestShoeWrapper(tagE);
-        fragmentF = new TestShoeWrapper(tagF);
+        fragmentA = new TestShoeFragmentAdapter(tagA);
+        fragmentB = new TestShoeFragmentAdapter(tagB);
+        fragmentC = new TestShoeFragmentAdapter(tagC);
+        fragmentD = new TestShoeFragmentAdapter(tagD);
+        fragmentE = new TestShoeFragmentAdapter(tagE);
+        fragmentF = new TestShoeFragmentAdapter(tagF);
     }
 
 
@@ -194,9 +194,9 @@ public class BasicStorageTest {
 
         int a=1,b=2,c=3,d=4,e=5,f=6;
 
-        fragmentA = new TestShoeWrapper(a);
-        fragmentB = new TestShoeWrapper(b);
-        fragmentC = new TestShoeWrapper(c);
+        fragmentA = new TestShoeFragmentAdapter(a);
+        fragmentB = new TestShoeFragmentAdapter(b);
+        fragmentC = new TestShoeFragmentAdapter(c);
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
@@ -231,9 +231,9 @@ public class BasicStorageTest {
         ShoeRack shoeRack = ShoeStorage.getRack( "static_fragment_storage");
         int a=1,b=2,c=3,d=4,e=5,f=6;
 
-        fragmentA = new TestShoeWrapper(a);
-        fragmentB = new TestShoeWrapper(b);
-        fragmentC = new TestShoeWrapper(c);
+        fragmentA = new TestShoeFragmentAdapter(a);
+        fragmentB = new TestShoeFragmentAdapter(b);
+        fragmentC = new TestShoeFragmentAdapter(c);
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);

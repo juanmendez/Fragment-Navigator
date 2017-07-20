@@ -18,6 +18,6 @@ public class ShoeBuilder {
      * @return
      */
     public static ShoeBox create(Fragment fragment ){
-        return ShoeBox.build( new DroidShoeWrapper(fragment));
+        return ShoeBox.build( new DroidShoeFragmentAdapter(fragment));
     }
 }

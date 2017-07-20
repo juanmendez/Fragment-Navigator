@@ -95,7 +95,7 @@ public class ShoeRack {
             }
 
             //lets not update based on a shoeBox which has no shoeFragment.
-            if( shoeModel instanceof ShoeBox  && ((ShoeBox) shoeModel).getShoeWrapper() == null ){
+            if( shoeModel instanceof ShoeBox  && ((ShoeBox) shoeModel).getShoeFragmentAdapter() == null ){
                 return false;
             }
 
@@ -230,7 +230,7 @@ public class ShoeRack {
                 if( nextShoeBox != null ){
                     history.set( i, nextShoeBox );
                 }else{
-                    prevShoeBox.setShoeWrapper(null);
+                    prevShoeBox.setShoeFragmentAdapter(null);
                 }
             }
         }

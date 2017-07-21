@@ -8,13 +8,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-import info.juanmendez.shoeboxes.adapters.ShoeFragment;
-import info.juanmendez.shoeboxes.models.ShoeBox;
-import info.juanmendez.shoeboxes.models.ShoeFlow;
-import info.juanmendez.shoeboxes.models.ShoeModel;
-import info.juanmendez.shoeboxes.models.ShoeRack;
-import info.juanmendez.shoeboxes.models.ShoeStack;
-import info.juanmendez.shoeboxes.models.TestShoeFragment;
+import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
+import info.juanmendez.shoeboxes.shoes.ShoeBox;
+import info.juanmendez.shoeboxes.shoes.ShoeFlow;
+import info.juanmendez.shoeboxes.shoes.ShoeModel;
+import info.juanmendez.shoeboxes.shoes.ShoeRack;
+import info.juanmendez.shoeboxes.shoes.ShoeStack;
+import info.juanmendez.shoeboxes.shoes.TestShoeFragmentAdapter;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
@@ -28,7 +28,7 @@ import static junit.framework.Assert.assertTrue;
  * contact@juanmendez.info
  */
 
-public class BasicShoeStorageTest {
+public class BasicStorageTest {
 
     String tagA = "fragmentA";
     String tagB = "fragmentB";
@@ -37,23 +37,23 @@ public class BasicShoeStorageTest {
     String tagE = "fragmentE";
     String tagF = "fragmentF";
 
-    ShoeFragment fragmentA;
-    ShoeFragment fragmentB;
-    ShoeFragment fragmentC;
-    ShoeFragment fragmentD;
-    ShoeFragment fragmentE;
-    ShoeFragment fragmentF;
+    ShoeFragmentAdapter fragmentA;
+    ShoeFragmentAdapter fragmentB;
+    ShoeFragmentAdapter fragmentC;
+    ShoeFragmentAdapter fragmentD;
+    ShoeFragmentAdapter fragmentE;
+    ShoeFragmentAdapter fragmentF;
     ShoeRack shoeRack;
 
     @Before
     public void before(){
-        shoeRack = ShoeStorage.getRack( BasicShoeStorageTest.class.getSimpleName());
-        fragmentA = new TestShoeFragment(tagA);
-        fragmentB = new TestShoeFragment(tagB);
-        fragmentC = new TestShoeFragment(tagC);
-        fragmentD = new TestShoeFragment(tagD);
-        fragmentE = new TestShoeFragment(tagE);
-        fragmentF = new TestShoeFragment(tagF);
+        shoeRack = ShoeStorage.getRack( BasicStorageTest.class.getSimpleName());
+        fragmentA = new TestShoeFragmentAdapter(tagA);
+        fragmentB = new TestShoeFragmentAdapter(tagB);
+        fragmentC = new TestShoeFragmentAdapter(tagC);
+        fragmentD = new TestShoeFragmentAdapter(tagD);
+        fragmentE = new TestShoeFragmentAdapter(tagE);
+        fragmentF = new TestShoeFragmentAdapter(tagF);
     }
 
 
@@ -194,9 +194,9 @@ public class BasicShoeStorageTest {
 
         int a=1,b=2,c=3,d=4,e=5,f=6;
 
-        fragmentA = new TestShoeFragment(a);
-        fragmentB = new TestShoeFragment(b);
-        fragmentC = new TestShoeFragment(c);
+        fragmentA = new TestShoeFragmentAdapter(a);
+        fragmentB = new TestShoeFragmentAdapter(b);
+        fragmentC = new TestShoeFragmentAdapter(c);
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
@@ -231,9 +231,9 @@ public class BasicShoeStorageTest {
         ShoeRack shoeRack = ShoeStorage.getRack( "static_fragment_storage");
         int a=1,b=2,c=3,d=4,e=5,f=6;
 
-        fragmentA = new TestShoeFragment(a);
-        fragmentB = new TestShoeFragment(b);
-        fragmentC = new TestShoeFragment(c);
+        fragmentA = new TestShoeFragmentAdapter(a);
+        fragmentB = new TestShoeFragmentAdapter(b);
+        fragmentC = new TestShoeFragmentAdapter(c);
 
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
@@ -251,7 +251,5 @@ public class BasicShoeStorageTest {
         assertTrue( shoeBoxA.isActive() );
         assertFalse( shoeBoxC.isActive() );
         assertFalse( shoeBoxB.isActive() );
-
     }
-
 }

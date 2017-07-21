@@ -2,7 +2,7 @@ package info.juanmendez.shoeboxes;
 
 import java.util.HashMap;
 
-import info.juanmendez.shoeboxes.models.ShoeRack;
+import info.juanmendez.shoeboxes.shoes.ShoeRack;
 
 /**
  * Created by Juan Mendez on 6/2/2017.

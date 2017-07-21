@@ -1,4 +1,4 @@
-package info.juanmendez.shoeboxes.models;
+package info.juanmendez.shoeboxes.shoes;
 
 import java.util.List;
 

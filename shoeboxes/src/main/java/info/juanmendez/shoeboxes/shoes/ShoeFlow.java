@@ -1,4 +1,4 @@
-package info.juanmendez.shoeboxes.models;
+package info.juanmendez.shoeboxes.shoes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,33 +11,29 @@ import info.juanmendez.shoeboxes.ShoeStorage;
  * www.juanmendez.info
  * contact@juanmendez.info
  *
- * Structure representation of a collection of nodes which visually correspond to a stack of fragments.
+ * Represents a flow of fragments having all visible yet one is active.
  */
 
-public class ShoeStack implements ShoeModel {
-
-    Boolean active = false;
+public class ShoeFlow implements ShoeModel {
     ShoeModel parentNode;
+    Boolean active = false;
     List<ShoeModel> nodes = new ArrayList<>();
 
-    public static ShoeStack build(ShoeModel... childNodeArray){
-        ShoeStack shoeStack =  new ShoeStack();
-        shoeStack.populate( childNodeArray );
-
-        return shoeStack;
+    public static ShoeFlow build(ShoeModel... childNodeArray){
+        ShoeFlow flow =  new ShoeFlow();
+        flow.populate( childNodeArray );
+        return flow;
     }
 
-    public ShoeStack() {
+    public ShoeFlow() {
 
         ShoeStorage.getCurrentRag().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
             if( pos >= 0 && pos < len-1 ){
-                ShoeModel childFound = navNodes.get( pos+1);
-
                 for( ShoeModel node: nodes ){
-                    node.setActive( node == childFound );
+                    node.setActive( true );
                 }
             }else{
                 for( ShoeModel node: nodes ){
@@ -45,14 +41,12 @@ public class ShoeStack implements ShoeModel {
                 }
             }
         });
-
     }
 
     @Override
     public ShoeModel populate(ShoeModel... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
 
-        //by default first fragment is active
         for( ShoeModel node: nodes ){
             node.setParent(this);
         }
@@ -61,7 +55,7 @@ public class ShoeStack implements ShoeModel {
     }
 
     public List<ShoeModel> getNodes() {
-        return nodes;
+        return this.nodes;
     }
 
     @Override
@@ -76,6 +70,7 @@ public class ShoeStack implements ShoeModel {
 
     @Override
     public ShoeModel search(String tag) {
+
         ShoeModel nodeResult;
 
         for( ShoeModel node: nodes){

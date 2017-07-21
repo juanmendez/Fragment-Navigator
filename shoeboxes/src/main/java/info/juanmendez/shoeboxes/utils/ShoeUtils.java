@@ -5,10 +5,10 @@ import java.util.Collections;
 import java.util.List;
 
 import info.juanmendez.shoeboxes.ShoeStorage;
-import info.juanmendez.shoeboxes.models.ShoeBox;
-import info.juanmendez.shoeboxes.models.ShoeFlow;
-import info.juanmendez.shoeboxes.models.ShoeModel;
-import info.juanmendez.shoeboxes.models.ShoeStack;
+import info.juanmendez.shoeboxes.shoes.ShoeBox;
+import info.juanmendez.shoeboxes.shoes.ShoeFlow;
+import info.juanmendez.shoeboxes.shoes.ShoeModel;
+import info.juanmendez.shoeboxes.shoes.ShoeStack;
 
 /**
  * Created by Juan Mendez on 6/9/2017.

@@ -3,11 +3,11 @@ package info.juanmendez.shoeboxes;
 import org.junit.Before;
 import org.junit.Test;
 
-import info.juanmendez.shoeboxes.adapters.ShoeFragment;
-import info.juanmendez.shoeboxes.models.ShoeBox;
-import info.juanmendez.shoeboxes.models.ShoeRack;
-import info.juanmendez.shoeboxes.models.ShoeStack;
-import info.juanmendez.shoeboxes.models.TestShoeFragment;
+import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
+import info.juanmendez.shoeboxes.shoes.ShoeBox;
+import info.juanmendez.shoeboxes.shoes.ShoeRack;
+import info.juanmendez.shoeboxes.shoes.ShoeStack;
+import info.juanmendez.shoeboxes.shoes.TestShoeFragmentAdapter;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
@@ -27,23 +27,23 @@ public class BackstackNavigationTest {
     String tagE = "fragmentE";
     String tagF = "fragmentF";
 
-    ShoeFragment fragmentA;
-    ShoeFragment fragmentB;
-    ShoeFragment fragmentC;
-    ShoeFragment fragmentD;
-    ShoeFragment fragmentE;
-    ShoeFragment fragmentF;
+    ShoeFragmentAdapter fragmentA;
+    ShoeFragmentAdapter fragmentB;
+    ShoeFragmentAdapter fragmentC;
+    ShoeFragmentAdapter fragmentD;
+    ShoeFragmentAdapter fragmentE;
+    ShoeFragmentAdapter fragmentF;
     ShoeRack shoeRack;
 
     @Before
     public void before(){
-        shoeRack = ShoeStorage.getRack( BasicShoeStorageTest.class.getSimpleName());
-        fragmentA = new TestShoeFragment(tagA);
-        fragmentB = new TestShoeFragment(tagB);
-        fragmentC = new TestShoeFragment(tagC);
-        fragmentD = new TestShoeFragment(tagD);
-        fragmentE = new TestShoeFragment(tagE);
-        fragmentF = new TestShoeFragment(tagF);
+        shoeRack = ShoeStorage.getRack( BasicStorageTest.class.getSimpleName());
+        fragmentA = new TestShoeFragmentAdapter(tagA);
+        fragmentB = new TestShoeFragmentAdapter(tagB);
+        fragmentC = new TestShoeFragmentAdapter(tagC);
+        fragmentD = new TestShoeFragmentAdapter(tagD);
+        fragmentE = new TestShoeFragmentAdapter(tagE);
+        fragmentF = new TestShoeFragmentAdapter(tagF);
     }
 
     @Test

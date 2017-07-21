@@ -2,7 +2,7 @@ package info.juanmendez.fragmentnavigatordemo.shoeboxes;
 
 import android.support.v4.app.Fragment;
 
-import info.juanmendez.shoeboxes.models.ShoeBox;
+import info.juanmendez.shoeboxes.shoes.ShoeBox;
 
 /**
  * Created by Juan Mendez on 6/15/2017.
@@ -18,6 +18,6 @@ public class ShoeBuilder {
      * @return
      */
     public static ShoeBox create(Fragment fragment ){
-        return ShoeBox.build( new ShoeFragmentAdapter(fragment));
+        return ShoeBox.build( new DroidShoeFragmentAdapter(fragment));
     }
 }

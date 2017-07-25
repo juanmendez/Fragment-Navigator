@@ -47,17 +47,17 @@ public class FragmentLetter extends Fragment {
 
     @Click
     void requestA(){
-        ShoeStorage.getCurrentRag().request( "A" );
+        ShoeStorage.getCurrentRack().request( "A" );
     }
 
     @Click
     void requestB(){
-        ShoeStorage.getCurrentRag().request( "B" );
+        ShoeStorage.getCurrentRack().request( "B" );
     }
 
     @Click
     void requestC(){
-        ShoeStorage.getCurrentRag().request( "C" );
+        ShoeStorage.getCurrentRack().request( "C" );
     }
 
 }

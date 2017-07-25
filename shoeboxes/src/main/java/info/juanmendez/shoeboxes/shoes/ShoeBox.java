@@ -32,7 +32,7 @@ public class ShoeBox implements ShoeModel {
 
     public ShoeBox() {
 
-        ShoeStorage.getCurrentRag().asObservable().subscribe(navNodes -> {
+        ShoeStorage.getCurrentRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
@@ -127,5 +127,16 @@ public class ShoeBox implements ShoeModel {
 
     public String getFragmentTag() {
         return fragmentTag;
+    }
+
+    @Override
+    public void onRotation(){
+        if( shoeFragmentAdapter != null ){
+            shoeFragmentAdapter.setActive(false);
+        }
+
+        for(ShoeModel node: nodes ){
+            node.onRotation();
+        }
     }
 }

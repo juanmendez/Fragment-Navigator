@@ -42,16 +42,16 @@ public class StaticFragmentLetter extends Fragment {
 
     @Click
     void requestA(){
-        ShoeStorage.getCurrentRag().request( R.id.layoutA );
+        ShoeStorage.getCurrentRack().request( R.id.layoutA );
     }
 
     @Click
     void requestB(){
-        ShoeStorage.getCurrentRag().request( R.id.layoutB  );
+        ShoeStorage.getCurrentRack().request( R.id.layoutB  );
     }
 
     @Click
     void requestC(){
-        ShoeStorage.getCurrentRag().request( R.id.layoutC  );
+        ShoeStorage.getCurrentRack().request( R.id.layoutC  );
     }
 }

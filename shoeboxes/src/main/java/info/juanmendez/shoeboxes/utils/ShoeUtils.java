@@ -34,7 +34,7 @@ public class ShoeUtils {
     }
 
     public static List<List<ShoeModel>> getPaths(){
-        List<ShoeModel> history = ShoeStorage.getCurrentRag().getHistory();
+        List<ShoeModel> history = ShoeStorage.getCurrentRack().getHistory();
         List<List<ShoeModel>> historyPaths = new ArrayList<>();
 
 
@@ -99,7 +99,7 @@ public class ShoeUtils {
 
 
    public static boolean isInLastHistoryRequest(ShoeModel shoeModel ){
-       List<ShoeModel> history = ShoeStorage.getCurrentRag().getHistory();
+       List<ShoeModel> history = ShoeStorage.getCurrentRack().getHistory();
 
        if( !history.isEmpty() ){
            List<ShoeModel> lastPath = getPath( history.get(history.size()-1));

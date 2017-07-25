@@ -67,7 +67,7 @@ public class StaticFragmentsActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (!ShoeStorage.getCurrentRag().goBack()) {
+        if (!ShoeStorage.getCurrentRack().goBack()) {
             super.onBackPressed();
         }
     }

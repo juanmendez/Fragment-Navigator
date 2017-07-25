@@ -162,8 +162,6 @@ public class ShoeRack {
         return suggest( tagsWithActions );
     }
 
-
-
     public boolean suggest( HashMap<String,String> tagsWithActions ){
 
         ShoeModel shoeModel, shoeParent;
@@ -196,7 +194,6 @@ public class ShoeRack {
     public List<ShoeModel> getHistory() {
         return history;
     }
-
 
     public ShoeRack populate(ShoeModel... nodes) {
 
@@ -329,5 +326,13 @@ public class ShoeRack {
 
     public boolean isHistoryEmpty(){
         return history.isEmpty();
+    }
+
+    /**
+     * Activity requests shoeRack to set all shoeModels to be set to inactive
+     * because the activity has ended or device is about to rotate
+     */
+    public void onRotation(){
+        shoeModel.onRotation();
     }
 }

@@ -23,4 +23,6 @@ public interface ShoeModel {
     //allow self node to display or hide
     void setActive(Boolean active);
     boolean isActive();
+
+    void onRotation();
 }

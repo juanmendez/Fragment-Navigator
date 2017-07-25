@@ -27,7 +27,7 @@ public class ShoeFlow implements ShoeModel {
 
     public ShoeFlow() {
 
-        ShoeStorage.getCurrentRag().asObservable().subscribe(navNodes -> {
+        ShoeStorage.getCurrentRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
@@ -92,5 +92,12 @@ public class ShoeFlow implements ShoeModel {
     @Override
     public boolean isActive() {
         return active;
+    }
+
+    @Override
+    public void onRotation(){
+        for(ShoeModel node: nodes ){
+            node.onRotation();
+        }
     }
 }

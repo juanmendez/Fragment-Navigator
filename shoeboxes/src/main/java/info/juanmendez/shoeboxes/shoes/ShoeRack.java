@@ -197,11 +197,14 @@ public class ShoeRack {
 
     public ShoeRack populate(ShoeModel... nodes) {
 
-        if( nodes.length > 1 ){
+        boolean makeFlow = nodes.length > 1 || (nodes.length == 1 && nodes[0] instanceof ShoeBox );
+
+        if( makeFlow ){
             shoeModel = ShoeFlow.build( nodes );
-        }else if( nodes.length == 1 ){
+        }else{
             shoeModel = nodes[0];
         }
+
         replaceHistory();
 
         return this;

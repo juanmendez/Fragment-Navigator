@@ -11,4 +11,6 @@ public interface ShoeFragmentAdapter {
     int getId();
     void setActive(Boolean active);
     boolean isActive();
+
+    void onRotation();
 }

@@ -1,7 +1,6 @@
 package info.juanmendez.shoeboxes.shoes;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import info.juanmendez.shoeboxes.ShoeStorage;
@@ -20,9 +19,8 @@ public class ShoeBox implements ShoeModel {
     ShoeModel parentNode;
 
     private ShoeFragmentAdapter shoeFragmentAdapter; //identifies Fragment with Tag or its Id
-    ShoeModel shoeModel;
-
     List<ShoeModel> nodes = new ArrayList<>();
+    ShoeModel shoeModel;
 
     private String fragmentTag;
 
@@ -34,17 +32,7 @@ public class ShoeBox implements ShoeModel {
 
         ShoeStorage.getCurrentRack().asObservable().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
-            int len = navNodes.size();
-
-            if( pos >= 0 && pos < len-1 ){
-                for( ShoeModel node: nodes ){
-                    node.setActive( true );
-                }
-            }else{
-                for( ShoeModel node: nodes ){
-                    node.setActive( false );
-                }
-            }
+            setActive( pos >= 0 );
         });
     }
 
@@ -69,27 +57,31 @@ public class ShoeBox implements ShoeModel {
     }
 
     @Override
-    public ShoeModel populate(ShoeModel... nodes) {
+    public ShoeModel populate(ShoeModel... shodeModels) {
 
-        if( nodes.length > 1 ){
-            shoeModel = ShoeFlow.build( nodes );
-        }else if( nodes.length == 1){
-            shoeModel = nodes[0];
+        boolean makeFlow = shodeModels.length > 1 || (shodeModels.length == 1 && shodeModels[0] instanceof ShoeBox );
+
+        if( makeFlow ){
+            shoeModel = ShoeFlow.build( shodeModels );
+        }else{
+            shoeModel = shodeModels[0];
         }
 
+        if( shoeModel != null ){
+            this.nodes.clear();
+            this.nodes.add(shoeModel);
 
-        this.nodes = new ArrayList<>(Arrays.asList(nodes));
-
-        for( ShoeModel node: nodes ){
-            node.setParent(this);
-            node.setActive(true);
+            shoeModel.setParent(this);
+            shoeModel.setActive( false );
         }
+
 
         return this;
     }
 
+    @Override
     public List<ShoeModel> getNodes() {
-        return this.nodes;
+        return nodes;
     }
 
     @Override
@@ -132,11 +124,11 @@ public class ShoeBox implements ShoeModel {
     @Override
     public void onRotation(){
         if( shoeFragmentAdapter != null ){
-            shoeFragmentAdapter.setActive(false);
+            shoeFragmentAdapter.onRotation();
         }
 
-        for(ShoeModel node: nodes ){
-            node.onRotation();
+        if( shoeModel != null ){
+            shoeModel.onRotation();
         }
     }
 }

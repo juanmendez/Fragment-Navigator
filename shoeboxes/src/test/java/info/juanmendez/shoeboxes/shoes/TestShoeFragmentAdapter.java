@@ -42,4 +42,9 @@ public class TestShoeFragmentAdapter implements ShoeFragmentAdapter {
     public boolean isActive() {
         return visible;
     }
+
+    @Override
+    public void onRotation() {
+
+    }
 }

@@ -58,4 +58,9 @@ public class DroidShoeFragmentAdapter implements ShoeFragmentAdapter {
 
         return active;
     }
+
+    @Override
+    public void onRotation() {
+
+    }
 }

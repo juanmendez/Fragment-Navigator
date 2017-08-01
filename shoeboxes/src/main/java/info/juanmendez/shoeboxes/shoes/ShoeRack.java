@@ -6,8 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 import info.juanmendez.shoeboxes.utils.ShoeUtils;
-import io.reactivex.Observable;
-import io.reactivex.subjects.PublishSubject;
+import rx.Observable;
+import rx.subjects.PublishSubject;
+
 
 /**
  * Created by Juan Mendez on 6/7/2017.
@@ -187,7 +188,7 @@ public class ShoeRack {
     }
 
     public Observable<List<ShoeModel>> asObservable() {
-        return publishSubject.hide();
+        return publishSubject.asObservable();
     }
 
     public List<ShoeModel> getHistory() {
@@ -196,11 +197,14 @@ public class ShoeRack {
 
     public ShoeRack populate(ShoeModel... nodes) {
 
-        if( nodes.length > 1 ){
+        boolean makeFlow = nodes.length > 1 || (nodes.length == 1 && nodes[0] instanceof ShoeBox );
+
+        if( makeFlow ){
             shoeModel = ShoeFlow.build( nodes );
-        }else if( nodes.length == 1 ){
+        }else{
             shoeModel = nodes[0];
         }
+
         replaceHistory();
 
         return this;

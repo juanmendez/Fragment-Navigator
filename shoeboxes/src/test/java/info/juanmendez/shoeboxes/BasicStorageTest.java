@@ -252,35 +252,4 @@ public class BasicStorageTest {
         assertFalse( shoeBoxC.isActive() );
         assertFalse( shoeBoxB.isActive() );
     }
-
-    @Test
-    public void testRotatingDevice(){
-
-        shoeRack.clearHistory();
-        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
-        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
-        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
-
-        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
-        shoeRack.request( tagB );
-        shoeRack.request( tagC );
-
-        shoeRack.onRotation();
-
-        assertFalse( shoeBoxA.isActive() );
-        assertFalse( shoeBoxC.isActive() );
-        assertFalse( shoeBoxB.isActive() );
-
-        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
-
-
-        assertFalse( shoeBoxA.isActive() );
-        assertTrue( shoeBoxC.isActive() );
-        assertFalse( shoeBoxB.isActive() );
-
-        shoeRack.goBack();
-        assertFalse( shoeBoxA.isActive() );
-        assertTrue( shoeBoxB.isActive() );
-        assertFalse( shoeBoxC.isActive() );
-    }
 }

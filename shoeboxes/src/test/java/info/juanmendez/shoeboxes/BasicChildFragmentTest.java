@@ -11,6 +11,9 @@ import info.juanmendez.shoeboxes.shoes.TestShoeFragmentAdapter;
 
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
+import static org.mockito.Mockito.reset;
+import static org.mockito.Mockito.verify;
+import static org.powermock.api.mockito.PowerMockito.spy;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
@@ -38,7 +41,7 @@ public class BasicChildFragmentTest {
     @Before
     public void before(){
         shoeRack = ShoeStorage.getRack( BasicChildFragmentTest.class.getSimpleName());
-        fragmentA = new TestShoeFragmentAdapter(tagA);
+        fragmentA = spy( new TestShoeFragmentAdapter(tagA) );
         fragmentB = new TestShoeFragmentAdapter(tagB);
         fragmentC = new TestShoeFragmentAdapter(tagC);
         fragmentD = new TestShoeFragmentAdapter(tagD);
@@ -78,6 +81,11 @@ public class BasicChildFragmentTest {
         assertFalse( shoeBoxC.isActive() );
         assertFalse( shoeBoxD.isActive() );
 
+        //since we visited a child fragment and returned to its parent, then
+        //we can assert we called on this method letting the parent know about it
+        //even if it's still active.
+        verify( fragmentA ).returnFromChildVisit();
+
         //device rotates
         shoeRack.onRotation();
         shoeRack.populate( shoeBoxA.populate(ShoeStack.build(shoeBoxB, shoeBoxC, shoeBoxD)));
@@ -107,13 +115,15 @@ public class BasicChildFragmentTest {
         assertTrue( shoeBoxB.isActive() );
         assertFalse( shoeBoxC.isActive() );
         assertFalse( shoeBoxD.isActive() );
-
-
+        
+        //checking once more..
+        reset( fragmentA );
         shoeRack.goBack();
         assertTrue( shoeBoxA.isActive() );
         assertFalse( shoeBoxB.isActive() );
         assertFalse( shoeBoxC.isActive() );
         assertFalse( shoeBoxD.isActive() );
+        verify( fragmentA ).returnFromChildVisit();
     }
 
 }

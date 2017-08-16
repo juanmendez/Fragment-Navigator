@@ -13,4 +13,7 @@ public interface ShoeFragmentAdapter {
     boolean isActive();
 
     void onRotation();
+
+    //A child fragment was visited last before returning this parent fragment
+    void returnFromChildVisit();
 }

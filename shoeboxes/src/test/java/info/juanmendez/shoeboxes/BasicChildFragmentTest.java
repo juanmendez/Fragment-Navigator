@@ -115,7 +115,7 @@ public class BasicChildFragmentTest {
         assertTrue( shoeBoxB.isActive() );
         assertFalse( shoeBoxC.isActive() );
         assertFalse( shoeBoxD.isActive() );
-        
+
         //checking once more..
         reset( fragmentA );
         shoeRack.goBack();

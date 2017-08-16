@@ -147,8 +147,4 @@ public class ShoeBox implements ShoeModel {
             shoeModel.onRotation();
         }
     }
-
-    public void returnFromChildVisit(){
-        shoeFragmentAdapter.returnFromChildVisit();
-    }
 }

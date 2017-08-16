@@ -63,4 +63,9 @@ public class DroidShoeFragmentAdapter implements ShoeFragmentAdapter {
     public void onRotation() {
 
     }
+
+    @Override
+    public void returnFromChildVisit() {
+
+    }
 }

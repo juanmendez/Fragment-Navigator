@@ -22,6 +22,9 @@ public class ShoeBox implements ShoeModel {
     List<ShoeModel> nodes = new ArrayList<>();
     ShoeModel shoeModel;
 
+    //lets keep a hold of the last child visited.
+    ShoeModel prevChildVisited;
+
     private String fragmentTag;
 
     public static ShoeBox build(ShoeFragmentAdapter shoeFragmentAdapter){
@@ -31,8 +34,21 @@ public class ShoeBox implements ShoeModel {
     public ShoeBox() {
 
         ShoeStorage.getCurrentRack().asObservable().subscribe(navNodes -> {
+
             int pos = navNodes.indexOf( this );
             setActive( pos >= 0 );
+
+            if( prevChildVisited != null ){
+                shoeFragmentAdapter.returnFromChildVisit();
+            }
+
+            prevChildVisited = null;
+            for (ShoeModel child: nodes ){
+                if( navNodes.indexOf(child) >= 0 ){
+                    prevChildVisited = child;
+                    break;
+                }
+            }
         });
     }
 

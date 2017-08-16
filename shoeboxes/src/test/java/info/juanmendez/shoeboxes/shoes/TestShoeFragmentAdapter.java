@@ -47,4 +47,9 @@ public class TestShoeFragmentAdapter implements ShoeFragmentAdapter {
     public void onRotation() {
 
     }
+
+    @Override
+    public void returnFromChildVisit() {
+
+    }
 }

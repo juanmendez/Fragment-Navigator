@@ -38,16 +38,21 @@ public class ShoeBox implements ShoeModel {
             int pos = navNodes.indexOf( this );
             setActive( pos >= 0 );
 
-            if( prevChildVisited != null ){
-                shoeFragmentAdapter.returnFromChildVisit();
-            }
-
-            prevChildVisited = null;
-            for (ShoeModel child: nodes ){
-                if( navNodes.indexOf(child) >= 0 ){
-                    prevChildVisited = child;
-                    break;
+            //this parent must be active for this to work!
+            if( pos >= 0 ){
+                if( prevChildVisited != null ){
+                    shoeFragmentAdapter.returnFromChildVisit();
                 }
+
+                prevChildVisited = null;
+                for (ShoeModel child: nodes ){
+                    if( navNodes.indexOf(child) >= 0 ){
+                        prevChildVisited = child;
+                        break;
+                    }
+                }
+            }else{
+                prevChildVisited = null;
             }
         });
     }

@@ -15,5 +15,8 @@ public interface ShoeFragmentAdapter {
     void onRotation();
 
     //A child fragment was visited last before returning this parent fragment
-    void returnFromChildVisit();
+    void fromChildVisit();
+
+    //fragment is notified it is not focused, as one of its children is active.
+    void toChildVisit();
 }

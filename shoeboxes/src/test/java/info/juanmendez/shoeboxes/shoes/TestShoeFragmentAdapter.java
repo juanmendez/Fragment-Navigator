@@ -49,7 +49,12 @@ public class TestShoeFragmentAdapter implements ShoeFragmentAdapter {
     }
 
     @Override
-    public void returnFromChildVisit() {
+    public void fromChildVisit() {
+
+    }
+
+    @Override
+    public void toChildVisit() {
 
     }
 }

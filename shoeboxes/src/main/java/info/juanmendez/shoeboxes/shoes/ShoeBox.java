@@ -24,6 +24,8 @@ public class ShoeBox implements ShoeModel {
 
     //lets keep a hold of the last child visited.
     ShoeModel prevChildVisited;
+    Boolean childVisited=false;
+    int childVisits = 0;
 
     private String fragmentTag;
 
@@ -40,19 +42,29 @@ public class ShoeBox implements ShoeModel {
 
             //this parent must be active for this to work!
             if( pos >= 0 ){
-                if( prevChildVisited != null ){
-                    shoeFragmentAdapter.returnFromChildVisit();
+
+                if( childVisited  ){
+                    shoeFragmentAdapter.fromChildVisit();
                 }
 
-                prevChildVisited = null;
+                childVisited = false;
+
                 for (ShoeModel child: nodes ){
                     if( navNodes.indexOf(child) >= 0 ){
-                        prevChildVisited = child;
+                        childVisited=true;
+                        childVisits++;
+
+                        if( childVisits == 1 )
+                            shoeFragmentAdapter.toChildVisit();
                         break;
                     }
                 }
+
+                if( !childVisited )
+                    childVisits = 0;
+
             }else{
-                prevChildVisited = null;
+                childVisited = false;
             }
         });
     }

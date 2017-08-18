@@ -50,6 +50,8 @@ public class DroidShoeFragmentAdapter implements ShoeFragmentAdapter {
             }
 
             ft.commit();
+
+            //here we can let the fragment know when it is active/inactive
         }
     }
 
@@ -65,7 +67,12 @@ public class DroidShoeFragmentAdapter implements ShoeFragmentAdapter {
     }
 
     @Override
-    public void returnFromChildVisit() {
+    public void fromChildVisit() {
+
+    }
+
+    @Override
+    public void toChildVisit() {
 
     }
 }

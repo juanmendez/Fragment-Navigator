@@ -50,6 +50,8 @@ public class DroidShoeFragmentAdapter implements ShoeFragmentAdapter {
             }
 
             ft.commit();
+
+            //here we can let the fragment know when it is active/inactive
         }
     }
 

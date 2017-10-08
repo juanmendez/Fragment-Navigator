@@ -9,9 +9,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/build.gradle" afterPath="$PROJECT_DIR$/demo/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/shoeboxes/src/main/res/values/styles.xml" />
 =======
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/.idea/misc.xml" afterPath="$PROJECT_DIR$/demo/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/app/build.gradle" afterPath="$PROJECT_DIR$/demo/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/build.gradle" afterPath="$PROJECT_DIR$/demo/build.gradle" />
@@ -59,7 +62,11 @@
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="3245">
+=======
+            <state relative-caret-position="1079">
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
             <state relative-caret-position="1079">
 >>>>>>> parent of b2239ad... out of beta, and canary.
@@ -71,6 +78,7 @@
       </file>
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="944">
@@ -85,6 +93,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="411">
               <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+=======
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="7" column="63" lean-forward="false" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
@@ -160,6 +173,7 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeReleaseConsumerProguardFiles" />
+<<<<<<< HEAD
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -167,6 +181,15 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+=======
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
                 <option name="name" value="validateSigningDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -849,6 +872,7 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
                 <option name="name" value="mergeReleaseConsumerProguardFiles" />
+<<<<<<< HEAD
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
@@ -856,6 +880,15 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
+=======
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
                 <option name="name" value="validateSigningDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1534,6 +1567,7 @@
                         <option name="entries">
                           <list>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/3.0.0-beta1/gradle-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/3.0.0-beta1/gradle-core-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/3.0.0-beta1/builder-3.0.0-beta1.jar" />
@@ -1542,6 +1576,8 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/3.0.0-beta1/gradle-api-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/3.0.0-beta1/compilerCommon-3.0.0-beta1.jar" />
 =======
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/3.0.0-alpha9/gradle-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/3.0.0-alpha9/gradle-core-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/3.0.0-alpha9/builder-3.0.0-alpha9.jar" />
@@ -1549,6 +1585,9 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/org-jetbrains/uast/26.0.0-alpha9/uast-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/3.0.0-alpha9/gradle-api-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/3.0.0-alpha9/compilerCommon-3.0.0-alpha9.jar" />
+<<<<<<< HEAD
+>>>>>>> parent of b2239ad... out of beta, and canary.
+=======
 >>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/kotlin/kotlin-stdlib/1.1.3-2/kotlin-stdlib-1.1.3-2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
@@ -1562,6 +1601,7 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.3.3/proguard-gradle-5.3.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/3.0.0-beta1/builder-model-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/3.0.0-beta1/builder-test-api-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/26.0.0-beta1/sdklib-26.0.0-beta1.jar" />
@@ -1574,6 +1614,8 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/26.0.0-beta1/tracker-26.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/apksig/3.0.0-beta1/apksig-3.0.0-beta1.jar" />
 =======
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/3.0.0-alpha9/builder-model-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/3.0.0-alpha9/builder-test-api-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/26.0.0-alpha9/sdklib-26.0.0-alpha9.jar" />
@@ -1585,12 +1627,16 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/26.0.0-alpha9/shared-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/26.0.0-alpha9/tracker-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/apksig/3.0.0-alpha9/apksig-3.0.0-alpha9.jar" />
+<<<<<<< HEAD
+>>>>>>> parent of b2239ad... out of beta, and canary.
+=======
 >>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.56/bcpkix-jdk15on-1.56.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.56/bcprov-jdk15on-1.56.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/5.1/asm-tree-5.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/it/unimi/dsi/fastutil/7.2.0/fastutil-7.2.0.jar" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/26.0.0-beta1/lint-checks-26.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
@@ -1612,11 +1658,23 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
+=======
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/26.0.0-alpha9/lint-checks-26.0.0-alpha9.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/22.0/guava-22.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/3.0.0-alpha9/baseLibrary-3.0.0-alpha9.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/26.0.0-alpha9/annotations-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.3.3/proguard-base-5.3.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/26.0.0-alpha9/layoutlib-api-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/26.0.0-alpha9/dvlib-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/26.0.0-alpha9/repository-26.0.0-alpha9.jar" />
+<<<<<<< HEAD
+>>>>>>> parent of b2239ad... out of beta, and canary.
+=======
 >>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.3/gson-2.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.12/commons-compress-1.12.jar" />
@@ -1624,7 +1682,11 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/26.0.0-beta1/lint-api-26.0.0-beta1.jar" />
+=======
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/26.0.0-alpha9/lint-api-26.0.0-alpha9.jar" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/26.0.0-alpha9/lint-api-26.0.0-alpha9.jar" />
 >>>>>>> parent of b2239ad... out of beta, and canary.
@@ -1635,7 +1697,11 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/annotations/13.0/annotations-13.0.jar" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/intellij-core/26.0.0-beta1/intellij-core-26.0.0-beta1.jar" />
+=======
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/intellij-core/26.0.0-alpha9/intellij-core-26.0.0-alpha9.jar" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/intellij-core/26.0.0-alpha9/intellij-core-26.0.0-alpha9.jar" />
 >>>>>>> parent of b2239ad... out of beta, and canary.
@@ -1870,6 +1936,7 @@
                         <option name="entries">
                           <list>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/3.0.0-beta1/gradle-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/3.0.0-beta1/gradle-core-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/3.0.0-beta1/builder-3.0.0-beta1.jar" />
@@ -1878,6 +1945,8 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/3.0.0-beta1/gradle-api-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/3.0.0-beta1/compilerCommon-3.0.0-beta1.jar" />
 =======
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/3.0.0-alpha9/gradle-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/3.0.0-alpha9/gradle-core-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/3.0.0-alpha9/builder-3.0.0-alpha9.jar" />
@@ -1885,6 +1954,9 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/org-jetbrains/uast/26.0.0-alpha9/uast-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/3.0.0-alpha9/gradle-api-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/3.0.0-alpha9/compilerCommon-3.0.0-alpha9.jar" />
+<<<<<<< HEAD
+>>>>>>> parent of b2239ad... out of beta, and canary.
+=======
 >>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/kotlin/kotlin-stdlib/1.1.3-2/kotlin-stdlib-1.1.3-2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
@@ -1898,6 +1970,7 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.3.3/proguard-gradle-5.3.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/3.0.0-beta1/builder-model-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/3.0.0-beta1/builder-test-api-3.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/26.0.0-beta1/sdklib-26.0.0-beta1.jar" />
@@ -1910,6 +1983,8 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/26.0.0-beta1/tracker-26.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/apksig/3.0.0-beta1/apksig-3.0.0-beta1.jar" />
 =======
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/3.0.0-alpha9/builder-model-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/3.0.0-alpha9/builder-test-api-3.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/26.0.0-alpha9/sdklib-26.0.0-alpha9.jar" />
@@ -1921,12 +1996,16 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/26.0.0-alpha9/shared-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/26.0.0-alpha9/tracker-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/apksig/3.0.0-alpha9/apksig-3.0.0-alpha9.jar" />
+<<<<<<< HEAD
+>>>>>>> parent of b2239ad... out of beta, and canary.
+=======
 >>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.56/bcpkix-jdk15on-1.56.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.56/bcprov-jdk15on-1.56.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/5.1/asm-tree-5.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/it/unimi/dsi/fastutil/7.2.0/fastutil-7.2.0.jar" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/26.0.0-beta1/lint-checks-26.0.0-beta1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
@@ -1948,11 +2027,23 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
+=======
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/26.0.0-alpha9/lint-checks-26.0.0-alpha9.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/22.0/guava-22.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/3.0.0-alpha9/baseLibrary-3.0.0-alpha9.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/26.0.0-alpha9/annotations-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.3.3/proguard-base-5.3.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/26.0.0-alpha9/layoutlib-api-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/26.0.0-alpha9/dvlib-26.0.0-alpha9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/26.0.0-alpha9/repository-26.0.0-alpha9.jar" />
+<<<<<<< HEAD
+>>>>>>> parent of b2239ad... out of beta, and canary.
+=======
 >>>>>>> parent of b2239ad... out of beta, and canary.
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.3/gson-2.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.12/commons-compress-1.12.jar" />
@@ -1960,7 +2051,11 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/26.0.0-beta1/lint-api-26.0.0-beta1.jar" />
+=======
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/26.0.0-alpha9/lint-api-26.0.0-alpha9.jar" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/26.0.0-alpha9/lint-api-26.0.0-alpha9.jar" />
 >>>>>>> parent of b2239ad... out of beta, and canary.
@@ -1971,7 +2066,11 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/annotations/13.0/annotations-13.0.jar" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/intellij-core/26.0.0-beta1/intellij-core-26.0.0-beta1.jar" />
+=======
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/intellij-core/26.0.0-alpha9/intellij-core-26.0.0-alpha9.jar" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/intellij-core/26.0.0-alpha9/intellij-core-26.0.0-alpha9.jar" />
 >>>>>>> parent of b2239ad... out of beta, and canary.
@@ -2196,15 +2295,21 @@
   </component>
   <component name="ProjectFrameBounds">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="x" value="-16" />
     <option name="y" value="-16" />
     <option name="width" value="6432" />
     <option name="height" value="3532" />
 =======
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="3862" />
     <option name="height" value="2122" />
+<<<<<<< HEAD
+>>>>>>> parent of b2239ad... out of beta, and canary.
+=======
 >>>>>>> parent of b2239ad... out of beta, and canary.
   </component>
   <component name="ProjectView">
@@ -2223,10 +2328,13 @@
     </navigator>
     <panes>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
 >>>>>>> parent of b2239ad... out of beta, and canary.
       <pane id="ProjectPane">
@@ -2306,7 +2414,10 @@
         </subPane>
       </pane>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
       <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="Scratches" />
@@ -2884,6 +2995,7 @@
   </component>
   <component name="ToolWindowManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="-16" y="-16" width="6432" height="3532" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -2892,27 +3004,38 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32694122" sideWeight="0.5026984" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
 =======
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
     <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32713756" sideWeight="0.50212204" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+>>>>>>> parent of b2239ad... out of beta, and canary.
+=======
 >>>>>>> parent of b2239ad... out of beta, and canary.
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51991504" sideWeight="0.49893898" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694122" sideWeight="0.49730158" order="9" side_tool="false" content_ui="tabs" />
 =======
+=======
+>>>>>>> parent of b2239ad... out of beta, and canary.
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51993066" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32713756" sideWeight="0.497878" order="9" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+>>>>>>> parent of b2239ad... out of beta, and canary.
+=======
 >>>>>>> parent of b2239ad... out of beta, and canary.
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2923,7 +3046,11 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23365079" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.233687" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.233687" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
 >>>>>>> parent of b2239ad... out of beta, and canary.
@@ -3179,7 +3306,11 @@
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="3245">
+=======
+        <state relative-caret-position="1079">
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
         <state relative-caret-position="1079">
 >>>>>>> parent of b2239ad... out of beta, and canary.
@@ -3195,6 +3326,7 @@
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="411">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
@@ -3205,6 +3337,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="944">
           <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+=======
+        <state relative-caret-position="378">
+          <caret line="7" column="63" lean-forward="false" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+>>>>>>> parent of b2239ad... out of beta, and canary.
 =======
         <state relative-caret-position="378">
           <caret line="7" column="63" lean-forward="false" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />

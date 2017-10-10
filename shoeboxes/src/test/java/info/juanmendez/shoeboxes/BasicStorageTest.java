@@ -166,6 +166,7 @@ public class BasicStorageTest {
         shoeRack.request( tagC, "C" );
 
         assertEquals( shoeRack.getActionByTag( tagC ), "C" );
+        assertEquals( shoeRack.getActionByTag(tagB), "B");
         assertNull( shoeRack.getActionByTag( tagA ));
 
         shoeRack.goBack();

@@ -128,7 +128,7 @@ public class ShoeBox implements ShoeModel {
     }
 
     @Override
-    public ShoeModel search(String tag) {
+    public ShoeBox search(String tag) {
 
         if( fragmentTag.equals(tag))
             return this;

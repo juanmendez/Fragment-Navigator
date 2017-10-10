@@ -69,9 +69,9 @@ public class ShoeFlow implements ShoeModel {
     }
 
     @Override
-    public ShoeModel search(String tag) {
+    public ShoeBox search(String tag) {
 
-        ShoeModel nodeResult;
+        ShoeBox nodeResult;
 
         for( ShoeModel node: nodes){
             nodeResult = node.search( tag );

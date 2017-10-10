@@ -8,6 +8,7 @@ import info.juanmendez.shoeboxes.ShoeStorage;
 import info.juanmendez.shoeboxes.shoes.ShoeBox;
 import info.juanmendez.shoeboxes.shoes.ShoeFlow;
 import info.juanmendez.shoeboxes.shoes.ShoeModel;
+import info.juanmendez.shoeboxes.shoes.ShoeRack;
 import info.juanmendez.shoeboxes.shoes.ShoeStack;
 
 /**
@@ -34,12 +35,13 @@ public class ShoeUtils {
     }
 
     public static List<List<ShoeModel>> getPaths(){
-        List<ShoeModel> history = ShoeStorage.getCurrentRack().getHistory();
+        ShoeRack rack = ShoeStorage.getCurrentRack();
+        List<String> history = rack.getHistory();
         List<List<ShoeModel>> historyPaths = new ArrayList<>();
 
 
-        for (ShoeModel shoeModel: history ){
-            historyPaths.add( getPath( shoeModel) );
+        for (String tag: history ){
+            historyPaths.add( getPath( rack.search(tag)) );
         }
 
         return historyPaths;
@@ -99,10 +101,11 @@ public class ShoeUtils {
 
 
    public static boolean isInLastHistoryRequest(ShoeModel shoeModel ){
-       List<ShoeModel> history = ShoeStorage.getCurrentRack().getHistory();
+       ShoeRack rack = ShoeStorage.getCurrentRack();
+       List<String> history = rack.getHistory();
 
        if( !history.isEmpty() ){
-           List<ShoeModel> lastPath = getPath( history.get(history.size()-1));
+           List<ShoeModel> lastPath = getPath( rack.search(history.get(history.size()-1)) );
 
            return lastPath.contains(shoeModel);
        }

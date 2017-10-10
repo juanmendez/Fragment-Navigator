@@ -75,8 +75,8 @@ public class ShoeStack implements ShoeModel {
     }
 
     @Override
-    public ShoeModel search(String tag) {
-        ShoeModel nodeResult;
+    public ShoeBox search(String tag) {
+        ShoeBox nodeResult;
 
         for( ShoeModel node: nodes){
             nodeResult = node.search( tag );

@@ -16,11 +16,9 @@ import io.reactivex.subjects.PublishSubject;
  */
 public class ShoeRack {
 
-    ShoeModel shoeModel;
-    HashMap<String, String> requestActionMap = new HashMap<>();
-
-    List<ShoeModel> history = new ArrayList<>();
-
+    private ShoeModel shoeModel;
+    private HashMap<String, String> requestActionMap = new HashMap<>();
+    private List<String> history = new ArrayList<>();
     private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
 
     public boolean  request( int requestId ){
@@ -32,7 +30,7 @@ public class ShoeRack {
     }
 
     public boolean request(String requestedTag) {
-        return request(search( requestedTag ));
+        return request( requestedTag, "");
     }
 
     public boolean request(String requestedTag, String action ) {
@@ -40,25 +38,24 @@ public class ShoeRack {
         /**
          * keep a reference of the action based on the tag in the shoeBox
          */
-        ShoeBox shoeBox = (ShoeBox) search( requestedTag );
+        ShoeBox shoeBox = search( requestedTag );
 
-        if( action == null || action.isEmpty() ){
-            requestActionMap.remove( shoeBox.getFragmentTag() );
-        }else{
+        if( shoeBox != null ){
             requestActionMap.put( shoeBox.getFragmentTag(), action );
         }
 
         return request( shoeBox );
     }
 
-    public boolean request( ShoeModel shoeModel ){
-        if( shoeModel != null ){
+    public boolean request( ShoeBox shoeBox ){
+        if( shoeBox != null ){
 
+            String shoeTag = shoeBox.getFragmentTag();
             /*
             going forward can mean also steping back to a previous shoeModel
             lets find the shoeModel within..
             */
-            ShoeModel parent = shoeModel.getParent();
+            ShoeModel parent = shoeBox.getParent();
 
             /**
              * for flow, we need to add in history previous siblings even if they are never visited.
@@ -66,11 +63,11 @@ public class ShoeRack {
              */
 
             //going forward can mean also stepping back to a previous shoeModel
-            if( history.contains(shoeModel)){
+            if( history.contains(shoeTag)){
 
                 for( int i = history.size()-1; i>= 0; i--){
 
-                    if( history.get(i) != shoeModel ){
+                    if( !history.get(i).equals( shoeTag ) ){
                         history.remove( i );
                     }else{
                         break;
@@ -83,23 +80,27 @@ public class ShoeRack {
                 if( parent != null && parent instanceof ShoeFlow){
 
                     for( ShoeModel sibling: parent.getNodes() ){
-                        if( sibling != shoeModel && !history.contains( sibling ) ){
-                            history.add( sibling );
-                        }else{
-                            break;
+                        if( sibling instanceof ShoeBox ){
+
+                            if( sibling != shoeBox && !history.contains( ((ShoeBox) sibling).getFragmentTag() ) ){
+                                history.add( ((ShoeBox) sibling).getFragmentTag() );
+                            }else{
+                                break;
+                            }
                         }
+
                     }
                 }
 
-                history.add(shoeModel);
+                history.add(shoeTag);
             }
 
             //lets not update based on a shoeBox which has no shoeFragment.
-            if( shoeModel instanceof ShoeBox  && ((ShoeBox) shoeModel).getShoeFragmentAdapter() == null ){
+            if( shoeBox.getShoeFragmentAdapter() == null ){
                 return false;
             }
 
-            publishSubject.onNext(ShoeUtils.getPath(shoeModel));
+            publishSubject.onNext(ShoeUtils.getPath(shoeBox));
             return true;
         }
 
@@ -127,16 +128,16 @@ public class ShoeRack {
      */
     public boolean suggest (String... tags ){
 
-        ShoeModel shoeModel, shoeParent;
         ShoeBox shoeBox;
+        ShoeModel shoeParent;
         Boolean anySuccess = false;
 
         for( String tag: tags ){
 
-            shoeModel = search( tag );
+            shoeBox = search( tag );
 
-            if( shoeModel != null && shoeModel instanceof ShoeBox ){
-                shoeBox = (ShoeBox) shoeModel;
+            if( shoeBox != null  ){
+
                 shoeParent = shoeBox.getParent();
 
                 if( !ShoeUtils.anyChildActive( shoeParent ) ){
@@ -163,16 +164,15 @@ public class ShoeRack {
 
     public boolean suggest( HashMap<String,String> tagsWithActions ){
 
-        ShoeModel shoeModel, shoeParent;
+        ShoeModel shoeParent;
         ShoeBox shoeBox;
         Boolean anySuccess = false;
 
         for (Map.Entry<String, String> entry : tagsWithActions.entrySet()) {
 
-            shoeModel = search( entry.getKey() );
+            shoeBox = search( entry.getKey() );
 
-            if( shoeModel != null && shoeModel instanceof ShoeBox ){
-                shoeBox = (ShoeBox) shoeModel;
+            if( shoeBox != null  ){
                 shoeParent = shoeBox.getParent();
 
                 if( !ShoeUtils.anyChildActive( shoeParent ) ){
@@ -190,7 +190,7 @@ public class ShoeRack {
         return publishSubject.hide();
     }
 
-    public List<ShoeModel> getHistory() {
+    public List<String> getHistory() {
         return history;
     }
 
@@ -215,26 +215,7 @@ public class ShoeRack {
      * new shoeBoxes.
      */
     private void replaceHistory(){
-
-        ShoeBox prevShoeBox; //old shoeBox reference
-        ShoeBox nextShoeBox; //new shoeBox reference
-
-
-        for( int i = 0; i < history.size(); i++ ){
-
-            if( history.get(i) instanceof ShoeBox ){
-                prevShoeBox = (ShoeBox) history.get(i);
-
-                nextShoeBox = (ShoeBox) search( prevShoeBox.getFragmentTag() );
-
-                if( nextShoeBox != null ){
-                    history.set( i, nextShoeBox );
-                }else{
-                    prevShoeBox.setShoeFragmentAdapter(null);
-                }
-            }
-        }
-
+        
         //lets make sure to call back again for the last history registered..
         if( !history.isEmpty() ){
 
@@ -243,7 +224,7 @@ public class ShoeRack {
         }
     }
 
-    public ShoeModel search(String tag) {
+    public ShoeBox search(String tag) {
         return shoeModel.search( tag );
     }
 
@@ -264,9 +245,10 @@ public class ShoeRack {
         Boolean executed = false;
         if( history.size() >= 2 ){
 
-            ShoeModel lastChild = history.get( history.size()-1 );
-            ShoeModel previous = history.get( history.size()-2 );
-            ShoeModel parent = lastChild.getParent();
+            String latestTag = history.get( history.size()-1 );
+            String previousTag = history.get( history.size()-2 );
+            ShoeBox latestShoeBox = search(latestTag);
+            ShoeModel parent = latestShoeBox.getParent();
             ShoeModel grandParent = parent.getParent();
 
 
@@ -282,8 +264,8 @@ public class ShoeRack {
                 if( parent instanceof ShoeFlow ){
                     for( int i = history.size()-2; i>= 0; i--){
 
-                        if( history.get(i).getParent() != parent ){
-                            return request( history.get(i));
+                        if( search(history.get(i)).getParent() != parent ){
+                            return request( history.get(i), requestActionMap.get(history.get(i)));
                         }
                     }
 
@@ -294,15 +276,15 @@ public class ShoeRack {
                 if( grandParent != null ){
 
                     if( parent instanceof ShoeStack && grandParent instanceof ShoeFlow ){
-                        if( ShoeUtils.anyOtherSiblingsInHistory(lastChild)){
-                            history.remove( lastChild );
+                        if( ShoeUtils.anyOtherSiblingsInHistory(latestShoeBox)){
+                            history.remove( latestTag );
                             return goBack();
                         }
                     }
                 }
             }
 
-            return request( history.get( history.size()-2) );
+            return request( previousTag, requestActionMap.get(previousTag) );
         }
 
         return false;

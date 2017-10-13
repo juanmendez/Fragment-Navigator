@@ -68,6 +68,18 @@ public class ShoeRack {
             //going forward can mean also stepping back to a previous shoeModel
             if( history.contains(shoeTag)){
 
+                /**
+                 * setting a shoeBox active twice means to refresh
+                 */
+                String tagAtTheFront = history.get( history.size()-1);
+
+                if( shoeBox.isActive() && shoeBox.getFragmentTag().equals(tagAtTheFront) ){
+                    shoeBox.setActive(false);
+                    shoeBox.setActive(true);
+                    return true;
+                }
+
+
                 for( int i = history.size()-1; i>= 0; i--){
 
                     if( !history.get(i).equals( shoeTag ) ){
@@ -103,17 +115,7 @@ public class ShoeRack {
                 return false;
             }
 
-            /**
-             * shoeBox can be called twice. therefore we set the item
-             * as deactivated and activated once again!
-             */
-            if( shoeBox.isActive() ){
-                shoeBox.setActive(false);
-                shoeBox.setActive(true);
-            }else{
-                publishSubject.onNext(ShoeUtils.getPath(shoeBox));
-            }
-
+            publishSubject.onNext(ShoeUtils.getPath(shoeBox));
             return true;
         }
 

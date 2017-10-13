@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="593b7e85-53f0-47a4-b095-a2fc4ca8b280" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeFlow.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeFlow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeStack.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/shoes/TestShoeFragmentAdapter.java" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/shoes/TestShoeFragmentAdapter.java" />
     </list>
     <ignored path="Fragment Navigator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,8 +59,18 @@
       <file leaf-file-name="BasicStorageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10146">
-              <caret line="198" column="51" lean-forward="false" selection-start-line="196" selection-start-column="6" selection-end-line="198" selection-end-column="51" />
+            <state relative-caret-position="5700">
+              <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicChildFragmentTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2223">
+              <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -75,21 +79,8 @@
       <file leaf-file-name="ShoeRack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="97" column="37" lean-forward="false" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
-              <folding>
-                <element signature="e#10079#10080#0" expanded="true" />
-                <element signature="e#10117#10118#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicChildFragmentTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2736">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="741">
+              <caret line="71" column="66" lean-forward="false" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -98,7 +89,7 @@
       <file leaf-file-name="BackstackNavigationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BackstackNavigationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12053">
+            <state relative-caret-position="12255">
               <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
               <folding />
             </state>
@@ -108,8 +99,8 @@
       <file leaf-file-name="FixingThroughTesting.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/FixingThroughTesting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="399">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2152,8 +2143,8 @@
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeFlow.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java" />
-        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java" />
       </list>
     </option>
   </component>
@@ -2178,7 +2169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2283,7 +2273,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2416,6 +2406,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -2522,7 +2513,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BasicChildFragmentTest.testChildren" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BasicStorageTest.shouldStackGoForward" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="info.juanmendez.shoeboxes.*" />
@@ -2533,8 +2524,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="info.juanmendez.shoeboxes" />
-      <option name="MAIN_CLASS_NAME" value="info.juanmendez.shoeboxes.BasicChildFragmentTest" />
-      <option name="METHOD_NAME" value="testChildren" />
+      <option name="MAIN_CLASS_NAME" value="info.juanmendez.shoeboxes.BasicStorageTest" />
+      <option name="METHOD_NAME" value="shouldStackGoForward" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -2642,7 +2633,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507854467975" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507866069704" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2688,7 +2679,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507854467975" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507866069704" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2869,7 +2860,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507854467976" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507866069705" />
       </method>
     </configuration>
     <configuration default="false" name="fragmentNavigator" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -2916,7 +2907,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507854467976" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507866069705" />
       </method>
     </configuration>
     <configuration default="false" name="coreNavigator" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -2963,7 +2954,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507854467976" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507866069705" />
       </method>
     </configuration>
     <list size="8">
@@ -2973,7 +2964,7 @@
       <item index="3" class="java.lang.String" itemvalue="Android JUnit.BackstackNavigationTest" />
       <item index="4" class="java.lang.String" itemvalue="Android JUnit.BasicStorageTest" />
       <item index="5" class="java.lang.String" itemvalue="Android JUnit.BasicChildFragmentTest" />
-      <item index="6" class="java.lang.String" itemvalue="Android JUnit.BasicChildFragmentTest.testChildren" />
+      <item index="6" class="java.lang.String" itemvalue="Android JUnit.BasicStorageTest.shouldStackGoForward" />
       <item index="7" class="java.lang.String" itemvalue="Android JUnit.FixingThroughTesting" />
     </list>
     <recent_temporary>
@@ -2982,7 +2973,7 @@
         <item index="1" class="java.lang.String" itemvalue="Android JUnit.BasicStorageTest" />
         <item index="2" class="java.lang.String" itemvalue="Android JUnit.BasicChildFragmentTest" />
         <item index="3" class="java.lang.String" itemvalue="Android JUnit.BackstackNavigationTest" />
-        <item index="4" class="java.lang.String" itemvalue="Android JUnit.BasicChildFragmentTest.testChildren" />
+        <item index="4" class="java.lang.String" itemvalue="Android JUnit.BasicStorageTest.shouldStackGoForward" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -3018,34 +3009,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BackstackNavigationTest - 2017.10.12 at 19h 27m 12s.xml">
+    <history-entry file="BackstackNavigationTest - 2017.10.12 at 21h 54m 56s.xml">
       <configuration name="BackstackNavigationTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="BasicChildFragmentTest - 2017.10.12 at 19h 24m 05s.xml">
+    <history-entry file="BasicChildFragmentTest - 2017.10.12 at 21h 50m 14s.xml">
       <configuration name="BasicChildFragmentTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="BasicChildFragmentTest - 2017.10.12 at 19h 27m 21s.xml">
+    <history-entry file="BasicChildFragmentTest - 2017.10.12 at 21h 54m 40s.xml">
       <configuration name="BasicChildFragmentTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="BasicChildFragmentTest_refreshTest - 2017.10.12 at 19h 17m 29s.xml">
-      <configuration name="BasicChildFragmentTest.refreshTest" configurationId="AndroidJUnit" />
+    <history-entry file="BasicChildFragmentTest - 2017.10.12 at 21h 55m 03s.xml">
+      <configuration name="BasicChildFragmentTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="BasicChildFragmentTest_testChildren - 2017.10.12 at 19h 23m 52s.xml">
-      <configuration name="BasicChildFragmentTest.testChildren" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BasicChildFragmentTest_testChildren - 2017.10.12 at 19h 24m 29s.xml">
-      <configuration name="BasicChildFragmentTest.testChildren" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BasicChildFragmentTest_testChildren - 2017.10.12 at 19h 24m 57s.xml">
-      <configuration name="BasicChildFragmentTest.testChildren" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BasicChildFragmentTest_testChildren - 2017.10.12 at 19h 26m 09s.xml">
-      <configuration name="BasicChildFragmentTest.testChildren" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BasicStorageTest - 2017.10.12 at 19h 27m 32s.xml">
+    <history-entry file="BasicStorageTest - 2017.10.12 at 21h 50m 30s.xml">
       <configuration name="BasicStorageTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="FixingThroughTesting - 2017.10.12 at 19h 27m 41s.xml">
+    <history-entry file="BasicStorageTest - 2017.10.12 at 21h 55m 12s.xml">
+      <configuration name="BasicStorageTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="BasicStorageTest_shouldStackGoForward - 2017.10.12 at 21h 50m 41s.xml">
+      <configuration name="BasicStorageTest.shouldStackGoForward" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="FixingThroughTesting - 2017.10.12 at 21h 50m 52s.xml">
+      <configuration name="FixingThroughTesting" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="FixingThroughTesting - 2017.10.12 at 21h 55m 21s.xml">
+      <configuration name="FixingThroughTesting" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="FixingThroughTesting - 2017.10.12 at 21h 56m 39s.xml">
       <configuration name="FixingThroughTesting" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
@@ -3059,60 +3050,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
+    <frame x="-16" y="-16" width="3872" height="2092" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46524987" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969558" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46524987" sideWeight="0.4973262" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969558" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32682365" sideWeight="0.497878" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969558" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32797244" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23315509" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32813403" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25751072" sideWeight="0.50467837" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32682365" sideWeight="0.5032086" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32573098" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29006317" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2894888" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32682365" sideWeight="0.497878" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299946" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32807016" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -3123,6 +3078,17 @@
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25751072" sideWeight="0.50467837" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32573098" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299946" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32813403" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3341,7 +3307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3376,7 +3341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="10116" column="30" lean-forward="false" selection-start-line="10116" selection-start-column="30" selection-end-line="10116" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3406,18 +3370,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="97" column="37" lean-forward="false" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
-          <folding>
-            <element signature="e#10079#10080#0" expanded="true" />
-            <element signature="e#10117#10118#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="741">
+          <caret line="71" column="66" lean-forward="false" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BackstackNavigationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12053">
+        <state relative-caret-position="12255">
           <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
           <folding />
         </state>
@@ -3425,24 +3386,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="2223">
+          <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10146">
-          <caret line="198" column="51" lean-forward="false" selection-start-line="196" selection-start-column="6" selection-end-line="198" selection-end-column="51" />
+        <state relative-caret-position="5700">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/FixingThroughTesting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>

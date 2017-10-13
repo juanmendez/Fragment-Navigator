@@ -27,17 +27,22 @@ public class ShoeFlow implements ShoeModel {
 
     public ShoeFlow() {
 
-        ShoeStorage.getCurrentRack().asObservable().subscribe(navNodes -> {
+        //checks to active|deactive children
+        ShoeStorage.getCurrentRack().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 
             if( pos >= 0 && pos < len-1 ){
                 for( ShoeModel node: nodes ){
-                    node.setActive( true );
+                    if( !node.isActive() ){
+                        node.setActive( true );
+                    }
                 }
             }else{
                 for( ShoeModel node: nodes ){
-                    node.setActive( false );
+                    if( node.isActive() ){
+                        node.setActive( false );
+                    }
                 }
             }
         });

@@ -43,12 +43,12 @@ public class BasicChildFragmentTest {
     @Before
     public void before(){
         shoeRack = ShoeStorage.getRack( BasicChildFragmentTest.class.getSimpleName());
-        fragmentA =  new TestShoeFragmentAdapter(tagA);
-        fragmentB =  new TestShoeFragmentAdapter(tagB);
-        fragmentC =  new TestShoeFragmentAdapter(tagC);
-        fragmentD =  new TestShoeFragmentAdapter(tagD);
-        fragmentE =  new TestShoeFragmentAdapter(tagE);
-        fragmentF =  new TestShoeFragmentAdapter(tagF);
+        fragmentA =  spy( new TestShoeFragmentAdapter(tagA));
+        fragmentB =  spy( new TestShoeFragmentAdapter(tagB));
+        fragmentC =  spy( new TestShoeFragmentAdapter(tagC));
+        fragmentD =  spy( new TestShoeFragmentAdapter(tagD));
+        fragmentE =  spy( new TestShoeFragmentAdapter(tagE));
+        fragmentF =  spy( new TestShoeFragmentAdapter(tagF));
     }
 
 
@@ -56,7 +56,6 @@ public class BasicChildFragmentTest {
     public void testChildren(){
 
         shoeRack.clearHistory();
-        fragmentA = spy( fragmentA );
         ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
         ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
@@ -142,19 +141,32 @@ public class BasicChildFragmentTest {
         ShoeBox shoeBoxB = spy( ShoeBox.build(fragmentB) );
         ShoeBox shoeBoxC = spy( ShoeBox.build(fragmentC) );
         ShoeBox shoeBoxD = spy( ShoeBox.build(fragmentD) );
+        ShoeStack shoeStack = spy( ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC, shoeBoxD) );
 
+        shoeRack.populate(  shoeStack );
 
-        shoeRack.populate(  ShoeStack.build( shoeBoxA, shoeBoxB, shoeBoxC, shoeBoxD) );
-
-
-        verify( shoeBoxA, times(0) ).setActive( eq(false) );
         verify( shoeBoxB, times(0) ).setActive( eq(false) );
         verify( shoeBoxC, times(0) ).setActive( eq(false) );
         verify( shoeBoxC, times(0) ).setActive( eq(false) );
 
         shoeRack.suggest( tagC );
+
         verify( shoeBoxC, times(1) ).setActive( eq(true) );
 
+        shoeRack.request( tagD );
+    }
 
+    @Test
+    public void refreshTest() {
+        shoeRack.clearHistory();
+        ShoeBox shoeBoxA = spy(ShoeBox.build(fragmentA));
+        ShoeBox shoeBoxB = spy(ShoeBox.build(fragmentB));
+
+        shoeRack.populate(shoeBoxA, shoeBoxB);
+        shoeRack.suggest(tagB);
+        shoeRack.request(tagB, "some action");
+
+        verify(shoeBoxB, times(1)).setActive(eq(false));
+        verify(shoeBoxB, times(2)).setActive(eq(true));
     }
 }

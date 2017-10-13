@@ -6,8 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 import info.juanmendez.shoeboxes.utils.ShoeUtils;
-import rx.Observable;
+import rx.functions.Action1;
 import rx.subjects.PublishSubject;
+import rx.subscriptions.CompositeSubscription;
 
 
 /**
@@ -21,6 +22,7 @@ public class ShoeRack {
     private HashMap<String, String> requestActionMap = new HashMap<>();
     private List<String> history = new ArrayList<>();
     private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
+    private CompositeSubscription compositeSubscription = new CompositeSubscription();
 
     public boolean  request( int requestId ){
         return request( requestId, "" );
@@ -101,7 +103,17 @@ public class ShoeRack {
                 return false;
             }
 
-            publishSubject.onNext(ShoeUtils.getPath(shoeBox));
+            /**
+             * shoeBox can be called twice. therefore we set the item
+             * as deactivated and activated once again!
+             */
+            if( shoeBox.isActive() ){
+                shoeBox.setActive(false);
+                shoeBox.setActive(true);
+            }else{
+                publishSubject.onNext(ShoeUtils.getPath(shoeBox));
+            }
+
             return true;
         }
 
@@ -187,8 +199,8 @@ public class ShoeRack {
         return  anySuccess;
     }
 
-    public Observable<List<ShoeModel>> asObservable() {
-        return publishSubject.asObservable();
+    public void subscribe(Action1<List<ShoeModel>> action ){
+        compositeSubscription.add( publishSubject.subscribe(action));
     }
 
     public List<String> getHistory() {

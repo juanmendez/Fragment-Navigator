@@ -29,19 +29,26 @@ public class ShoeStack implements ShoeModel {
 
     public ShoeStack() {
 
-        ShoeStorage.getCurrentRack().asObservable().subscribe(navNodes -> {
+        //checks to active|deactive children
+        ShoeStorage.getCurrentRack().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
-            int len = navNodes.size();
+            boolean childInPath;
 
-            if( pos >= 0 && pos < len-1 ){
+            if( pos >= 0 ){
                 ShoeModel childFound = navNodes.get( pos+1);
 
                 for( ShoeModel node: nodes ){
-                    node.setActive( node == childFound );
+                    childInPath = node == childFound;
+
+                    if( childInPath != node.isActive() ){
+                        node.setActive( node == childFound );
+                    }
                 }
             }else{
                 for( ShoeModel node: nodes ){
-                    node.setActive( false );
+                    if( node.isActive() ){
+                        node.setActive( false );
+                    }
                 }
             }
         });

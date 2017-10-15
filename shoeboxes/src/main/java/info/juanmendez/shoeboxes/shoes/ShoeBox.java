@@ -5,6 +5,7 @@ import java.util.List;
 
 import info.juanmendez.shoeboxes.ShoeStorage;
 import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
+import info.juanmendez.shoeboxes.utils.ShoeUtils;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
@@ -126,13 +127,14 @@ public class ShoeBox implements ShoeModel {
     }
 
     @Override
-    public ShoeBox search(String tag) {
+    public ShoeBox search(String route) {
 
-        if( fragmentTag.equals(tag))
+        if(ShoeUtils.isTagInRoute(fragmentTag, route)){
             return this;
+        }
 
         if( shoeModelChildNode != null )
-            return shoeModelChildNode.search( tag );
+            return shoeModelChildNode.search( route );
 
         return null;
     }

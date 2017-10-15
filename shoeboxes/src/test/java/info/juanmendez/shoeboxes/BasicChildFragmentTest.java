@@ -164,7 +164,7 @@ public class BasicChildFragmentTest {
 
         shoeRack.populate(shoeBoxA, shoeBoxB);
         shoeRack.suggest(tagB);
-        shoeRack.request(tagB, "some action");
+        shoeRack.request(tagB);
 
         verify(shoeBoxB, times(1)).setActive(eq(false));
         verify(shoeBoxB, times(2)).setActive(eq(true));

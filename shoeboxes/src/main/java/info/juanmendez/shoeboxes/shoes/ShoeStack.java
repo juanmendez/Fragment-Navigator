@@ -82,11 +82,11 @@ public class ShoeStack implements ShoeModel {
     }
 
     @Override
-    public ShoeBox search(String tag) {
+    public ShoeBox search(String route) {
         ShoeBox nodeResult;
 
         for( ShoeModel node: nodes){
-            nodeResult = node.search( tag );
+            nodeResult = node.search( route );
 
             if( nodeResult != null ){
                 return nodeResult;

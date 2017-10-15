@@ -18,7 +18,7 @@ public interface ShoeModel {
     ShoeModel getParent();
 
     //search nodes by tag or id
-    ShoeBox search(String tag);
+    ShoeBox search(String route);
 
     //allow self node to display or hide
     void setActive(Boolean active);

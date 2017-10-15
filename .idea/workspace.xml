@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="593b7e85-53f0-47a4-b095-a2fc4ca8b280" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/RoutesTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeFlow.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeFlow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeModel.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeStack.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeStack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java" afterPath="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java" afterPath="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java" />
     </list>
     <ignored path="Fragment Navigator.iws" />
@@ -64,28 +66,8 @@
       <file leaf-file-name="BasicStorageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7182">
-              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackstackNavigationTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BackstackNavigationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4402">
-              <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShoeBox.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+            <state relative-caret-position="1817">
+              <caret line="172" column="5" lean-forward="false" selection-start-line="172" selection-start-column="5" selection-end-line="172" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -94,8 +76,8 @@
       <file leaf-file-name="BasicChildFragmentTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="8607">
+              <caret line="166" column="29" lean-forward="false" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -104,13 +86,27 @@
       <file leaf-file-name="ShoeRack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="1558">
+              <caret line="277" column="39" lean-forward="false" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="39" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6496#6497#0" expanded="true" />
-                <element signature="e#6542#6543#0" expanded="true" />
+                <element signature="e#5508#5509#0" expanded="true" />
+                <element signature="e#5556#5557#0" expanded="true" />
+                <element signature="e#8389#8390#0" expanded="true" />
+                <element signature="e#8450#8451#0" expanded="true" />
+                <element signature="e#8499#8500#0" expanded="true" />
+                <element signature="e#8560#8561#0" expanded="true" />
+                <marker date="1508045427346" expanded="true" signature="4537:4545" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1518">
+              <caret line="176" column="17" lean-forward="false" selection-start-line="176" selection-start-column="15" selection-end-line="176" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,8 +114,63 @@
       <file leaf-file-name="FixingThroughTesting.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/FixingThroughTesting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="1938">
+              <caret line="43" column="5" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="43" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoutesTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/RoutesTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4615">
+              <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BackstackNavigationTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BackstackNavigationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12255">
+              <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeBox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6954">
+              <caret line="135" column="30" lean-forward="false" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="30" />
+              <folding>
+                <element signature="e#3884#3885#0" expanded="true" />
+                <element signature="e#3937#3938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeStack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeStack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="834">
+              <caret line="84" column="38" lean-forward="false" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoeFlow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeFlow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3320">
+              <caret line="93" column="19" lean-forward="false" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -139,10 +190,33 @@
     <findStrings>
       <find>getPaths</find>
       <find>take</find>
-      <find>search</find>
       <find>(ShoeBox</find>
       <find>requestActionMap</find>
+      <find>spy\((.*)?\);</find>
+      <find>shoeModel</find>
+      <find>nodes</find>
+      <find>node.setActive</find>
+      <find>as</find>
+      <find>child making the call fragmentC</find>
+      <find>subsc</find>
+      <find>r</find>
+      <find>rotate</find>
+      <find>asObser</find>
+      <find>subscribe</find>
+      <find>publishSubject</find>
+      <find>fromChi</find>
+      <find>equals</find>
+      <find>search</find>
+      <find>setActive</find>
+      <find>request</find>
+      <find>contains</find>
     </findStrings>
+    <replaceStrings>
+      <replace>$1</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\codes\Android\juanmendez\Fragment-Navigator\shoeboxes\src\test\java\info\juanmendez\shoeboxes</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -202,11 +276,11 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="validateSigningDebugAndroidTest" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformClassesWithRetrolambdaForDebug" />
+                <option name="name" value="validateSigningDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -261,11 +335,6 @@
                 <option name="description" value="Displays the tasks runnable from root project 'Fragment-Navigator' (some of the displayed tasks may belong to subprojects)." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Converts all java 8 class files to java 6 or 7" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileRetrolambda" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -564,6 +633,10 @@
                 <option name="name" value="processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="extractReleaseAnnotations" />
@@ -617,6 +690,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -700,10 +777,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformClassesWithRetrolambdaForRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="transformResourcesWithMergeJavaResForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -773,6 +846,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -790,10 +867,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateReleaseBuildConfig" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformClassesWithRetrolambdaForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -892,11 +965,11 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
-                <option name="name" value="validateSigningDebugAndroidTest" />
+                <option name="name" value="extractTryWithResourcesSupportJarDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
-                <option name="name" value="transformClassesWithRetrolambdaForDebug" />
+                <option name="name" value="validateSigningDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
@@ -946,11 +1019,6 @@
                 <option name="description" value="Displays the configuration model of project ':shoeboxes'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
                 <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Converts all java 8 class files to java 6 or 7" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
-                <option name="name" value="compileRetrolambda" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the tasks runnable from project ':shoeboxes'." />
@@ -1249,6 +1317,10 @@
                 <option name="name" value="processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
+                <option name="name" value="transformClassesWithDesugarForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
                 <option name="name" value="extractReleaseAnnotations" />
@@ -1297,6 +1369,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
@@ -1380,10 +1456,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
-                <option name="name" value="transformClassesWithRetrolambdaForRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
                 <option name="name" value="transformResourcesWithMergeJavaResForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1453,6 +1525,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
+                <option name="name" value="transformClassesWithStackFramesFixerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
                 <option name="name" value="mergeReleaseAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1470,10 +1546,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
                 <option name="name" value="generateReleaseBuildConfig" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
-                <option name="name" value="transformClassesWithRetrolambdaForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/shoeboxes" />
@@ -2095,10 +2167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragment.java" />
-        <option value="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/NavFragmentManager.java" />
-        <option value="$PROJECT_DIR$/coreNavigator/src/main/java/info/juanmendez/corenavigator/adapters/CoreNavFragmentManager.java" />
-        <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragmentManager.java" />
         <option value="$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragment.java" />
         <option value="$PROJECT_DIR$/fragmentNavigator/build.gradle" />
         <option value="$PROJECT_DIR$/settings.gradle" />
@@ -2139,24 +2207,28 @@
         <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicShoeStorageTest.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/shoeboxes/build.gradle" />
-        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java" />
-        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeModel.java" />
-        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/shoes/TestShoeFragmentAdapter.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeFlow.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/adapters/ShoeFragmentAdapter.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeModel.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeStack.java" />
-        <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java" />
         <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java" />
+        <option value="$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/RoutesTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-16" />
     <option name="y" value="-16" />
-    <option name="width" value="3872" />
-    <option name="height" value="2092" />
+    <option name="width" value="6432" />
+    <option name="height" value="3532" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -2170,6 +2242,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2182,11 +2255,126 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2209,8 +2397,112 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragment-Navigator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shoeboxes" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2237,33 +2529,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android JUnit.BackstackNavigationTest">
-    <configuration default="false" name="BasicStorageTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="info.juanmendez.shoeboxes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="shoeboxes" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="info.juanmendez.shoeboxes" />
-      <option name="MAIN_CLASS_NAME" value="info.juanmendez.shoeboxes.BasicStorageTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Android JUnit.RoutesTest">
     <configuration default="false" name="BackstackNavigationTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -2278,6 +2544,32 @@
       <option name="MAIN_CLASS_NAME" value="info.juanmendez.shoeboxes.BackstackNavigationTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BasicChildFragmentTest.refreshTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="info.juanmendez.shoeboxes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="shoeboxes" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="info.juanmendez.shoeboxes" />
+      <option name="MAIN_CLASS_NAME" value="info.juanmendez.shoeboxes.BasicChildFragmentTest" />
+      <option name="METHOD_NAME" value="refreshTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -2342,7 +2634,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BackstackNavigationTest.shouldUpdateHistoryWithSameStructure" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RoutesTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="info.juanmendez.shoeboxes.*" />
@@ -2353,9 +2645,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="info.juanmendez.shoeboxes" />
-      <option name="MAIN_CLASS_NAME" value="info.juanmendez.shoeboxes.BackstackNavigationTest" />
-      <option name="METHOD_NAME" value="shouldUpdateHistoryWithSameStructure" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="info.juanmendez.shoeboxes.RoutesTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -2435,8 +2727,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507593427914" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1508048474242" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2481,8 +2772,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507593427914" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1508048474242" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2662,8 +2952,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507593427915" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1508048474243" />
       </method>
     </configuration>
     <configuration default="false" name="fragmentNavigator" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -2709,8 +2998,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507593427915" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1508048474243" />
       </method>
     </configuration>
     <configuration default="false" name="coreNavigator" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -2756,27 +3044,26 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1507593427915" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1508048474243" />
       </method>
     </configuration>
     <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
       <item index="1" class="java.lang.String" itemvalue="Android App.fragmentNavigator" />
       <item index="2" class="java.lang.String" itemvalue="Android App.coreNavigator" />
-      <item index="3" class="java.lang.String" itemvalue="Android JUnit.BasicStorageTest" />
-      <item index="4" class="java.lang.String" itemvalue="Android JUnit.BackstackNavigationTest" />
+      <item index="3" class="java.lang.String" itemvalue="Android JUnit.BackstackNavigationTest" />
+      <item index="4" class="java.lang.String" itemvalue="Android JUnit.BasicChildFragmentTest.refreshTest" />
       <item index="5" class="java.lang.String" itemvalue="Android JUnit.BasicChildFragmentTest" />
       <item index="6" class="java.lang.String" itemvalue="Android JUnit.FixingThroughTesting" />
-      <item index="7" class="java.lang.String" itemvalue="Android JUnit.BackstackNavigationTest.shouldUpdateHistoryWithSameStructure" />
+      <item index="7" class="java.lang.String" itemvalue="Android JUnit.RoutesTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Android JUnit.BackstackNavigationTest" />
-        <item index="1" class="java.lang.String" itemvalue="Android JUnit.BackstackNavigationTest.shouldUpdateHistoryWithSameStructure" />
-        <item index="2" class="java.lang.String" itemvalue="Android JUnit.FixingThroughTesting" />
-        <item index="3" class="java.lang.String" itemvalue="Android JUnit.BasicStorageTest" />
-        <item index="4" class="java.lang.String" itemvalue="Android JUnit.BasicChildFragmentTest" />
+        <item index="0" class="java.lang.String" itemvalue="Android JUnit.RoutesTest" />
+        <item index="1" class="java.lang.String" itemvalue="Android JUnit.FixingThroughTesting" />
+        <item index="2" class="java.lang.String" itemvalue="Android JUnit.BasicChildFragmentTest" />
+        <item index="3" class="java.lang.String" itemvalue="Android JUnit.BasicChildFragmentTest.refreshTest" />
+        <item index="4" class="java.lang.String" itemvalue="Android JUnit.BackstackNavigationTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -2812,101 +3099,85 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BackstackNavigationTest - 2017.10.09 at 18h 50m 16s.xml">
+    <history-entry file="BackstackNavigationTest - 2017.10.15 at 00h 33m 15s.xml">
       <configuration name="BackstackNavigationTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="BackstackNavigationTest - 2017.10.09 at 18h 51m 02s.xml">
-      <configuration name="BackstackNavigationTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BackstackNavigationTest - 2017.10.09 at 18h 51m 56s.xml">
-      <configuration name="BackstackNavigationTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BackstackNavigationTest - 2017.10.09 at 18h 53m 39s.xml">
-      <configuration name="BackstackNavigationTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BackstackNavigationTest - 2017.10.09 at 18h 54m 55s.xml">
-      <configuration name="BackstackNavigationTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BackstackNavigationTest - 2017.10.09 at 18h 55m 41s.xml">
-      <configuration name="BackstackNavigationTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BackstackNavigationTest_shouldUpdateHistoryWithSameStructure - 2017.10.09 at 18h 55m 33s.xml">
-      <configuration name="BackstackNavigationTest.shouldUpdateHistoryWithSameStructure" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="BasicChildFragmentTest - 2017.10.09 at 18h 50m 32s.xml">
+    <history-entry file="BasicChildFragmentTest - 2017.10.15 at 00h 33m 35s.xml">
       <configuration name="BasicChildFragmentTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="BasicStorageTest - 2017.10.09 at 18h 50m 45s.xml">
-      <configuration name="BasicStorageTest" configurationId="AndroidJUnit" />
+    <history-entry file="BasicChildFragmentTest_refreshTest - 2017.10.15 at 00h 33m 25s.xml">
+      <configuration name="BasicChildFragmentTest.refreshTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="FixingThroughTesting - 2017.10.09 at 18h 50m 52s.xml">
+    <history-entry file="BasicStorageTest_testRequestAction - 2017.10.15 at 00h 33m 04s.xml">
+      <configuration name="BasicStorageTest.testRequestAction" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="BasicStorageTest_testSuggestById - 2017.10.15 at 00h 10m 04s.xml">
+      <configuration name="BasicStorageTest.testSuggestById" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="FixingThroughTesting - 2017.10.15 at 00h 33m 44s.xml">
       <configuration name="FixingThroughTesting" configurationId="AndroidJUnit" />
     </history-entry>
+    <history-entry file="RoutesTest - 2017.10.15 at 00h 33m 54s.xml">
+      <configuration name="RoutesTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="RoutesTest - 2017.10.15 at 00h 35m 57s.xml">
+      <configuration name="RoutesTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="RoutesTest_testGettingRoute - 2017.10.15 at 00h 20m 40s.xml">
+      <configuration name="RoutesTest.testGettingRoute" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="RoutesTest_testGettingRoute - 2017.10.15 at 00h 21m 09s.xml">
+      <configuration name="RoutesTest.testGettingRoute" configurationId="AndroidJUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
+    <frame x="-16" y="-16" width="6432" height="3532" extended-state="6" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23315509" sideWeight="0.27800116" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291212" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969558" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291212" sideWeight="0.4973262" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32682365" sideWeight="0.49679145" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32797244" sideWeight="0.49893048" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23315509" sideWeight="0.7219989" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25751072" sideWeight="0.50467837" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32682365" sideWeight="0.5032086" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32573098" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug with JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29006317" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32682365" sideWeight="0.497878" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28921723" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="-4623" y="2616" width="3888" height="864" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32662684" sideWeight="0.497878" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299946" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32851306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32807016" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23315509" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23301588" sideWeight="0.49532163" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel for Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32813403" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25751072" sideWeight="0.50467837" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32573098" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299946" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2957,33 +3228,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="142" />
+      <option name="time" value="177" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/android/support/v4/app/Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="544" column="24" lean-forward="false" selection-start-line="544" selection-start-column="24" selection-end-line="544" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/models/TestShoeFragmentManager.java" />
     <entry file="file://$PROJECT_DIR$/fragmentNavigator/src/main/java/info/juanmendez/fragmentnavigator/models/NavFragment.java" />
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
@@ -3035,13 +3284,6 @@
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/models/TestActivity.java" />
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeModel.java" />
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/adapters/ShoeFragment.java" />
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/ShoeStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-25/android.jar!/junit/framework/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -3054,21 +3296,6 @@
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeStack.java" />
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/models/ShoeFlow.java" />
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicShoeStorageTest.java" />
-    <entry file="file://$PROJECT_DIR$/shoeboxes/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/adapters/ShoeFragmentAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -3136,92 +3363,157 @@
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeFlow.java">
+    <entry file="file://$USER_HOME$/.gradle/gradle.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="73" column="15" lean-forward="false" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/shoes/TestShoeFragmentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/ShoeStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#398#399#0" expanded="false" />
+            <element signature="e#450#451#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.3.0/5a34ce3b9e72e2a99b7a86d6e1910785be1a3e3f/rxjava-1.3.0-sources.jar!/rx/Observable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="10116" column="30" lean-forward="false" selection-start-line="10116" selection-start-column="30" selection-end-line="10116" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/adapters/ShoeFragmentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1076">
-          <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6496#6497#0" expanded="true" />
-            <element signature="e#6542#6543#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7182">
-          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/FixingThroughTesting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BackstackNavigationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4402">
-          <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+        <state relative-caret-position="1140">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+        <state relative-caret-position="6954">
+          <caret line="135" column="30" lean-forward="false" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="30" />
+          <folding>
+            <element signature="e#3884#3885#0" expanded="true" />
+            <element signature="e#3937#3938#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="84" column="38" lean-forward="false" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeFlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3320">
+          <caret line="93" column="19" lean-forward="false" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/shoes/ShoeRack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="277" column="39" lean-forward="false" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="39" />
+          <folding>
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5556#5557#0" expanded="true" />
+            <element signature="e#8389#8390#0" expanded="true" />
+            <element signature="e#8450#8451#0" expanded="true" />
+            <element signature="e#8499#8500#0" expanded="true" />
+            <element signature="e#8560#8561#0" expanded="true" />
+            <marker date="1508045427346" expanded="true" signature="4537:4545" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/main/java/info/juanmendez/shoeboxes/utils/ShoeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1518">
+          <caret line="176" column="17" lean-forward="false" selection-start-line="176" selection-start-column="15" selection-end-line="176" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1817">
+          <caret line="172" column="5" lean-forward="false" selection-start-line="172" selection-start-column="5" selection-end-line="172" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BackstackNavigationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12255">
+          <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/BasicChildFragmentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8607">
+          <caret line="166" column="29" lean-forward="false" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/FixingThroughTesting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="43" column="5" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="43" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoeboxes/src/test/java/info/juanmendez/shoeboxes/RoutesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4615">
+          <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

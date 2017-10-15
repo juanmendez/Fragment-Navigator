@@ -3,6 +3,8 @@ package info.juanmendez.shoeboxes.utils;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import info.juanmendez.shoeboxes.ShoeStorage;
 import info.juanmendez.shoeboxes.shoes.ShoeBox;
@@ -134,5 +136,44 @@ public class ShoeUtils {
         return false;
     }
 
+    private static final String tagRegex = "^([\\w-]+)/?(.*)";
+    private static final Pattern tagPattern = Pattern.compile( tagRegex );
 
+    public static Boolean isTagInRoute( String tag, String route ){
+        Matcher m = tagPattern.matcher(route);
+
+        if( m.find() ){
+            return m.group(1).equals( tag );
+        }else{
+            return false;
+        }
+    }
+
+    public static Boolean isTagInRouteList(String tag, List<String> routes ){
+        for(String route:routes){
+            if( isTagInRoute(tag, route))
+                return true;
+        }
+
+        return false;
+    }
+
+    public static String getRouteParams(String route) {
+        Matcher m = tagPattern.matcher(route);
+
+        if( m.find() ){
+            return m.group(2);
+        }
+
+        return "";
+    }
+
+    public static String getRouteParams(String tag, List<String> routes ){
+        for(String route:routes){
+            if( isTagInRoute(tag, route))
+                return getRouteParams(route);
+        }
+
+        return "";
+    }
 }

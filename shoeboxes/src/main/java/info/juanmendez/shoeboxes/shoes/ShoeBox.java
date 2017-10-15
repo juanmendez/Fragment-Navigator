@@ -5,6 +5,7 @@ import java.util.List;
 
 import info.juanmendez.shoeboxes.ShoeStorage;
 import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
+import info.juanmendez.shoeboxes.utils.ShoeUtils;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
@@ -19,8 +20,8 @@ public class ShoeBox implements ShoeModel {
     ShoeModel parentNode;
 
     private ShoeFragmentAdapter shoeFragmentAdapter; //identifies Fragment with Tag or its Id
-    List<ShoeModel> nodes = new ArrayList<>();
-    ShoeModel shoeModel;
+    private List<ShoeModel> nodes = new ArrayList<>();
+    private ShoeModel shoeModelChildNode;
 
     //lets keep a hold of the last child visited.
     ShoeModel prevChildVisited;
@@ -33,12 +34,23 @@ public class ShoeBox implements ShoeModel {
         return new ShoeBox(shoeFragmentAdapter);
     }
 
-    public ShoeBox() {
+    public ShoeBox(ShoeFragmentAdapter shoeFragmentAdapter){
 
-        ShoeStorage.getCurrentRack().asObservable().subscribe(navNodes -> {
+        this.shoeFragmentAdapter = shoeFragmentAdapter;
+
+        if( shoeFragmentAdapter.getTag() != null ){
+            this.fragmentTag = shoeFragmentAdapter.getTag();
+        }
+        else if( shoeFragmentAdapter.getId() != 0 ){
+            this.fragmentTag = Integer.toString( shoeFragmentAdapter.getId() );
+        }
+
+        //starts with a closed state
+        this.shoeFragmentAdapter.setActive(false);
+
+        ShoeStorage.getCurrentRack().subscribe(navNodes -> {
 
             int pos = navNodes.indexOf( this );
-            setActive( pos >= 0 );
 
             //this parent must be active for this to work!
             if( pos >= 0 ){
@@ -69,18 +81,6 @@ public class ShoeBox implements ShoeModel {
         });
     }
 
-    public ShoeBox(ShoeFragmentAdapter shoeFragmentAdapter){
-        this();
-        this.shoeFragmentAdapter = shoeFragmentAdapter;
-
-        if( shoeFragmentAdapter.getTag() != null ){
-            this.fragmentTag = shoeFragmentAdapter.getTag();
-        }
-        else if( shoeFragmentAdapter.getId() != 0 ){
-            this.fragmentTag = Integer.toString( shoeFragmentAdapter.getId() );
-        }
-    }
-
     public ShoeFragmentAdapter getShoeFragmentAdapter(){
         return shoeFragmentAdapter;
     }
@@ -95,19 +95,18 @@ public class ShoeBox implements ShoeModel {
         boolean makeFlow = shodeModels.length > 1 || (shodeModels.length == 1 && shodeModels[0] instanceof ShoeBox );
 
         if( makeFlow ){
-            shoeModel = ShoeFlow.build( shodeModels );
+            shoeModelChildNode = ShoeFlow.build( shodeModels );
         }else{
-            shoeModel = shodeModels[0];
+            shoeModelChildNode = shodeModels[0];
         }
 
-        if( shoeModel != null ){
-            this.nodes.clear();
-            this.nodes.add(shoeModel);
+        if( shoeModelChildNode != null ){
+            nodes.clear();
+            nodes.add(shoeModelChildNode);
 
-            shoeModel.setParent(this);
-            shoeModel.setActive( false );
+            shoeModelChildNode.setParent(this);
+            shoeModelChildNode.setActive( false );
         }
-
 
         return this;
     }
@@ -128,20 +127,20 @@ public class ShoeBox implements ShoeModel {
     }
 
     @Override
-    public ShoeBox search(String tag) {
+    public ShoeBox search(String route) {
 
-        if( fragmentTag.equals(tag))
+        if(ShoeUtils.isTagInRoute(fragmentTag, route)){
             return this;
+        }
 
-        if( shoeModel != null )
-            return shoeModel.search( tag );
+        if( shoeModelChildNode != null )
+            return shoeModelChildNode.search( route );
 
         return null;
     }
 
     @Override
     public void setActive(Boolean active) {
-
         shoeFragmentAdapter.setActive(active);
     }
 
@@ -160,8 +159,8 @@ public class ShoeBox implements ShoeModel {
             shoeFragmentAdapter.onRotation();
         }
 
-        if( shoeModel != null ){
-            shoeModel.onRotation();
+        if( shoeModelChildNode != null ){
+            shoeModelChildNode.onRotation();
         }
     }
 }

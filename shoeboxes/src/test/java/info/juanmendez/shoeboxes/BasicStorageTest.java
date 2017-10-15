@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
@@ -19,7 +18,6 @@ import info.juanmendez.shoeboxes.shoes.TestShoeFragmentAdapter;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertNotNull;
-import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertTrue;
 
 /**
@@ -70,7 +68,6 @@ public class BasicStorageTest {
     public void shouldDispatchRequest(){
         shoeRack.clearHistory();
 
-
         ShoeBox shoeBoxA, shoeBoxB;
 
         //lets draw the fragments
@@ -79,7 +76,7 @@ public class BasicStorageTest {
         //so we are going to build a dual pane...
         shoeRack.request( tagA );
 
-        shoeRack.asObservable().take(1).subscribe(navItems -> {
+        shoeRack.subscribe(navItems -> {
             assertEquals( "tag is A", navItems.get(navItems.size()-1), shoeBoxA);
         });
     }
@@ -160,18 +157,19 @@ public class BasicStorageTest {
         shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
 
 
-        shoeRack.request( tagB, "B" );
+        shoeRack.request( tagB + "/B" );
 
         //lets go to first one!
-        shoeRack.request( tagC, "C" );
+        shoeRack.request( tagC + "/C" );
 
-        assertEquals( shoeRack.getActionByTag( tagC ), "C" );
-        assertEquals( shoeRack.getActionByTag(tagB), "B");
-        assertNull( shoeRack.getActionByTag( tagA ));
+
+        assertEquals( shoeRack.getRouteParams( tagC ), "C" );
+        assertEquals( shoeRack.getRouteParams(tagB), "B");
+        assertTrue( shoeRack.getRouteParams( tagA ).isEmpty() );
 
         shoeRack.goBack();
         assertTrue( fragmentB.isActive() );
-        assertEquals( shoeRack.getActionByTag(tagB), "B");
+        assertEquals( shoeRack.getRouteParams(tagB), "B");
     }
 
 
@@ -184,9 +182,8 @@ public class BasicStorageTest {
 
         shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
 
-        HashMap<String,String> tagsWithActions = new HashMap<>();
-        tagsWithActions.put( tagC, "C");
-        shoeRack.suggest( tagsWithActions );
+        shoeRack.suggest( tagA );
+        assertTrue( fragmentA.isActive() );
     }
 
     @Test
@@ -205,18 +202,12 @@ public class BasicStorageTest {
 
         shoeRack.populate( shoeBoxA, shoeBoxB, shoeBoxC  );
 
-        HashMap<Integer, String> idsWithActions = new HashMap<>();
-        idsWithActions.put( a, "A");
-        idsWithActions.put( b, "B");
-        idsWithActions.put( c, "C");
-
-        shoeRack.suggestIdsWithActions( idsWithActions );
-
+        shoeRack.suggest( a + "/A", b + "/B", c+"/C");
         assertTrue( shoeBoxA.isActive() );
         assertTrue( shoeBoxC.isActive() );
         assertTrue( shoeBoxB.isActive() );
 
-        assertEquals( shoeRack.getActionById(a), "A");
+        assertEquals( shoeRack.getRouteParams(a), "A");
     }
 
 

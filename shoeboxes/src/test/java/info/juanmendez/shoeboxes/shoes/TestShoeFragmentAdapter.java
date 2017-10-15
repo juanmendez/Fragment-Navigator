@@ -36,6 +36,7 @@ public class TestShoeFragmentAdapter implements ShoeFragmentAdapter {
     @Override
     public void setActive(Boolean show) {
         visible = show;
+        System.out.println( "making active: " + show + " @:" + tag );
     }
 
     @Override

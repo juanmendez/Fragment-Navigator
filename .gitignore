@@ -8,3 +8,5 @@
 /captures
 .externalNativeBuild
 .gradle/*
+.idea/workspace.xml
+.idea/workspace.xml

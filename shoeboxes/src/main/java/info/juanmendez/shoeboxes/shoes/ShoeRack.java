@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import info.juanmendez.shoeboxes.utils.ShoeUtils;
-import rx.functions.Action1;
-import rx.subjects.PublishSubject;
-import rx.subscriptions.CompositeSubscription;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.subjects.PublishSubject;
 
 
 /**
@@ -19,7 +19,7 @@ public class ShoeRack {
     private ShoeModel shoeModel;
     private List<String> history = new ArrayList<>();
     private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
-    private CompositeSubscription compositeSubscription = new CompositeSubscription();
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     public boolean  request( int requestId ){
         return request( Integer.toString( requestId) );
@@ -146,8 +146,8 @@ public class ShoeRack {
         return anySuccess;
     }
 
-    public void subscribe(Action1<List<ShoeModel>> action ){
-        compositeSubscription.add( publishSubject.subscribe(action));
+    public void subscribe(Consumer<List<ShoeModel>> consumer ){
+        compositeDisposable.add( publishSubject.subscribe(consumer));
     }
 
     public List<String> getHistory() {

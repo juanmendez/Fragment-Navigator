@@ -154,6 +154,14 @@ public class ShoeRack {
         return history;
     }
 
+    /**
+     * Android component provides the structure of a new layout.
+     * In this way the component restore previous navigation after rotating,
+     * or when returning from another component.
+     *
+     * @param nodes
+     * @return
+     */
     public ShoeRack populate(ShoeModel... nodes) {
 
         boolean makeFlow = nodes.length > 1 || (nodes.length == 1 && nodes[0] instanceof ShoeBox );

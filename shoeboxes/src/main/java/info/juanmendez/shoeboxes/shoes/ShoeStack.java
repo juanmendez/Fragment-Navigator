@@ -29,21 +29,29 @@ public class ShoeStack implements ShoeModel {
 
     public ShoeStack() {
 
-        //checks to active|deactive children
+        /**
+         * we find out if any of the stacks' children is active and so
+         * the other get deactivated. There is now a new order.
+         * Those which deactivate are notified before the one activated.
+         */
         ShoeStorage.getCurrentRack().subscribe(navNodes -> {
             int pos = navNodes.indexOf( this );
-            boolean childInPath;
+            boolean isChildInPath;
 
-            if( pos >= 0 ){
+            if( pos >= 0){
                 ShoeModel childFound = navNodes.get( pos+1);
 
                 for( ShoeModel node: nodes ){
-                    childInPath = node == childFound;
 
-                    if( childInPath != node.isActive() ){
-                        node.setActive( node == childFound );
+                   if( childFound != node && node.isActive() ){
+                        node.setActive(false);
                     }
                 }
+
+                if( nodes.indexOf(childFound) >= 0 && !childFound.isActive()){
+                    childFound.setActive(true);
+                }
+
             }else{
                 for( ShoeModel node: nodes ){
                     if( node.isActive() ){

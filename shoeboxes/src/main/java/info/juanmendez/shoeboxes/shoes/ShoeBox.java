@@ -24,8 +24,6 @@ public class ShoeBox implements ShoeModel {
     private List<ShoeModel> nodes = new ArrayList<>();
     private ShoeModel shoeModelChildNode;
 
-    //lets keep a hold of the last child visited.
-    ShoeModel prevChildVisited;
     Boolean childVisited=false;
     int childVisits = 0;
 

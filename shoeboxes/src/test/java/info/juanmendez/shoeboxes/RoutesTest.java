@@ -169,5 +169,7 @@ public class RoutesTest {
 
         assertEquals( ShoeUtils.getRouteParamsOnce( tagA, history),  "12" );
         assertEquals( ShoeUtils.getRouteParams( tagA, history), "" );
+        assertEquals( ShoeUtils.getRouteParamsOnce( tagA, history),  "" );
+        assertEquals( ShoeUtils.getRouteParams( tagA, history), "" );
     }
 }

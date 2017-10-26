@@ -2,8 +2,8 @@ package info.juanmendez.shoeboxes.shoes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
-import info.juanmendez.shoeboxes.ShoeStorage;
 import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
 import info.juanmendez.shoeboxes.utils.ShoeUtils;
 
@@ -17,6 +17,7 @@ import info.juanmendez.shoeboxes.utils.ShoeUtils;
  */
 
 public class ShoeBox implements ShoeModel {
+
     ShoeModel parentNode;
 
     private ShoeFragmentAdapter shoeFragmentAdapter; //identifies Fragment with Tag or its Id
@@ -47,39 +48,6 @@ public class ShoeBox implements ShoeModel {
 
         //starts with a closed state
         this.shoeFragmentAdapter.setActive(false);
-
-        ShoeStorage.getCurrentRack().addObserver( (o, arg) -> {
-            List<ShoeModel> navNodes = (List<ShoeModel>) arg;
-
-            int pos = navNodes.indexOf( this );
-
-            //this parent must be active for this to work!
-            if( pos >= 0 ){
-
-                if( childVisited  ){
-                    shoeFragmentAdapter.fromChildVisit();
-                }
-
-                childVisited = false;
-
-                for (ShoeModel child: nodes ){
-                    if( navNodes.indexOf(child) >= 0 ){
-                        childVisited=true;
-                        childVisits++;
-
-                        if( childVisits == 1 )
-                            shoeFragmentAdapter.toChildVisit();
-                        break;
-                    }
-                }
-
-                if( !childVisited )
-                    childVisits = 0;
-
-            }else{
-                childVisited = false;
-            }
-        });
     }
 
     public ShoeFragmentAdapter getShoeFragmentAdapter(){
@@ -104,9 +72,6 @@ public class ShoeBox implements ShoeModel {
         if( shoeModelChildNode != null ){
             nodes.clear();
             nodes.add(shoeModelChildNode);
-
-            shoeModelChildNode.setParent(this);
-            shoeModelChildNode.setActive( false );
         }
 
         return this;
@@ -115,6 +80,17 @@ public class ShoeBox implements ShoeModel {
     @Override
     public List<ShoeModel> getNodes() {
         return nodes;
+    }
+
+    @Override
+    public void setRack(ShoeRack shoeRack) {
+        shoeRack.addObserver( this );
+
+        if( shoeModelChildNode != null ){
+            shoeModelChildNode.setRack( shoeRack );
+            shoeModelChildNode.setParent(this);
+            shoeModelChildNode.setActive( false );
+        }
     }
 
     @Override
@@ -162,6 +138,40 @@ public class ShoeBox implements ShoeModel {
 
         if( shoeModelChildNode != null ){
             shoeModelChildNode.onRotation();
+        }
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        List<ShoeModel> navNodes = (List<ShoeModel>) arg;
+
+        int pos = navNodes.indexOf( this );
+
+        //this parent must be active for this to work!
+        if( pos >= 0 ){
+
+            if( childVisited  ){
+                shoeFragmentAdapter.fromChildVisit();
+            }
+
+            childVisited = false;
+
+            for (ShoeModel child: nodes ){
+                if( navNodes.indexOf(child) >= 0 ){
+                    childVisited=true;
+                    childVisits++;
+
+                    if( childVisits == 1 )
+                        shoeFragmentAdapter.toChildVisit();
+                    break;
+                }
+            }
+
+            if( !childVisited )
+                childVisits = 0;
+
+        }else{
+            childVisited = false;
         }
     }
 }

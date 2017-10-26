@@ -3,8 +3,7 @@ package info.juanmendez.shoeboxes.shoes;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import info.juanmendez.shoeboxes.ShoeStorage;
+import java.util.Observable;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
@@ -15,6 +14,7 @@ import info.juanmendez.shoeboxes.ShoeStorage;
  */
 
 public class ShoeFlow implements ShoeModel {
+
     ShoeModel parentNode;
     Boolean active = false;
     List<ShoeModel> nodes = new ArrayList<>();
@@ -25,44 +25,26 @@ public class ShoeFlow implements ShoeModel {
         return flow;
     }
 
-    public ShoeFlow() {
-
-        //checks to active|deactive children
-        ShoeStorage.getCurrentRack().addObserver( (o, arg) -> {
-            List<ShoeModel> navNodes = (List<ShoeModel>) arg;
-
-            int pos = navNodes.indexOf( this );
-            int len = navNodes.size();
-
-            if( pos >= 0 && pos < len-1 ){
-                for( ShoeModel node: nodes ){
-                    if( !node.isActive() ){
-                        node.setActive( true );
-                    }
-                }
-            }else{
-                for( ShoeModel node: nodes ){
-                    if( node.isActive() ){
-                        node.setActive( false );
-                    }
-                }
-            }
-        });
-    }
 
     @Override
     public ShoeModel populate(ShoeModel... nodes) {
         this.nodes = new ArrayList<>(Arrays.asList(nodes));
-
-        for( ShoeModel node: nodes ){
-            node.setParent(this);
-        }
-
         return this;
     }
 
     public List<ShoeModel> getNodes() {
         return this.nodes;
+    }
+
+    @Override
+    public void setRack(ShoeRack shoeRack) {
+
+        for( ShoeModel node: nodes ){
+            node.setRack( shoeRack );
+            node.setParent(this);
+        }
+
+        shoeRack.addObserver( this );
     }
 
     @Override
@@ -105,6 +87,28 @@ public class ShoeFlow implements ShoeModel {
     public void onRotation(){
         for(ShoeModel node: nodes ){
             node.onRotation();
+        }
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        List<ShoeModel> navNodes = (List<ShoeModel>) arg;
+
+        int pos = navNodes.indexOf( this );
+        int len = navNodes.size();
+
+        if( pos >= 0 && pos < len-1 ){
+            for( ShoeModel node: nodes ){
+                if( !node.isActive() ){
+                    node.setActive( true );
+                }
+            }
+        }else{
+            for( ShoeModel node: nodes ){
+                if( node.isActive() ){
+                    node.setActive( false );
+                }
+            }
         }
     }
 }

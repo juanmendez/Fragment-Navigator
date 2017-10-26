@@ -159,12 +159,15 @@ public class ShoeRack extends Observable {
      */
     public ShoeRack populate(ShoeModel... nodes) {
 
+        deleteObservers();
         boolean makeFlow = nodes.length > 1 || (nodes.length == 1 && nodes[0] instanceof ShoeBox );
 
         if( makeFlow ){
             shoeModel = ShoeFlow.build( nodes );
+            shoeModel.setRack( this );
         }else{
             shoeModel = nodes[0];
+            shoeModel.setRack( this );
         }
 
         replaceHistory();

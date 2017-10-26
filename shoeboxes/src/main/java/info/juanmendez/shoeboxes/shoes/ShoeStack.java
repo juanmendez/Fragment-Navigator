@@ -34,7 +34,9 @@ public class ShoeStack implements ShoeModel {
          * the other get deactivated. There is now a new order.
          * Those which deactivate are notified before the one activated.
          */
-        ShoeStorage.getCurrentRack().subscribe(navNodes -> {
+        ShoeStorage.getCurrentRack().addObserver( (o, arg) -> {
+            List<ShoeModel> navNodes = (List<ShoeModel>) arg;
+
             int pos = navNodes.indexOf( this );
             boolean isChildInPath;
 
@@ -43,7 +45,7 @@ public class ShoeStack implements ShoeModel {
 
                 for( ShoeModel node: nodes ){
 
-                   if( childFound != node && node.isActive() ){
+                    if( childFound != node && node.isActive() ){
                         node.setActive(false);
                     }
                 }
@@ -60,7 +62,6 @@ public class ShoeStack implements ShoeModel {
                 }
             }
         });
-
     }
 
     @Override

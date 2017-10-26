@@ -2,11 +2,9 @@ package info.juanmendez.shoeboxes.shoes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 import info.juanmendez.shoeboxes.utils.ShoeUtils;
-import rx.functions.Action1;
-import rx.subjects.PublishSubject;
-import rx.subscriptions.CompositeSubscription;
 
 
 /**
@@ -14,12 +12,12 @@ import rx.subscriptions.CompositeSubscription;
  * www.juanmendez.info
  * contact@juanmendez.info
  */
-public class ShoeRack {
+public class ShoeRack extends Observable {
 
     private ShoeModel shoeModel;
     private List<String> history = new ArrayList<>();
-    private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
-    private CompositeSubscription compositeSubscription = new CompositeSubscription();
+    /*private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
+    private CompositeSubscription compositeSubscription = new CompositeSubscription();*/
 
     public boolean  request( int requestId ){
         return request( Integer.toString( requestId) );
@@ -95,7 +93,8 @@ public class ShoeRack {
                 return false;
             }
 
-            publishSubject.onNext(ShoeUtils.getPath(shoeBox));
+            setChanged();
+            notifyObservers( ShoeUtils.getPath(shoeBox ) );
             return true;
         }
 
@@ -144,10 +143,6 @@ public class ShoeRack {
         }
 
         return anySuccess;
-    }
-
-    public void subscribe(Action1<List<ShoeModel>> action ){
-        compositeSubscription.add( publishSubject.subscribe(action));
     }
 
     public List<String> getHistory() {

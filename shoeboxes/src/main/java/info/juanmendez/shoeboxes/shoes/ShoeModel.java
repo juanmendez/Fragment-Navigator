@@ -8,7 +8,7 @@ import java.util.List;
  * contact@juanmendez.info
  */
 
-public interface ShoeModel {
+public interface ShoeModel{
     ShoeModel populate(ShoeModel... nodes);
     List<ShoeModel> getNodes();
 

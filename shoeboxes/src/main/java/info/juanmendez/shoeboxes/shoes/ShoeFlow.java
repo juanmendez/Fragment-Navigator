@@ -28,7 +28,9 @@ public class ShoeFlow implements ShoeModel {
     public ShoeFlow() {
 
         //checks to active|deactive children
-        ShoeStorage.getCurrentRack().subscribe(navNodes -> {
+        ShoeStorage.getCurrentRack().addObserver( (o, arg) -> {
+            List<ShoeModel> navNodes = (List<ShoeModel>) arg;
+
             int pos = navNodes.indexOf( this );
             int len = navNodes.size();
 

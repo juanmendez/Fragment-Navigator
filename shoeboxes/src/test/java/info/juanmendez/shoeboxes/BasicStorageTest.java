@@ -76,7 +76,8 @@ public class BasicStorageTest {
         //so we are going to build a dual pane...
         shoeRack.request( tagA );
 
-        shoeRack.subscribe(navItems -> {
+        shoeRack.addObserver( (o, arg) -> {
+            List<ShoeModel> navItems = (List<ShoeModel>) arg;
             assertEquals( "tag is A", navItems.get(navItems.size()-1), shoeBoxA);
         });
     }

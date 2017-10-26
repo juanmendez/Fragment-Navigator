@@ -48,7 +48,8 @@ public class ShoeBox implements ShoeModel {
         //starts with a closed state
         this.shoeFragmentAdapter.setActive(false);
 
-        ShoeStorage.getCurrentRack().subscribe(navNodes -> {
+        ShoeStorage.getCurrentRack().addObserver( (o, arg) -> {
+            List<ShoeModel> navNodes = (List<ShoeModel>) arg;
 
             int pos = navNodes.indexOf( this );
 

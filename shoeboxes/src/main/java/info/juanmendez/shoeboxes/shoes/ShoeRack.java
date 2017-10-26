@@ -281,6 +281,10 @@ public class ShoeRack extends Observable {
     }
 
     public String getRouteParams( String tag ){
-        return ShoeUtils.getRouteParams(tag, history);
+        return ShoeUtils.getRouteParamsOnce(tag, history);
+    }
+
+    public String getRouteParamsOnce( String tag ){
+        return ShoeUtils.getRouteParamsOnce( tag, history );
     }
 }

@@ -153,4 +153,21 @@ public class RoutesTest {
         assertEquals( ShoeUtils.getRouteParams(tagB, history), "");
         assertEquals( ShoeUtils.getRouteParams(tagC, history), "12/13/14");
     }
+
+    /**
+     * In case the route params are pulled just once, we need to remove them from
+     * history, leaving just the tag.
+     * so "fragmentA/12" should return "12" and next time should return ""
+     */
+    @Test
+    public void testGettingRouteOnceFromHistory(){
+        List<String> history = new ArrayList();
+        history.add( routeA );
+        history.add( routeB );
+        history.add( routeC );
+        history.add( routeD );
+
+        assertEquals( ShoeUtils.getRouteParamsOnce( tagA, history),  "12" );
+        assertEquals( ShoeUtils.getRouteParams( tagA, history), "" );
+    }
 }

@@ -176,4 +176,17 @@ public class ShoeUtils {
 
         return "";
     }
+
+    public static String getRouteParamsOnce(String tag, List<String> routes) {
+
+        for(String route:routes){
+
+            if( isTagInRoute(tag, route)){
+                routes.set( routes.indexOf( route ), tag );
+                return getRouteParams(route);
+            }
+        }
+
+        return "";
+    }
 }

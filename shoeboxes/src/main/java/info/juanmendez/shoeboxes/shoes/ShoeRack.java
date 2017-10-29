@@ -2,11 +2,9 @@ package info.juanmendez.shoeboxes.shoes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 import info.juanmendez.shoeboxes.utils.ShoeUtils;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.subjects.PublishSubject;
 
 
 /**
@@ -14,12 +12,12 @@ import io.reactivex.subjects.PublishSubject;
  * www.juanmendez.info
  * contact@juanmendez.info
  */
-public class ShoeRack {
+public class ShoeRack extends Observable {
 
     private ShoeModel shoeModel;
     private List<String> history = new ArrayList<>();
-    private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    /*private PublishSubject<List<ShoeModel>> publishSubject = PublishSubject.create();
+    private CompositeSubscription compositeSubscription = new CompositeSubscription();*/
 
     public boolean  request( int requestId ){
         return request( Integer.toString( requestId) );
@@ -95,7 +93,8 @@ public class ShoeRack {
                 return false;
             }
 
-            publishSubject.onNext(ShoeUtils.getPath(shoeBox));
+            setChanged();
+            notifyObservers( ShoeUtils.getPath(shoeBox ) );
             return true;
         }
 
@@ -146,22 +145,29 @@ public class ShoeRack {
         return anySuccess;
     }
 
-    public void subscribe(Consumer<List<ShoeModel>> consumer ){
-        compositeDisposable.add( publishSubject.subscribe(consumer));
-    }
-
     public List<String> getHistory() {
         return history;
     }
 
+    /**
+     * Android component provides the structure of a new layout.
+     * In this way the component restore previous navigation after rotating,
+     * or when returning from another component.
+     *
+     * @param nodes
+     * @return
+     */
     public ShoeRack populate(ShoeModel... nodes) {
 
+        deleteObservers();
         boolean makeFlow = nodes.length > 1 || (nodes.length == 1 && nodes[0] instanceof ShoeBox );
 
         if( makeFlow ){
             shoeModel = ShoeFlow.build( nodes );
+            shoeModel.setRack( this );
         }else{
             shoeModel = nodes[0];
+            shoeModel.setRack( this );
         }
 
         replaceHistory();
@@ -276,5 +282,9 @@ public class ShoeRack {
 
     public String getRouteParams( String tag ){
         return ShoeUtils.getRouteParams(tag, history);
+    }
+
+    public String getRouteParamsOnce( String tag ){
+        return ShoeUtils.getRouteParamsOnce( tag, history );
     }
 }

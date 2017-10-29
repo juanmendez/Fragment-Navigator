@@ -1,6 +1,7 @@
 package info.juanmendez.shoeboxes.shoes;
 
 import java.util.List;
+import java.util.Observer;
 
 /**
  * Created by Juan Mendez on 6/2/2017.
@@ -8,10 +9,12 @@ import java.util.List;
  * contact@juanmendez.info
  */
 
-public interface ShoeModel {
+public interface ShoeModel extends Observer{
     ShoeModel populate(ShoeModel... nodes);
     List<ShoeModel> getNodes();
 
+    //connect with rack
+    void setRack( ShoeRack shoeRack );
 
     //connect with parent
     void setParent( ShoeModel parentNode );

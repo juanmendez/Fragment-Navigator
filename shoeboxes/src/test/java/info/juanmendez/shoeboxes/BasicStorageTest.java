@@ -76,7 +76,8 @@ public class BasicStorageTest {
         //so we are going to build a dual pane...
         shoeRack.request( tagA );
 
-        shoeRack.subscribe(navItems -> {
+        shoeRack.addObserver( (o, arg) -> {
+            List<ShoeModel> navItems = (List<ShoeModel>) arg;
             assertEquals( "tag is A", navItems.get(navItems.size()-1), shoeBoxA);
         });
     }
@@ -158,8 +159,6 @@ public class BasicStorageTest {
 
 
         shoeRack.request( tagB + "/B" );
-
-        //lets go to first one!
         shoeRack.request( tagC + "/C" );
 
 
@@ -169,7 +168,8 @@ public class BasicStorageTest {
 
         shoeRack.goBack();
         assertTrue( fragmentB.isActive() );
-        assertEquals( shoeRack.getRouteParams(tagB), "B");
+        assertEquals( shoeRack.getRouteParamsOnce(tagB), "B");
+        assertEquals( shoeRack.getRouteParams(tagB), "");
     }
 
 

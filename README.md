@@ -18,6 +18,6 @@ dependencies {
 }
 ```
 
-Watch preview on Youtube:
+Watch preview on Youtube, plese turn on captions:
 
 [![Alt text](https://img.youtube.com/vi/qGsCQHAvJeY/0.jpg)](https://www.youtube.com/watch?v=qGsCQHAvJeY)

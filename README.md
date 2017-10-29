@@ -6,9 +6,15 @@ Install through jitpack:
 
 [Snapshot](https://jitpack.io/#juanmendez/shoe-boxes/master-SNAPSHOT)
 
-```
+```Groovy
+repositories {
+...
+    maven { url 'https://jitpack.io' }
+}
+
 dependencies {
-	  compile 'com.github.juanmendez:shoe-boxes:master-SNAPSHOT'
+...
+    implementation 'com.github.juanmendez:shoe-boxes:master-SNAPSHOT'
 }
 ```
 

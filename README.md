@@ -4,7 +4,7 @@ Making single activity applications possible. This project concentrates in fragm
 This is an ongoing project based on basic concepts of a shoe store. [Read more..](https://github.com/juanmendez/Fragment-Navigator/wiki)
 Install through jitpack:
 
-[RxJava 1.x support](https://jitpack.io/#juanmendez/shoe-boxes/RxJava1.x-SNAPSHOT), [RxJava 2.x support](https://jitpack.io/#juanmendez/shoe-boxes/RxJava2.x-SNAPSHOT)
+[Snapshot](https://jitpack.io/#juanmendez/shoe-boxes/master-SNAPSHOT)
 
 Watch preview on Youtube:
 

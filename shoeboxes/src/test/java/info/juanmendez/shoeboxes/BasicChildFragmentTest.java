@@ -90,7 +90,7 @@ public class BasicChildFragmentTest {
         verify( fragmentA ).fromChildVisit();
 
         //device rotates
-        shoeRack.onRotation();
+        shoeRack.onActivityPause();
         shoeRack.populate( shoeBoxA.populate(ShoeStack.build(shoeBoxB, shoeBoxC, shoeBoxD)));
 
         shoeRack.request( tagA );

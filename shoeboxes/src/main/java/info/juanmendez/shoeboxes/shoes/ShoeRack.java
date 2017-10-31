@@ -262,6 +262,7 @@ public class ShoeRack extends Observable {
      */
     public void clearHistory(){
         history.clear();
+        deleteObservers();
     }
 
     public boolean isHistoryEmpty(){
@@ -272,8 +273,9 @@ public class ShoeRack extends Observable {
      * Activity requests shoeRack to set all shoeModels to be set to inactive
      * because the activity has ended or device is about to rotate
      */
-    public void onRotation(){
+    public void onActivityPause(){
         shoeModel.onRotation();
+        deleteObservers();
     }
 
     public String getRouteParams(int id) {

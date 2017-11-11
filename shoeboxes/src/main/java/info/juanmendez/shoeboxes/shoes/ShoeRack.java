@@ -276,6 +276,7 @@ public class ShoeRack extends Observable {
     public void onActivityPause(){
         shoeModel.onRotation();
         deleteObservers();
+        shoeModel = null;
     }
 
     public String getRouteParams(int id) {

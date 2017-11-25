@@ -18,6 +18,9 @@ import info.juanmendez.shoeboxes.utils.ShoeUtils;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
+import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.powermock.api.mockito.PowerMockito.spy;
 
 /**
@@ -184,16 +187,33 @@ public class RoutesTest {
         ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
 
         shoeRack = ShoeStorage.getRack( "test" );
+        shoeRack.clearHistory();
         shoeRack.populate(ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC));
 
         shoeRack.request( tagA );
         shoeRack.request( tagB );
 
         shoeRack.request( tagA + "/hello-world");
-        assertEquals( shoeRack.getRouteParamsOnce(tagA), "hello-world");
 
-        shoeRack.request( tagB + "/hello-world");
-        assertEquals( shoeRack.getRouteParamsOnce(tagB), "hello-world");
+        verify(fragmentA, times(2)).setActive(eq(true) );
+    }
 
+    @Test
+    public void testRoutesInShoeFlow(){
+
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack = ShoeStorage.getRack( "test" );
+        shoeRack.clearHistory();
+        shoeRack.populate(shoeBoxA, shoeBoxB, shoeBoxC);
+
+        shoeRack.request( tagA );
+        shoeRack.request( tagB );
+
+        shoeRack.request( tagA + "/hello-world");
+
+        verify(fragmentA, times(2)).setActive(eq(true) );
     }
 }

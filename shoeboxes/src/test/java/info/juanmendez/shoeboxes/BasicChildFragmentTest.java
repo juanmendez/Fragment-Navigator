@@ -166,7 +166,8 @@ public class BasicChildFragmentTest {
         shoeRack.suggest(tagB);
         shoeRack.request(tagB);
 
-        verify(shoeBoxB, times(1)).setActive(eq(false));
-        verify(shoeBoxB, times(2)).setActive(eq(true));
+        //we don't need to refresh if the same item is first suggested and then requested.
+        //unless there is a route then we refresh. ;)
+        verify(shoeBoxB, times(1)).setActive(eq(true));
     }
 }

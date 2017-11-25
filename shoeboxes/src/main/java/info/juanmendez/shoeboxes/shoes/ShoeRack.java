@@ -43,31 +43,25 @@ public class ShoeRack extends Observable {
             //going forward can mean also stepping back to a previous shoeModel
             if( ShoeUtils.isTagInRouteList(tag, history)){
 
-                /**
-                 * setting a shoeBox active twice means to refresh
-                 */
-                String lastRoute = history.get( history.size()-1);
-
-                if( shoeBox.isActive() && ShoeUtils.isTagInRoute( tag, lastRoute ) ){
-
-                    shoeBox.setActive(false);
-
-                    //lets update the route
-                    history.set( history.size()-1, route );
-                    shoeBox.setActive(true);
-                    return true;
-                }
-
                 for( int i = history.size()-1; i>= 0; i--){
 
                     if( !ShoeUtils.isTagInRoute( tag, history.get(i) ) ){
                         history.remove( i );
                     }else{
-
                         //lets update the route
                         history.set(i, route );
                         break;
                     }
+                }
+
+                /**
+                 * setting a shoeBox active twice means to refresh
+                 */
+                if( shoeBox.isActive() && !ShoeUtils.getRouteParams(route).isEmpty() ){
+
+                    shoeBox.setActive(false);
+                    shoeBox.setActive(true);
+                    return true;
                 }
 
             }else{

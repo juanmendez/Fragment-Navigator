@@ -30,7 +30,7 @@ public class ShoeRack extends Observable {
 
             String tag = shoeBox.getFragmentTag();
             /*
-            going forward can mean also steping back to a previous shoeModel
+            going forward can mean also stepping back to a previous shoeModel
             lets find the shoeModel within..
             */
             ShoeModel parent = shoeBox.getParent();
@@ -63,6 +63,9 @@ public class ShoeRack extends Observable {
                     if( !ShoeUtils.isTagInRoute( tag, history.get(i) ) ){
                         history.remove( i );
                     }else{
+
+                        //lets update the route
+                        history.set(i, route );
                         break;
                     }
                 }

@@ -9,13 +9,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
+import info.juanmendez.shoeboxes.shoes.ShoeBox;
 import info.juanmendez.shoeboxes.shoes.ShoeRack;
+import info.juanmendez.shoeboxes.shoes.ShoeStack;
 import info.juanmendez.shoeboxes.shoes.TestShoeFragmentAdapter;
 import info.juanmendez.shoeboxes.utils.ShoeUtils;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
+import static org.powermock.api.mockito.PowerMockito.spy;
 
 /**
  * Created by Juan Mendez on 10/14/2017.
@@ -52,10 +55,10 @@ public class RoutesTest {
 
     @Before
     public void before(){
-        fragmentA = new TestShoeFragmentAdapter(tagA);
-        fragmentB = new TestShoeFragmentAdapter(tagB);
-        fragmentC = new TestShoeFragmentAdapter(tagC);
-        fragmentD = new TestShoeFragmentAdapter(tagD);
+        fragmentA =  spy( new TestShoeFragmentAdapter(tagA));
+        fragmentB =  spy( new TestShoeFragmentAdapter(tagB));
+        fragmentC =  spy( new TestShoeFragmentAdapter(tagC));
+        fragmentD =  spy( new TestShoeFragmentAdapter(tagD));
     }
 
 
@@ -171,5 +174,26 @@ public class RoutesTest {
         assertEquals( ShoeUtils.getRouteParams( tagA, history), "" );
         assertEquals( ShoeUtils.getRouteParamsOnce( tagA, history),  "" );
         assertEquals( ShoeUtils.getRouteParams( tagA, history), "" );
+    }
+
+    @Test
+    public void testRouteFromPreviousShoeBox(){
+
+        ShoeBox shoeBoxA = ShoeBox.build(fragmentA);
+        ShoeBox shoeBoxB = ShoeBox.build(fragmentB);
+        ShoeBox shoeBoxC = ShoeBox.build(fragmentC);
+
+        shoeRack = ShoeStorage.getRack( "test" );
+        shoeRack.populate(ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC));
+
+        shoeRack.request( tagA );
+        shoeRack.request( tagB );
+
+        shoeRack.request( tagA + "/hello-world");
+        assertEquals( shoeRack.getRouteParamsOnce(tagA), "hello-world");
+
+        shoeRack.request( tagB + "/hello-world");
+        assertEquals( shoeRack.getRouteParamsOnce(tagB), "hello-world");
+
     }
 }

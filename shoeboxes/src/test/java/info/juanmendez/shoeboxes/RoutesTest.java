@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 
 import info.juanmendez.shoeboxes.adapters.ShoeFragmentAdapter;
 import info.juanmendez.shoeboxes.shoes.ShoeBox;
+import info.juanmendez.shoeboxes.shoes.ShoeFlow;
 import info.juanmendez.shoeboxes.shoes.ShoeRack;
 import info.juanmendez.shoeboxes.shoes.ShoeStack;
 import info.juanmendez.shoeboxes.shoes.TestShoeFragmentAdapter;
@@ -207,7 +208,7 @@ public class RoutesTest {
 
         shoeRack = ShoeStorage.getRack( "test" );
         shoeRack.clearHistory();
-        shoeRack.populate(shoeBoxA, shoeBoxB, shoeBoxC);
+        shoeRack.populate(ShoeFlow.build(shoeBoxA, shoeBoxB, shoeBoxC));
 
         shoeRack.request( tagA );
         shoeRack.request( tagB );
@@ -215,5 +216,16 @@ public class RoutesTest {
         shoeRack.request( tagA + "/hello-world");
 
         verify(fragmentA, times(2)).setActive(eq(true) );
+        shoeRack.request( tagB + "/hello-world");
+
+        assertEquals( shoeRack.getHistory().size(), 2 );
+
+        shoeRack.onActivityPause();
+        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+
+        assertFalse( shoeBoxA.isActive() );
+        assertTrue( shoeBoxB.isActive() );
+        assertEquals( shoeRack.getHistory().size(), 2 );
+
     }
 }

@@ -61,7 +61,6 @@ public class ShoeRack extends Observable {
 
                     shoeBox.setActive(false);
                     shoeBox.setActive(true);
-                    return true;
                 }
 
             }else{
@@ -168,7 +167,6 @@ public class ShoeRack extends Observable {
         }
 
         replaceHistory();
-
         return this;
     }
 

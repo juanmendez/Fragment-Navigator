@@ -60,7 +60,6 @@ public class ShoeRack extends Observable {
                 if( shoeBox.isActive() && !ShoeUtils.getRouteParams(route).isEmpty() ){
 
                     shoeBox.setActive(false);
-                    shoeBox.setActive(true);
                 }
 
             }else{

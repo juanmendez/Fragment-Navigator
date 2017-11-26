@@ -221,11 +221,13 @@ public class RoutesTest {
         assertEquals( shoeRack.getHistory().size(), 2 );
 
         shoeRack.onActivityPause();
-        shoeRack.populate( ShoeStack.build(shoeBoxA, shoeBoxB, shoeBoxC) );
+        shoeRack.populate( shoeBoxA, ShoeStack.build( shoeBoxB, shoeBoxC) );
+        shoeRack.suggest( tagA, tagB );
 
-        assertFalse( shoeBoxA.isActive() );
+        shoeRack.request( tagA + "/2");
+
+        assertTrue( shoeBoxA.isActive() );
         assertTrue( shoeBoxB.isActive() );
-        assertEquals( shoeRack.getHistory().size(), 2 );
 
     }
 }

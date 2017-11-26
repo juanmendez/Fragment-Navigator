@@ -103,7 +103,7 @@ public class ShoeFlow implements ShoeModel {
                     node.setActive( true );
                 }
             }
-        }else{
+        }else if( !isActive() ){
             for( ShoeModel node: nodes ){
                 if( node.isActive() ){
                     node.setActive( false );

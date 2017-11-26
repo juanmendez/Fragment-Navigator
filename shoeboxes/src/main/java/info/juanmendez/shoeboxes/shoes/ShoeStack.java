@@ -102,13 +102,11 @@ public class ShoeStack implements ShoeModel {
             for( ShoeModel node: nodes ){
 
                 if( childFound != node && node.isActive() ){
-                    System.out.println( "making inactive " + node.toString() );
                     node.setActive(false);
                 }
             }
 
             if( nodes.indexOf(childFound) >= 0 && !childFound.isActive()){
-                System.out.println( "making active " + childFound.toString() );
                 childFound.setActive(true);
             }
 
@@ -117,7 +115,6 @@ public class ShoeStack implements ShoeModel {
             //in case the stack is active, but not in the path, leave it alone.
             for( ShoeModel node: nodes ){
                 if( node.isActive() ){
-                    System.out.println( "making all inactive" + node.toString() );
                     node.setActive( false );
                 }
             }

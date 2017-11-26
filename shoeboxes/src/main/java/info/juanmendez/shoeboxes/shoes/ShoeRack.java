@@ -1,7 +1,5 @@
 package info.juanmendez.shoeboxes.shoes;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
@@ -26,8 +24,6 @@ public class ShoeRack extends Observable {
     }
 
     public boolean request(String route) {
-
-        System.out.println("shoebox request " + route );
         ShoeBox shoeBox = search( route );
 
         if( shoeBox != null ){
